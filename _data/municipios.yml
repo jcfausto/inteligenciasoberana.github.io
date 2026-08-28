@@ -1,0 +1,100 @@
+# Social indicators for the concert-sample municipalities.
+# Sanitation: IBGE Censo Demográfico 2022 (universo), SIDRA 6803 / 6805 / 6892.
+# water_net = households with a connection to the general water network (uses it or not).
+# sewage_net = households on the general or stormwater sewer (rede geral ou pluvial).
+# garbage = households with waste collected.
+# Population: Censo 2022, SIDRA 4709.
+# pib_pc: IBGE PIB dos Municípios 2023 (SIDRA 5938) / Censo 2022 population.
+# PNAD Contínua is not published at this municipal grain; Censo 2022 is the universe count.
+brazil:
+  pop: 203080756
+  water_net: 87.4
+  sewage_net: 60.4
+  garbage: 91.7
+  pib_pc: 53887
+cities:
+  sao-fidelis:
+    name: "São Fidélis"
+    uf: RJ
+    ibge: "3304805"
+    pop: 38961
+    water_net: 81.3
+    sewage_net: 70.2
+    garbage: 90.0
+    pib_pc: 25306
+  moita-bonita:
+    name: "Moita Bonita"
+    uf: SE
+    ibge: "2804102"
+    pop: 11050
+    water_net: 64.2
+    sewage_net: 45.5
+    garbage: 93.1
+    pib_pc: 25352
+  malhador:
+    name: "Malhador"
+    uf: SE
+    ibge: "2803906"
+    pop: 11533
+    water_net: 87.1
+    sewage_net: 18.9
+    garbage: 94.6
+    pib_pc: 19463
+  alpercata:
+    name: "Alpercata"
+    uf: MG
+    ibge: "3101805"
+    pop: 6903
+    water_net: 78.1
+    sewage_net: 75.9
+    garbage: 83.8
+    pib_pc: 16366
+    flags: [no_hospital]
+  sobralia:
+    name: "Sobrália"
+    uf: MG
+    ibge: "3167707"
+    pop: 5137
+    water_net: 72.5
+    sewage_net: 63.9
+    garbage: 78.4
+    pib_pc: 15990
+    flags: [no_hospital]
+  marilac:
+    name: "Marilac"
+    uf: MG
+    ibge: "3140100"
+    pop: 4224
+    water_net: 88.3
+    sewage_net: 81.3
+    garbage: 83.1
+    pib_pc: 17806
+    flags: [no_hospital]
+  americano-do-brasil:
+    name: "Americano do Brasil"
+    uf: GO
+    ibge: "5200852"
+    pop: 5259
+    water_net: 91.3
+    sewage_net: 0.7
+    garbage: 94.1
+    pib_pc: 20175
+  mar-vermelho:
+    name: "Mar Vermelho"
+    uf: AL
+    ibge: "2704906"
+    pop: 3155
+    water_net: 47.7
+    sewage_net: 20.9
+    garbage: 77.7
+    pib_pc: 16357
+    flags: [unpaved_low_income]
+  bom-jesus:
+    name: "Bom Jesus"
+    uf: RS
+    ibge: "4302303"
+    pop: 11202
+    water_net: 83.8
+    sewage_net: 66.8
+    garbage: 88.2
+    pib_pc: 52973

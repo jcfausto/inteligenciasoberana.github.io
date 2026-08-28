@@ -1,0 +1,4 @@
+{% assign city = site.data.municipios.cities[include.id] %}
+{% capture _ct -%}
+<button type="button" class="city-tip" data-city="{{ include.id }}" aria-expanded="false">{% if include.text %}{{ include.text }}{% else %}{{ city.name }} ({{ city.uf }}){% endif %}{% if include.mark %}<sup class="text-gray-500">{{ include.mark }}</sup>{% endif %}</button>
+{%- endcapture -%}{{ _ct }}

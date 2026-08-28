@@ -1,0 +1,301 @@
+---
+layout: default
+title: Observatório da Produção Científica Nacional em IA — Inteligência Soberana
+description: Publicações brasileiras em inteligência artificial por ano e instituição, a partir do OpenAlex.
+page_id: producao
+permalink: /producao.html
+charts: true
+producao_js: true
+---
+{% assign data = site.data['producao-ia'] %}
+{% assign ufs = data.institutions | map: "uf" | compact | uniq | sort %}
+{% assign default_year = data.year_to | minus: 1 %}
+{% if data.current_year_incomplete == false %}
+  {% assign default_year = data.year_to %}
+{% endif %}
+<article class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20" data-works-base="{{ '/assets/data/producao-ia/' | relative_url }}" data-default-year="{{ default_year }}" data-year-from="{{ data.year_from }}" data-year-to="{{ data.year_to }}">
+  <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
+    <span class="lang-pt">Observatório · produção científica · atualizado {{ data.source.retrieved_pt }}</span>
+    <span class="lang-en">Observatory · scientific output · updated {{ data.source.retrieved_en }}</span>
+  </p>
+  <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-3 leading-tight">
+    <span class="lang-pt">Observatório da Produção Científica Nacional em IA</span>
+    <span class="lang-en">Observatory of National Scientific Production in AI</span>
+  </h1>
+  <p class="text-lg text-gray-700 font-light leading-relaxed max-w-3xl mb-8">
+    <span class="lang-pt">Trabalhos com afiliação brasileira cujo tópico principal no OpenAlex é inteligência artificial ou visão computacional, agrupados por ano e pela instituição-mãe no Brasil.</span>
+    <span class="lang-en">Works with a Brazilian affiliation whose primary OpenAlex topic is artificial intelligence or computer vision, grouped by year and by the Brazilian host institution.</span>
+  </p>
+
+  <div class="space-y-4 text-gray-700 font-light leading-relaxed max-w-3xl mb-10">
+    <p class="lang-pt">
+      O recorte cobre {{ data.year_from }}–{{ data.year_to }}{% if data.current_year_incomplete %} ({{ data.year_to }} incompleto){% endif %}: artigos, revisões e preprints no {% include official-link.html href="https://openalex.org" text="OpenAlex" %}, com subcampo primário <em>Artificial Intelligence</em> (1702) ou <em>Computer Vision and Pattern Recognition</em> (1707). Os totais nacionais contam cada trabalho uma vez; a tabela por instituição usa contagem plena — um artigo USP+UFRJ entra nas duas linhas.
+    </p>
+    <p class="lang-en">
+      The window is {{ data.year_from }}–{{ data.year_to }}{% if data.current_year_incomplete %} ({{ data.year_to }} incomplete){% endif %}: articles, reviews, and preprints in {% include official-link.html href="https://openalex.org" text="OpenAlex" %} whose primary subfield is <em>Artificial Intelligence</em> (1702) or <em>Computer Vision and Pattern Recognition</em> (1707). National totals count each work once; the institution table uses full counting — a USP+UFRJ paper appears in both rows.
+    </p>
+    <p class="text-sm text-gray-600 lang-pt">
+      Não é Scopus, CAPES, Lattes nem um censo de teses. A classificação de tópicos é automática e há ruído (artigos de métodos com milhares de autores, por exemplo). Campi da mesma universidade são agrupados quando o nome resolve para a mesma sigla.
+    </p>
+    <p class="text-sm text-gray-600 lang-en">
+      This is not Scopus, CAPES, Lattes, or a census of theses. Topic assignment is automatic and noisy (for example mega-author methods papers). Campuses of the same university are merged when the name resolves to the same acronym.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Trabalhos</span>
+        <span class="lang-en">Works</span>
+      </p>
+      <p class="font-serif text-3xl font-bold text-navy" data-int="{{ data.totals.works }}">{{ data.totals.works }}</p>
+      <p class="text-xs text-gray-500 mt-1">
+        <span class="lang-pt">Únicos no recorte</span>
+        <span class="lang-en">Unique in the window</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Período</span>
+        <span class="lang-en">Window</span>
+      </p>
+      <p class="font-serif text-3xl font-bold text-navy">{{ data.year_from }}–{{ data.year_to }}</p>
+      <p class="text-xs text-gray-500 mt-1">
+        {% if data.current_year_incomplete %}
+        <span class="lang-pt">{{ data.year_to }} em curso</span>
+        <span class="lang-en">{{ data.year_to }} year to date</span>
+        {% else %}
+        <span class="lang-pt">Anos civis completos</span>
+        <span class="lang-en">Complete calendar years</span>
+        {% endif %}
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Instituições</span>
+        <span class="lang-en">Institutions</span>
+      </p>
+      <p class="font-serif text-3xl font-bold text-navy" data-int="{{ data.totals.institutions }}">{{ data.totals.institutions }}</p>
+      <p class="text-xs text-gray-500 mt-1">
+        <span class="lang-pt">Com afiliação brasileira</span>
+        <span class="lang-en">With a Brazilian affiliation</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Snapshot</span>
+        <span class="lang-en">Snapshot</span>
+      </p>
+      <p class="font-serif text-2xl md:text-3xl font-bold text-navy leading-tight">
+        <span class="lang-pt">{{ data.source.retrieved_pt }}</span>
+        <span class="lang-en">{{ data.source.retrieved_en }}</span>
+      </p>
+      <p class="text-xs text-gray-500 mt-1">OpenAlex · CC0</p>
+    </div>
+  </div>
+
+  <div class="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm mb-10">
+    <h2 class="font-serif text-xl md:text-2xl font-bold text-navy mb-1">
+      <span class="lang-pt">Trabalhos por ano</span>
+      <span class="lang-en">Works per year</span>
+    </h2>
+    <p class="text-sm text-gray-500 mb-6">
+      <span class="lang-pt">Contagem nacional única — cada DOI entra só uma vez, mesmo com várias universidades brasileiras.</span>
+      <span class="lang-en">Unique national count — each work is counted once, even with several Brazilian universities.</span>
+    </p>
+    <div class="relative h-64 md:h-72">
+      <canvas id="producaoYearChart" aria-label="Gráfico de trabalhos brasileiros em IA por ano"></canvas>
+    </div>
+  </div>
+
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden mb-10">
+    <div class="flex flex-col md:flex-row gap-3 md:items-end p-4 md:p-6 border-b border-gray-100 no-print">
+      <label class="flex-1 min-w-0 text-xs font-bold tracking-wide uppercase text-gray-500">
+        <span class="lang-pt">Buscar instituição</span>
+        <span class="lang-en">Search institution</span>
+        <input id="prod-inst-search" type="search" autocomplete="off" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta" data-placeholder-pt="Sigla, nome ou cidade" data-placeholder-en="Acronym, name, or city">
+      </label>
+      <label class="md:w-36 text-xs font-bold tracking-wide uppercase text-gray-500">
+        <span class="lang-pt">Ano</span>
+        <span class="lang-en">Year</span>
+        <select id="prod-inst-year" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta">
+          <option value="" data-label-pt="Todos" data-label-en="All">Todos</option>
+          {% for row in data.years %}
+          <option value="{{ row.year }}" {% if row.year == default_year %}selected{% endif %}>{{ row.year }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label class="md:w-28 text-xs font-bold tracking-wide uppercase text-gray-500">
+        UF
+        <select id="prod-inst-uf" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta">
+          <option value="" data-label-pt="Todas" data-label-en="All">Todas</option>
+          {% for uf in ufs %}
+          {% if uf != "" %}
+          <option value="{{ uf }}">{{ uf }}</option>
+          {% endif %}
+          {% endfor %}
+        </select>
+      </label>
+    </div>
+
+    <div class="overflow-auto max-h-[40rem]">
+      <table id="prod-inst-table" class="uni-table w-full text-left border-collapse text-sm">
+        <caption class="sr-only">
+          <span class="lang-pt">Produção científica em IA por instituição brasileira</span>
+          <span class="lang-en">AI scientific output by Brazilian institution</span>
+        </caption>
+        <thead>
+          <tr class="border-b border-gray-200 text-gray-500">
+            <th scope="col" class="py-3 px-4 font-bold">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy" data-sort="name" data-type="text" aria-pressed="false">
+                <span class="lang-pt">Instituição</span>
+                <span class="lang-en">Institution</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy" data-sort="uf" data-type="text">
+                UF
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold text-right">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy ml-auto" data-sort="year" data-type="num">
+                <span class="lang-pt">No ano</span>
+                <span class="lang-en">In year</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-4 font-bold text-right">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy ml-auto" data-sort="total" data-type="num" aria-pressed="true">
+                Total
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for inst in data.institutions %}
+          <tr class="prod-inst-row border-b border-gray-100 hover:bg-[#faf9f6] transition-colors" data-short="{{ inst.short | escape }}" data-name="{{ inst.name | escape }}" data-uf="{{ inst.uf }}" data-city="{{ inst.city | escape }}" data-total="{{ inst.works_total }}" data-counts="{{ inst.counts | jsonify }}">
+            <th scope="row" class="py-3 px-4 font-medium text-navy">
+              <span class="block">{{ inst.short }}</span>
+              <span class="block text-xs font-normal text-gray-500 mt-0.5">
+                {{ inst.name }}{% if inst.city %} · {{ inst.city }}{% endif %}
+                {% if inst.federal_slug %}
+                <a href="{{ '/universidades.html' | relative_url }}#uni-{{ inst.federal_slug }}" class="text-terracotta hover:underline ml-1">
+                  <span class="lang-pt">orçamento federal</span>
+                  <span class="lang-en">federal budget</span>
+                </a>
+                {% endif %}
+              </span>
+            </th>
+            <td class="py-3 px-3 text-gray-600">{% if inst.uf and inst.uf != "" %}{{ inst.uf }}{% else %}—{% endif %}</td>
+            <td class="py-3 px-3 text-right tabular-nums text-gray-700 prod-year-cell">{{ inst.works_total }}</td>
+            <td class="py-3 px-4 text-right tabular-nums font-semibold text-navy prod-total-cell">{{ inst.works_total }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p id="prod-inst-empty" class="hidden px-4 py-8 text-center text-sm text-gray-500 no-print">
+      <span class="lang-pt">Nenhuma instituição corresponde à busca.</span>
+      <span class="lang-en">No institution matches this search.</span>
+    </p>
+  </div>
+
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+    <div class="p-4 md:p-6 border-b border-gray-100">
+      <h2 class="font-serif text-xl md:text-2xl font-bold text-navy mb-1">
+        <span class="lang-pt">Lista de trabalhos</span>
+        <span class="lang-en">Paper list</span>
+      </h2>
+      <p class="text-sm text-gray-500 mb-4">
+        <span class="lang-pt">Carrega um ano de cada vez. Título, DOI e instituições brasileiras do snapshot.</span>
+        <span class="lang-en">Loads one year at a time. Title, DOI, and Brazilian institutions from the snapshot.</span>
+      </p>
+      <div class="flex flex-col lg:flex-row gap-3 lg:items-end no-print">
+        <label class="flex-1 min-w-0 text-xs font-bold tracking-wide uppercase text-gray-500">
+          <span class="lang-pt">Buscar título</span>
+          <span class="lang-en">Search title</span>
+          <input id="prod-paper-search" type="search" autocomplete="off" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta" data-placeholder-pt="Título ou tópico" data-placeholder-en="Title or topic">
+        </label>
+        <label class="lg:w-36 text-xs font-bold tracking-wide uppercase text-gray-500">
+          <span class="lang-pt">Ano</span>
+          <span class="lang-en">Year</span>
+          <select id="prod-paper-year" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta">
+            {% for row in data.years %}
+            <option value="{{ row.year }}" {% if row.year == default_year %}selected{% endif %}>{{ row.year }}</option>
+            {% endfor %}
+          </select>
+        </label>
+        <label class="lg:w-56 text-xs font-bold tracking-wide uppercase text-gray-500">
+          <span class="lang-pt">Instituição</span>
+          <span class="lang-en">Institution</span>
+          <select id="prod-paper-inst" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta">
+            <option value="" data-label-pt="Todas" data-label-en="All">Todas</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table id="prod-paper-table" class="uni-table w-full text-left border-collapse text-sm">
+        <caption class="sr-only">
+          <span class="lang-pt">Trabalhos brasileiros em inteligência artificial</span>
+          <span class="lang-en">Brazilian works in artificial intelligence</span>
+        </caption>
+        <thead>
+          <tr class="border-b border-gray-200 text-gray-500">
+            <th scope="col" class="py-3 px-4 font-bold">
+              <span class="lang-pt">Título</span>
+              <span class="lang-en">Title</span>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold whitespace-nowrap">
+              <span class="lang-pt">Ano</span>
+              <span class="lang-en">Year</span>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold">
+              <span class="lang-pt">Instituições</span>
+              <span class="lang-en">Institutions</span>
+            </th>
+            <th scope="col" class="py-3 px-4 font-bold text-right whitespace-nowrap">
+              <span class="lang-pt">Citações</span>
+              <span class="lang-en">Citations</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="prod-paper-body"></tbody>
+      </table>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 py-4 border-t border-gray-100 no-print">
+      <p id="prod-paper-status" class="text-sm text-gray-500"></p>
+      <div class="flex items-center gap-2">
+        <button type="button" id="prod-paper-prev" class="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-md border border-gray-200 bg-white text-navy hover:border-terracotta disabled:opacity-40 disabled:hover:border-gray-200">
+          <span class="lang-pt">Anterior</span>
+          <span class="lang-en">Previous</span>
+        </button>
+        <button type="button" id="prod-paper-next" class="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-md border border-gray-200 bg-white text-navy hover:border-terracotta disabled:opacity-40 disabled:hover:border-gray-200">
+          <span class="lang-pt">Próxima</span>
+          <span class="lang-en">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-xs text-gray-400 italic mt-6">
+    <span class="lang-pt">
+      Fonte: {% include official-link.html href="https://openalex.org" text="OpenAlex" %} (dados CC0), snapshot de {{ data.source.retrieved_pt }}.
+      Filtro: afiliação brasileira; subcampo primário 1702 ou 1707; artigos, revisões e preprints; {{ data.year_from }}–{{ data.year_to }}.
+      Script de atualização: <code>scripts/fetch_producao_ia.py</code>.
+    </span>
+    <span class="lang-en">
+      Source: {% include official-link.html href="https://openalex.org" text="OpenAlex" %} (CC0 data), snapshot {{ data.source.retrieved_en }}.
+      Filter: Brazilian affiliation; primary subfield 1702 or 1707; articles, reviews, and preprints; {{ data.year_from }}–{{ data.year_to }}.
+      Refresh script: <code>scripts/fetch_producao_ia.py</code>.
+    </span>
+  </p>
+</article>
+
+<script type="application/json" id="producao-years">
+{{ data.years | jsonify }}
+</script>

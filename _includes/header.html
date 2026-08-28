@@ -1,0 +1,26 @@
+<header class="sticky top-0 z-50 bg-[#faf9f6]/95 backdrop-blur-md border-b border-gray-200 no-print">
+  <div class="max-w-7xl mx-auto py-4 px-6 md:px-12 flex justify-between items-center gap-4">
+    <div class="flex items-center min-w-0">
+      <a href="{{ '/' | relative_url }}" class="min-w-0">
+        <span class="lang-pt font-serif font-bold text-xl tracking-tight text-navy truncate block">INTELIGÊNCIA SOBERANA</span>
+        <span class="lang-en font-serif font-bold text-xl tracking-tight text-navy truncate block">SOVEREIGN INTELLIGENCE</span>
+      </a>
+    </div>
+    <div class="flex items-center gap-4 md:gap-6 shrink-0">
+      <nav class="flex items-center gap-4 text-sm font-medium">
+        <a href="{{ '/' | relative_url }}" {% if page.page_id == 'manifesto' %}aria-current="page" class="text-navy border-b-2 border-terracotta pb-0.5"{% else %}class="text-gray-500 hover:text-navy transition-colors"{% endif %}>
+          <span class="lang-pt">Manifesto</span>
+          <span class="lang-en">Open Letter</span>
+        </a>
+        <a href="{{ '/relatorio.html' | relative_url }}" {% if page.page_id == 'relatorio' %}aria-current="page" class="text-navy border-b-2 border-terracotta pb-0.5"{% else %}class="text-gray-500 hover:text-navy transition-colors"{% endif %}>
+          <span class="lang-pt">Relatório</span>
+          <span class="lang-en">Report</span>
+        </a>
+      </nav>
+      <div class="inline-flex rounded-md border border-gray-200 bg-white p-0.5" role="group" aria-label="Language">
+        <button type="button" data-lang="pt" onclick="setLanguage('pt')" class="lang-switch px-3 py-1.5 rounded text-xs font-bold tracking-wide transition-colors">PT</button>
+        <button type="button" data-lang="en" onclick="setLanguage('en')" class="lang-switch px-3 py-1.5 rounded text-xs font-bold tracking-wide transition-colors">EN</button>
+      </div>
+    </div>
+  </div>
+</header>

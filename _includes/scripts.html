@@ -1,0 +1,29 @@
+{% if page.charts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+{% endif %}
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+{% unless page.page_id == 'glossario' %}
+{% include glossary-data.html %}
+<script src="{{ '/assets/js/glossary.js' | relative_url }}"></script>
+{% endunless %}
+{% if page.page_id == 'manifesto' or page.page_id == 'relatorio' %}
+{% include city-tip-data.html %}
+<script src="{{ '/assets/js/city-tip.js' | relative_url }}"></script>
+{% endif %}
+{% if page.manifesto_js %}
+<script src="{{ '/assets/js/manifesto.js' | relative_url }}"></script>
+{% endif %}
+{% if page.universidades_js %}
+<script src="{{ '/assets/js/universidades.js' | relative_url }}"></script>
+{% endif %}
+{% if page.centros_js %}
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ '/assets/js/centros.js' | relative_url }}"></script>
+{% endif %}
+{% if page.producao_js %}
+<script src="{{ '/assets/js/producao.js' | relative_url }}"></script>
+{% endif %}
+{% if page.custo_prompt_js %}
+<script src="{{ '/assets/js/custo-prompt.js' | relative_url }}"></script>
+{% endif %}

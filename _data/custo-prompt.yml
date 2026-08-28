@@ -1,0 +1,377 @@
+# Educational cost ranges for a typical frontier-LLM prompt.
+# Figures are literature bands, not an audit of any vendor.
+source:
+  retrieved: 2026-08-28
+  retrieved_pt: 28 de agosto de 2026
+  retrieved_en: 28 August 2026
+
+simulator:
+  chars_per_token: 4
+  sample_prompt:
+    pt: "Explique o que é um token de IA em duas frases."
+    en: "Explain what an AI token is in two sentences."
+  chat:
+    output_tokens_min: 150
+    output_ratio: 3
+    output_tokens_cap: 800
+    energy_wh_per_1k_output:
+      min: 0.3
+      max: 6.0
+    api_usd_per_1k_input: 0.0025
+    api_usd_per_1k_output: 0.01
+  reasoning:
+    output_multiplier:
+      min: 5
+      max: 15
+    energy_wh_per_1k_output:
+      min: 1.5
+      max: 40
+    api_usd_per_1k_input: 0.015
+    api_usd_per_1k_output: 0.06
+  water_l_per_kwh:
+    min: 0.55
+    max: 3.69
+  training_usd:
+    min: 40000000
+    max: 191000000
+  amortization_queries:
+    min: 1000000000
+    max: 10000000000
+  vitrine_usd_per_month: 20
+
+acts:
+  - id: before
+    kicker:
+      pt: Ato 0
+      en: Act 0
+    title:
+      pt: O que já existia antes de você digitar
+      en: What already existed before you typed
+    lead:
+      pt: Um prompt só “custa centavos” porque alguém já pagou — em silício, energia, água e trabalho — para o modelo existir e permanecer ligado.
+      en: A prompt only “costs cents” because someone already paid — in silicon, energy, water, and labor — for the model to exist and stay on.
+  - id: during
+    kicker:
+      pt: Ato 1
+      en: Act 1
+    title:
+      pt: O caminho deste prompt
+      en: This prompt’s path
+    lead:
+      pt: Da caixa de texto até o parágrafo na tela, o pedido vira tokens, passa por filtros, atravessa uma rede neural e, nos modelos de raciocínio, gasta compute extra que você não vê.
+      en: From the text box to the paragraph on screen, the request becomes tokens, passes filters, runs through a neural net, and — in reasoning models — spends extra compute you never see.
+  - id: after
+    kicker:
+      pt: Ato 2
+      en: Act 2
+    title:
+      pt: O que não sai na fatura
+      en: What never appears on the bill
+    lead:
+      pt: Energia, água, trabalho no Sul Global e o risco de o Brasil virar somente hospedeiro de carga alheia não cabem na linha “US$ 0,00”.
+      en: Energy, water, Global South labor, and the risk that Brazil becomes only a host for someone else’s workload do not fit on the “US$ 0.00” line.
+
+stages:
+  - id: scrape
+    act: before
+    side: left
+    cost_kind: afundado
+    n: 1
+    receipt: data
+    title:
+      pt: Coleta de dados
+      en: Data collection
+    figure:
+      pt: Bilhões de páginas, livros e código
+      en: Billions of pages, books, and code
+    lead:
+      pt: Antes do chat existir, o laboratório varreu a web, livros, repositórios de código e outros corpora. Grande parte desse material nunca foi licenciada para treino. O “conhecimento” do modelo começa como extração.
+      en: Before the chat existed, the lab swept the web, books, code repositories, and other corpora. Much of that material was never licensed for training. The model’s “knowledge” begins as extraction.
+    sources: [1, 9, 13]
+  - id: labeling
+    act: before
+    side: right
+    cost_kind: qualitativo
+    n: 2
+    receipt: labor
+    title:
+      pt: Rotulagem e RLHF no Sul Global
+      en: Labeling and RLHF in the Global South
+    figure:
+      pt: US$ 1,32–2,00 / hora
+      en: US$ 1.32–2.00 / hour
+    lead:
+      pt: Humanos no Quênia, na Venezuela, nas Filipinas e no Brasil classificam texto tóxico e comparam respostas para o alinhamento (RLHF). A TIME documentou rotuladores da Sama, no Quênia, a US$ 1,32–2,00/hora — enquanto o laboratório pagava à firma US$ 12,50/hora. Na Scale AI, um redator de português do Brasil era ofertado a US$ 3,97/hora; o de Portugal, a US$ 8,20 pela mesma descrição de vaga.
+      en: Humans in Kenya, Venezuela, the Philippines, and Brazil label toxic text and rank answers for alignment (RLHF). TIME documented Sama annotators in Kenya at US$ 1.32–2.00/hour — while the lab paid the vendor US$ 12.50/hour. At Scale AI, a Brazilian-Portuguese writer was posted at US$ 3.97/hour; the Portugal posting, US$ 8.20 for the same job description.
+    sources: [5, 6, 12]
+  - id: pretrain
+    act: before
+    side: left
+    cost_kind: afundado
+    n: 3
+    receipt: training
+    title:
+      pt: Pré-treino
+      en: Pre-training
+    figure:
+      pt: US$ 40–191 milhões
+      en: US$ 40–191 million
+    lead:
+      pt: A corrida final de treino de um modelo de fronteira (GPT-4, Gemini Ultra) já custava dezenas a quase duzentos milhões de dólares em hardware amortizado, energia e equipe, segundo a Epoch AI e o AI Index. Isso é CapEx concentrado num único artefato. Dividir por um bilhão de consultas faz o treino parecer “barato por prompt” — e é exatamente assim que ele some da conversa.
+      en: The final training run of a frontier model (GPT-4, Gemini Ultra) already cost tens to almost two hundred million dollars in amortized hardware, energy, and staff, according to Epoch AI and the AI Index. That is CapEx concentrated in a single artifact. Divide it by a billion queries and training looks “cheap per prompt” — which is exactly how it disappears from the conversation.
+    sources: [1]
+  - id: finetune
+    act: before
+    side: right
+    cost_kind: afundado
+    n: 4
+    receipt: training
+    title:
+      pt: Fine-tuning e alinhamento
+      en: Fine-tuning and alignment
+    figure:
+      pt: SFT + RLHF + DPO
+      en: SFT + RLHF + DPO
+    lead:
+      pt: "Depois do pré-treino bruto vem a adaptação: supervised fine-tuning em demonstrações humanas, RLHF ou DPO para preferências, e red-teaming de segurança. Cada ciclo gasta mais GPU e mais horas de anotação. Sem essa camada, o modelo de fronteira não vira um produto de chat."
+      en: "After raw pre-training comes adaptation: supervised fine-tuning on human demonstrations, RLHF or DPO for preferences, and safety red-teaming. Each cycle spends more GPU time and more annotation hours. Without this layer, the frontier model does not become a chat product."
+    sources: [1, 5, 7]
+  - id: datacenter
+    act: before
+    side: left
+    cost_kind: afundado
+    n: 5
+    receipt: standing
+    title:
+      pt: Infraestrutura permanente
+      en: Standing infrastructure
+    figure:
+      pt: Sempre ligado · GW na rede
+      en: Always on · GW on the grid
+    lead:
+      pt: "O modelo não “acende” quando você envia o prompt. Clusters de GPU, refrigeração e rede ficam no ar o dia inteiro. A IEA projeta que o consumo elétrico de data centers pode dobrar nesta década. No Brasil, a Scala AI City mira até 4,7 GW — mais que a hidrelétrica de Jirau — com energia barata e isenção fiscal atraindo carga do Norte Global. Quem paga o reforço da rede é a pergunta que o Idec faz: “Quem vai pagar a conta?”"
+      en: "The model does not “wake up” when you hit send. GPU clusters, cooling, and networking stay up all day. The IEA projects data-center electricity could double this decade. In Brazil, Scala AI City targets up to 4.7 GW — more than the Jirau hydropower plant — with cheap power and tax breaks pulling Global North workloads. Who pays for the grid upgrades is the question consumer group Idec asks: “Who will pay the bill?”"
+    sources: [8, 11]
+  - id: type
+    act: during
+    side: right
+    cost_kind: vitrine
+    n: 6
+    receipt: vitrine
+    title:
+      pt: Digitação
+      en: Typing
+    figure:
+      pt: US$ 0,00 na tela
+      en: US$ 0.00 on screen
+    lead:
+      pt: Você abre o chat e escreve. No plano gratuito o preço de vitrine é zero; o Plus custa da ordem de US$ 20/mês, diluído em dezenas de prompts. Esse é o único número que a interface mostra — e por isso parece que a resposta é barata.
+      en: You open the chat and type. On the free tier the sticker price is zero; Plus is on the order of US$ 20/month, spread over dozens of prompts. That is the only number the interface shows — which is why the answer feels cheap.
+    sources: [2]
+  - id: tokenize
+    act: during
+    side: left
+    cost_kind: marginal
+    n: 7
+    receipt: tokens
+    title:
+      pt: Tokenização
+      en: Tokenization
+    figure:
+      pt: ~4 caracteres / token
+      en: ~4 characters / token
+    lead:
+      pt: O texto vira uma sequência de tokens — pedaços de palavra, não palavras inteiras. Uma regra de bolso é ~4 caracteres por token em inglês; em português a conta oscila. A partir daqui, cada token de entrada e cada token de saída entra na conta de energia, de API e de tempo de GPU.
+      en: The text becomes a sequence of tokens — pieces of words, not whole words. A rule of thumb is ~4 characters per token in English; in Portuguese the ratio wobbles. From here, every input token and every output token hits the energy, API, and GPU-time bill.
+    sources: [2]
+  - id: moderate
+    act: during
+    side: right
+    cost_kind: marginal
+    n: 8
+    receipt: tokens
+    title:
+      pt: Moderação e roteamento
+      en: Moderation and routing
+    figure:
+      pt: Filtros + Mixture-of-Experts
+      en: Filters + Mixture-of-Experts
+    lead:
+      pt: Um classificador de segurança lê o pedido antes do modelo grande. Em seguida o sistema escolhe qual modelo (ou quais “experts” de uma Mixture-of-Experts) vai responder. Já há compute gasto — e ainda não começou o parágrafo que você vai ler.
+      en: A safety classifier reads the request before the large model does. Then the system picks which model (or which Mixture-of-Experts “experts”) will answer. Compute is already spent — and the paragraph you will read has not started.
+    sources: [3, 7]
+  - id: forward
+    act: during
+    side: left
+    cost_kind: marginal
+    n: 9
+    receipt: energy
+    title:
+      pt: Forward pass
+      en: Forward pass
+    figure:
+      pt: ~0,3–3 Wh / consulta de chat
+      en: ~0.3–3 Wh / chat query
+    lead:
+      pt: A rede calcula, camada a camada, a próxima distribuição de tokens. A Epoch AI estima ~0,3 Wh para um pedido típico de GPT-4o; o número viral de 3 Wh é um teto pessimista. Luccioni et al. mediram da ordem de 0,004 kWh (4 Wh) por consulta no BLOOM-176B em cluster de pesquisa, sem o empacotamento comercial. A faixa é larga porque hardware, batching e tamanho do modelo mudam tudo.
+      en: The network computes, layer by layer, the next token distribution. Epoch AI estimates ~0.3 Wh for a typical GPT-4o request; the viral 3 Wh figure is a pessimistic ceiling. Luccioni et al. measured on the order of 0.004 kWh (4 Wh) per query for BLOOM-176B on a research cluster, without commercial batching. The band is wide because hardware, batching, and model size change everything.
+    sources: [2, 3]
+  - id: scaling
+    act: during
+    side: right
+    cost_kind: marginal
+    n: 10
+    receipt: energy
+    title:
+      pt: Inference scaling
+      en: Inference scaling
+    figure:
+      pt: 5–15× mais tokens ocultos
+      en: 5–15× more hidden tokens
+    lead:
+      pt: Modelos de raciocínio (o1 e sucessores) gastam compute na hora da resposta — “test-time compute”. Pensam em tokens que você não vê e que, na API, entram na fatura. Latência e custo por consulta sobem uma ordem de grandeza (cerca de 5–6× no preço do token, e bem mais no tempo até a primeira palavra). É aqui que o recibo deste simulador dispara.
+      en: Reasoning models (o1 and successors) spend compute at answer time — “test-time compute.” They think in tokens you never see, which still hit the API bill. Latency and cost per query jump by an order of magnitude (about 5–6× on token price, and far more in time-to-first-word). This is where this simulator’s receipt spikes.
+    sources: [7]
+  - id: decode
+    act: during
+    side: left
+    cost_kind: marginal
+    n: 11
+    receipt: api
+    title:
+      pt: Decodificação e streaming
+      en: Decoding and streaming
+    figure:
+      pt: Token a token na tela
+      en: Token by token on screen
+    lead:
+      pt: O modelo amostra um token, envia, amostra o próximo. Pode chamar ferramentas (busca, código). Um segundo filtro lê a saída. Na API, a ordem de grandeza de 2024–25 era ~US$ 2,50 / milhão de tokens de entrada e ~US$ 10 / milhão de saída num chat de fronteira; no raciocínio, ~US$ 15 e ~US$ 60. Não é o preço vigente de um vendor — é a escala do que o prompt “custa” quando alguém paga por token.
+      en: The model samples a token, streams it, samples the next. It may call tools (search, code). A second filter reads the output. On the API, the 2024–25 order of magnitude was ~US$ 2.50 / million input tokens and ~US$ 10 / million output for frontier chat; for reasoning, ~US$ 15 and ~US$ 60. This is not a live vendor price — it is the scale of what the prompt “costs” when someone pays per token.
+    sources: [2, 7]
+  - id: energy
+    act: after
+    side: right
+    cost_kind: marginal
+    n: 12
+    receipt: water
+    title:
+      pt: Energia e água desta consulta
+      en: Energy and water for this query
+    figure:
+      pt: 0,3–25 ml / resposta média
+      en: 0.3–25 ml / median reply
+    lead:
+      pt: "Li et al. estimaram que o GPT-3 “bebia” uma garrafa de 500 ml a cada 10–50 respostas médias (cerca de 10–25 ml por pedido), somando água on-site e a água da geração elétrica. Treinar o GPT-3 nos data centers da Microsoft nos EUA: ~5,4 milhões de litros. Números de 2025 de vendors (gotas por consulta) são menores — e não apagam o volume absoluto de um campus de gigawatts na rede brasileira."
+      en: "Li et al. estimated GPT-3 “drank” a 500 ml bottle every 10–50 median replies (about 10–25 ml per request), counting on-site cooling and the water in electricity generation. Training GPT-3 in Microsoft’s US datacenters: ~5.4 million liters. Vendor 2025 figures (drops per query) are lower — and they do not erase the absolute volume of a gigawatt-scale campus on the Brazilian grid."
+    sources: [4, 8, 11]
+  - id: labor
+    act: after
+    side: left
+    cost_kind: qualitativo
+    n: 13
+    receipt: labor
+    title:
+      pt: Trabalho que não amortiza
+      en: Labor that does not amortize
+    figure:
+      pt: Fora da planilha do token
+      en: Off the token spreadsheet
+    lead:
+      pt: Dividir US$ 78 milhões por dez bilhões de consultas produz frações de centavo e apaga as pessoas. O rotulador queniano não recebe um royalty por prompt. A água evaporada em Eldorado do Sul não volta quando a consulta termina. Nada disso cabe na linha do Wh.
+      en: Divide US$ 78 million by ten billion queries and you get fractions of a cent, and you erase the people. The Kenyan labeler does not get a royalty per prompt. Water evaporated in Eldorado do Sul does not return when the query ends. None of that fits on the watt-hour line.
+    sources: [5, 6, 11]
+
+controversies:
+  - id: copyright
+    stage: scrape
+    title:
+      pt: Processos de copyright
+      en: Copyright lawsuits
+    body:
+      pt: O New York Times processou OpenAI e Microsoft (dez. 2023) por treino e reprodução de reportagens. Autores processaram a Anthropic; em 2025–26 a empresa fechou acordo da ordem de US$ 1,5 bilhão no caso Bartz, sobre livros de bibliotecas-sombra — um marco financeiro, não uma sentença sobre fair use de material licitamente obtido.
+      en: The New York Times sued OpenAI and Microsoft (Dec. 2023) over training on and reproducing journalism. Authors sued Anthropic; in 2025–26 the company settled the Bartz case on the order of US$ 1.5 billion over shadow-library books — a financial landmark, not a ruling on fair use of lawfully obtained material.
+    url: https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html
+    link:
+      pt: The New York Times (processo)
+      en: The New York Times (lawsuit)
+    sources: [9, 13]
+  - id: mental-health
+    stage: labor
+    title:
+      pt: Saúde mental e chatbots
+      en: Mental health and chatbots
+    body:
+      pt: "Famílias processaram a Character.AI (e, por vínculo, o Google) alegando que chatbots contribuíram para o suicídio de adolescentes, incluindo Sewell Setzer III (14 anos, Flórida, 2024). Em janeiro de 2026 as empresas anunciaram acordo em vários estados; os termos não foram divulgados. Cartão curto: o produto de conversa tem custo humano que a API não precifica."
+      en: "Families sued Character.AI (and, through its ties, Google) alleging chatbots contributed to teenagers’ suicides, including Sewell Setzer III (14, Florida, 2024). In January 2026 the companies announced settlements in several states; terms were not disclosed. Short card: the conversation product has a human cost the API does not price."
+    url: https://apnews.com/article/ai-chatbot-lawsuits-character-google-fbca4e105b0adc5f3e5ea096851437de
+    link:
+      pt: AP News (acordos)
+      en: AP News (settlements)
+    sources: [10]
+
+references:
+  - n: 1
+    text:
+      pt: "Cottier, B. et al. (2024). “The rising costs of training frontier AI models.” arXiv:2405.21015 / Epoch AI. GPT-4: ~US$ 40 milhões (hardware+energia da corrida final) a ~US$ 41–78 milhões com equipe; Gemini Ultra: ~US$ 30–191 milhões conforme o método."
+      en: "Cottier, B. et al. (2024). “The rising costs of training frontier AI models.” arXiv:2405.21015 / Epoch AI. GPT-4: ~US$ 40 million (final-run hardware+energy) to ~US$ 41–78 million with staff; Gemini Ultra: ~US$ 30–191 million depending on method."
+    url: https://arxiv.org/abs/2405.21015
+  - n: 2
+    text:
+      pt: "Epoch AI (2025). “How much energy does ChatGPT use?” Estima ~0,3 Wh para um pedido típico de GPT-4o (~500 tokens de saída); o atalho de 3 Wh/consulta é tratado como teto pessimista."
+      en: "Epoch AI (2025). “How much energy does ChatGPT use?” Estimates ~0.3 Wh for a typical GPT-4o request (~500 output tokens); the 3 Wh/query shortcut is treated as a pessimistic ceiling."
+    url: https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use
+  - n: 3
+    text:
+      pt: "Luccioni, A. S., Jernite, Y. & Strubell, E. (2024). “Power Hungry Processing: Watts Driving the Cost of AI Deployment?” FAccT / arXiv:2311.16863. Inferência generativa consome ordens de magnitude mais que tarefas discriminativas; BLOOM-176B ~0,004 kWh/consulta em cluster de pesquisa."
+      en: "Luccioni, A. S., Jernite, Y. & Strubell, E. (2024). “Power Hungry Processing: Watts Driving the Cost of AI Deployment?” FAccT / arXiv:2311.16863. Generative inference uses orders of magnitude more energy than discriminative tasks; BLOOM-176B ~0.004 kWh/query on a research cluster."
+    url: https://arxiv.org/abs/2311.16863
+  - n: 4
+    text:
+      pt: "Li, P., Yang, J., Islam, M. A. & Ren, S. (2023/2025). “Making AI Less ‘Thirsty’.” arXiv:2304.03271 / Communications of the ACM. Treino do GPT-3: ~5,4 milhões de litros; ~500 ml de água a cada 10–50 respostas médias."
+      en: "Li, P., Yang, J., Islam, M. A. & Ren, S. (2023/2025). “Making AI Less ‘Thirsty’.” arXiv:2304.03271 / Communications of the ACM. GPT-3 training: ~5.4 million liters; ~500 ml of water every 10–50 median replies."
+    url: https://arxiv.org/abs/2304.03271
+  - n: 5
+    text:
+      pt: "Perrigo, B. (18 jan. 2023). “OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic.” TIME. Rotuladores da Sama no Quênia: US$ 1,32–2,00/hora; OpenAI pagava US$ 12,50/hora à firma."
+      en: "Perrigo, B. (18 Jan. 2023). “OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic.” TIME. Sama annotators in Kenya: US$ 1.32–2.00/hour; OpenAI paid the vendor US$ 12.50/hour."
+    url: https://time.com/6247678/openai-chatgpt-kenya-workers/
+  - n: 6
+    text:
+      pt: "Rest of World (2023). “Scale AI uses low-paid workers to solve tech’s language problem.” Português do Brasil ofertado a US$ 3,97/hora; português de Portugal a US$ 8,20; alemão a US$ 21,55; telugo a US$ 1,43."
+      en: "Rest of World (2023). “Scale AI uses low-paid workers to solve tech’s language problem.” Brazilian Portuguese posted at US$ 3.97/hour; Portugal Portuguese at US$ 8.20; German at US$ 21.55; Telugu at US$ 1.43."
+    url: https://restofworld.org/2023/scale-ai-language-training-hiring/
+  - n: 7
+    text:
+      pt: "OpenAI (12 set. 2024). “OpenAI o1 System Card.” Modelos de raciocínio gastam compute extra na inferência (test-time compute); tokens de “pensamento” são cobrados e a latência sobe fortemente frente ao GPT-4o."
+      en: "OpenAI (12 Sept. 2024). “OpenAI o1 System Card.” Reasoning models spend extra compute at inference (test-time compute); “thinking” tokens are billed and latency rises sharply versus GPT-4o."
+    url: https://openai.com/index/openai-o1-system-card/
+  - n: 8
+    text:
+      pt: "Agência Internacional de Energia (2024–2025). Electricity 2024 e Energy and AI. Consumo elétrico de data centers pode dobrar nesta década; a carga de IA pressiona redes e água de refrigeração."
+      en: "International Energy Agency (2024–2025). Electricity 2024 and Energy and AI. Data-center electricity use could double this decade; AI load stresses grids and cooling water."
+    url: https://www.iea.org/reports/energy-and-ai
+  - n: 9
+    text:
+      pt: "The New York Times (27 dez. 2023). “The Times Sues OpenAI and Microsoft Over A.I. Use of Copyrighted Work.” Processo sobre treino e reprodução de jornalismo."
+      en: "The New York Times (27 Dec. 2023). “The Times Sues OpenAI and Microsoft Over A.I. Use of Copyrighted Work.” Suit over training on and reproducing journalism."
+    url: https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-microsoft-lawsuit.html
+  - n: 10
+    text:
+      pt: "Associated Press (jan. 2026). “Google and chatbot maker Character to settle lawsuit alleging chatbot pushed teen to suicide.” Acordos em vários estados; termos não divulgados. Inclui o caso de Sewell Setzer III."
+      en: "Associated Press (Jan. 2026). “Google and chatbot maker Character to settle lawsuit alleging chatbot pushed teen to suicide.” Multi-state settlements; terms undisclosed. Includes the Sewell Setzer III case."
+    url: https://apnews.com/article/ai-chatbot-lawsuits-character-google-fbca4e105b0adc5f3e5ea096851437de
+  - n: 11
+    text:
+      pt: "Inteligência Soberana (2026). Relatório de pesquisa — seções sobre Scala AI City, energia, Idec e o risco de “fazenda de dados”."
+      en: "Sovereign Intelligence (2026). Research report — sections on Scala AI City, energy, Idec, and the “data farm” risk."
+    url: /relatorio.html
+  - n: 12
+    text:
+      pt: "Rest of World (2023–2025). Reportagens sobre clickwork venezuelano, Remotasks/Scale AI e a substituição de anotadores pela própria IA generativa. Posada (Yale): após os EUA, a Venezuela chegou a hospedar o maior número de data workers no mundo."
+      en: "Rest of World (2023–2025). Reporting on Venezuelan clickwork, Remotasks/Scale AI, and generative AI displacing annotators. Posada (Yale): after the US, Venezuela hosted among the world’s largest populations of data workers."
+    url: https://restofworld.org/2023/scale-ai-language-training-hiring/
+  - n: 13
+    text:
+      pt: "Bartz v. Anthropic (N.D. Cal.). Acordo da ordem de US$ 1,5 bilhão (aprovação preliminar em 2025, trâmite em 2026) sobre treino com livros de bibliotecas-sombra. Não resolve o fair use de obras obtidas licitamente nem o processo do New York Times contra a OpenAI."
+      en: "Bartz v. Anthropic (N.D. Cal.). Settlement on the order of US$ 1.5 billion (preliminary approval 2025, proceedings in 2026) over training on shadow-library books. It does not settle fair use of lawfully obtained works, nor the New York Times case against OpenAI."
+    url: https://www.reuters.com/legal/litigation/anthropic-agrees-pay-15-billion-settle-authors-ai-copyright-lawsuit-2025-09-25/

@@ -1,0 +1,26 @@
+{% assign people = site.data.assinaturas.signatories %}
+{% if people and people.size > 0 %}
+{% assign n = people.size %}
+<section class="max-w-7xl mx-auto px-6 md:px-12 pb-16" aria-labelledby="assinaturas-heading">
+  <div class="border-t border-gray-200 pt-10 text-center">
+    <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-2">
+      <span class="lang-pt">{% if n == 1 %}Apoiador(a){% else %}{{ n }} Apoiadores(as){% endif %}</span>
+      <span class="lang-en">{% if n == 1 %}Supporter{% else %}{{ n }} Supporters{% endif %}</span>
+    </p>
+    <h3 id="assinaturas-heading" class="font-serif text-2xl font-bold text-navy mb-6">
+      <span class="lang-pt">Estas pessoas apoiam esta ideia</span>
+      <span class="lang-en">These people support this idea</span>
+    </h3>
+    <ul class="flex flex-wrap justify-center gap-3">
+      {% for person in people %}
+      <li class="min-w-[12rem] bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm text-left">
+        <p class="font-serif font-bold text-navy">{{ person.name }}</p>
+        {% if person.location %}
+        <p class="text-xs text-gray-500 mt-0.5 font-light">{{ person.location }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

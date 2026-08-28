@@ -1,0 +1,5 @@
+# Confirmed manifesto signatures. Add an entry only after email confirmation.
+# Public display: first name + last-name initials, plus location (privacy format).
+signatories:
+  - name: Julio C. F.
+    location: Santa Catarina

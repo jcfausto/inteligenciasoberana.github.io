@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+  {% include head.html %}
+</head>
+<body class="{% if page.theme == 'report' %}bg-[#e7e2d8]{% else %}bg-[#faf9f6]{% endif %} text-gray-800 antialiased font-sans">
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
+  {% include scripts.html %}
+</body>
+</html>

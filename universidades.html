@@ -1,0 +1,189 @@
+---
+layout: default
+title: Universidades federais — Inteligência Soberana
+description: Orçamento discricionário federal de 2026 das 69 universidades federais do Brasil.
+page_id: universidades
+permalink: /universidades.html
+universidades_js: true
+---
+{% assign data = site.data.universidades %}
+{% assign ufs = data.institutions | map: "uf" | uniq | sort %}
+<article class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+  <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
+    <span class="lang-pt">Acompanhamento orçamentário · {{ data.year }}</span>
+    <span class="lang-en">Budget tracker · {{ data.year }}</span>
+  </p>
+  <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-3 leading-tight">
+    <span class="lang-pt">69 universidades federais do Brasil</span>
+    <span class="lang-en">69 federal universities in Brazil</span>
+  </h1>
+  <p class="text-lg text-gray-700 font-light leading-relaxed max-w-3xl mb-8">
+    <span class="lang-pt">Orçamento discricionário (RP2) autorizado na Lei Orçamentária Anual de {{ data.year }} para cada universidade federal — sem emendas parlamentares, sem receita própria e sem a folha de pessoal obrigatória.</span>
+    <span class="lang-en">Discretionary (RP2) budget authorized in the {{ data.year }} Annual Budget Law for each federal university — excluding parliamentary emendas, own revenue, and mandatory payroll.</span>
+  </p>
+
+  <div class="space-y-4 text-gray-700 font-light leading-relaxed max-w-3xl mb-10">
+    <p class="lang-pt">
+      A série comparável por instituição é o {% include glossary-term.html id="custeio-discricionario" text="custeio discricionário" %} RP2 da Andifes: o Projeto de Lei (PLOA), o corte feito pelo Congresso na tramitação, e o valor autorizado na {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="LOA 2026 (Lei 15.346)" %}. A coluna PNAES é a ação de assistência estudantil (Anexo 2 da Andifes).
+    </p>
+    <p class="lang-en">
+      The comparable per-institution series is Andifes RP2 {% include glossary-term.html id="custeio-discricionario" text="discretionary funding" %}: the executive bill (PLOA), the cut made by Congress, and the amount authorized in the {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="2026 Annual Budget (Law 15.346)" %}. The PNAES column is student-assistance funding (Andifes Annex 2).
+    </p>
+    <p class="lang-pt text-sm text-gray-600">
+      O manifesto cita <strong>R$ 7,85 bilhões</strong> de orçamento discricionário e <strong>R$ 335,9 milhões</strong> de investimento de capital para a rede inteira, segundo o {% include official-link.html href="https://observatoriodoconhecimento.org.br/" text="Observatório do Conhecimento" %} — cifras de sistema que incluem emendas destinadas às universidades e não estão desagregadas por campus nesta tabela. Em janeiro de 2026, a Portaria GM/MPO nº 12/2026 abriu crédito suplementar para evitar colapso imediato; os valores abaixo permanecem os da LOA sancionada, porque a recomposição não foi publicada por instituição.
+    </p>
+    <p class="lang-en text-sm text-gray-600">
+      The manifesto cites <strong>R$ 7.85 billion</strong> in discretionary funding and <strong>R$ 335.9 million</strong> in capital investment for the whole network, from the {% include official-link.html href="https://observatoriodoconhecimento.org.br/" text="Observatório do Conhecimento" %} — system-wide figures that include emendas to universities and are not split by campus in this table. In January 2026, Ordinance GM/MPO No. 12/2026 opened a supplementary credit to avert immediate collapse; the figures below remain those of the sanctioned budget law, because that recomposition was not published per institution.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Instituições</span>
+        <span class="lang-en">Institutions</span>
+      </p>
+      <p class="font-serif text-3xl font-bold text-navy">{{ data.count }}</p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">PLOA {{ data.year }}</p>
+      <p class="font-serif text-2xl md:text-3xl font-bold text-navy" data-money="{{ data.totals.ploa }}" data-money-mode="bi">{{ data.totals.ploa }}</p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Corte do Congresso</span>
+        <span class="lang-en">Congressional cut</span>
+      </p>
+      <p class="font-serif text-2xl md:text-3xl font-bold text-navy" data-money="{{ data.totals.cut }}" data-money-mode="mi">{{ data.totals.cut }}</p>
+      <p class="text-xs text-gray-500 mt-1">
+        <span class="lang-pt">{{ data.totals.cut_pct | replace: '.', ',' }}%</span>
+        <span class="lang-en">{{ data.totals.cut_pct }}%</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">LOA autorizada</span>
+        <span class="lang-en">Authorized LOA</span>
+      </p>
+      <p class="font-serif text-2xl md:text-3xl font-bold text-navy" data-money="{{ data.totals.loa }}" data-money-mode="bi">{{ data.totals.loa }}</p>
+    </div>
+  </div>
+
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+    <div class="flex flex-col md:flex-row gap-3 md:items-end p-4 md:p-6 border-b border-gray-100 no-print">
+      <label class="flex-1 min-w-0 text-xs font-bold tracking-wide uppercase text-gray-500">
+        <span class="lang-pt">Buscar</span>
+        <span class="lang-en">Search</span>
+        <input id="uni-search" type="search" autocomplete="off" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta" data-placeholder-pt="Sigla, nome ou cidade" data-placeholder-en="Acronym, name, or city">
+      </label>
+      <label class="md:w-40 text-xs font-bold tracking-wide uppercase text-gray-500">
+        <span class="lang-pt">UF</span>
+        <span class="lang-en">State</span>
+        <select id="uni-uf" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta">
+          <option value="" data-label-pt="Todas" data-label-en="All">Todas</option>
+          {% for uf in ufs %}
+          <option value="{{ uf }}">{{ uf }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </div>
+
+    <div class="overflow-x-auto md:overflow-visible">
+      <table id="uni-table" class="uni-table w-full text-left border-collapse text-sm">
+        <caption class="sr-only">
+          <span class="lang-pt">Orçamento discricionário RP2 de {{ data.year }} das 69 universidades federais</span>
+          <span class="lang-en">{{ data.year }} RP2 discretionary budget of the 69 federal universities</span>
+        </caption>
+        <thead>
+          <tr class="border-b border-gray-200 text-gray-500">
+            <th scope="col" class="py-3 px-4 font-bold">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy" data-sort="name" data-type="text" aria-pressed="false">
+                <span class="lang-pt">Universidade</span>
+                <span class="lang-en">University</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy" data-sort="uf" data-type="text">
+                UF
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold text-right">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy ml-auto" data-sort="ploa" data-type="num">
+                PLOA
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold text-right">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy ml-auto" data-sort="cut" data-type="num">
+                <span class="lang-pt">Corte</span>
+                <span class="lang-en">Cut</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold text-right">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy ml-auto" data-sort="loa" data-type="num">
+                LOA
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-4 font-bold text-right">
+              <button type="button" class="uni-sort inline-flex items-center gap-1 hover:text-navy ml-auto" data-sort="pnaes" data-type="num">
+                PNAES
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for uni in data.institutions %}
+          <tr id="uni-{{ uni.slug }}" class="uni-row border-b border-gray-100 hover:bg-[#faf9f6] transition-colors" data-acronym="{{ uni.acronym }}" data-name-pt="{{ uni.name_pt }}" data-name-en="{{ uni.name_en }}" data-uf="{{ uni.uf }}" data-city="{{ uni.city }}" data-ploa="{{ uni.ploa }}" data-cut="{{ uni.cut }}" data-loa="{{ uni.loa }}" data-pnaes="{{ uni.pnaes_loa }}">
+            <th scope="row" class="py-3 px-4 font-medium text-navy">
+              <span class="block">{{ uni.acronym }}</span>
+              <span class="block text-xs font-normal text-gray-500 mt-0.5 lang-pt">{{ uni.name_pt }} · {{ uni.city }}</span>
+              <span class="block text-xs font-normal text-gray-500 mt-0.5 lang-en">{{ uni.name_en }} · {{ uni.city }}</span>
+            </th>
+            <td class="py-3 px-3 text-gray-600">{{ uni.uf }}</td>
+            <td class="py-3 px-3 text-right tabular-nums text-gray-700" data-money="{{ uni.ploa }}" data-money-mode="brl">{{ uni.ploa }}</td>
+            <td class="py-3 px-3 text-right tabular-nums text-gray-700" data-money="{{ uni.cut }}" data-money-mode="brl">{{ uni.cut }}</td>
+            <td class="py-3 px-3 text-right tabular-nums font-semibold text-navy" data-money="{{ uni.loa }}" data-money-mode="brl">{{ uni.loa }}</td>
+            <td class="py-3 px-4 text-right tabular-nums text-gray-700" data-money="{{ uni.pnaes_loa }}" data-money-mode="brl">{{ uni.pnaes_loa }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+          <tr id="uni-total" class="bg-navy text-white font-bold">
+            <th scope="row" class="py-3 px-4" colspan="2">
+              <span class="lang-pt">Total da rede ({{ data.count }})</span>
+              <span class="lang-en">Network total ({{ data.count }})</span>
+            </th>
+            <td class="py-3 px-3 text-right tabular-nums" data-money="{{ data.totals.ploa }}" data-money-mode="brl">{{ data.totals.ploa }}</td>
+            <td class="py-3 px-3 text-right tabular-nums" data-money="{{ data.totals.cut }}" data-money-mode="brl">{{ data.totals.cut }}</td>
+            <td class="py-3 px-3 text-right tabular-nums text-terracotta" data-money="{{ data.totals.loa }}" data-money-mode="brl">{{ data.totals.loa }}</td>
+            <td class="py-3 px-4 text-right tabular-nums" data-money="{{ data.totals.pnaes_loa }}" data-money-mode="brl">{{ data.totals.pnaes_loa }}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p id="uni-empty" class="hidden px-4 py-8 text-center text-sm text-gray-500 no-print">
+      <span class="lang-pt">Nenhuma universidade corresponde à busca.</span>
+      <span class="lang-en">No university matches this search.</span>
+    </p>
+  </div>
+
+  <p class="text-xs text-gray-400 italic mt-6">
+    <span class="lang-pt">
+      Fontes: {% include official-link.html href="https://www.apufsc.org.br/wp-content/uploads/2025/12/Relatorio-Andifes-PLOA-2026-1-1.pdf" text="Andifes, análise PLOA/LOA 2026 (anexos 1 e 2)" %};
+      {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="Lei 15.346/2026 (LOA)" %};
+      {% include official-link.html href="https://observatoriodoconhecimento.org.br/" text="Observatório do Conhecimento" %}.
+      Valores em reais correntes. RP2 exclui emendas e arrecadação própria.
+    </span>
+    <span class="lang-en">
+      Sources: {% include official-link.html href="https://www.apufsc.org.br/wp-content/uploads/2025/12/Relatorio-Andifes-PLOA-2026-1-1.pdf" text="Andifes PLOA/LOA 2026 analysis (annexes 1 and 2)" %};
+      {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="Law 15.346/2026 (annual budget)" %};
+      {% include official-link.html href="https://observatoriodoconhecimento.org.br/" text="Observatório do Conhecimento" %}.
+      Figures in current BRL. RP2 excludes emendas and own revenue.
+    </span>
+  </p>
+</article>

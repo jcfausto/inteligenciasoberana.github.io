@@ -1,0 +1,946 @@
+---
+layout: default
+title: Relatório — Inteligência Soberana
+description: Relatório de pesquisa sobre velocidade de adoção, assimetria de recursos e atrofia cognitiva na corrida global de IA.
+page_id: relatorio
+theme: report
+charts: true
+permalink: /relatorio.html
+---
+<main class="paper max-w-[52rem] mx-auto my-6 md:my-10 bg-white shadow-[0_8px_40px_rgba(15,23,42,0.08)] px-6 sm:px-10 md:px-16 py-12 md:py-20">
+  <article class="article-prose font-article text-[1.05rem] leading-[1.85] text-stone-800">
+
+    <p class="text-center text-[11px] font-sans font-bold tracking-[0.22em] uppercase text-terracotta mb-6">
+      <span class="lang-pt">Relatório de pesquisa · versão {{ site.research.version }}</span>
+      <span class="lang-en">Research report · version {{ site.research.version }}</span>
+    </p>
+
+    <h1 class="font-serif text-3xl md:text-4xl font-bold leading-tight text-navy text-center mb-6">
+      <span class="lang-pt">Inteligência Soberana: Velocidade de Adoção, Assimetria de Recursos e Atrofia Cognitiva na Corrida Global de IA</span>
+      <span class="lang-en">Sovereign Intelligence: Adoption Velocity, Resource Asymmetry, and Cognitive Atrophy in the Global AI Race</span>
+    </h1>
+
+    <div class="text-center text-sm font-sans text-gray-500 mb-8 space-y-1">
+      <p class="text-navy font-medium">Inteligência Soberana</p>
+      <p class="lang-pt">Documento de trabalho · atualizado em {{ site.research.updated_pt }}</p>
+      <p class="lang-en">Working paper · updated {{ site.research.updated_en }}</p>
+    </div>
+
+    <section class="border-y border-stone-300 py-6 mb-10 bg-stone-50/80 -mx-6 sm:-mx-10 md:-mx-16 px-6 sm:px-10 md:px-16">
+      <h2 class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-navy mb-3">
+        <span class="lang-pt">Resumo</span>
+        <span class="lang-en">Abstract</span>
+      </h2>
+      <p class="text-[0.95rem] leading-relaxed mb-0 lang-pt">
+        As revoluções industriais físicas do passado automatizaram o trabalho manual e expandiram a força de trabalho cognitiva. A inteligência artificial generativa inverteu esse roteiro histórico: ao atingir funções de alta cognição, habilidades de elite e esforço intelectual, iniciou uma transformação rápida e volátil da economia global. Essa onda avança a uma velocidade que rompeu todas as curvas históricas de adoção, ultrapassa a capacidade regulatória dos Estados soberanos e desencadeia uma mudança sociocognitiva profunda que ameaça induzir atrofia cognitiva generalizada em domínios profissionais de alta qualificação. Com dados empíricos e marcos legais da América do Norte, da Europa e da América do Sul, este relatório examina as tensões estruturais da corrida de IA e argumenta que o Brasil se posiciona, de modo singular, na interseção entre adoção móvel acelerada, ambição regulatória de tipo europeu e infraestrutura digital de energia limpa em escala. A tese central é que hardware soberano sem <em>{% include glossary-term.html id="mindware" text="mindware" %}</em> soberano — universidades, pesquisa e carreiras científicas estáveis — reduz o país a ser somente uma “{% include glossary-term.html id="fazenda-dados" text="fazenda de dados" %}” do {% include glossary-term.html id="norte-global" text="Norte Global" %}. Data centers não são o problema; tratá-los como solução única é.
+      </p>
+      <p class="text-[0.95rem] leading-relaxed mb-0 lang-en">
+        The physical industrial revolutions of the past automated manual labor while expanding the cognitive, white-collar workforce. The generative artificial intelligence (AI) revolution has flipped this historical script. By targeting roles built on outstanding cognition, elite skills, and intellectual effort, it has initiated a rapid and volatile transformation of the global economy. This technological wave is moving at a velocity that has shattered all historical adoption curves, completely outstripping the regulatory capacity of sovereign states and triggering a profound socio-cognitive shift that threatens to induce widespread cognitive atrophy across high-skill professional domains. Using empirical data and legal frameworks across North America, Europe, and South America, this article explores the structural tensions of the AI race, detailing how Brazil is uniquely positioning itself as a sovereign digital powerhouse at the intersection of rapid mobile adoption, European-style regulatory ambitions, and massive green-energy digital infrastructure. The central thesis is that sovereign hardware without sovereign {% include glossary-term.html id="mindware" text="mindware" %} — universities, research, and stable scientific careers — reduces the country to being only a “{% include glossary-term.html id="fazenda-dados" text="data farm" %}” for the {% include glossary-term.html id="norte-global" text="Global North" %}. Data centers are not the problem; treating them as the only solution is.
+      </p>
+      <p class="mt-4 mb-0 text-sm font-sans text-gray-600">
+        <span class="font-semibold text-navy lang-pt">Palavras-chave:</span>
+        <span class="font-semibold text-navy lang-en">Keywords:</span>
+        <span class="lang-pt"> {% include glossary-term.html id="soberania-digital" text="soberania digital" %}; inteligência artificial; atrofia cognitiva; dívida de compreensão; emendas parlamentares; PBIA; Scala AI City; fuga de cérebros.</span>
+        <span class="lang-en"> {% include glossary-term.html id="soberania-digital" text="digital sovereignty" %}; artificial intelligence; cognitive atrophy; comprehension debt; parliamentary amendments; PBIA; Scala AI City; brain drain.</span>
+      </p>
+    </section>
+
+    <nav class="mb-12 font-sans text-sm no-print" aria-label="Table of contents">
+      <h2 class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-navy mb-3">
+        <span class="lang-pt">Sumário</span>
+        <span class="lang-en">Contents</span>
+      </h2>
+      <ol class="list-decimal list-inside space-y-1.5 text-gray-700">
+        <li><a href="#sec-1" class="hover:text-terracotta">
+          <span class="lang-pt">As três ondas da tecnologia e a velocidade de adoção</span>
+          <span class="lang-en">The Three Waves of Technology &amp; Adoption Velocity</span>
+        </a></li>
+        <li><a href="#sec-2" class="hover:text-terracotta">
+          <span class="lang-pt">O atraso regulatório e a assimetria de financiamento</span>
+          <span class="lang-en">The Regulatory Lag &amp; the Funding Asymmetry</span>
+        </a></li>
+        <li><a href="#sec-3" class="hover:text-terracotta">
+          <span class="lang-pt">O aperto econômico: demografia e automação</span>
+          <span class="lang-en">The Economic Squeeze: Demographic Strain Meets Job Automation</span>
+        </a></li>
+        <li><a href="#sec-4" class="hover:text-terracotta">
+          <span class="lang-pt">O paradoxo do profissional: atrofia cognitiva, desqualificação e automação</span>
+          <span class="lang-en">The Professional’s Paradox: Cognitive Atrophy, Deskilling, and Unregulated Automation</span>
+        </a></li>
+        <li><a href="#sec-5" class="hover:text-terracotta">
+          <span class="lang-pt">Uma alternativa soberana: IA pública como infraestrutura</span>
+          <span class="lang-en">A Sovereign Alternative: Public AI as Digital Infrastructure</span>
+        </a></li>
+      </ol>
+      <p class="mt-2">
+        <a href="#referencias" class="hover:text-terracotta">
+          <span class="lang-pt">Referências</span>
+          <span class="lang-en">References</span>
+        </a>
+      </p>
+    </nav>
+
+    <div class="lang-en space-y-[1.15em]">
+      <p>To prevent a future where society is held hostage to digital systems built solely for private profit, digital development must be treated as a vital public utility. Governments must recognize that computational capacity and digital infrastructure are first-class assets, fully on par with physical infrastructure like roads, transmission lines, and water grids. The only entities with the financial and structural capacity to establish public-good alternatives, regulate commercial pricing, and steer development toward human well-being are sovereign states.</p>
+    </div>
+    <div class="lang-pt space-y-[1.15em]">
+      <p>Para evitar um futuro em que a sociedade fique refém de sistemas digitais construídos apenas para o lucro privado, o desenvolvimento digital deve ser tratado como utilidade pública vital. Os governos precisam reconhecer que capacidade computacional e infraestrutura digital são ativos de primeira classe, no mesmo patamar de estradas, linhas de transmissão e redes de água. As únicas entidades com capacidade financeira e estrutural para estabelecer alternativas de bem público, regular preços comerciais e orientar o desenvolvimento ao bem-estar humano são os Estados soberanos.</p>
+    </div>
+
+    <h2 id="sec-1" class="font-serif text-2xl font-bold text-navy mt-14 mb-4 pt-4 border-t border-stone-200">
+      <span class="text-terracotta font-sans text-sm tracking-widest mr-2">1.</span>
+      <span class="lang-pt">As três ondas da tecnologia e a velocidade de adoção</span>
+      <span class="lang-en">The Three Waves of Technology &amp; Adoption Velocity</span>
+    </h2>
+
+    <div class="lang-en">
+      <p>The timeline of human innovation is characterized by a dramatic compression of adoption curves, leaving progressively narrower windows for society to adapt, study, and implement safeguards. Historically, foundational technologies required decades to achieve ubiquity. The personal computer took roughly twenty-two years to reach seventy percent of US households, and electricity required four decades to diffuse to seventy percent of the population. Even the internet and the smartphone, widely regarded as hyper-accelerated disruptions, required four and six years respectively to achieve forty percent adoption among US adults<sup class="cite"><a href="#ref-2">[2]</a></sup>.</p>
+      <p>Generative AI has shattered these historical baselines. ChatGPT reached the milestone of 100 million active users in just two months—compressing a growth cycle that took platforms like Instagram two and a half years and mobile phones sixteen years to achieve<sup class="cite"><a href="#ref-2">[2]</a></sup>. By August 2025, just thirty-three months after the mass-market launch of generative AI, the technology had already been adopted by 54.6% of US adults aged 18–64, according to research by the St. Louis Fed<sup class="cite"><a href="#ref-2">[2]</a></sup>. This vertical adoption curve represents an unprecedented societal transformation occurring in a complete clinical and regulatory vacuum.</p>
+    </div>
+    <div class="lang-pt">
+      <p>A linha do tempo da inovação humana é marcada por uma compressão dramática das curvas de adoção, deixando janelas cada vez mais estreitas para a sociedade se adaptar, estudar e implantar salvaguardas. Historicamente, tecnologias fundacionais levaram décadas para alcançar ubiquidade. O computador pessoal levou cerca de vinte e dois anos para chegar a setenta por cento dos lares nos Estados Unidos, e a eletricidade exigiu quatro décadas para se difundir até setenta por cento da população. Mesmo a internet e o smartphone, tidos como disrupções hiperaceleradas, levaram quatro e seis anos, respectivamente, para atingir quarenta por cento de adoção entre adultos norte-americanos<sup class="cite"><a href="#ref-2">[2]</a></sup>.</p>
+      <p>A IA generativa rompeu essas linhas de base. O ChatGPT alcançou 100 milhões de usuários ativos em apenas dois meses — comprimindo um ciclo de crescimento que levou dois anos e meio ao Instagram e dezesseis anos aos telefones móveis<sup class="cite"><a href="#ref-2">[2]</a></sup>. Em agosto de 2025, apenas trinta e três meses após o lançamento de mercado da IA generativa, a tecnologia já havia sido adotada por 54,6% dos adultos norte-americanos de 18 a 64 anos, segundo pesquisa do Federal Reserve de St. Louis<sup class="cite"><a href="#ref-2">[2]</a></sup>. Essa curva vertical representa uma transformação societária sem precedentes, ocorrendo em um vácuo clínico e regulatório completo.</p>
+    </div>
+
+    <figure id="fig-adocao" class="my-10">
+      <figcaption class="font-sans text-xs font-semibold text-navy mb-3 tracking-wide uppercase">
+        <span class="lang-pt">Figura 1.</span>
+        <span class="lang-en">Figure 1.</span>
+        <span class="font-normal normal-case tracking-normal text-gray-600 ml-1">
+          <span class="lang-pt">A IA generativa comprime as curvas históricas de adoção.</span>
+          <span class="lang-en">Generative AI compresses historical adoption curves.</span>
+        </span>
+      </figcaption>
+      <div class="rounded border border-stone-200 bg-stone-50 p-4 md:p-5">
+        <div class="grid grid-cols-1 gap-8">
+          <div>
+            <p id="adoptionSubtitle" class="font-sans text-xs font-bold text-navy mb-2"></p>
+            <div class="relative h-80 md:h-96">
+              <canvas id="adoptionChart"></canvas>
+            </div>
+          </div>
+          <div>
+            <p id="usersSubtitle" class="font-sans text-xs font-bold text-navy mb-2"></p>
+            <div class="relative h-56 md:h-64">
+              <canvas id="usersChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="font-sans text-[11px] text-gray-500 mt-2 italic mb-0">
+        <span class="lang-pt">Fontes: Epoch AI e Federal Reserve de St. Louis<sup class="cite"><a href="#ref-2">[2]</a></sup>. Painel superior: anos até o marco de penetração citado (os limiares não são idênticos). Painel inferior: tempo até 100 milhões de usuários. IA generativa: 33 meses até 54,6% dos adultos de 18 a 64 anos nos EUA (agosto de 2025).</span>
+        <span class="lang-en">Sources: Epoch AI and the St. Louis Fed<sup class="cite"><a href="#ref-2">[2]</a></sup>. Top panel: years to the cited penetration milestone (thresholds are not identical). Bottom panel: time to 100 million users. Generative AI: 33 months to 54.6% of US adults aged 18–64 (August 2025).</span>
+      </p>
+    </figure>
+
+    <div class="lang-en">
+      <p>We have seen the consequences of this adoption velocity before. When smartphones and social media swept the globe in the late 2000s, they did so without public oversight. The empirical evidence of their long-term, systemic harms only matured a decade later. Today, rigorous clinical data confirms that bedtime smartphone usage suppresses melatonin, disrupts sleep timing, and directly drives adolescent depression and anxiety. A massive World Health Organization (WHO) study surveying 280,000 young people aged 11, 13, and 15 across 44 countries and regions revealed that more than 1 in 10 adolescents (11%) now show clinical signs of problematic, addiction-like social media behavior<sup class="cite"><a href="#ref-9">[9]</a></sup>. Because the physical and cognitive infrastructure of a generation was rewritten before any meaningful safety research could be conducted, we are now left trying to retroactively mitigate a mental health crisis. Yet, substantive digital guardrails like the Kids Online Safety Act (KOSA) remain caught in intense legislative and constitutional debates, lagging more than fifteen years behind the technology’s ubiquity<sup class="cite"><a href="#ref-16">[16]</a></sup>.</p>
+      <p>In Brazil, this regulatory vacuum also forced a belated reaction. The 1990 Statute of the Child and Adolescent (ECA)—conceived in an analog era—underwent a deep and urgent update with the approval of {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="Law No. 15,211 of 17 September 2025" %}, known as the “ECA Digital”<sup class="cite"><a href="#ref-26">[26]</a></sup>. In force since 17 March 2026, the new legislation imposes strict safety and compliance rules on digital platforms, eliminating simplified age self-declaration in favor of reliable age verification, banning child-directed advertising, and restricting algorithms designed to drive addictive use, under penalty of fines of up to R$ 50 million<sup class="cite"><a href="#ref-25">[25]</a></sup>. It is a historic attempt to translate the principle of integral protection of youth into the virtual environment, although, like KOSA, it arrives after the cognitive redesign of an entire generation.</p>
+      <p>A robust legal framework, however, is only the first step in a complex battle for effective applicability. The passage from legal theory to practice confronts the immense challenge of structuring efficient regulatory-oversight mechanisms capable of reaching a dynamic digital ecosystem. The requirement to implement reliable age-verification methods at every access<sup class="cite"><a href="#ref-25">[25]</a></sup>, for example, demands technologies that can prove age without compromising privacy or creating new personal-data stores highly vulnerable to leaks. Moreover, although the law provides for severe penalties—including suspension of operations and fines of up to 10% of a company’s revenue<sup class="cite"><a href="#ref-25">[25]</a></sup>—critics point to practical limits in the state’s enforcement capacity, arguing that active family oversight remains indispensable<sup class="cite"><a href="#ref-25">[25]</a></sup>. As the law’s own formulation stresses, the effectiveness of the ECA Digital will depend fundamentally on co-responsibility among platforms, the state, and the coordinated involvement of civil society as a whole<sup class="cite"><a href="#ref-25">[25]</a></sup>.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Já vimos as consequências dessa velocidade. Quando smartphones e redes sociais varreram o mundo no fim dos anos 2000, fizeram-no sem supervisão pública. A evidência empírica de seus danos sistêmicos de longo prazo só amadureceu uma década depois. Hoje, dados clínicos rigorosos confirmam que o uso noturno de smartphones suprime a melatonina, desregula o sono e impulsiona depressão e ansiedade adolescente. Um estudo da Organização Mundial da Saúde com 280 mil jovens de 11, 13 e 15 anos em 44 países e regiões revelou que mais de 1 em cada 10 adolescentes (11%) apresenta sinais clínicos de comportamento problemático, semelhante à dependência, nas redes sociais<sup class="cite"><a href="#ref-9">[9]</a></sup>. Como a infraestrutura física e cognitiva de uma geração foi reescrita antes de qualquer pesquisa de segurança significativa, restou mitigar retroativamente uma crise de saúde mental. Mesmo assim, salvaguardas como o Kids Online Safety Act (KOSA) permanecem presas a debates legislativos e constitucionais, atrasadas mais de quinze anos em relação à ubiquidade da tecnologia<sup class="cite"><a href="#ref-16">[16]</a></sup>.</p>
+      <p>No Brasil, esse vácuo regulatório também forçou uma reação tardia. O Estatuto da Criança e do Adolescente (ECA) de 1990 — concebido em uma era analógica — passou por uma atualização profunda e urgente com a aprovação da {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="Lei nº 15.211, de 17 de setembro de 2025" %}, conhecida como o “ECA Digital”<sup class="cite"><a href="#ref-26">[26]</a></sup>. Em vigor desde 17 de março de 2026, a nova legislação impõe regras rígidas de segurança e conformidade às plataformas digitais, eliminando a autodeclaração simplificada de idade em favor de verificação de idade confiável, proibindo o direcionamento de publicidade infantil e restringindo algoritmos projetados para estimular o uso viciante, sob risco de multas de até R$ 50 milhões<sup class="cite"><a href="#ref-25">[25]</a></sup>. Trata-se de uma tentativa histórica de traduzir o princípio da proteção integral da juventude para o ambiente virtual, embora, assim como o KOSA, chegue após o redesenho cognitivo de toda uma geração.</p>
+      <p>Contudo, a promulgação de um marco normativo robusto é apenas o primeiro passo de uma complexa batalha pela sua efetiva aplicabilidade. A transição da teoria jurídica para a prática depara-se com o imenso desafio de estruturar mecanismos eficientes de fiscalização regulatória capazes de alcançar o dinâmico ecossistema digital. A exigência de implementar métodos confiáveis de verificação etária a cada acesso<sup class="cite"><a href="#ref-25">[25]</a></sup>, por exemplo, exige o desenvolvimento de tecnologias que comprovem a idade sem comprometer a privacidade ou criar novas bases de dados pessoais altamente vulneráveis a vazamentos. Além disso, embora a lei preveja penalidades severas, como a suspensão de atividades e multas que podem atingir até 10% do faturamento da empresa<sup class="cite"><a href="#ref-25">[25]</a></sup>, críticos apontam limites práticos na capacidade executiva da fiscalização estatal, defendendo que o acompanhamento ativo das famílias permanece indispensável<sup class="cite"><a href="#ref-25">[25]</a></sup>. Como salienta a própria formulação da lei, a eficácia do ECA Digital dependerá fundamentalmente de uma corresponsabilidade entre plataformas, Estado e o envolvimento coordenado de toda a sociedade civil<sup class="cite"><a href="#ref-25">[25]</a></sup>.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O paralelo brasileiro: hiperadoção mobile-first</span>
+      <span class="lang-en">The Brazilian Parallel: Mobile-First Hyper-Adoption</span>
+    </h3>
+    <div class="lang-en">
+      <p>For Brazil, this adoption curve is compressed even further by a highly unique digital landscape. Brazilians do not experience technological waves through the traditional desktop-to-mobile pipeline; instead, Brazil is a hyper-adoptive, mobile-first society where active cellular connections cover 102% of the population. Out of a population of roughly 215 million, DataReportal counted 183 million active internet users at the start of 2025, representing an 86.2% online penetration rate<sup class="cite"><a href="#ref-4">[4]</a></sup>.</p>
+      <p>Rather than adopting complex desktop enterprise software, Brazilian consumers and small-to-medium businesses (SMBs) integrate AI directly into their daily lives via conversational, mobile-first channels. WhatsApp reaches 93.9% of Brazil's online audience, and the Pix real-time payment network is utilized by roughly 75% of the population (representing 161 million active individuals)<sup class="cite"><a href="#ref-4">[4]</a></sup>. Consequently, AI adoption in Brazil does not wait for formal corporate desktop onboarding; instead, it is driven by everyday conversational interfaces and mobile-first vertical apps. This hyper-adoption bypasses traditional enterprise barriers, making the Brazilian public highly exposed to the immediate benefits—and the unmitigated security risks—of unregulated AI systems.</p>
+    </div>
+    <div class="lang-pt">
+      <p>No Brasil, essa curva se comprime ainda mais por um panorama digital singular. Os brasileiros não atravessam ondas tecnológicas pelo pipeline clássico desktop-para-mobile; o país é uma sociedade hiperadotante e mobile-first, em que conexões celulares ativas cobrem 102% da população. De uma população de cerca de 215 milhões, o DataReportal contou 183 milhões de usuários ativos de internet no início de 2025 — 86,2% de penetração<sup class="cite"><a href="#ref-4">[4]</a></sup>.</p>
+      <p>Em vez de adotar software empresarial complexo de desktop, consumidores e pequenas e médias empresas integram a IA ao cotidiano por canais conversacionais e móveis. O WhatsApp alcança 93,9% da audiência online brasileira, e o Pix é utilizado por cerca de 75% da população (161 milhões de indivíduos ativos)<sup class="cite"><a href="#ref-4">[4]</a></sup>. A adoção de IA, portanto, não espera o onboarding corporativo formal: é impulsionada por interfaces conversacionais cotidianas e aplicativos verticais mobile-first. Essa hiperadoção contorna barreiras empresariais tradicionais e expõe o público brasileiro tanto aos benefícios imediatos quanto aos riscos de segurança não mitigados de sistemas de IA sem regulação madura.</p>
+    </div>
+
+    <h2 id="sec-2" class="font-serif text-2xl font-bold text-navy mt-14 mb-4 pt-4 border-t border-stone-200">
+      <span class="text-terracotta font-sans text-sm tracking-widest mr-2">2.</span>
+      <span class="lang-pt">O atraso regulatório e a assimetria de financiamento</span>
+      <span class="lang-en">The Regulatory Lag &amp; the Funding Asymmetry</span>
+    </h2>
+    <div class="lang-en">
+      <p>As private capital drives AI capabilities forward at a breakneck pace, the public sector is caught in a severe, compounding deficit of both regulatory funding and technical capacity. This imbalance has created a stark structural asymmetry where the corporations developing the technology wield resources that dwarf the public institutions charged with protecting the public interest.</p>
+      <p>The scale of private capital allocation is historically unprecedented. In North America, the “Big Four” technology {% include glossary-term.html id="hiperscalers" text="hyperscalers" %}—Amazon, Alphabet, Meta, and Microsoft—are guiding toward a staggering $720 billion to $745 billion in combined capital expenditures (CapEx) for 2026 alone, up 77% from approximately $410 billion in 2025<sup class="cite"><a href="#ref-5">[5]</a></sup>. This aggressive funding allows private developers to monopolize elite technical talent by offering highly competitive, “life-changing” compensation packages, further widening the capability gap between public agencies and private entities.</p>
+      <p>Conversely, the public sector operates on what can only be described as a shoestring budget. While private tech firms deploy hundreds of billions, the United States federal government’s proposed budget cuts the Federal Trade Commission's (FTC) budget by 10% to $385 million, while freezing the Department of Justice's (DOJ) Antitrust Division at $233 million. This means the primary federal regulators responsible for policing monopolistic behavior and consumer safety in the US must operate with less than 0.08% of the capital deployed by the very entities they are tasked with regulating.</p>
+      <p>This funding asymmetry is equally visible in Europe. The European Union has pioneered the world's first comprehensive legal framework for artificial intelligence, the EU AI Act, overseen by the centralized EU AI Office. Yet, this office—responsible for enforcing strict compliance, transparency, and auditing mandates across 27 member states and 450 million citizens—was launched with a reallocated budget of just €45 million (approximately $51 million).</p>
+      <p>Because public budgets cannot match private development speeds, legislative efforts inevitably lag behind the market. In the United States, federal digital safety initiatives like the Kids Online Safety Act (KOSA) remain stalled or mired in intense constitutional debates, leaving individual states to enact a fragmented, uncoordinated patchwork of local privacy laws that are frequently struck down in court.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Enquanto o capital privado acelera as capacidades de IA, o setor público enfrenta um déficit grave e cumulativo de financiamento regulatório e de capacidade técnica. O desequilíbrio criou uma assimetria estrutural em que as corporações que desenvolvem a tecnologia dispõem de recursos que ofuscam as instituições públicas encarregadas de proteger o interesse coletivo.</p>
+      <p>A alocação de capital privado é historicamente inédita. Na América do Norte, os quatro {% include glossary-term.html id="hiperscalers" text="hiperscalers" %} — Amazon, Alphabet, Meta e Microsoft — caminham para US$ 720 a 745 bilhões de CapEx combinado apenas em 2026, alta de 77% em relação a cerca de US$ 410 bilhões em 2025<sup class="cite"><a href="#ref-5">[5]</a></sup>. Esse financiamento agressivo permite monopolizar talentos técnicos de elite através de altos pacotes de remuneração e a oportunidade de estar no primeiro plano mundial do desenvolvimento de IA, alargando ainda mais o abismo de capacidade entre agências públicas e entidades privadas.</p>
+      <p>O setor público, por contraste, opera com orçamento quase simbólico. Enquanto as empresas de tecnologia despejam centenas de bilhões, o orçamento federal proposto nos Estados Unidos corta 10% da Federal Trade Commission (FTC), para US$ 385 milhões, e congela a Divisão Antitruste do Departamento de Justiça (DOJ) em US$ 233 milhões. Os reguladores federais primários responsáveis por policiar monopólios e a segurança do consumidor precisam operar com menos de 0,08% do capital empregado pelas entidades que deveriam regular.</p>
+      <p>A assimetria é igualmente visível na Europa. A União Europeia foi pioneira do primeiro marco legal abrangente para inteligência artificial, o AI Act, supervisionado pelo AI Office. Esse escritório — responsável por compliance, transparência e auditoria em 27 Estados-membros e 450 milhões de cidadãos — foi lançado com orçamento realocado de apenas € 45 milhões (cerca de US$ 51 milhões).</p>
+      <p>Como os orçamentos públicos não acompanham a velocidade do desenvolvimento privado, a legislação atrasa em relação ao mercado. Nos Estados Unidos, iniciativas federais como o KOSA permanecem paralisadas ou presas a debates constitucionais, deixando aos estados um mosaico fragmentado de leis locais de privacidade frequentemente anuladas nos tribunais.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O paralelo brasileiro: alta ambição e o paradoxo de segurança</span>
+      <span class="lang-en">The Brazilian Parallel: High Ambition Meets a Security Paradox</span>
+    </h3>
+    <div class="lang-en">
+      <p>Brazil stands at a critical regulatory crossroads, caught between the European model of strict precautionary governance and the reality of its own developing infrastructure.</p>
+      <p>The Brazilian Senate is currently advancing PL 2338/2023 (<em>Marco Legal da Inteligência Artificial</em>), a comprehensive regulatory proposal heavily inspired by the EU AI Act's risk-based classification<sup class="cite"><a href="#ref-10">[10]</a></sup>. Under this framework, systems are categorized by their risk level, with strict transparency obligations, civil liability rules, and absolute prohibitions on “unacceptable risks” like mass public biometric surveillance. The draft law designates the National Data Protection Authority (ANPD) as the central coordinating body for this new regulatory system, the <em>Sistema Nacional de Regulação e Governança de Inteligência Artificial</em> (SIA). However, due to intense political debates surrounding copyright protections for creators and tax incentives for data centers, the final vote in the Chamber of Deputies has been officially delayed to late 2026<sup class="cite"><a href="#ref-10">[10]</a></sup>.</p>
+      <p>This legislative vacuum has created a dangerous security paradox in the Brazilian market:</p>
+      <ol class="list-decimal ml-6 mb-4 space-y-2">
+        <li><strong>Aggressive deployment.</strong> Driven by immense cultural enthusiasm, 76% of Brazilian companies keep active AI agents in production—significantly outpacing the United States (67%) and the global average (62%), according to a global Sinch study<sup class="cite"><a href="#ref-3">[3]</a></sup>.</li>
+        <li><strong>The pullback rate.</strong> This rapid integration has occurred without mature data governance, resulting in a staggering failure rate: 80% of Brazilian organizations have been forced to pause or roll back an AI deployment<sup class="cite"><a href="#ref-3">[3]</a></sup>.</li>
+        <li><strong>The security catalyst.</strong> Out of these failures, 39% were caused directly by severe data breaches or personal information leaks—a vulnerability rate far exceeding those reported in North America<sup class="cite"><a href="#ref-3">[3]</a></sup>. In response, 41% of Brazilian companies had to completely shut down their AI agents<sup class="cite"><a href="#ref-3">[3]</a></sup>.</li>
+      </ol>
+      <p>This high rate of security failures has forced a sharp, defensive pivot in corporate spending. Today, 76% of Brazilian companies are compelled to allocate specific resources to compliance, trust, and security, outstripping the 63% investing in building new AI capabilities<sup class="cite"><a href="#ref-3">[3]</a></sup>.</p>
+      <p>Yet, to bridge this infrastructural deficit, the Brazilian government and private sector are executing a stunning policy shift: a complete exemption of all federal taxes (0%) for five years on the importation of computer and network equipment for data centers, announced by the Ministry of Finance<sup class="cite"><a href="#ref-18">[18]</a></sup>. When combined with Brazil's clean energy costs—averaging an incredibly competitive 6 cents USD per kilowatt-hour (kWh)—and 12 GW of available transmission power on the grid, Brazil has suddenly become as cost-competitive as any market in North America, attracting massive global capital.</p>
+    </div>
+    <div class="lang-pt">
+      <p>O Brasil está em uma encruzilhada regulatória, entre o modelo europeu de governança precautória e a realidade de sua infraestrutura em desenvolvimento.</p>
+      <p>O Senado avança o PL 2338/2023 (Marco Legal da Inteligência Artificial), proposta abrangente inspirada na classificação de risco do AI Act europeu<sup class="cite"><a href="#ref-10">[10]</a></sup>. O marco categoriza sistemas por nível de risco, com obrigações de transparência, regras de responsabilidade civil e proibições absolutas a “riscos inaceitáveis”, como vigilância biométrica em massa. O projeto designa a Autoridade Nacional de Proteção de Dados (ANPD) como órgão coordenador do Sistema Nacional de Regulação e Governança de Inteligência Artificial (SIA). Contudo, por debates políticos intensos sobre direitos autorais e incentivos fiscais a data centers, a votação final na Câmara dos Deputados foi oficialmente adiada para o fim de 2026<sup class="cite"><a href="#ref-10">[10]</a></sup>.</p>
+      <p>Esse vácuo legislativo criou um perigoso paradoxo de segurança no mercado brasileiro:</p>
+      <ol class="list-decimal ml-6 mb-4 space-y-2">
+        <li><strong>Implantação agressiva.</strong> Impulsionadas por entusiasmo cultural, 76% das empresas brasileiras mantêm agentes de IA em produção — superando os Estados Unidos (67%) e a média global (62%), segundo estudo global da Sinch<sup class="cite"><a href="#ref-3">[3]</a></sup>.</li>
+        <li><strong>Taxa de recuo.</strong> A integração rápida ocorreu sem governança de dados madura: 80% das organizações brasileiras foram forçadas a pausar ou reverter uma implantação de IA<sup class="cite"><a href="#ref-3">[3]</a></sup>.</li>
+        <li><strong>O catalisador de segurança.</strong> Dessas falhas, 39% decorreram diretamente de vazamentos graves de dados ou de informações pessoais — taxa bem superior à relatada na América do Norte<sup class="cite"><a href="#ref-3">[3]</a></sup>. Em resposta, 41% das empresas tiveram de desligar completamente seus agentes de IA<sup class="cite"><a href="#ref-3">[3]</a></sup>.</li>
+      </ol>
+      <p>Essa taxa de falhas forçou uma virada defensiva no gasto corporativo. Hoje, 76% das empresas brasileiras alocam recursos específicos a compliance, confiança e segurança, superando os 63% que investem em novas capacidades de IA<sup class="cite"><a href="#ref-3">[3]</a></sup>.</p>
+      <p>Para cobrir o déficit de infraestrutura, governo e setor privado executam uma mudança de política notável: isenção total de impostos federais (0%) por cinco anos na importação de equipamentos de computação e rede para data centers, anunciada pelo Ministério da Fazenda<sup class="cite"><a href="#ref-18">[18]</a></sup>. Combinada ao custo da energia limpa — média competitiva de 6 centavos de dólar por kWh — e a 12 GW de potência de transmissão disponível, o Brasil tornou-se tão competitivo em custo quanto qualquer mercado da América do Norte, atraindo capital global em massa.</p>
+    </div>
+
+    <h2 id="sec-3" class="font-serif text-2xl font-bold text-navy mt-14 mb-4 pt-4 border-t border-stone-200">
+      <span class="text-terracotta font-sans text-sm tracking-widest mr-2">3.</span>
+      <span class="lang-pt">O aperto econômico: pressão demográfica e automação do trabalho</span>
+      <span class="lang-en">The Economic Squeeze: Demographic Strain Meets Job Automation</span>
+    </h2>
+    <div class="lang-en">
+      <p>The physical industrial revolutions of the past automated manual labor while expanding the cognitive, white-collar workforce. Generative AI flips this historical script by targeting roles built on “outstanding cognition, skills, and effort”—specifically threatening cognitive activities such as data analysis, administrative services, and software development. This wave of cognitive automation is colliding with a slow-motion demographic crisis. Across the globe, populations are growing older as birth rates decline. This demographic transition has already strained social welfare and pension systems.</p>
+      <p>The core structural squeeze lies in the tax base: there may soon not be enough of an active workforce paying the taxes required to provide secure, comfortable pensions for the elderly. When generative AI automates entry-level and cognitive roles, it blocks the traditional entryways into the job market, amplifying the hardships facing young people and entry-level workers who are meant to support these social safety nets.</p>
+      <p>Beyond these structural barriers, this cognitive displacement is poised to accelerate the expansion and precarization of the informal labor market—most notably through the gig economy. Forced to seek a means of survival as traditional entry-level pathways evaporate, a growing cohort of young workers will inevitably migrate toward algorithmic on-demand platforms. While this shift toward the gig economy may offer a temporary, short-term survival mechanism, it imposes a severe systemic threat to long-term social welfare. Unlike formal employment, gig-platform revenues provide absolutely no social guarantees, healthcare safety nets, or pension contributions, shifting the entire burden of economic volatility and cognitive displacement from corporate employers and the state onto the shoulders of vulnerable individuals.</p>
+    </div>
+    <div class="lang-pt">
+      <p>As revoluções industriais físicas automatizaram o trabalho manual e expandiram a força de trabalho cognitiva. A IA generativa inverte o roteiro ao atingir funções de “cognição, habilidades e esforço excepcionais” — em especial análise de dados, serviços administrativos e desenvolvimento de software. Essa onda colide com uma crise demográfica em câmera lenta: populações envelhecem e as taxas de natalidade caem, tensionando sistemas de bem-estar e previdência.</p>
+      <p>O aperto estrutural está na base tributária: em breve pode não haver força de trabalho ativa suficiente para financiar pensões seguras. Quando a IA automatiza postos de entrada e funções cognitivas, bloqueia as portas tradicionais do mercado de trabalho e agrava as dificuldades de jovens e trabalhadores iniciantes que deveriam sustentar as redes de proteção social.</p>
+      <p>Além dessas barreiras estruturais, o deslocamento cognitivo tende a acelerar a expansão e a precarização do mercado de trabalho informal — sobretudo pela gig economy. Forçados a buscar um meio de sobrevivência à medida que as vias tradicionais de entrada evaporam, um contingente crescente de jovens trabalhadores migrará inevitavelmente para plataformas algorítmicas sob demanda. Embora essa virada possa oferecer um mecanismo temporário de sobrevivência no curto prazo, impõe uma grave ameaça sistêmica ao bem-estar social de longo prazo. Diferentemente do emprego formal, as receitas das plataformas de gig não oferecem quaisquer garantias sociais, redes de saúde ou contribuições previdenciárias, transferindo todo o ônus da volatilidade econômica e do deslocamento cognitivo dos empregadores corporativos e do Estado para os ombros de indivíduos vulneráveis.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">A ilusão de produtividade e o ciclo global de demissões por IA</span>
+      <span class="lang-en">The Productivity Illusion and the Global AI Layoff Cycle</span>
+    </h3>
+    <div class="lang-en">
+      <p>As organizations rush to integrate artificial intelligence, a volatile global paradox has emerged: a massive wave of corporate layoffs justified by “AI-driven efficiency” that is completely disconnected from actual productivity gains. Since January 2025, specialized trackers like jobloss.ai and industry reports indicate that between 126,000 and 205,000 workers in the United States and Europe have lost their jobs due to AI-related factors, with the tech sector alone suffering 149,023 cuts in the first seven months of 2026<sup class="cite"><a href="#ref-14">[14]</a></sup>. High-profile examples include companies like Block (Square), which cut its workforce nearly in half in early 2026 citing AI-driven automation, triggering an immediate 24% jump in its share price.</p>
+      <p>However, rigorous macroeconomic research reveals that these layoffs are largely built on a <strong>productivity illusion</strong>:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>The zero-productivity gap.</strong> A comprehensive survey by the National Bureau of Economic Research (NBER) reveals that over 90% of executives admit AI has had “no impact on own-firm employment over the past three years,” and 89% report “no impact on labor productivity” at all. Harvard Business Review found that while 60% of companies cut jobs in anticipation of AI, only 2% did so because AI was actually performing the displaced work.</li>
+        <li><strong>Corporate scapegoating.</strong> Analyses from the Yale Budget Lab and the Oxford Internet Institute suggest that corporations are “scapegoating” AI to Wall Street. By framing workforce reductions as forward-looking tech innovation, companies can signal fiscal discipline and boost valuations while quietly correcting pandemic-era overhiring.</li>
+        <li><strong>The regret cycle.</strong> Research from Careerminds and Forrester reveals that <strong>75% of organizations found AI-driven layoffs cost more than they saved</strong> due to high integration expenses, system errors, and collapsed employee morale<sup class="cite"><a href="#ref-14">[14]</a></sup>. Consequently, <strong>55% of employers actively regret their AI-driven layoff decisions</strong>, and 90% would rethink them given the chance<sup class="cite"><a href="#ref-14">[14]</a></sup>.</li>
+        <li><strong>The messaging pivot.</strong> An Axios review of workforce statements in August 2026 showed leaders from companies like Etsy, Patreon, and Microsoft actively distancing their layoffs from “AI replacement” claims, choosing instead to frame reductions around “organizational restructuring” and “reducing bureaucracy” while acknowledging that AI is simply changing the skills the company needs.</li>
+      </ul>
+    </div>
+    <div class="lang-pt">
+      <p>Enquanto as organizações correm para integrar IA, emerge um paradoxo volátil: uma onda massiva de demissões justificadas por “eficiência via IA”, desconectada de ganhos reais de produtividade. Desde janeiro de 2025, rastreadores como jobloss.ai e relatórios setoriais indicam que entre 126 mil e 205 mil trabalhadores nos Estados Unidos e na Europa perderam o emprego por fatores ligados à IA; só o setor de tecnologia sofreu 149.023 cortes nos primeiros sete meses de 2026<sup class="cite"><a href="#ref-14">[14]</a></sup>. A Block (Square), por exemplo, cortou quase metade da força de trabalho no início de 2026 citando automação por IA, e as ações subiram 24% imediatamente.</p>
+      <p>Pesquisa macroeconômica rigorosa mostra, contudo, que essas demissões assentam em grande parte sobre uma <strong>ilusão de produtividade</strong>:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>O hiato de produtividade zero.</strong> Levantamento do National Bureau of Economic Research (NBER) revela que mais de 90% dos executivos admitem que a IA “não teve impacto no emprego da própria firma nos últimos três anos”, e 89% relatam “nenhum impacto na produtividade do trabalho”. A Harvard Business Review constatou que, embora 60% das empresas tenham cortado postos na antecipação da IA, apenas 2% o fizeram porque a IA de fato executava o trabalho deslocado.</li>
+        <li><strong>Bode expiatório corporativo.</strong> Análises do Yale Budget Lab e do Oxford Internet Institute sugerem que as corporações usam a IA como bode expiatório perante Wall Street: ao emoldurar cortes como inovação tecnológica, sinalizam disciplina fiscal e elevam valuations enquanto corrigem, em silêncio, a contratações excessivas da era da pandemia.</li>
+        <li><strong>O ciclo do arrependimento.</strong> Pesquisas da Careerminds e da Forrester revelam que <strong>75% das organizações acharam que demissões “por IA” custaram mais do que economizaram</strong>, por integração cara, erros de sistema e colapso do moral<sup class="cite"><a href="#ref-14">[14]</a></sup>. <strong>55% dos empregadores se arrependem ativamente</strong>, e 90% repensariam a decisão se pudessem<sup class="cite"><a href="#ref-14">[14]</a></sup>.</li>
+        <li><strong>A virada de discurso.</strong> Revisão da Axios sobre comunicados de agosto de 2026 mostrou líderes da Etsy, Patreon e Microsoft se distanciando da tese de “substituição por IA”, preferindo “reestruturação organizacional” e “redução de burocracia”, e reconhecendo que a IA apenas muda as competências de que a empresa precisa.</li>
+      </ul>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">Europa: o amortecedor institucional</span>
+      <span class="lang-en">Europe: The Institutional Buffer and the Perceived Savings Gap</span>
+    </h3>
+    <div class="lang-en">
+      <p>Europe is experiencing a severe demographic winter, but its social and institutional architecture acts as a defensive buffer against rapid technological displacement. Strong labor unions, strict worker-dismissal laws, and co-determination structures force corporations to implement automation gradually. Furthermore, the EU’s strict regulatory environments—including GDPR and the EU AI Act—foster highly cautious corporate rollouts, slowing down the pace of sudden, unmanaged job cuts.</p>
+      <p>This cautious approach is supported by the European Central Bank's (ECB) Consumer Expectations Survey (August 2026), which reveals that while workplace AI usage has doubled from 26% in 2024 to 52% in 2026, perceived productivity gains and actual time-savings vary widely<sup class="cite"><a href="#ref-1">[1]</a></sup>. Significant adoption barriers and fragmented language markets continue to hinder further uptake, reinforcing Europe's preference for stable, long-term workforce alignment over the aggressive “layoff-and-regret” cycles seen across the Atlantic. While Europe’s heavily taxed social welfare systems face massive pension liabilities, the state plays a proactive role in cushioning the transition and retraining workers, prioritizing social cohesion over rapid capital efficiency.</p>
+    </div>
+    <div class="lang-pt">
+      <p>A Europa vive um inverno demográfico severo, mas sua arquitetura social e institucional amortece o deslocamento tecnológico rápido. Sindicatos fortes, leis rígidas de demissão e estruturas de cogestão forçam a automação gradual. O GDPR e o AI Act incentivam implantações corporativas cautelosas, desacelerando cortes súbitos e desgovernados.</p>
+      <p>Essa cautela é corroborada pela Pesquisa de Expectativas do Consumidor do Banco Central Europeu (agosto de 2026): o uso de IA no trabalho dobrou de 26% em 2024 para 52% em 2026, mas ganhos percebidos de produtividade e economia de tempo variam amplamente<sup class="cite"><a href="#ref-1">[1]</a></sup>. Barreiras de adoção e mercados linguísticos fragmentados reforçam a preferência europeia por alinhamento estável da força de trabalho, em vez dos ciclos agressivos de “demitir e se arrepender” do outro lado do Atlântico. Embora os sistemas de bem-estar altamente tributados enfrentem passivos previdenciários enormes, o Estado atua para amortecer a transição e retreinar trabalhadores, priorizando coesão social sobre eficiência rápida do capital.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">Estados Unidos: flexibilidade de mercado e ônus individual</span>
+      <span class="lang-en">United States: Market Flexibility &amp; Individual Burden</span>
+    </h3>
+    <div class="lang-en">
+      <p>In contrast, the United States features high labor market flexibility, minimal regulatory friction, and is the primary epicenter of the AI layoff wave. US employers cited AI in connection with 10,970 announced job cuts in July 2026 alone, making AI the leading reason for announced cuts for the fifth consecutive month<sup class="cite"><a href="#ref-14">[14]</a></sup>. The US labor market absorbs technological shocks through rapid, reactive corporate restructuring. Displaced workers are pushed to adapt through highly fragmented gig work or private contract services. Without robust, state-supported social safety nets or centralized pension guarantees, the financial and emotional burden of job displacement shifts entirely onto individual households, exacerbating long-term welfare stress.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Os Estados Unidos, em contraste, combinam alta flexibilidade do mercado de trabalho, mínima fricção regulatória e o epicentro da onda de demissões por IA. Empregadores citaram IA em 10.970 cortes anunciados só em julho de 2026 — o principal motivo pelo quinto mês consecutivo<sup class="cite"><a href="#ref-14">[14]</a></sup>. O mercado absorve choques por reestruturações corporativas rápidas e reativas. Trabalhadores deslocados são empurrados para o gig work fragmentado ou contratos privados. Sem redes de proteção robustas ou garantias previdenciárias centralizadas, o ônus financeiro e emocional recai inteiramente sobre os domicílios, agravando o estresse de bem-estar de longo prazo.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O paralelo brasileiro: precarização e mercado informal</span>
+      <span class="lang-en">The Brazilian Parallel: Precarization and the Informal Labor Market</span>
+    </h3>
+    <div class="lang-en">
+      <p>For Brazil, the collision between job automation, the global layoff wave, and demographics presents a vastly different, more dangerous architecture.</p>
+      <p>First, Brazil's economic structure is heavily dominated by the services sector, which accounts for roughly 70% of the country's GDP. Second, Brazil is a hyper-adoptive digital outlier: a staggering 68% of Brazilian knowledge workers utilize AI tools every single day, and 76% of Brazilian companies keep AI agents in active production—significantly outpacing both the United States and global averages.</p>
+      <p>However, this aggressive integration is occurring in a labor market characterized by deep precarization and informal employment, where roughly 40% of the workforce operates in the informal economy, completely lacking employer-sponsored pension schemes or social safety nets.</p>
+      <p>This vulnerability has been severely compounded by recent legislative shifts. While the initial draft of Brazil's landmark AI regulation, PL 2338/2023, sought to establish baseline protections, the legislative process in the Chamber of Deputies resulted in the stripping of minimum labor safeguards (<em>salvaguardas mínimas para o mercado de trabalho</em>) from the text. In an economy already marked by precarization, the removal of these protective guardrails leaves the Brazilian workforce highly exposed to rapid corporate automation.</p>
+      <p>Because the services sector represents 70% of Brazil's GDP and lacks formal labor protections, the rapid automation of customer support, basic analysis, and administrative services directly threatens the livelihoods of everyday workers. For informal workers, this does not just mean “losing a corporate desk job”—it means the sudden elimination of informal micro-gigs, customer support contracts, and low-barrier digital service opportunities, threatening their basic livelihoods without any welfare cushion.</p>
+      <p>Furthermore, the Brazilian market is highly exposed to the same “trial-and-error” operational failures that drive the global regret cycle. As 80% of Brazilian companies have had to pull back deployments due to high data leak vulnerabilities, the lack of mature corporate governance means that workers are displaced by unstable, high-risk systems, resulting in double-sided disruption where both labor stability and data privacy are compromised.</p>
+    </div>
+    <div class="lang-pt">
+      <p>No Brasil, a colisão entre automação, a onda global de demissões e a demografia assume uma arquitetura distinta — e mais perigosa.</p>
+      <p>Primeiro, a estrutura econômica é dominada pelos serviços, cerca de 70% do PIB. Segundo, o Brasil é um outlier digital hiperadotante: 68% dos trabalhadores do conhecimento usam ferramentas de IA todos os dias, e 76% das empresas mantêm agentes de IA em produção — ritmos superiores aos dos Estados Unidos e às médias globais.</p>
+      <p>Essa integração agressiva ocorre, porém, em um mercado marcado por precarização profunda e informalidade: cerca de 40% da força de trabalho opera na economia informal, sem previdência patronal ou redes de proteção.</p>
+      <p>A vulnerabilidade foi agravada por mudanças legislativas recentes. O texto inicial do PL 2338/2023 buscava proteções mínimas; o processo na Câmara resultou na retirada das <em>salvaguardas mínimas para o mercado de trabalho</em>. Numa economia já precarizada, a remoção desses guardrails expõe a força de trabalho à automação corporativa rápida.</p>
+      <p>Como os serviços representam 70% do PIB e carecem de proteções formais, a automação de atendimento, análise básica e serviços administrativos ameaça diretamente o sustento cotidiano. Para o trabalhador informal, não se trata de “perder uma mesa corporativa”: é a eliminação súbita de micro-gigs, contratos de suporte e serviços digitais de baixa barreira, sem qualquer colchão de bem-estar.</p>
+      <p>O mercado brasileiro está, ainda, exposto às mesmas falhas operacionais de tentativa e erro que alimentam o ciclo global de arrependimento. Como 80% das empresas tiveram de recuar implantações por vazamentos, a governança imatura significa que trabalhadores são deslocados por sistemas instáveis e de alto risco — uma disrupção de dois lados, em que estabilidade laboral e privacidade de dados são comprometidas juntas.</p>
+    </div>
+
+    <h2 id="sec-4" class="font-serif text-2xl font-bold text-navy mt-14 mb-4 pt-4 border-t border-stone-200">
+      <span class="text-terracotta font-sans text-sm tracking-widest mr-2">4.</span>
+      <span class="lang-pt">O paradoxo do profissional: atrofia cognitiva, desqualificação e os riscos da automação sem regulação</span>
+      <span class="lang-en">The Professional’s Paradox: Cognitive Atrophy, Deskilling, and the Risks of Unregulated Automation</span>
+    </h2>
+    <div class="lang-en">
+      <p>The rapid, unregulated integration of generative AI into elite professional sectors is celebrating a dangerous paradigm: offloading active, high-level cognition to automated systems in the name of speed and short-term capital efficiency. From software engineering to medicine and education, elite cognitive workers are actively participating in a process of technological dependency that erodes the very skills that define their expertise. Rather than liberating professionals to perform higher-order reasoning, indiscriminate AI adoption is generating a systemic socio-cognitive tax: the rise of automation bias, structural deskilling, and the erosion of generational expert pipelines.</p>
+    </div>
+    <div class="lang-pt">
+      <p>A integração rápida e sem regulação da IA generativa em setores profissionais de elite celebra um paradigma perigoso: transferir cognição ativa de alto nível a sistemas automatizados em nome da velocidade e da eficiência de capital de curto prazo. Da engenharia de software à medicina e à educação, trabalhadores cognitivos de elite participam de um processo de dependência tecnológica que erode as próprias habilidades que definem sua expertise. Em vez de libertar profissionais para raciocínio de ordem superior, a adoção indiscriminada de IA gera um imposto sociocognitivo sistêmico: o viés de automação, a desqualificação estrutural e a erosão dos pipelines geracionais de especialistas.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">4.1 O engenheiro de software: dívida de compreensão e canibalização do código</span>
+      <span class="lang-en">4.1 The Software Engineer: Comprehension Debt and Code Cannibalization</span>
+    </h3>
+    <div class="lang-en">
+      <p>In software engineering, this dynamic manifests as the rapid accumulation of <strong>{% include glossary-term.html id="divida-compreensao" text="comprehension debt" %}</strong>—the widening gap between the volume of code that exists in a system and how much of it any human being genuinely understands. AI-native development platforms (like Cursor and Claude Code) make raw code incredibly cheap to generate, but they have not made understanding cheap to skip.</p>
+      <p>At major organizations like Google, 75% of all new code is now AI-generated and approved by engineers, creating an ingestion pace that human reviewers can no longer physically absorb<sup class="cite"><a href="#ref-6">[6]</a></sup>. This gap between what exists in the system and what any human genuinely understands is quietly widening, creating a false confidence where the code looks clean and tests pass, but the underlying comprehension has collapsed<sup class="cite"><a href="#ref-17">[17]</a></sup>.</p>
+      <p>This debt accumulates silently because of a powerful cognitive feedback loop: AI systems deliver instantaneous, clean-looking solutions that easily pass unit tests, triggering a rush of dopamine that feeds an artificial “illusion of competence and power.” Developers merge thousands of lines of code without reading them, substituting “green tests” for true comprehension. When a defect inevitably appears weeks later, the team, suffering from <strong>dependency-induced atrophy</strong>, is unable to read the stack traces or reason through the system's logic. This forces them to feed the error back into the AI, which generates another uncomprehended patch to bandage a self-inflicted wound, establishing a recursive “bandaid on bandaid” loop of deferred understanding<sup class="cite"><a href="#ref-8">[8]</a></sup>.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Na engenharia de software, essa dinâmica se manifesta como a acumulação rápida de <strong>{% include glossary-term.html id="divida-compreensao" text="dívida de compreensão" %}</strong> — o fosso crescente entre o volume de código que existe em um sistema e quanto dele qualquer ser humano realmente entende. Plataformas de desenvolvimento nativas de IA (como Cursor e Claude Code) tornam o código bruto baratíssimo de gerar, mas não tornaram barato pular o entendimento.</p>
+      <p>Em organizações como o Google, 75% de todo o código novo é gerado por IA e aprovado por engenheiros, num ritmo de ingestão que revisores humanos já não conseguem absorver fisicamente<sup class="cite"><a href="#ref-6">[6]</a></sup>. O fosso entre o que existe no sistema e o que qualquer humano realmente compreende se alarga em silêncio, criando uma falsa confiança: o código parece limpo e os testes passam, mas a compreensão subjacente colapsou<sup class="cite"><a href="#ref-17">[17]</a></sup>.</p>
+      <p>A dívida se acumula em silêncio por um loop cognitivo poderoso: sistemas de IA entregam soluções instantâneas, de aparência limpa, que passam nos testes unitários, disparando dopamina e alimentando uma “ilusão de competência e poder”. Desenvolvedores fazem merge de milhares de linhas sem lê-las, substituindo compreensão real por “testes verdes”. Quando o defeito aparece semanas depois, o time, sofrendo de <strong>atrofia induzida por dependência</strong>, é incapaz de ler stack traces ou raciocinar sobre a lógica do sistema. Devolve o erro à IA, que gera outro patch incompreendido para um ferimento autoinfligido — um loop recursivo de “curativo sobre curativo” de entendimento adiado<sup class="cite"><a href="#ref-8">[8]</a></sup>.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">4.2 O clínico médico: viés de automação e desqualificação clínica</span>
+      <span class="lang-en">4.2 The Medical Clinician: Automation Bias and Clinical Deskilling</span>
+    </h3>
+    <div class="lang-en">
+      <p>A parallel, and far more critical, vulnerability is actively transforming the field of medicine: the twin threats of <strong>clinical deskilling</strong> and <strong>automation bias</strong>—the human tendency to uncritically trust automated systems, even when they are confidently wrong. This over-reliance distorts clinical judgment, leading to catastrophic errors of commission (acting on incorrect AI recommendations) and omission (failing to act because the AI did not prompt action).</p>
+      <p>The impact of this bias on diagnostic reasoning is no longer a theoretical concern:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>The Pakistani {% include glossary-term.html id="llm" text="LLM" %} trial (NCT06963957).</strong> A randomized clinical trial evaluating 44 physicians who had completed 20 hours of formal AI-literacy training demonstrated how easily persuasive but flawed AI suggestions override clinical training. When physicians diagnosed clinical cases with access to deliberately flawed large language model (LLM) recommendations, their overall diagnostic reasoning score suffered an adjusted <strong>14.0 percentage point drop</strong> (falling from 84.9% with error-free advice to 73.3%). More alarmingly, their top-choice diagnostic accuracy experienced an adjusted <strong>18.3 percentage point collapse</strong> (dropping from 90.5% in the control group to 76.1% in the flawed-advice group), proving that even trained clinicians uncritically defer to erroneous algorithmic suggestions<sup class="cite"><a href="#ref-21">[21]</a></sup>.</li>
+        <li><strong>The radiology failure rate (European Radiology 2023).</strong> A pilot study published in <em>European Radiology</em> revealed that AI errors directly induced higher false positive and false negative rates among clinicians compared to when they assessed the exact same cases without AI. In other words, the radiologists achieved a higher diagnostic baseline when relying on their organic reasoning alone—the unregulated, incorrect system actively derailed clinical judgement rather than augmenting it<sup class="cite"><a href="#ref-22">[22]</a></sup>.</li>
+      </ul>
+      <p>As diagnostic tools are deeply embedded into electronic health records (EHRs), clinicians risk losing their independent interpretive autonomy. When complex interpretive processes are delegated to machines, the clinician's diagnostic reasoning and cognitive agility begin to atrophy, making them increasingly unequipped to catch the cases where the AI inevitably fails<sup class="cite"><a href="#ref-20">[20]</a></sup>.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Uma vulnerabilidade paralela — e bem mais crítica — transforma a medicina: a dupla ameaça da <strong>desqualificação clínica</strong> e do <strong>viés de automação</strong> — a tendência humana de confiar acriticamente em sistemas automatizados, mesmo quando estão confidentemente errados. Essa sobredependência distorce o julgamento clínico, levando a erros catastróficos de comissão (agir segundo recomendações incorretas da IA) e de omissão (deixar de agir porque a IA não sugeriu a ação).</p>
+      <p>O impacto desse viés no raciocínio diagnóstico deixou de ser teórico:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>O ensaio clínico paquistanês (NCT06963957).</strong> Um ensaio randomizado com 44 médicos que completaram 20 horas de formação formal em letramento em IA mostrou como sugestões persuasivas, porém falhas, sobrescrevem o treino clínico. Quando os médicos diagnosticaram casos com acesso a recomendações deliberadamente falhas de um grande modelo de linguagem, o escore geral de raciocínio diagnóstico sofreu uma queda ajustada de <strong>14,0 pontos percentuais</strong> (de 84,9% com conselho sem erro para 73,3%). A acurácia da primeira escolha diagnóstica sofreu um colapso ajustado de <strong>18,3 pontos percentuais</strong> (de 90,5% no controle para 76,1% no grupo com conselho falho), mostrando que mesmo clínicos treinados deferem acriticamente a sugestões algorítmicas errôneas<sup class="cite"><a href="#ref-21">[21]</a></sup>.</li>
+        <li><strong>A taxa de falha em radiologia (European Radiology 2023).</strong> Um estudo-piloto publicado em <em>European Radiology</em> revelou que erros de IA induziram taxas mais altas de falso positivo e falso negativo entre clínicos, comparados à avaliação dos mesmos casos sem IA. Em outras palavras, os radiologistas tiveram linha de base diagnóstica mais alta quando confiaram só no raciocínio orgânico — o sistema incorreto e sem regulação descarrilou o julgamento clínico em vez de aumentá-lo<sup class="cite"><a href="#ref-22">[22]</a></sup>.</li>
+      </ul>
+      <p>À medida que ferramentas diagnósticas se embutem nos prontuários eletrônicos, os clínicos correm o risco de perder autonomia interpretativa. Quando processos interpretativos complexos são delegados a máquinas, o raciocínio diagnóstico e a agilidade cognitiva atrofiam, deixando-os cada vez menos equipados para captar os casos em que a IA inevitavelmente falha<sup class="cite"><a href="#ref-20">[20]</a></sup>.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">4.3 O educador: atrofia pedagógica e disparidades da correção algorítmica</span>
+      <span class="lang-en">4.3 The Educator: Pedagogical Atrophy and Algorithmic Grading Disparities</span>
+    </h3>
+    <div class="lang-en">
+      <p>In the field of education, the rush to deploy AI for automated grading and learning evaluation threatens to dissolve the foundational feedback loops of pedagogy, while actively amplifying structural biases.</p>
+      <p>Automated grading platforms (such as Gradescope, Crowdmark, and ChatGPT-driven assessment models) are widely celebrated by university administrations as a 70% time-saving mechanism. However, peer-reviewed research (Wetzler et al., 2024; Flodén, 2025) reveals a severe compromise in evaluation quality:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>Evaluation flattening.</strong> Studies show that AI grading algorithms operate with a structural flattening effect, grading more leniently on low-performing student essays and far more harshly on high-performing, highly original ones. Because the “black box” models rely on mathematical patterns and vocabulary sophistication rather than conceptual depth, they penalize creative, non-traditional arguments<sup class="cite"><a href="#ref-24">[24]</a></sup>.</li>
+        <li><strong>The linguistic tax on non-native speakers.</strong> Research (Arshad et al.) indicates that AI essay scoring systems are systemically biased against non-native English speakers. By disproportionately penalizing dialect variations and subtle grammatical differences, the algorithms consistently deliver unfair outcomes, transforming automated grading into an amplifier of educational inequality<sup class="cite"><a href="#ref-23">[23]</a></sup>.</li>
+        <li><strong>The Massachusetts MCAS glitch (September 2025).</strong> An overnight batching error misaligned student essay files with rubric IDs, automatically assigning lower grades to <strong>1,400 students</strong>, compromising scholarship eligibility and student morale before administrators caught the clash<sup class="cite"><a href="#ref-24">[24]</a></sup>.</li>
+      </ul>
+      <p>More broadly, automated grading induces a profound <strong>pedagogical atrophy</strong>. When teachers shift from actively reading, analyzing, and engaging with their students' raw writing to passively monitoring and approving AI-generated scorecards, they lose their organic understanding of their students' cognitive and intellectual development. The teacher is deskilled into a low-level “machine auditor,” breaking the vital human connection of mentorship and pedagogical care.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Na educação, a pressa em implantar IA para correção e avaliação automatizadas ameaça dissolver os loops fundamentais de feedback da pedagogia e, ao mesmo tempo, ampliar vieses estruturais.</p>
+      <p>Plataformas de correção automática (Gradescope, Crowdmark e modelos de avaliação via ChatGPT) são celebradas por administrações universitárias como economia de 70% do tempo. Pesquisa revisada por pares (Wetzler et al., 2024; Flodén, 2025) revela, porém, grave comprometimento da qualidade avaliativa:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>Achatamento da avaliação.</strong> Algoritmos de correção por IA operam com efeito estrutural de achatamento: mais lenientes com redações de baixo desempenho e bem mais duros com as de alto desempenho e alta originalidade. Como os modelos “caixa-preta” se apoiam em padrões matemáticos e sofisticação vocabular, e não em profundidade conceitual, penalizam argumentos criativos e não tradicionais<sup class="cite"><a href="#ref-24">[24]</a></sup>.</li>
+        <li><strong>O imposto linguístico sobre falantes não nativos.</strong> A pesquisa (Arshad et al.) indica que sistemas de pontuação de redação por IA são sistemicamente enviesados contra falantes não nativos de inglês. Ao penalizar de forma desproporcional variações de dialeto e diferenças gramaticais sutis, os algoritmos produzem resultados injustos e transformam a correção automática em amplificador de desigualdade educacional<sup class="cite"><a href="#ref-23">[23]</a></sup>.</li>
+        <li><strong>A falha do MCAS em Massachusetts (setembro de 2025).</strong> Um erro noturno de loteamento desalinhou arquivos de redação e IDs de rubrica, atribuindo notas mais baixas a <strong>1.400 estudantes</strong>, comprometendo elegibilidade a bolsas e o moral antes que administradores detectassem o conflito<sup class="cite"><a href="#ref-24">[24]</a></sup>.</li>
+      </ul>
+      <p>De modo mais amplo, a correção automatizada induz uma <strong>atrofia pedagógica</strong> profunda. Quando professores deixam de ler, analisar e engajar-se com a escrita bruta dos alunos para monitorar passivamente boletos gerados por IA, perdem a compreensão orgânica do desenvolvimento cognitivo e intelectual. O professor é desqualificado a “auditor de máquina” de baixo nível, rompendo a conexão humana vital da mentoria e do cuidado pedagógico.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O aperto no mercado de trabalho: quebrando o pipeline geracional de expertise</span>
+      <span class="lang-en">The Labor Market Squeeze: Breaking the Generational Pipeline of Expertise</span>
+    </h3>
+    <div class="lang-en">
+      <p>Across all three professions, the unmitigated adoption of AI is reshaping the labor market in a highly destructive manner:</p>
+      <ol class="list-decimal ml-6 mb-4 space-y-2">
+        <li><strong>The junior barrier.</strong> By automating entry-level and routine cognitive tasks (basic code-writing, initial diagnostic charting, draft grading), organizations justify slashing junior and entry-level roles. However, it is precisely through executing these “routine” tasks that junior professionals develop the deep, organic, tacit knowledge and clinical/pedagogical intuition required to become senior experts.</li>
+        <li><strong>The expertise chasm.</strong> If the first rung of the professional ladder is destroyed, the generational pipeline of expertise collapses. In a decade, who will possess the deep, intuitive mastery needed to audit the AI, or design the next generation of models, if no one practiced the fundamental skills?</li>
+        <li><strong>From reasoners to auditors.</strong> The labor market is being pushed into a precarious, unequal bimodal distribution. At the top sits a shrinking class of highly compensated “system orchestrators” or private capital AI trainers; at the bottom sits a deskilled, outsourced mass of “human-in-the-loop” verification clerks, earning low wages to stamp approval on automated outputs they can no longer fully comprehend or contest.</li>
+      </ol>
+    </div>
+    <div class="lang-pt">
+      <p>Nas três profissões, a adoção sem mitigação da IA remodela o mercado de trabalho de forma destrutiva:</p>
+      <ol class="list-decimal ml-6 mb-4 space-y-2">
+        <li><strong>A barreira júnior.</strong> Ao automatizar tarefas cognitivas de entrada e rotina (código básico, triagem diagnóstica inicial, correção de rascunhos), as organizações justificam o corte de postos juniores. É precisamente ao executar essas tarefas “rotineiras”, porém, que os profissionais juniores desenvolvem o conhecimento tácito profundo e a intuição clínica/pedagógica exigidos para se tornarem especialistas sêniores.</li>
+        <li><strong>O abismo de expertise.</strong> Se o primeiro degrau da escada profissional é destruído, o pipeline geracional de expertise colapsa. Em uma década, quem terá o domínio intuitivo profundo necessário para auditar a IA, ou desenhar a próxima geração de modelos, se ninguém praticou as habilidades fundamentais?</li>
+        <li><strong>De raciocinadores a auditores.</strong> O mercado é empurrado a uma distribuição bimodal precária e desigual. No topo, uma classe encolhida de “orquestradores de sistema” altamente remunerados ou treinadores de IA do capital privado; na base, uma massa desqualificada e terceirizada de escriturários de verificação <em>human-in-the-loop</em>, com salários baixos para carimbar outputs automatizados que já não compreendem nem contestam por completo.</li>
+      </ol>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O paralelo brasileiro: nearshoring, “armadilha do wrapper” e requalificação profissional na Faria Lima</span>
+      <span class="lang-en">The Brazilian Parallel: Nearshoring, the “Wrapper Trap”, and Professional Reskilling on Faria Lima</span>
+    </h3>
+    <div class="lang-en">
+      <p>For Brazil, which has established itself as a premier global {% include glossary-term.html id="nearshoring" text="nearshoring" %} hub and the 9th largest information and communication technology (ICT) market in the world (reaching $97 billion in 2025), this professional paradox has incredibly high local stakes.</p>
+      <p>As generative AI commoditizes entry-level software engineering, basic medical triage, and low-barrier digital tutoring, the traditional labor-arbitrage model—where North American firms nearshore basic coding and administrative tasks to Brazilian professionals—is rapidly evaporating. If Brazilian professionals remain simple “task-executors,” they face immediate displacement by autonomous global agents. To survive, local talent must transition from writing routine code to designing highly complex, integrated system architectures.</p>
+      <p>This shift from raw experimentation to disciplined, high-value engineering is already visible in São Paulo's financial heart along Avenida Brigadeiro Faria Lima. Data from the Febraban Tech 2026 banking survey reveals that Brazilian financial institutions have earmarked a massive 6.9 billion reais (approx. $1.3 billion USD) for AI, cloud, and big data infrastructure. However, local tech executives report a stark transition in strategy: banks are shifting away from a chaotic “experimentation phase” characterized by testing endless models. Instead, they are entering a cycle of strict cost rationalization, assessing the financial returns of token consumption as their model usage scales.</p>
+      <p>Furthermore, local technology builders are waking up to the danger of the “chat {% include glossary-term.html id="armadilha-wrappers" text="wrapper trap" %}.” Many early-stage startups built thin consumer interfaces on top of foreign proprietary models, only to find they had no defensible moat. In a mobile-first economy where WhatsApp reaches 93.9% of the online population and the Pix payment network processes trillions of reais, a thin chat wrapper is highly vulnerable to being instantly absorbed or rendered obsolete by a single update from a frontier model provider.</p>
+      <p>To build true, lasting value, Brazilian developers and professionals must steer their efforts away from generic wrappers and passive algorithmic reliance. Defensibility in the Brazilian market must come from integrating AI directly into deep, localized workflows that capture proprietary transaction data—such as WhatsApp-native business copilots that manage local commercial interactions, settle transactions instantly via Pix, and leverage that tight data loop to underwrite working capital. The modern software engineering and professional challenge in Brazil is no longer about writing code or executing tasks faster; it is about owning the local workflow before the global AI arrives.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Para o Brasil — hub global de {% include glossary-term.html id="nearshoring" text="nearshoring" %} e nono maior mercado de TIC do mundo (US$ 97 bilhões em 2025) — o paradoxo do profissional tem apostas locais altíssimas.</p>
+      <p>À medida que a IA generativa commoditiza a engenharia de entrada, a triagem médica básica e a tutoria digital de baixa barreira, o modelo clássico de arbitragem de mão de obra — empresas norte-americanas nearshoring código e tarefas administrativas a profissionais brasileiros — evapora. Se os profissionais locais permanecerem meros “executores de tarefas”, serão deslocados por agentes autônomos globais. Para sobreviver, o talento local precisa transitar da escrita rotineira para o desenho de arquiteturas de sistemas complexas e integradas.</p>
+      <p>Essa passagem da experimentação bruta para a engenharia disciplinada de alto valor já é visível no coração financeiro de São Paulo, na Avenida Brigadeiro Faria Lima. A pesquisa Febraban Tech 2026 mostra que instituições financeiras brasileiras reservaram R$ 6,9 bilhões (cerca de US$ 1,3 bilhão) para IA, nuvem e big data. Executivos locais relatam, porém, uma virada: os bancos saem da “fase de experimentação” caótica de testar modelos sem fim e entram em racionalização estrita de custos, avaliando o retorno financeiro do consumo de tokens à medida que o uso escala.</p>
+      <p>Desenvolvedores locais também despertam para a “{% include glossary-term.html id="armadilha-wrappers" text="armadilha do wrapper" %} de chat”. Muitas startups iniciais ergueram interfaces finas sobre modelos proprietários estrangeiros e descobriram não ter um modelo de negócio defensável. Em uma economia mobile-first em que o WhatsApp alcança 93,9% da audiência online e o Pix processa trilhões de reais, um wrapper fino é vulnerável a ser absorvido ou tornado obsoleto por uma única atualização de um provedor de modelo de fronteira.</p>
+      <p>Para gerar valor duradouro, desenvolvedores e profissionais brasileiros precisam afastar-se de wrappers genéricos e da dependência algorítmica passiva. A defensibilidade virá de integrar a IA a fluxos localizados profundos que capturem dados transacionais proprietários — copilots nativos de WhatsApp que gerenciem interações comerciais locais, liquidem via Pix e usem esse loop de dados para lastrear capital de giro. O desafio profissional no Brasil deixou de ser escrever código ou executar tarefas mais rápido: é possuir o fluxo de trabalho local antes que a IA global chegue.</p>
+    </div>
+
+    <h2 id="sec-5" class="font-serif text-2xl font-bold text-navy mt-14 mb-4 pt-4 border-t border-stone-200">
+      <span class="text-terracotta font-sans text-sm tracking-widest mr-2">5.</span>
+      <span class="lang-pt">Uma alternativa soberana: IA pública como infraestrutura digital</span>
+      <span class="lang-en">A Sovereign Alternative: Public AI as Digital Infrastructure</span>
+    </h2>
+    <div class="lang-en">
+      <p>To prevent a future where society is held hostage to digital systems built solely for private profit, digital development must be treated as a vital public utility. Governments must recognize that digital infrastructure is a first-class citizen, fully on par with physical infrastructure like roads and power grids. It takes billions of dollars to train the frontier AI models used on a day-to-day basis, and the only entities with the financial capacity to compete with heavily funded private monopolies are sovereign states.</p>
+      <p>By establishing public labs and non-profit entities, governments can create a powerful public alternative. This public weight is essential to help regulate commercial pricing, establish baseline safety standards, and steer AI development toward the public good rather than leaving it entirely to market forces. Yet, a profound educational deficit persists: many politicians and regulators treat AI as a “magical” tool rather than a reproducible, resource-intensive science. In the absence of state-level processing power and local capacity, public interests are easily overshadowed by marketing promises and the prospect of corporate profits.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Para evitar um futuro em que a sociedade fique refém de sistemas digitais feitos só para o lucro privado, o desenvolvimento digital deve ser tratado como utilidade pública vital. Governos precisam reconhecer a infraestrutura digital como cidadã de primeira classe, no mesmo plano de estradas e redes elétricas. Treinar os modelos de fronteira usados no dia a dia custa bilhões de dólares; as únicas entidades com capacidade financeira para competir com monopólios privados fortemente capitalizados são os Estados soberanos.</p>
+      <p>Ao estabelecer laboratórios públicos e entidades sem fins lucrativos, os governos podem criar uma alternativa pública potente. Esse peso é essencial para regular preços comerciais, fixar padrões mínimos de segurança e orientar a IA ao bem público, em vez de deixá-la só às forças de mercado. Persiste, contudo, um déficit educacional profundo: muitos políticos e reguladores tratam a IA como ferramenta “mágica”, não como ciência reproduzível e intensiva em recursos. Na ausência de poder de processamento estatal e de capacidade local, o interesse público é facilmente ofuscado por promessas de marketing e pela perspectiva de lucros corporativos.</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">Modelos transatlânticos: domínio privado versus computação centralizada</span>
+      <span class="lang-en">Transatlantic Models: Private Dominance vs. Centralized Compute</span>
+    </h3>
+    <div class="lang-en">
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>North America.</strong> The United States approaches sovereign infrastructure through a heavily privatized model. While proposals like the National AI Research Resource (NAIRR) attempt to democratize access to processing power for researchers, the system is fundamentally reliant on partnerships with the same private cloud giants (Amazon, Microsoft, and Google) that dominate the market. This hybrid approach accelerates commercial deployment but fails to establish a truly independent, public-sector computing grid.</li>
+        <li><strong>Europe.</strong> The European Union has taken a more direct, state-funded approach to digital sovereignty. Under initiatives like the EuroHPC Joint Undertaking, the EU has built a network of world-class public supercomputers and established “AI Factories” to provide European startups and research labs with independent compute. This public processing power acts as a direct counterweight to US cloud monopolies, ensuring that European researchers can train models under strict compliance with local regulations.</li>
+      </ul>
+    </div>
+    <div class="lang-pt">
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>América do Norte.</strong> Os Estados Unidos abordam a infraestrutura soberana por um modelo fortemente privatizado. Propostas como o National AI Research Resource (NAIRR) tentam democratizar o acesso a processamento para pesquisadores, mas o sistema depende de parcerias com os mesmos gigantes de nuvem (Amazon, Microsoft e Google) que dominam o mercado. O híbrido acelera a implantação comercial, mas não estabelece uma malha computacional pública verdadeiramente independente.</li>
+        <li><strong>Europa.</strong> A União Europeia adotou via mais direta e estatal. Sob o EuroHPC Joint Undertaking, construiu uma rede de supercomputadores públicos de classe mundial e “AI Factories” para startups e laboratórios com computação independente. Esse poder de processamento público contrapesa os monopólios de nuvem dos EUA e permite treinar modelos sob compliance estrito das normas locais.</li>
+      </ul>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O plano brasileiro: “IA para o Bem de Todos” (PBIA 2024–2028)</span>
+      <span class="lang-en">The Brazilian Blueprint: “IA para o Bem de Todos” (PBIA 2024–2028)</span>
+    </h3>
+    <div class="lang-en">
+      <p>Brazil has positioned itself as a major {% include glossary-term.html id="sul-global" text="Global South" %} pioneer in sovereign technology through the launch of the Plano Brasileiro de Inteligência Artificial ({% include glossary-term.html id="pbia" text="PBIA" %} 2024–2028). Operating under the slogan “IA para o Bem de Todos” (AI for the Good of All), the plan outlines a massive public commitment of R$ 23 billion (approx. $4.2 billion USD) over four years—matching the per-capita public funding efforts of leading European nations like France and Germany<sup class="cite"><a href="#ref-19">[19]</a></sup>.</p>
+      <p>The primary objective of the PBIA is to drastically reduce Brazil's technological dependence on foreign cloud hyper-monopolies (such as Amazon, Microsoft, and Google) and to prevent local data extraction by foreign entities. The strategy is built upon five foundational pillars:</p>
+      <ol class="list-decimal ml-6 mb-4 space-y-2">
+        <li><strong>Computational infrastructure (supercomputing leadership).</strong> The plan funds the procurement of a state-of-the-art public supercomputer valued at US$ 1 billion, projected to rank among the top 10 most powerful globally, providing universities, research centers, and public agencies with the compute necessary to run advanced workloads.</li>
+        <li><strong>Sovereign scientific research and AI development (native Portuguese LLMs).</strong> Rather than relying on translated foreign models that erase local context, Brazil is funding native large language models trained on Brazilian Portuguese, local historical archives, and domestic cultural data.</li>
+        <li><strong>Sovereign hardware and semiconductor R&amp;D (domestic chip design).</strong> To mitigate hardware supply-chain vulnerabilities, the plan allocates R$ 1.2 billion in public resources (via the FNDCT 2026) to foster local semiconductor design and incentives for domestic chip manufacturing.</li>
+        <li><strong>Public sector transformation (AI for social and economic good).</strong> Key initiatives include AI-based diagnostics to optimize the Unified Health System (SUS), modernizing agricultural productivity, promoting educational equity, and strengthening environmental monitoring to detect and combat deforestation in the Amazon.</li>
+        <li><strong>Ethical governance and regulatory integration (ANPD and PL 2338 alignment).</strong> The sovereign plan is designed to operate in tandem with PL 2338/2023 and the proposed SIA, with the ANPD as coordinating regulator to enforce security, auditability, and bias-mitigation standards<sup class="cite"><a href="#ref-10">[10]</a></sup>.</li>
+      </ol>
+    </div>
+    <div class="lang-pt">
+      <p>O Brasil posicionou-se como pioneiro do {% include glossary-term.html id="sul-global" text="Sul Global" %} em tecnologia soberana com o Plano Brasileiro de Inteligência Artificial ({% include glossary-term.html id="pbia" text="PBIA" %} 2024–2028). Sob o lema “IA para o Bem de Todos”, o plano prevê compromisso público de R$ 23 bilhões (cerca de US$ 4,2 bilhões) em quatro anos — patamar per capita comparável ao de França e Alemanha<sup class="cite"><a href="#ref-19">[19]</a></sup>.</p>
+      <p>O objetivo primário é reduzir drasticamente a dependência tecnológica dos hipermonopólios estrangeiros de nuvem (Amazon, Microsoft e Google) e impedir a extração local de dados por entidades forâneas. A estratégia assenta em cinco pilares:</p>
+      <ol class="list-decimal ml-6 mb-4 space-y-2">
+        <li><strong>Infraestrutura computacional (liderança em supercomputação).</strong> O plano financia a aquisição de um supercomputador público de última geração, avaliado em US$ 1 bilhão, projetado para figurar entre os dez mais poderosos do mundo, oferecendo a universidades, centros de pesquisa e agências públicas a computação necessária a cargas avançadas.</li>
+        <li><strong>Pesquisa científica soberana e desenvolvimento de IA ({% include glossary-term.html id="llm" text="LLMs" %} nativos em português).</strong> Em vez de modelos estrangeiros traduzidos que apagam o contexto local, o Brasil financia grandes modelos de linguagem treinados nativamente em português brasileiro, arquivos históricos locais e dados culturais domésticos.</li>
+        <li><strong>Hardware soberano e P&amp;D em semicondutores (design doméstico de chips).</strong> Para mitigar vulnerabilidades de cadeia de suprimentos, o plano aloca R$ 1,2 bilhão em recursos públicos (via FNDCT 2026) ao design local de semicondutores e a incentivos à fabricação doméstica.</li>
+        <li><strong>Transformação do setor público (IA para o bem social e econômico).</strong> Incluem-se diagnósticos baseados em IA para otimizar o SUS, modernizar a produtividade agrícola, promover equidade educacional e fortalecer o monitoramento ambiental contra o desmatamento na Amazônia.</li>
+        <li><strong>Governança ética e integração regulatória (ANPD e alinhamento ao PL 2338).</strong> O plano soberano deve operar em conjunto com o PL 2338/2023 e o SIA proposto, com a ANPD como reguladora coordenadora de segurança, auditabilidade e mitigação de viés<sup class="cite"><a href="#ref-10">[10]</a></sup>.</li>
+      </ol>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O polo soberano: Scala AI City</span>
+      <span class="lang-en">The Sovereign Powerhouse: Scala AI City</span>
+    </h3>
+    <div class="lang-en">
+      <p>The physical, climate-resilient realization of this sovereign ambition is <strong>{% include glossary-term.html id="scala-ai-city" text="Scala AI City" %}</strong> in Eldorado do Sul, Rio Grande do Sul (metropolitan Porto Alegre). Born from a partnership between the Rio Grande do Sul government and Scala Data Centers, the project represents an initial first-phase investment of <strong>USD 500 million (around BRL 3 billion)</strong><sup class="cite"><a href="#ref-7">[7]</a></sup>. When fully realized over decades of continuous expansion, the “data center city” is projected to scale up to <strong>USD 50 billion in total investment and 4.7 GW of critical capacity</strong><sup class="cite"><a href="#ref-7">[7]</a></sup>.</p>
+      <p>Having suffered from devastating regional floods at its earlier sites, Scala designed climate resilience into the core site selection criteria of Scala AI City, prioritizing high-elevation areas proven safe from natural disasters. The campus boasts an initial IT capacity of <strong>54 MW</strong>—which is larger than the entire digital infrastructure market of Argentina.</p>
+      <p>Scala AI City is strategically positioned to serve as a <strong>global hub for AI training and inference workloads</strong>, successfully bypassing the grid capacity crises plaguing North American hubs like Northern Virginia. To enable this, several revolutionary milestones have been achieved:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>The Guaíba substation grid connection.</strong> Scala AI City has secured a massive <strong>5 GW grid connection</strong> to the Guaíba substation. This leverages Brazil's rich transmission grid (which has 12 GW of available capacity) and 6 GW of surplus green-energy generation coming online in 2025–2026.</li>
+        <li><strong>The virtual extension of Virginia (70 ms latency).</strong> Scala is deploying a direct subsea fiber-optic cable connecting the south of Brazil directly to Virginia Beach. Delivering an ultra-low latency of <strong>70 milliseconds</strong>, the campus acts as a virtual, green-powered extension of the Northern Virginia grid. Highlighting this immense global potential, <strong>two major hyperscale customers have already reserved 1 GW of power each</strong> on the Eldorado do Sul campus<sup class="cite"><a href="#ref-18">[18]</a></sup>.</li>
+        <li><strong>The regulatory “embassy” neutral zone.</strong> To resolve international data sovereignty concerns, the private sector is working with the federal government to establish a regulatory “neutral zone” or “embassy” approach. This framework legally protects international corporate workloads and data according to their country of origin, exempting foreign entities from domestic {% include glossary-term.html id="lgpd" text="LGPD" %} jurisdiction much like existing exemptions for non-resident foreign individuals.</li>
+      </ul>
+    </div>
+    <div class="lang-pt">
+      <p>A realização física e climática dessa ambição soberana é a <strong>{% include glossary-term.html id="scala-ai-city" text="Scala AI City" %}</strong>, em Eldorado do Sul, Rio Grande do Sul (região metropolitana de Porto Alegre). Parceria entre o governo gaúcho e a Scala Data Centers, o projeto representa investimento inicial de <strong>US$ 500 milhões (cerca de R$ 3 bilhões)</strong><sup class="cite"><a href="#ref-7">[7]</a></sup>. Em décadas de expansão contínua, a “cidade de data centers” projeta-se a <strong>US$ 50 bilhões de investimento total e 4,7 GW de capacidade crítica</strong><sup class="cite"><a href="#ref-7">[7]</a></sup>.</p>
+      <p>Após enchentes devastadoras em locais anteriores, a Scala incorporou resiliência climática à escolha do local, priorizando áreas elevadas comprovadamente seguras. O campus tem capacidade de TI inicial de <strong>54 MW</strong> — maior que todo o mercado de infraestrutura digital da Argentina.</p>
+      <p>A Scala AI City posiciona-se como <strong>hub global de treino e inferência de IA</strong>, contornando as crises de capacidade de rede que atingem hubs norte-americanos como o Norte da Virgínia. Marcos:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>Conexão à subestação de Guaíba.</strong> A Scala AI City assegurou conexão de <strong>5 GW</strong> à subestação de Guaíba, apoiando-se na malha de transmissão brasileira (12 GW disponíveis) e em 6 GW de geração excedente de energia verde que entram em 2025–2026.</li>
+        <li><strong>A extensão virtual da Virgínia (70 ms de latência).</strong> A Scala implanta cabo submarino de fibra ligando o sul do Brasil a Virginia Beach. Com latência de <strong>70 milissegundos</strong>, o campus funciona como extensão virtual, alimentada por energia limpa, da malha do Norte da Virgínia. Dois grandes clientes hyperscale já reservaram <strong>1 GW cada</strong> no campus de Eldorado do Sul<sup class="cite"><a href="#ref-18">[18]</a></sup>.</li>
+        <li><strong>A zona neutra regulatória tipo “embaixada”.</strong> Para resolver preocupações internacionais de soberania de dados, o setor privado trabalha com o governo federal em uma abordagem de “zona neutra” ou “embaixada”. O marco protegeria legalmente cargas e dados corporativos internacionais segundo o país de origem, isentando entidades estrangeiras da jurisdição da {% include glossary-term.html id="lgpd" text="LGPD" %}, à semelhança de isenções já existentes para indivíduos estrangeiros não residentes.</li>
+      </ul>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">O avesso ecológico e soberano: tensões e controvérsias</span>
+      <span class="lang-en">The Ecological and Sovereign Underbelly: Tensions and Controversies</span>
+    </h3>
+    <div class="lang-en">
+      <p>While government officials and corporate executives celebrate Scala AI City as the green, five-gigawatt crown jewel of South American AI infrastructure, a deep and contentious debate has erupted among Brazilian environmentalists, academics, and digital rights organizations. Behind the marketing of a “sustainable data center city” lies a volatile mix of ecological risk, regulatory loopholes, and geopolitical concerns that challenge the very thesis of sovereign development.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Enquanto autoridades e executivos celebram a Scala AI City como joia verde de cinco gigawatts da infraestrutura de IA sul-americana, irrompeu um debate contencioso entre ambientalistas, acadêmicos e organizações de direitos digitais. Por trás do marketing da “cidade sustentável de data centers” há uma mistura volátil de risco ecológico, atalhos regulatórios e preocupações geopolíticas que desafiam a própria tese do desenvolvimento soberano.</p>
+    </div>
+
+    <h4 class="font-serif text-lg font-bold text-navy mt-6 mb-2">
+      <span class="lang-pt">5.1 O paradoxo do dreno energético: 4,75 GW versus o consumo público</span>
+      <span class="lang-en">5.1 The Energy Drain Paradox: 4.75 GW vs. Public Consumption</span>
+    </h4>
+    <div class="lang-en">
+      <p>The most alarming controversy centers on the sheer scale of the project's energy demand. At full build-out, Scala AI City is projected to consume up to <strong>4.75 gigawatts (GW)</strong> of electrical power. According to the Brazilian Energy Planning Company (EPE), this single data center complex will draw more power than the generating capacity of the <strong>Jirau Hydroelectric Plant (3.7 GW)</strong>—the fourth-largest hydropower facility in Brazil, which currently provides electricity to <strong>40 million people</strong>.</p>
+      <p>While Scala asserts that its operations will not disrupt the local electrical supply, consumer advocacy groups like the <strong>Instituto de Defesa de Consumidores (Idec)</strong> express profound concern over <strong>energy justice and consumer tariff hikes</strong>. Pointing to precedents in Illinois and Loudoun County (US)—where the sudden influx of hyperscale data centers forced massive grid expansions and drove up household electricity and water bills—critics ask: “Quem vai pagar a conta?” (Who will pay the bill?). The massive injection of a continuous, gigawatt-scale load onto the National Interconnected System (SIN) threatens to strain transmission lines and socialize the costs of grid reinforcements onto ordinary Brazilian ratepayers.</p>
+    </div>
+    <div class="lang-pt">
+      <p>A controvérsia mais alarmante é a escala da demanda energética. Em plena capacidade, a Scala AI City deve consumir até <strong>4,75 gigawatts (GW)</strong>. Segundo a Empresa de Pesquisa Energética (EPE), esse complexo único demandará mais potência do que a <strong>Usina Hidrelétrica de Jirau (3,7 GW)</strong> — a quarta maior do Brasil, que abastece <strong>40 milhões de pessoas</strong>.</p>
+      <p>A Scala afirma que suas operações não interromperão o suprimento local, mas entidades como o <strong>Instituto de Defesa de Consumidores (Idec)</strong> expressam preocupação profunda com <strong>justiça energética e altas tarifárias</strong>. Apontando precedentes em Illinois e Loudoun County (EUA) — onde o influxo de data centers hyperscale forçou expansões massivas da rede e elevou contas residenciais de luz e água — críticos perguntam: “Quem vai pagar a conta?”. A injeção contínua de carga em escala de gigawatts no Sistema Interligado Nacional (SIN) ameaça tensionar linhas de transmissão e socializar os custos de reforço da rede sobre o consumidor comum.</p>
+    </div>
+
+    <h4 class="font-serif text-lg font-bold text-navy mt-6 mb-2">
+      <span class="lang-pt">5.2 Justiça climática e o contraste social de Eldorado do Sul</span>
+      <span class="lang-en">5.2 Climate Justice and the Eldorado do Sul Social Contrast</span>
+    </h4>
+    <div class="lang-en">
+      <p>The site selection in Eldorado do Sul represents a stark, painful paradox for local communities. The municipality was <strong>almost entirely devastated by the historic 2024 floods</strong> of Rio Grande do Sul. While local residents continue to live in ruins, surrounded by flood debris, and waiting for state-funded structural drainage and flood protection works, the state government rapidly mobilized to approve a multi-billion-dollar private technology hub.</p>
+      <p>Marina Dermann, a legal advisor to the National Council of Human Rights (CNDH), notes with concern that <strong>“the project advances without establishing a clear relationship with the reconstruction of the city, with climate adaptation, and with the protection of the rights of the affected population.”</strong> This has sparked intense criticism regarding <strong>climate equity</strong>: while the private sector receives fast-tracked state support to construct a highly resilient, elevated “data center city,” the vulnerable human population of Eldorado do Sul remains exposed to future extreme climate events.</p>
+    </div>
+    <div class="lang-pt">
+      <p>A escolha de Eldorado do Sul é um paradoxo doloroso. O município foi <strong>quase inteiramente devastado pelas enchentes históricas de 2024</strong> no Rio Grande do Sul. Enquanto moradores seguem em ruínas, entre destroços, à espera de drenagem estrutural e obras de proteção financiadas pelo Estado, o governo estadual mobilizou-se rapidamente para aprovar um polo tecnológico privado de bilhões de dólares.</p>
+      <p>Marina Dermann, assessora jurídica do Conselho Nacional de Direitos Humanos (CNDH), observa que <strong>“o projeto avança sem estabelecer uma relação clara com a reconstrução da cidade, com a adaptação climática e com a proteção dos direitos da população afetada.”</strong> A crítica recai sobre a <strong>equidade climática</strong>: o setor privado recebe apoio estatal acelerado para erguer uma “cidade de data centers” elevada e resiliente, enquanto a população vulnerável de Eldorado do Sul permanece exposta a futuros extremos climáticos.</p>
+    </div>
+
+    <h4 class="font-serif text-lg font-bold text-navy mt-6 mb-2">
+      <span class="lang-pt">5.3 Licenciamento simplificado e o atalho ambiental da “via rápida”</span>
+      <span class="lang-en">5.3 Simplified Licensing and the “Via Rápida” Environmental Loophole</span>
+    </h4>
+    <div class="lang-en">
+      <p>To accelerate the project and capitalize on the global AI boom, the Rio Grande do Sul government implemented Municipal Law No. 5,949/2024, establishing a specialized technology hub with highly simplified, <strong>self-declaratory environmental licensing (“via rápida”)</strong>.</p>
+      <p>Environmental engineers and hydrologists from the Federal University of Rio Grande do Sul (UFRGS) have criticized this fast-tracking, warning that a project of such unprecedented scale cannot bypass rigorous, independent Environmental Impact Assessments (EIAs). Although Scala highlights that Scala AI City will utilize advanced <strong>waterless liquid cooling systems</strong> to eliminate water consumption, researchers argue that the broader ecological footprint—including regional heat dissipation, massive land use (exceeding 1,400 acres), and the deployment of large-scale backup diesel generators—must not be exempted from deep public scrutiny under the guise of “technological neutrality.”</p>
+    </div>
+    <div class="lang-pt">
+      <p>Para acelerar o projeto e capitalizar o boom global de IA, o governo do Rio Grande do Sul implementou a Lei Municipal nº 5.949/2024, criando um polo tecnológico com licenciamento ambiental altamente simplificado e <strong>autodeclaratório (“via rápida”)</strong>.</p>
+      <p>Engenheiros ambientais e hidrólogos da Universidade Federal do Rio Grande do Sul (UFRGS) criticaram essa aceleração, alertando que um projeto de escala inédita não pode contornar Estudos de Impacto Ambiental (EIAs) rigorosos e independentes. Embora a Scala destaque sistemas avançados de <strong>resfriamento líquido sem água</strong>, pesquisadores argumentam que a pegada ecológica mais ampla — dissipação regional de calor, uso massivo de terra (mais de 1.400 acres) e geradores a diesel de backup em larga escala — não deve ser isenta de escrutínio público profundo sob o pretexto de “neutralidade tecnológica”.</p>
+    </div>
+
+    <h4 class="font-serif text-lg font-bold text-navy mt-6 mb-2">
+      <span class="lang-pt">5.4 Neocolonialismo digital: a crítica da “fazenda de dados”</span>
+      <span class="lang-en">5.4 Digital Neocolonialism: The “Data Farm” Critique</span>
+    </h4>
+    <div class="lang-en">
+      <p>At a geopolitical level, critics challenge the core premise of Brazil's “sovereign AI” narrative, arguing that the Scala AI City model represents a modern form of <strong>extractivism and digital neocolonialism</strong>. The issue is not that Brazil hosts data centers — physical infrastructure is a foundation. The risk is treating it as the only strategy and reducing the country to being only a {% include glossary-term.html id="fazenda-dados" text="data farm" %}:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>The {% include glossary-term.html id="fazenda-dados" text="data farm" %} model.</strong> By offering a 5-year 0% federal import tax exemption, cheap land, and highly competitive green energy rates (6 cents per kWh), Brazil is accused of acting <em>only</em> as a “digital farm.” The country exports its natural resources (clean electricity, land) and physical infrastructure to host the heavy, heat-intensive physical workloads of foreign corporations, while the actual high-value technological assets—the proprietary LLM algorithms, the model weights, and the massive financial margins—remain safely in Silicon Valley.</li>
+        <li><strong>Sovereignty vs. foreign law.</strong> While the servers are physically located in Eldorado do Sul, Scala Data Centers is backed by foreign capital (such as DigitalBridge). Under frameworks like the <strong>{% include glossary-term.html id="cloud-act" text="US CLOUD Act" %}</strong>, foreign-owned data centers can still be legally compelled to provide data access to foreign governments, undermining the “sovereignty” of local storage. This has led scholars to ask whether the project represents true sovereign intelligence or merely technological submission under a green facade.</li>
+      </ul>
+    </div>
+    <div class="lang-pt">
+      <p>No plano geopolítico, críticos contestam a premissa da narrativa de “IA soberana”, argumentando que o modelo Scala AI City representa uma forma moderna de <strong>extrativismo e neocolonialismo digital</strong>. A questão não é a presença de data centers no Brasil — infraestrutura física é fundamento. O risco é tratá-la como solução única e reduzir o país a ser somente uma {% include glossary-term.html id="fazenda-dados" text="fazenda de dados" %}:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>O modelo da fazenda de dados.</strong> Ao oferecer isenção de 0% de impostos federais de importação por cinco anos, terra barata e energia verde a 6 centavos de dólar por kWh, o Brasil é acusado de atuar <em>somente</em> como “fazenda digital”. O país exporta recursos naturais (eletricidade limpa, terra) e infraestrutura física para hospedar as cargas pesadas e intensivas em calor de corporações estrangeiras, enquanto os ativos tecnológicos de alto valor — algoritmos proprietários de LLM, pesos dos modelos e as margens financeiras — permanecem no Vale do Silício.</li>
+        <li><strong>Soberania versus lei estrangeira.</strong> Embora os servidores estejam em Eldorado do Sul, a Scala Data Centers é lastreada por capital estrangeiro (como a DigitalBridge). Sob marcos como o <strong>{% include glossary-term.html id="cloud-act" text="US CLOUD Act" %}</strong>, data centers de controle estrangeiro ainda podem ser legalmente obrigados a fornecer acesso a dados a governos forâneos, minando a “soberania” do armazenamento local. Estudiosos perguntam se o projeto representa inteligência soberana de fato ou submissão tecnológica sob fachada verde.</li>
+      </ul>
+    </div>
+
+    <h4 class="font-serif text-lg font-bold text-navy mt-6 mb-2">
+      <span class="lang-pt">5.5 Hardware soberano versus mindware soberano: fuga de cérebros e o gargalo das bolsas</span>
+      <span class="lang-en">5.5 Sovereign Hardware vs. Sovereign Mindware: Combating Brain Drain and the “Bolsas” Bottleneck</span>
+    </h4>
+    <div class="lang-en">
+      <p>While physical infrastructure like supercomputers and multi-gigawatt data center cities represents a vital foundation, physical capacity is a hollow victory without equal investment in human capital. The ultimate limiting constraint on Brazil's technological independence is not its computing grids, but its cognitive sovereign capital—what can be termed “sovereign {% include glossary-term.html id="mindware" text="mindware" %}.” Without native intellectual property, advanced scientific research, and an active class of local inventors, high-tech physical facilities remain vacant shells, destined to host foreign workloads and extract domestic resources without generating local technological value.</p>
+      <p>At a global level, Brazil remains severely behind the frontrunners of artificial intelligence development. While a highly active consumer market exists domestically, Brazil's contribution to global intellectual property is virtually negligible. According to the <strong>World Intellectual Property Organization (WIPO) 2025/2026 Indicators</strong>, a massive bipolar concentration dominates AI patenting, while Brazil sits near the bottom of the list<sup class="cite"><a href="#ref-15">[15]</a></sup>. Furthermore, in high-impact scientific research quality—as measured by the average H-index of publications—Brazil lags behind other middle-income and emerging economies: China ranks 8th and India is 19th globally, while Brazil ranks 24th<sup class="cite"><a href="#ref-15">[15]</a></sup>.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Infraestrutura física como supercomputadores e cidades de data centers de múltiplos gigawatts é fundamento vital, mas capacidade física é vitória oca sem investimento equivalente em capital humano. O vínculo limitante da independência tecnológica brasileira não são as malhas de computação, e sim o capital cognitivo soberano — o “mindware soberano”. Sem propriedade intelectual nativa, pesquisa científica avançada e uma classe ativa de inventores locais, instalações de alta tecnologia permanecem casulos vazios, destinando-se a hospedar cargas estrangeiras e extrair recursos domésticos sem gerar valor tecnológico local.</p>
+      <p>No plano global, o Brasil permanece muito atrás dos líderes de IA. Há mercado consumidor ativo, mas a contribuição brasileira à propriedade intelectual global é quase desprezível. Segundo os <strong>Indicadores da Organização Mundial da Propriedade Intelectual (OMPI) 2025/2026</strong>, uma concentração bipolar massiva domina as patentes de IA, e o Brasil figura perto da base da lista<sup class="cite"><a href="#ref-15">[15]</a></sup>. Na qualidade de pesquisa de alto impacto — medida pelo H-index médio das publicações — o país também fica atrás de outras economias de renda média e emergentes: a China ocupa o 8º lugar e a Índia o 19º no ranking global, enquanto o Brasil está em 24º<sup class="cite"><a href="#ref-15">[15]</a></sup>.</p>
+    </div>
+
+    <figure class="my-10">
+      <figcaption class="font-sans text-xs font-semibold text-navy mb-2 tracking-wide uppercase">
+        <span class="lang-pt">Tabela 1.</span>
+        <span class="lang-en">Table 1.</span>
+        <span class="font-normal normal-case tracking-normal text-gray-600 ml-1">
+          <span class="lang-pt">Pedidos de patentes de IA e impacto científico (OMPI, 2026)<sup class="cite"><a href="#ref-15">[15]</a></sup>.</span>
+          <span class="lang-en">Global AI patent filings and scientific impact (WIPO, 2026)<sup class="cite"><a href="#ref-15">[15]</a></sup>.</span>
+        </span>
+      </figcaption>
+      <div class="overflow-x-auto">
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th><span class="lang-pt">Posição</span><span class="lang-en">Rank</span></th>
+              <th><span class="lang-pt">País</span><span class="lang-en">Country</span></th>
+              <th class="num"><span class="lang-pt">Patentes de IA concedidas</span><span class="lang-en">AI patents granted</span></th>
+              <th class="num"><span class="lang-pt">H-index científico</span><span class="lang-en">Scientific H-index rank</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>China</td>
+              <td class="num">25.177</td>
+              <td class="num"><span class="lang-pt">8º</span><span class="lang-en">8th</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><span class="lang-pt">Estados Unidos</span><span class="lang-en">United States</span></td>
+              <td class="num">17.307</td>
+              <td class="num"><span class="lang-pt">1º</span><span class="lang-en">1st</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><span class="lang-pt">Coreia do Sul</span><span class="lang-en">South Korea</span></td>
+              <td class="num">5.635</td>
+              <td class="num"><span class="lang-pt">15º</span><span class="lang-en">15th</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><span class="lang-pt">Japão</span><span class="lang-en">Japan</span></td>
+              <td class="num">4.811</td>
+              <td class="num"><span class="lang-pt">12º</span><span class="lang-en">12th</span></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><span class="lang-pt">Alemanha</span><span class="lang-en">Germany</span></td>
+              <td class="num">436</td>
+              <td class="num"><span class="lang-pt">3º</span><span class="lang-en">3rd</span></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><span class="lang-pt">Brasil</span><span class="lang-en">Brazil</span></td>
+              <td class="num">37</td>
+              <td class="num"><span class="lang-pt">24º</span><span class="lang-en">24th</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="font-sans text-[11px] text-gray-500 mt-2 italic mb-0">
+        <span class="lang-pt">Fonte: Indicadores OMPI 2025/2026. O Brasil registra 37 patentes de IA concedidas, contra 25.177 da China. No H-index científico, a Índia ocupa o 19º lugar e o Brasil o 24º.</span>
+        <span class="lang-en">Source: WIPO 2025/2026 Indicators. Brazil records 37 granted AI patents, versus 25,177 for China. On scientific H-index, India ranks 19th and Brazil 24th.</span>
+      </p>
+    </figure>
+
+    <div class="lang-en">
+      <p>This patent gap is severely compounded by domestic regulatory bottlenecks. While the National Intellectual Property Strategy (ENPI) set a target to reduce patent review times to two years by 2026, a survey of the <strong>Brazilian Patent and Trademark Office (INPI/BPTO)</strong> reveals that between 2019 and 2024, out of all AI-related patent applications analyzed, <strong>only 3% (8 applications) were successfully granted</strong>, with the remainder stuck in an examination backlog averaging nearly three years<sup class="cite"><a href="#ref-15">[15]</a></sup>.</p>
+      <p>Historically, Brazil has systematically starved its primary engine of scientific innovation: the federal university system and national research agencies. This structural neglect has triggered a severe, multi-decade cognitive hemorrhage known as <strong>“Fuga de Cérebros” ({% include glossary-term.html id="fuga-cerebros" text="Brain Drain" %})</strong>:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>The decade-long exodus.</strong> Between 2015 and 2022, Brazil lost <strong>approximately 6,700 elite scientists, engineers, and researchers</strong> to institutions in the {% include glossary-term.html id="norte-global" text="Global North" %}, according to the Center for Management and Strategic Studies (CGEE/MCTI)<sup class="cite"><a href="#ref-15">[15]</a></sup>. Highly qualified minds in STEM fields fled the country due to frozen research funding, deteriorating laboratory conditions, and a complete lack of stable, structured academic careers.</li>
+        <li><strong>The decimation of the knowledge budget.</strong> According to data from the <em>Observatório do Conhecimento</em>, the total “Orçamento do Conhecimento” (comprising federal universities, CAPES, and CNPq) for 2026 is projected at <strong>R$ 17.29 billion</strong>—a nominal figure that represents <strong>nearly half</strong> of the inflation-adjusted R$ 32.51 billion allocated a decade ago in 2014.</li>
+        <li><strong>Starving the federal system.</strong> In 2026, the direct discretionary budget for {% include universities-phrase.html text="Brazil's 69 federal universities" %} stands at <strong>R$ 7.85 billion</strong>, which is only <strong>45.3% of the 2014 funding level</strong>, despite the fact that the number of institutions grew from 59 to 69 and student enrollment skyrocketed. More dramatically, capital investment in university infrastructure has practically vanished: the R$ 335.9 million planned for 2026 is a miserable <strong>5.67% of what was invested 11 years ago</strong>, making the maintenance of world-class, local research laboratories functionally impossible.</li>
+        <li><strong>Active hostility in the 2026 budget.</strong> In the approved 2026 Annual Budget (LOA), the Brazilian Congress slashed <strong>R$ 488 million</strong> (7.05%) from the {% include glossary-term.html id="custeio-discricionario" text="discretionary funding" %} of federal universities, while cutting <strong>R$ 262 million</strong> from CAPES and <strong>R$ 72 million</strong> from CNPq. Although the federal government intervened in January 2026 with a supplementary credit of R$ 1.36 billion (Portaria GM/MPO nº 12/2026) to prevent immediate institutional collapse, this credit merely restored the original, highly strained planning baseline, leaving the scientific ecosystem operating in a permanent state of survival.</li>
+      </ul>
+      <p>Crucially, this structural starvation is not driven by a genuine lack of national resources, but rather by a deliberate, {% include glossary-term.html id="clientelismo" text="clientelist" %} distortion of public administration and political spending. While Brazil's scientific and academic institutions fight over crumbs, the Brazilian Congress approved a staggering <strong>R$ 61 billion for {% include glossary-term.html id="emendas-parlamentares" text="parliamentary amendments" %} (emendas parlamentares)</strong> in the 2026 budget—a historically unprecedented pool of funds largely used for localized political bargaining, pork-barrel politics, and public-sector inefficiencies<sup class="cite"><a href="#ref-13">[13]</a></sup>. Simultaneously, the <strong>Electoral Fund (Fundo Eleitoral) was inflated from R$ 1 billion to R$ 4.9 billion</strong> to fund political campaigns.</p>
+      <p>To put these figures in perspective, the resources funneled into clientelist parliamentary emendas alone are <strong>nearly eight times larger</strong> than the entire discretionary budget of all {% include universities-phrase.html text="69 federal universities" %} combined (R$ 7.85 billion), and <strong>nearly 180 times larger</strong> than the total capital investment allocated for university laboratories and research equipment (R$ 335.9 million).</p>
+    </div>
+    <div class="lang-pt">
+      <p>Essa lacuna de patentes é agravada por gargalos regulatórios domésticos. A Estratégia Nacional de Propriedade Intelectual (ENPI) fixou a meta de reduzir o tempo de exame a dois anos até 2026, mas um levantamento do <strong>INPI</strong> revela que, entre 2019 e 2024, de todos os pedidos de patentes de IA analisados, <strong>apenas 3% (8 pedidos) foram concedidos</strong>; o restante permanece num backlog de exame de quase três anos em média<sup class="cite"><a href="#ref-15">[15]</a></sup>.</p>
+      <p>Historicamente, o Brasil subnutriu de forma sistemática o motor primário da inovação científica: o sistema de universidades federais e as agências nacionais de pesquisa. Essa negligência estrutural desencadeou uma hemorragia cognitiva de décadas, a <strong>{% include glossary-term.html id="fuga-cerebros" text="fuga de cérebros" %}</strong>:</p>
+      <ul class="list-disc ml-6 mb-4 space-y-2">
+        <li><strong>O êxodo de uma década.</strong> Entre 2015 e 2022, o Brasil perdeu <strong>cerca de 6.700 cientistas, engenheiros e pesquisadores de elite</strong> para instituições do Norte Global, segundo o CGEE/MCTI<sup class="cite"><a href="#ref-15">[15]</a></sup>. Mentes altamente qualificadas em STEM deixaram o país por congelamento de financiamento, laboratórios deteriorados e ausência de carreiras acadêmicas estáveis e estruturadas.</li>
+        <li><strong>A dizimação do orçamento do conhecimento.</strong> Segundo o <em>Observatório do Conhecimento</em>, o “Orçamento do Conhecimento” (universidades federais, CAPES e CNPq) para 2026 está projetado em <strong>R$ 17,29 bilhões</strong> — cifra nominal que representa <strong>quase a metade</strong> dos R$ 32,51 bilhões de 2014, já corrigidos pela inflação.</li>
+        <li><strong>A fome do sistema federal.</strong> Em 2026, o orçamento discricionário direto das {% include universities-phrase.html text="69 universidades federais" %} é de <strong>R$ 7,85 bilhões</strong>, apenas <strong>45,3% do patamar de 2014</strong>, apesar de o número de instituições ter subido de 59 para 69 e da matrícula ter disparado. Mais dramaticamente, o investimento de capital em infraestrutura universitária praticamente evaporou: os R$ 335,9 milhões previstos para 2026 são míseros <strong>5,67% do investido há 11 anos</strong>, tornando funcionalmente impossível manter laboratórios de pesquisa de classe mundial.</li>
+        <li><strong>Hostilidade ativa no orçamento de 2026.</strong> Na LOA aprovada, o Congresso cortou <strong>R$ 488 milhões</strong> (7,05%) do {% include glossary-term.html id="custeio-discricionario" text="custeio discricionário" %} das universidades federais, <strong>R$ 262 milhões</strong> da CAPES e <strong>R$ 72 milhões</strong> do CNPq. Embora o governo federal tenha intervido em janeiro de 2026 com crédito suplementar de R$ 1,36 bilhão (Portaria GM/MPO nº 12/2026) para evitar colapso imediato, o crédito apenas restaurou a linha de base já tensionada, deixando o ecossistema científico em estado permanente de sobrevivência.</li>
+      </ul>
+      <p>Essa fome estrutural não decorre de falta genuína de recursos nacionais, e sim de uma distorção {% include glossary-term.html id="clientelismo" text="clientelista" %} deliberada da administração pública. Enquanto instituições científicas brigam por migalhas, o Congresso aprovou <strong>R$ 61 bilhões em {% include glossary-term.html id="emendas-parlamentares" text="emendas parlamentares" %}</strong> no orçamento de 2026 — pool historicamente inédito, em grande parte usado para barganha política local, fisiologismo e ineficiências<sup class="cite"><a href="#ref-13">[13]</a></sup>. Simultaneamente, o <strong>Fundo Eleitoral foi inflado de R$ 1 bilhão para R$ 4,9 bilhões</strong>.</p>
+      <p>Em perspectiva, os recursos canalizados às emendas clientelistas são <strong>quase oito vezes maiores</strong> que todo o orçamento discricionário das {% include universities-phrase.html text="69 universidades federais" %} (R$ 7,85 bilhões) e <strong>quase 180 vezes maiores</strong> que o investimento de capital em laboratórios e equipamentos de pesquisa (R$ 335,9 milhões).</p>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-navy mt-8 mb-3">
+      <span class="lang-pt">Entre palcos e laboratórios: o custo de oportunidade da ciência brasileira</span>
+      <span class="lang-en">Between Stages and Laboratories: The Opportunity Cost of Brazilian Science</span>
+    </h3>
+    <div class="lang-en">
+      <p>This misallocation of capital is even more shocking when analyzed at a microeconomic level. Under the guise of promoting regional tourism and local economies, federal politicians are utilizing un-auditable “{% include glossary-term.html id="emendas-pix" text="emendas Pix" %}” to fund highly expensive weekend pop concerts in tiny, under-resourced municipalities. A random sample of recent federal funding allocations compiled from investigative reports and the Federal Transparency Portal reveals the following:</p>
+    </div>
+    <div class="lang-pt">
+      <p>A má alocação é ainda mais chocante no plano microeconômico. Sob o pretexto de promover turismo regional e economias locais, parlamentares usam “{% include glossary-term.html id="emendas-pix" text="emendas Pix" %}” inauditáveis para financiar shows pop caríssimos de fim de semana em municípios minúsculos e subequipados. Uma amostra aleatória de alocações federais recentes, compilada a partir de reportagens investigativas e do Portal da Transparência, revela o seguinte:</p>
+    </div>
+
+    <figure class="my-10">
+      <figcaption class="font-sans text-xs font-semibold text-navy mb-2 tracking-wide uppercase">
+        <span class="lang-pt">Tabela 2.</span>
+        <span class="lang-en">Table 2.</span>
+        <span class="font-normal normal-case tracking-normal text-gray-600 ml-1">
+          <span class="lang-pt">Amostra de cachês de shows pop financiados por emendas Pix.</span>
+          <span class="lang-en">Sample of pop concert fees funded by emendas Pix.</span>
+        </span>
+      </figcaption>
+      <div class="overflow-x-auto">
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>
+                <span class="lang-pt">Município (UF)</span><span class="lang-en">Municipality (state)</span>
+                <span class="block font-normal text-[11px] text-gray-500 normal-case tracking-normal"><span class="lang-pt">passe o cursor: saneamento e renda</span><span class="lang-en">hover: sanitation and income</span></span>
+              </th>
+              <th class="num"><span class="lang-pt">Pop.</span><span class="lang-en">Pop.</span></th>
+              <th class="num">
+                <span class="lang-pt">IDEB 2023</span><span class="lang-en">2023 IDEB</span>
+                <span class="block font-normal text-[11px] text-gray-500 normal-case tracking-normal"><span class="lang-pt">iniciais / finais</span><span class="lang-en">early / later years</span></span>
+              </th>
+              <th class="num">
+                <span class="lang-pt">Salário médio docente</span><span class="lang-en">Mean teacher pay</span>
+                <span class="block font-normal text-[11px] text-gray-500 normal-case tracking-normal"><span class="lang-pt">municipal · 2020 · 40h</span><span class="lang-en">municipal · 2020 · 40h</span></span>
+              </th>
+              <th><span class="lang-pt">Artista / atração</span><span class="lang-en">Artist contracted</span></th>
+              <th class="num"><span class="lang-pt">Emenda (R$)</span><span class="lang-en">Emenda (BRL)</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>{% include city-tip.html id="sao-fidelis" %}</td><td class="num">38.961</td>{% include ideb-cell.html pt="5,0 / 4,2" en="5.0 / 4.2" class="num" score_class="" %}{% include salary-cell.html pt="3.518,33" en="3,518.33" class="num" score_class="" %}<td>Ana Castela</td><td class="num">{% include official-link.html href="https://www.camara.leg.br/deputados/220603/todas-emendas?ano=2025" text="1.000.000" title="Emendas oficiais de Dani Cunha na Câmara (2025)" %}<sup class="cite"><a href="#ref-27">[27]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="moita-bonita" %}</td><td class="num">11.050</td>{% include ideb-cell.html pt="4,0 / 3,5" en="4.0 / 3.5" class="num" score_class="" %}{% include salary-cell.html pt="5.576,79" en="5,576.79" class="num" score_class="" %}<td><span class="lang-pt">Atrações de fim de semana</span><span class="lang-en">Weekend attractions</span></td><td class="num">{% include official-link.html href="https://www25.senado.leg.br/web/senadores/senador/-/perfil/4811" text="995.000" title="Perfil oficial do senador Laércio Oliveira" %}<sup class="cite"><a href="#ref-13">[13]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="malhador" %}</td><td class="num">11.533</td>{% include ideb-cell.html pt="3,8 / 3,7" en="3.8 / 3.7" class="num" score_class="" %}{% include salary-cell.html pt="4.080,28" en="4,080.28" class="num" score_class="" %}<td>Wesley Safadão</td><td class="num">{% include official-link.html href="https://www.camara.leg.br/deputados/165470/todas-emendas?ano=2025" text="900.000" title="Emendas oficiais de Rodrigo Valadares na Câmara (2025)" %}<sup class="cite"><a href="#ref-11">[11]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="alpercata" mark="*" %}</td><td class="num">6.903</td>{% include ideb-cell.html pt="5,3 / 4,6" en="5.3 / 4.6" class="num" score_class="" %}{% include salary-cell.html pt="2.770,40" en="2,770.40" class="num" score_class="" mark="‡" %}<td>Israel &amp; Rodolffo</td><td class="num">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3101805-alpercata" text="860.000" title="Transferências federais a Alpercata (CGU)" %}<sup class="cite"><a href="#ref-12">[12]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="sobralia" mark="*" %}</td><td class="num">5.137</td>{% include ideb-cell.html pt="6,1 / 4,9" en="6.1 / 4.9" class="num" score_class="" mark="†" %}{% include salary-cell.html pt="3.674,02" en="3,674.02" class="num" score_class="" %}<td>Leonardo</td><td class="num">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3167707-sobralia" text="850.000" title="Transferências federais a Sobrália (CGU)" %}<sup class="cite"><a href="#ref-12">[12]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="marilac" mark="*" %}</td><td class="num">4.224</td>{% include ideb-cell.html pt="6,0 / 4,6" en="6.0 / 4.6" class="num" score_class="" mark="†" %}{% include salary-cell.html pt="3.994,24" en="3,994.24" class="num" score_class="" %}<td>Marcos &amp; Belutti</td><td class="num">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3140100-marilac" text="718.000" title="Transferências federais a Marilac (CGU)" %}<sup class="cite"><a href="#ref-12">[12]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="americano-do-brasil" %}</td><td class="num">5.259</td>{% include ideb-cell.html pt="7,0 / 5,4" en="7.0 / 5.4" class="num" score_class="" mark="†" %}{% include salary-cell.html pt="4.754,03" en="4,754.03" class="num" score_class="" %}<td>Electrofunk DJs</td><td class="num">{% include official-link.html href="https://www.camara.leg.br/deputados/220569/todas-emendas?ano=2026" text="497.500" title="Emendas oficiais de Silvye Alves na Câmara (2026)" %}<sup class="cite"><a href="#ref-13">[13]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="mar-vermelho" %}</td><td class="num">3.155</td>{% include ideb-cell.html pt="5,8 / 5,2" en="5.8 / 5.2" class="num" score_class="" %}{% include salary-cell.html pt="3.107,15" en="3,107.15" class="num" score_class="" %}<td>Luan Santana</td><td class="num">{% include official-link.html href="https://www.camara.leg.br/deputados/204436/todas-emendas?ano=2022" text="370.000" title="Emendas oficiais de Isnaldo Bulhões Jr. na Câmara (2022)" %}<sup class="cite"><a href="#ref-28">[28]</a></sup></td></tr>
+            <tr><td>{% include city-tip.html id="bom-jesus" %}</td><td class="num">11.202</td>{% include ideb-cell.html pt="5,5 / 4,9" en="5.5 / 4.9" class="num" score_class="" %}{% include salary-cell.html pt="5.586,73" en="5,586.73" class="num" score_class="" %}<td>Simone &amp; Simaria</td><td class="num">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/4302303-bom-jesus" text="380.000" title="Transferências federais a Bom Jesus/RS (CGU)" %}<sup class="cite"><a href="#ref-29">[29]</a></sup></td></tr>
+            <tr class="font-semibold bg-stone-50">
+              <td colspan="4"><span class="lang-pt">Total da amostra</span><span class="lang-en">Total cachês sample</span></td>
+              <td><span class="lang-pt">Amostra da pesquisa</span><span class="lang-en">Research sample</span></td>
+              <td class="num">6.570.500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="font-sans text-[11px] text-gray-500 mt-2 italic mb-0">
+        <span class="lang-pt">* Sem hospital ou clínica local. † Anos finais da rede pública (resultado municipal não divulgado). IDEB da rede municipal, {% include official-link.html href="https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/ideb" text="INEP/MEC" %} (2023), escala 0–10; iniciais / finais. Salário médio bruto dos docentes da rede municipal, padronizado para 40h/semana, {% include official-link.html href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/remuneracao-media-dos-docentes" text="INEP/MEC" %} (2020; Censo Escolar + RAIS). Média nacional municipal: R$ 4.897. Piso nacional em 2020: R$ 2.886,24. ‡ Alpercata ficou abaixo do piso. População e indicadores ao passar o cursor: {% include official-link.html href="https://sidra.ibge.gov.br/pesquisa/censo-demografico/demografico-2022/universo-caracteristicas-dos-domicilios" text="IBGE, Censo 2022" %} e PIB dos Municípios 2023. Os valores da emenda apontam para o registro oficial (Câmara, Senado ou {% include official-link.html href="https://portaldatransparencia.gov.br/emendas" text="Portal da Transparência" %}) e para a reportagem que documenta o cachê.</span>
+        <span class="lang-en">* No local hospital or clinic. † Later-years score from the public network (municipal result not disclosed). Municipal-network IDEB, {% include official-link.html href="https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/ideb" text="INEP/MEC" %} (2023), 0–10 scale; early / later years. Mean gross pay of municipal-network teachers, standardised to a 40-hour week, {% include official-link.html href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/remuneracao-media-dos-docentes" text="INEP/MEC" %} (2020; School Census + RAIS). National municipal mean: R$ 4,897. The 2020 national floor was R$ 2,886.24. ‡ Alpercata fell below that floor. Population and hover indicators: {% include official-link.html href="https://sidra.ibge.gov.br/pesquisa/censo-demografico/demografico-2022/universo-caracteristicas-dos-domicilios" text="IBGE, 2022 Census" %} and 2023 Municipal GDP. Emenda amounts link to the official record (Chamber, Senate, or {% include official-link.html href="https://portaldatransparencia.gov.br/emendas" text="Transparency Portal" %}) and to the reporting that documents the fee.</span>
+      </p>
+    </figure>
+
+    <div class="lang-en">
+      <p>When contrasted with the starvation of public science and education, this R$ 6.57 million sample of weekend “bread and circuses” (<em>pão e circo</em>) reveals a devastating opportunity cost:</p>
+    </div>
+    <div class="lang-pt">
+      <p>Confrontada com a fome da ciência e da educação públicas, essa amostra de R$ 6,57 milhões de “pão e circo” de fim de semana revela um custo de oportunidade devastador:</p>
+    </div>
+
+    <figure class="my-10">
+      <figcaption class="font-sans text-xs font-semibold text-navy mb-2 tracking-wide uppercase">
+        <span class="lang-pt">Tabela 3.</span>
+        <span class="lang-en">Table 3.</span>
+        <span class="font-normal normal-case tracking-normal text-gray-600 ml-1">
+          <span class="lang-pt">Custo de oportunidade da amostra de shows.</span>
+          <span class="lang-en">Opportunity cost of the concert sample.</span>
+        </span>
+      </figcaption>
+      <div class="overflow-x-auto">
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th><span class="lang-pt">Alternativa científica pública</span><span class="lang-en">Public scientific alternative</span></th>
+              <th><span class="lang-pt">Equivalência financeira</span><span class="lang-en">Financial equivalency</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="lang-pt">Bolsas de modernização de laboratórios universitários (média de R$ 2,17 mi por instituição federal)</span>
+                <span class="lang-en">University lab modernization grants (average R$ 2.17M per federal institution)</span>
+              </td>
+              <td>
+                <span class="lang-pt">Moderniza 3 laboratórios federais de pesquisa inteiros</span>
+                <span class="lang-en">Modernizes 3 entire federal research laboratories</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="lang-pt">Bolsas especiais de cientistas repatriados (Conhecimento Brasil: R$ 156.000/ano)</span>
+                <span class="lang-en">Repatriated elite scientific fellowships (Conhecimento Brasil: R$ 156,000 per year)</span>
+              </td>
+              <td>
+                <span class="lang-pt">Financia 42 anos de pesquisa de um cientista de ponta e PI local</span>
+                <span class="lang-en">Funds 42 years of a top-tier scientist’s research and local IP</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="lang-pt">Bolsas padrão de doutorado (CAPES/CNPq: R$ 36.000/ano)</span>
+                <span class="lang-en">Standard PhD fellowships (CAPES/CNPq: R$ 36,000 per year)</span>
+              </td>
+              <td>
+                <span class="lang-pt">Financia integralmente 182 anos de pesquisa de um doutorando</span>
+                <span class="lang-en">Fully funds 182 years of a doctoral student’s research</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+
+    <figure class="my-10">
+      <figcaption class="font-sans text-xs font-semibold text-navy mb-3 tracking-wide uppercase">
+        <span class="lang-pt">Figura 2.</span>
+        <span class="lang-en">Figure 2.</span>
+        <span class="font-normal normal-case tracking-normal text-gray-600 ml-1">
+          <span class="lang-pt">A riqueza mal alocada do Brasil: financiamento político supera ciência e pesquisa estratégica.</span>
+          <span class="lang-en">Brazil's misallocated wealth: political pork-barrel funding outpaces strategic science and research.</span>
+        </span>
+      </figcaption>
+      <div class="rounded border border-stone-200 bg-stone-50 p-4 md:p-5">
+        <div class="grid grid-cols-1 gap-8">
+          <div>
+            <p id="macroSubtitle" class="font-sans text-xs font-bold text-navy mb-2"></p>
+            <div class="relative h-64 md:h-72">
+              <canvas id="macroChart"></canvas>
+            </div>
+          </div>
+          <div>
+            <p id="microSubtitle" class="font-sans text-xs font-bold text-navy mb-2"></p>
+            <div class="relative h-64 md:h-72">
+              <canvas id="microChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="font-sans text-[11px] text-gray-500 mt-2 italic mb-0">
+        <span class="lang-pt">Fontes: LOA 2026; Andifes; Observatório do Conhecimento; reportagens investigativas de Veja, Folha de S.Paulo e Correio Braziliense.</span>
+        <span class="lang-en">Sources: Brazilian 2026 Annual Budget (LOA); Andifes; Observatório do Conhecimento; investigative reports by Veja, Folha de S.Paulo, and Correio Braziliense.</span>
+      </p>
+    </figure>
+
+    <div class="lang-en">
+      <p>This stark asymmetry makes one fact impossible to ignore: Brazil possesses the financial capacity to fund a world-class scientific renaissance and secure true technological sovereignty. The country does not lack money; it lacks an administrative framework that prioritizes strategic science, research, and long-term development over immediate political survival, clientelism, and public sector waste.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Essa assimetria torna impossível ignorar um fato: o Brasil tem capacidade financeira para financiar um renascimento científico de classe mundial e assegurar soberania tecnológica verdadeira. O país não carece de dinheiro; carece de um arcabouço administrativo que priorize ciência estratégica, pesquisa e desenvolvimento de longo prazo sobre sobrevivência política imediata, clientelismo e desperdício do setor público.</p>
+    </div>
+
+    <figure class="my-10">
+      <figcaption class="font-sans text-xs font-semibold text-navy mb-2 tracking-wide uppercase">
+        <span class="lang-pt">Tabela 4.</span>
+        <span class="lang-en">Table 4.</span>
+        <span class="font-normal normal-case tracking-normal text-gray-600 ml-1">
+          <span class="lang-pt">Retração do orçamento do conhecimento no Brasil.</span>
+          <span class="lang-en">Brazil’s knowledge budget retraction.</span>
+        </span>
+      </figcaption>
+      <div class="overflow-x-auto">
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th><span class="lang-pt">Indicador</span><span class="lang-en">Indicator</span></th>
+              <th class="num"><span class="lang-pt">Valor</span><span class="lang-en">Value</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="lang-pt">Orçamento do Conhecimento (2014, corrigido)</span><span class="lang-en">Total knowledge budget (2014, inflation-adjusted)</span></td>
+              <td class="num">R$ 32,51 bi</td>
+            </tr>
+            <tr>
+              <td><span class="lang-pt">Orçamento do Conhecimento (2026, linha de base)</span><span class="lang-en">Total knowledge budget (2026 projected baseline)</span></td>
+              <td class="num">R$ 17,29 bi (−47%)</td>
+            </tr>
+            <tr>
+              <td><span class="lang-pt">Custeio discricionário das universidades federais (2014)*</span><span class="lang-en">Federal universities discretionary budget (2014)*</span></td>
+              <td class="num">R$ 17,33 bi</td>
+            </tr>
+            <tr>
+              <td><span class="lang-pt">Custeio discricionário das universidades federais (2026)</span><span class="lang-en">Federal universities discretionary budget (2026)</span></td>
+              <td class="num">R$ 7,85 bi (−55%)</td>
+            </tr>
+            <tr>
+              <td><span class="lang-pt">Investimento de capital nas universidades (pico de 2015)*</span><span class="lang-en">Capital investment in universities (2015 peak)*</span></td>
+              <td class="num">R$ 5,92 bi</td>
+            </tr>
+            <tr>
+              <td><span class="lang-pt">Investimento de capital nas universidades (2026, planejado)</span><span class="lang-en">Capital investment in universities (2026 planned)</span></td>
+              <td class="num">R$ 335,9 mi (−94,3%)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="font-sans text-[11px] text-gray-500 mt-2 italic mb-0">
+        <span class="lang-pt">* Equivalentes corrigidos pela inflação, compilados pelo Observatório do Conhecimento.</span>
+        <span class="lang-en">* Inflation-adjusted equivalents compiled by the Observatório do Conhecimento.</span>
+      </p>
+    </figure>
+
+    <div class="lang-en">
+      <p>This domestic starvation stands in stark contrast to the <strong>R$ 23 billion PBIA plan</strong> and the <strong>R$ 3 billion first-phase private investment in Scala AI City</strong>. The state is willing to waive federal import taxes for five years to bring in foreign silicon, but continues to underfund the human beings who must program, regulate, and direct those systems.</p>
+      <p>To bridge this gap, the federal government launched the <strong>“Conhecimento Brasil” (Talent Repatriation Program)</strong>, earmarking R$ 1 billion over five years to incentivize the return of Brazilian researchers scattered across 56 countries. The program offers special repatriation fellowships of <strong>R$ 13,000 per month</strong> to attract at least a thousand elite scientists back to local projects.</p>
+      <p>However, the academic community—led by the <em>Sociedade Brasileira para o Progresso da Ciência (SBPC)</em> and its president, Renato Janine Ribeiro—has expressed deep reservations. Returning “brains” are not motivated by these stipends alone; the Brazilian market remains fundamentally uncompetitive in terms of global compensation, research infrastructure, and long-term career security.</p>
+      <p>Furthermore, the domestic research model relies on a highly precarious foundation. The vast majority of scientific discovery in Brazil is carried out by graduate and doctoral students surviving on <strong>stiflingly low and insecure government fellowships (“bolsas”)</strong>. These students enjoy no formal labor rights, no retirement contributions, and no structured professional career progression. Providing repatriated scientists with temporary R$ 13,000 fellowships while continuing to starve the everyday master's and doctoral students who run the laboratories is a fundamentally flawed strategy.</p>
+      <p>If Brazil wants to escape the “wrapper trap” and avoid becoming a glorified, green-powered “{% include glossary-term.html id="fazenda-dados" text="data farm" %}” for Silicon Valley capital, it must realize that <strong>sovereign {% include glossary-term.html id="mindware" text="mindware" %} is the prerequisite for sovereign hardware</strong>. Physical supercomputers and 5 GW data center grids are merely tools. True sovereignty is achieved only when the country treats education and research not as a discretionary fiscal burden, but as a strategic national asset. This requires upgrading short-term, precarious fellowship systems into stable, highly funded, and permanent scientific careers, giving Brazil's brilliant minds the resources to turn clean energy and raw processing power into native IP, domestic patents, and sovereign intelligence.</p>
+    </div>
+    <div class="lang-pt">
+      <p>Essa fome doméstica contrasta de forma aguda com o <strong>plano PBIA de R$ 23 bilhões</strong> e o <strong>investimento privado de R$ 3 bilhões na primeira fase da Scala AI City</strong>. O Estado aceita abrir mão de impostos federais de importação por cinco anos para trazer silício estrangeiro, mas continua a subfinanciar os seres humanos que devem programar, regular e dirigir esses sistemas.</p>
+      <p>Para cobrir o fosso, o governo federal lançou o <strong>“Conhecimento Brasil”</strong>, destinando R$ 1 bilhão em cinco anos para incentivar o retorno de pesquisadores brasileiros em 56 países. O programa oferece bolsas especiais de repatriação de <strong>R$ 13.000 por mês</strong> para atrair pelo menos mil cientistas de elite a projetos locais.</p>
+      <p>A comunidade acadêmica — liderada pela <em>Sociedade Brasileira para o Progresso da Ciência (SBPC)</em> e por seu presidente, Renato Janine Ribeiro — expressou, contudo, reservas profundas. “Cérebros” que retornam não se movem só por essas estipêndios; o mercado brasileiro permanece estruturalmente pouco competitivo em remuneração global, infraestrutura de pesquisa e segurança de carreira de longo prazo.</p>
+      <p>Além disso, o modelo doméstico de pesquisa assenta em base precária. A vasta maioria da descoberta científica no Brasil é feita por mestrandos e doutorandos que sobrevivem de <strong>bolsas governamentais baixas e inseguras</strong>. Esses estudantes não têm direitos trabalhistas formais, contribuição previdenciária nem progressão profissional estruturada. Oferecer a cientistas repatriados bolsas temporárias de R$ 13.000 enquanto se continua a subnutrir os mestrandos e doutorandos que tocam os laboratórios no dia a dia é uma estratégia fundamentalmente falha.</p>
+      <p>Se o Brasil quiser escapar da “armadilha dos wrappers” e evitar tornar-se uma “{% include glossary-term.html id="fazenda-dados" text="fazenda de dados" %}” verde e glorificada para o capital do Vale do Silício, precisa reconhecer que <strong>{% include glossary-term.html id="mindware" text="mindware" %} soberano é pré-requisito de hardware soberano</strong>. Supercomputadores físicos e malhas de 5 GW são meras ferramentas. A soberania verdadeira só se alcança quando o país trata educação e pesquisa não como ônus fiscal discricionário, mas como ativo estratégico nacional. Isso exige transformar sistemas de bolsas curtas e precárias em carreiras científicas estáveis, bem financiadas e permanentes — dando às mentes brilhantes do Brasil os recursos para converter energia limpa e poder de processamento bruto em PI nativa, patentes domésticas e inteligência soberana.</p>
+    </div>
+
+    <section id="referencias" class="mt-14 pt-8 border-t border-stone-300">
+      <h2 class="font-serif text-2xl font-bold text-navy mb-2">
+        <span class="lang-pt">Referências</span>
+        <span class="lang-en">References</span>
+      </h2>
+      <p class="font-sans text-sm text-gray-600 mb-6">
+        <span class="lang-pt">Este relatório assenta nos seguintes registros públicos oficiais, estudos revisados por pares e marcos legais:</span>
+        <span class="lang-en">This article series is strictly grounded in the following official public records, peer-reviewed studies, and legal frameworks:</span>
+      </p>
+      <ol class="references font-sans text-[0.82rem] leading-relaxed text-stone-700 space-y-3 list-none pl-0">
+        <li id="ref-1" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[1]</span> António Dias da Silva, Laura Lebastard, David Sondermann (26 Aug. 2026). “AI adoption and the productivity promise: what workers report.” <em>European Central Bank (ECB) Blog</em>. <a class="text-terracotta break-all" href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260826~e1c1a89999.en.html" target="_blank" rel="noopener noreferrer">https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260826~e1c1a89999.en.html</a></li>
+        <li id="ref-2" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[2]</span> Arden Berg, Anson Ho (17 July 2025). “After the ChatGPT moment: Measuring AI's adoption.” <em>Epoch AI</em>. <a class="text-terracotta break-all" href="https://epoch.ai/gradient-updates/after-the-chatgpt-moment-measuring-ais-adoption" target="_blank" rel="noopener noreferrer">https://epoch.ai/gradient-updates/after-the-chatgpt-moment-measuring-ais-adoption</a></li>
+        <li id="ref-3" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[3]</span> MaxAssistant Newsroom (18 Aug. 2026). “Brazil Leads the World in AI Agent Adoption, But 80% of Companies Have Already Had to Pull Back After Failures.” <em>MaxAssistant (Sinch Global Study)</em>. <a class="text-terracotta break-all" href="https://maxassistant.app/en/news/market/brazil-leads-ai-agent-adoption-sinch/" target="_blank" rel="noopener noreferrer">https://maxassistant.app/en/news/market/brazil-leads-ai-agent-adoption-sinch/</a></li>
+        <li id="ref-4" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[4]</span> Avante Founding Team (July 2026). “Brazil Mobile AI Market 2026: Where a Studio Would Build on the Phone.” <em>Avante Ventures</em>. <a class="text-terracotta break-all" href="https://avanteventures.com/en/library/brazil-services-economy-opportunity" target="_blank" rel="noopener noreferrer">https://avanteventures.com/en/library/brazil-services-economy-opportunity</a></li>
+        <li id="ref-5" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[5]</span> Mike Wheatley (13 Apr. 2026). “China has erased the US lead in AI, Stanford HAI's 2026 AI index reveals.” <em>SiliconANGLE / Stanford Institute for Human-Centered Artificial Intelligence (HAI)</em>. <a class="text-terracotta break-all" href="https://siliconangle.com/2026/04/13/stanford-hais-2026-ai-index-reveals-china-u-s-now-neck-neck-race-global-dominance/" target="_blank" rel="noopener noreferrer">https://siliconangle.com/2026/04/13/stanford-hais-2026-ai-index-reveals-china-u-s-now-neck-neck-race-global-dominance/</a></li>
+        <li id="ref-6" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[6]</span> Molisha Shah (24 July 2026). “Comprehension Debt: Why Reviewing the Loop Beats Reviewing the Code.” <em>Augment Code / Semafor</em>. <a class="text-terracotta break-all" href="https://www.augmentcode.com/guides/comprehension-debt-ai-code-review" target="_blank" rel="noopener noreferrer">https://www.augmentcode.com/guides/comprehension-debt-ai-code-review</a></li>
+        <li id="ref-7" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[7]</span> Scala Corporate Communications (11 Sept. 2024). “With an initial investment of USD 500 million, Scala Data Centers and Rio Grande do Sul Government Sign Agreement for Largest Digital Infrastructure Project in South America.” <em>Scala Data Centers Press</em>. <a class="text-terracotta break-all" href="https://scaladatacenters.com/en/with-an-initial-investment-of-usd-500-million-scala-data-centers-and-rio-grande-do-sul-government-sign-agreement-for-largest-digital-infrastructure-project-in-the-state-of-southern-brazil/" target="_blank" rel="noopener noreferrer">https://scaladatacenters.com/en/with-an-initial-investment-of-usd-500-million-scala-data-centers-and-rio-grande-do-sul-government-sign-agreement-for-largest-digital-infrastructure-project-in-the-state-of-southern-brazil/</a></li>
+        <li id="ref-8" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[8]</span> Muhammad Ovais Ahmad (14 Apr. 2026). “Comprehension Debt in GenAI-Assisted Software Engineering Projects.” <em>arXiv (2604.13277)</em>. <a class="text-terracotta break-all" href="https://arxiv.org/abs/2604.13277" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2604.13277</a></li>
+        <li id="ref-9" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[9]</span> WHO Regional Office for Europe (25 Sept. 2024). “Teens, screens and mental health: New WHO report indicates need for healthier online habits among adolescents.” <em>World Health Organization (WHO)</em>. <a class="text-terracotta break-all" href="https://www.who.int/europe/news/item/25-09-2024-teens--screens-and-mental-health" target="_blank" rel="noopener noreferrer">https://www.who.int/europe/news/item/25-09-2024-teens--screens-and-mental-health</a></li>
+        <li id="ref-10" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[10]</span> Glenda Dantas (19 Dec. 2025). “Votação do marco da IA fica para 2026 em meio a impasses políticos e críticas ao texto.” <em>desinformante</em>. <a class="text-terracotta break-all" href="https://desinformante.com.br/votacao-do-marco-da-ia-fica-para-2026-em-meio-a-impasses-politicos-e-criticas-ao-texto/" target="_blank" rel="noopener noreferrer">https://desinformante.com.br/votacao-do-marco-da-ia-fica-para-2026-em-meio-a-impasses-politicos-e-criticas-ao-texto/</a></li>
+        <li id="ref-11" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[11]</span> Anna Satie, Bruno Caniato (2 Mar. 2026). “Wesley Safadão e mais: os artistas que tocaram em pequenas cidades bancados por emendas Pix.” <em>Revista VEJA</em>. <a class="text-terracotta break-all" href="https://veja.abril.com.br/politica/wesley-safadao-e-mais-os-artistas-que-tocaram-em-pequenas-cidades-bancados-por-emendas-pix/" target="_blank" rel="noopener noreferrer">https://veja.abril.com.br/politica/wesley-safadao-e-mais-os-artistas-que-tocaram-em-pequenas-cidades-bancados-por-emendas-pix/</a></li>
+        <li id="ref-12" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[12]</span> Núcleo de Dados do EM (Oct. 2025). “Cidades sem hospital gastaram milhões de emendas Pix em shows.” <em>Correio Braziliense / Estado de Minas</em>. <a class="text-terracotta break-all" href="https://www.correiobraziliense.com.br/politica/2025/10/7269731-cidades-sem-hospital-gastaram-milhoes-de-emendas-pix-em-shows.html" target="_blank" rel="noopener noreferrer">https://www.correiobraziliense.com.br/politica/2025/10/7269731-cidades-sem-hospital-gastaram-milhoes-de-emendas-pix-em-shows.html</a></li>
+        <li id="ref-13" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[13]</span> Fabio Calsavara (3 June 2026). ““Fogo na Saia” e companhia: emendas parlamentares pagam shows em cidades sem saneamento.” <em>Gazeta do Povo</em>. <a class="text-terracotta break-all" href="https://www.gazetadopovo.com.br/ideias/fogo-na-saiae-companhia-emendas-parlamentares-bancam-shows-em-cidades-sem-saneamento/" target="_blank" rel="noopener noreferrer">https://www.gazetadopovo.com.br/ideias/fogo-na-saiae-companhia-emendas-parlamentares-bancam-shows-em-cidades-sem-saneamento/</a></li>
+        <li id="ref-14" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[14]</span> Mark Samuels (20 Aug. 2026). “Why replacing staff with AI backfires — and 5 ways smart leaders generate real value instead.” <em>ZDNet / Careerminds</em>. <a class="text-terracotta break-all" href="https://www.zdnet.com/article/why-replacing-staff-with-ai-backfires-and-how-smart-leaders-generate-real-value-instead/" target="_blank" rel="noopener noreferrer">https://www.zdnet.com/article/why-replacing-staff-with-ai-backfires-and-how-smart-leaders-generate-real-value-instead/</a></li>
+        <li id="ref-15" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[15]</span> Global Innovation Index Authors (Mid-2025). “The United States Continues to Lead High-Impact Scientific Publications by Far; China, India, South Africa and Türkiye Catching Up.” <em>World Intellectual Property Organization (WIPO)</em>. <a class="text-terracotta break-all" href="https://www.wipo.int/en/web/global-innovation-index/w/blogs/2025/high-impact-scientific-publications" target="_blank" rel="noopener noreferrer">https://www.wipo.int/en/web/global-innovation-index/w/blogs/2025/high-impact-scientific-publications</a></li>
+        <li id="ref-16" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[16]</span> Wikipedia Contributors (Aug. 2026). “Kids Online Safety Act (KOSA).” <em>Wikipedia</em>. <a class="text-terracotta break-all" href="https://en.wikipedia.org/wiki/Kids_Online_Safety_Act" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Kids_Online_Safety_Act</a></li>
+        <li id="ref-17" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[17]</span> MadeCurious Editorial (30 Mar. 2026). “What Is Comprehension Debt in Software Development?” <em>MadeCurious</em>. <a class="text-terracotta break-all" href="https://madecurious.com/articles/what-is-comprehension-debt/" target="_blank" rel="noopener noreferrer">https://madecurious.com/articles/what-is-comprehension-debt/</a></li>
+        <li id="ref-18" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[18]</span> The Tech Capital Network (Mid-2025). “IFF25 | How Brazil is Positioning Itself as Global AI Hub with Tax Cuts and Data Centre Expansion.” <em>YouTube (The Tech Capital Channel)</em>. <a class="text-terracotta break-all" href="https://www.youtube.com/watch?v=s3XVZh6uc9w" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=s3XVZh6uc9w</a></li>
+        <li id="ref-19" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[19]</span> Ministério da Ciência, Tecnologia e Inovação (MCTI) (July 2024). “Plano Brasileiro de Inteligência Artificial (PBIA 2024–2028): IA para o Bem de Todos.” <em>Gov.br Portal</em>. <a class="text-terracotta break-all" href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" target="_blank" rel="noopener noreferrer">https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial</a></li>
+        <li id="ref-20" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[20]</span> National Institutes of Health (NIH) (Mid-2025). “Bias in medical AI: Implications for clinical decision-making.” <em>PubMed Central (PMC) / NIH Journal</em>. <a class="text-terracotta break-all" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11542778/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC11542778/</a></li>
+        <li id="ref-21" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[21]</span> BJH Medical Research (Early 2026). “Automation Bias Persists in AI-Trained Physicians: Erroneous LLM Advice Worsens Diagnostic Reasoning (Clinical Trial NCT06963957).” <em>BJH / ClinicalTrials.gov</em>. <a class="text-terracotta break-all" href="https://clinicaltrials.gov/study/NCT06963957" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT06963957</a></li>
+        <li id="ref-22" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[22]</span> Susan Shelmerdine et al. (Mid-2023). “Automation Bias in Healthcare: How AI Can Distort Clinical Judgement and Induce Radiologist Errors.” <em>European Radiology Journal</em>. <a class="text-terracotta break-all" href="https://susanshelmerdine.com/governance/automation-bias-in-healthcare/" target="_blank" rel="noopener noreferrer">https://susanshelmerdine.com/governance/automation-bias-in-healthcare/</a></li>
+        <li id="ref-23" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[23]</span> PMC Education Research (Early 2024). “Grading by AI makes me feel fairer? How different evaluators affect college students' perception of fairness.” <em>PubMed Central (PMC) / NIH Journal</em>. <a class="text-terracotta break-all" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10869489/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC10869489/</a></li>
+        <li id="ref-24" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[24]</span> Flodén (Mid-2025). “AI and Auto-Grading in Higher Education: Capabilities, Ethics, and the Evolving Role of Educators.” <em>Ohio State University (ASC Office of Distance Education)</em>. <a class="text-terracotta break-all" href="https://ascode.osu.edu/news/ai-and-auto-grading-higher-education-capabilities-ethics-and-evolving-role-educators" target="_blank" rel="noopener noreferrer">https://ascode.osu.edu/news/ai-and-auto-grading-higher-education-capabilities-ethics-and-evolving-role-educators</a></li>
+        <li id="ref-25" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[25]</span> Senado Federal / Alessandro Vieira (17 Mar. 2026). “ECA Digital, para proteção on-line de crianças e adolescentes, entra em vigor.” <em>Senado Notícias</em>. {% include official-link.html href="https://www12.senado.leg.br/noticias/materias/2026/03/17/eca-digital-para-protecao-on-line-de-criancas-e-adolescentes-entra-em-vigor" text="https://www12.senado.leg.br/noticias/materias/2026/03/17/eca-digital-para-protecao-on-line-de-criancas-e-adolescentes-entra-em-vigor" %}</li>
+        <li id="ref-26" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[26]</span> Presidência da República / Casa Civil (17 Sept. 2025). “Lei nº 15.211, de 17 de setembro de 2025 (Estatuto Digital da Criança e do Adolescente).” <em>Portal do Planalto</em>. {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" %}</li>
+        <li id="ref-27" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[27]</span> Poder360 (25 Aug. 2026). “Ana Castela terá cachê de R$ 850 mil pago com emenda de deputada.” <em>Poder360</em>. <a class="text-terracotta break-all" href="https://www.poder360.com.br/poder-eleicoes-2026/ana-castela-tera-cache-de-r-850-mil-pago-com-emenda-de-deputada/" target="_blank" rel="noopener noreferrer">https://www.poder360.com.br/poder-eleicoes-2026/ana-castela-tera-cache-de-r-850-mil-pago-com-emenda-de-deputada/</a></li>
+        <li id="ref-28" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[28]</span> Estadão (June 2022). “Cidades sem saneamento, asfalto e emprego gastam milhões em shows pagos com ‘emendas Pix’.” <em>O Estado de S. Paulo</em>. <a class="text-terracotta break-all" href="https://www.estadao.com.br/politica/cidades-sem-saneamento-asfalto-e-emprego-gastam-milhoes-em-shows/" target="_blank" rel="noopener noreferrer">https://www.estadao.com.br/politica/cidades-sem-saneamento-asfalto-e-emprego-gastam-milhoes-em-shows/</a></li>
+        <li id="ref-29" class="ref-item pl-8 -indent-8"><span class="font-semibold text-navy">[29]</span> G1 Rio Grande do Sul (23 June 2022). “MP arquiva investigação contra Prefeitura de Bom Jesus por contratação de show de Simone e Simaria por R$ 380 mil.” <em>G1</em>. <a class="text-terracotta break-all" href="https://g1.globo.com/rs/rio-grande-do-sul/noticia/2022/06/23/mp-arquiva-investigacao-contra-prefeitura-de-bom-jesus-por-contratacao-de-show-de-simone-e-simaria-por-r-380-mil.ghtml" target="_blank" rel="noopener noreferrer">https://g1.globo.com/rs/rio-grande-do-sul/noticia/2022/06/23/mp-arquiva-investigacao-contra-prefeitura-de-bom-jesus-por-contratacao-de-show-de-simone-e-simaria-por-r-380-mil.ghtml</a></li>
+      </ol>
+    </section>
+
+    <section class="mt-14 pt-8 border-t border-stone-300 font-sans text-sm text-gray-600">
+      <h2 class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-navy mb-3">
+        <span class="lang-pt">Como citar</span>
+        <span class="lang-en">How to cite</span>
+      </h2>
+      <p class="lang-pt italic leading-relaxed mb-0">Inteligência Soberana. (2026). <em>Inteligência Soberana: Velocidade de Adoção, Assimetria de Recursos e Atrofia Cognitiva na Corrida Global de IA</em> (Relatório de pesquisa, versão {{ site.research.version }}). Documento de trabalho.</p>
+      <p class="lang-en italic leading-relaxed mb-0">Inteligência Soberana. (2026). <em>Sovereign Intelligence: Adoption Velocity, Resource Asymmetry, and Cognitive Atrophy in the Global AI Race</em> (Research report, version {{ site.research.version }}). Working paper.</p>
+    </section>
+
+  </article>
+</main>

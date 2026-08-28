@@ -1,0 +1,38 @@
+---
+layout: default
+title: Glossário — Inteligência Soberana
+description: Glossário de termos usados no manifesto, no relatório e nas páginas educativas.
+page_id: glossario
+permalink: /glossario.html
+---
+<article class="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-20">
+  <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
+    <span class="lang-pt">Referência</span>
+    <span class="lang-en">Reference</span>
+  </p>
+  <h1 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-3">
+    <span class="lang-pt">Glossário</span>
+    <span class="lang-en">Glossary</span>
+  </h1>
+  <p class="text-sm text-gray-500 mb-12">
+    <span class="lang-pt">Termos usados no manifesto, no relatório e nas páginas educativas. Passe o cursor ou toque nas palavras destacadas nas demais páginas para ver um resumo.</span>
+    <span class="lang-en">Terms used in the manifesto, the research report, and the educational pages. Hover or tap the highlighted words on other pages for a short definition.</span>
+  </p>
+
+  <div class="article-prose font-article text-[1.05rem] leading-[1.85] text-stone-800 space-y-10">
+    {% for term in site.data.glossary %}
+    <section id="{{ term.id }}" class="glossary-entry">
+      <h2 class="font-sans text-[11px] font-bold tracking-[0.2em] uppercase text-navy mb-3">
+        <span class="lang-pt">{{ term.label.pt }}</span>
+        <span class="lang-en">{{ term.label.en }}</span>
+      </h2>
+      <p class="lang-pt">{{ term.def.pt }}</p>
+      <p class="lang-en">{{ term.def.en }}</p>
+      {% if term.label.pt != term.label.en %}
+      <p class="text-sm font-sans text-gray-500 mt-2 mb-0 lang-pt">Em inglês: {{ term.label.en }}</p>
+      <p class="text-sm font-sans text-gray-500 mt-2 mb-0 lang-en">In Portuguese: {{ term.label.pt }}</p>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+</article>

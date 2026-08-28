@@ -1,0 +1,317 @@
+---
+layout: default
+title: Quanto Custa um Prompt de IA — Inteligência Soberana
+description: Infográfico interativo do caminho de um prompt de IA — pré-treino, rotulagem, inferência, energia e o que não sai na fatura.
+page_id: custo-prompt
+permalink: /custo-prompt.html
+custo_prompt_js: true
+---
+{% assign data = site.data['custo-prompt'] %}
+{% capture rlhf_term %}{% include glossary-term.html id="rlhf" text="RLHF" %}{% endcapture %}
+<article class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+  <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
+    <span class="lang-pt">Infográfico · custo escondido · atualizado {{ data.source.retrieved_pt }}</span>
+    <span class="lang-en">Infographic · hidden cost · updated {{ data.source.retrieved_en }}</span>
+  </p>
+  <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-3 leading-tight">
+    <span class="lang-pt">Quanto Custa um Prompt de IA</span>
+    <span class="lang-en">What an AI Prompt Really Costs</span>
+  </h1>
+  <p class="text-lg text-gray-700 font-light leading-relaxed max-w-3xl mb-6">
+    <span class="lang-pt">Da caixa de texto até o parágrafo na tela, um pedido a um {% include glossary-term.html id="llm" text="LLM" %} como o ChatGPT atravessa coleta de dados, {% include glossary-term.html id="rlhf" text="RLHF" %}, {% include glossary-term.html id="pre-treino" text="pré-treino" %}, data centers sempre ligados e, nos modelos de raciocínio, {% include glossary-term.html id="inference-scaling" text="inference scaling" %}. O preço de vitrine é zero. O iceberg não é.</span>
+    <span class="lang-en">From the text box to the paragraph on screen, a request to an {% include glossary-term.html id="llm" text="LLM" %} such as ChatGPT travels through data collection, {% include glossary-term.html id="rlhf" text="RLHF" %}, {% include glossary-term.html id="pre-treino" text="pre-training" %}, always-on data centers, and — in reasoning models — {% include glossary-term.html id="inference-scaling" text="inference scaling" %}. The sticker price is zero. The iceberg is not.</span>
+  </p>
+  <p class="text-sm text-gray-600 font-light leading-relaxed max-w-3xl mb-10">
+    <span class="lang-pt">Não é uma auditoria da OpenAI nem a conta do seu plano. É o caminho típico de um modelo de fronteira, com faixas da literatura. Números são ordens de grandeza. O objetivo é educativo: fazer o custo escondido ficar visível.</span>
+    <span class="lang-en">This is not an audit of OpenAI, nor the bill for your plan. It is the typical path of a frontier model, with bands from the literature. Figures are orders of magnitude. The aim is educational: to make the hidden cost visible.</span>
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">1</p>
+      <p class="font-serif text-lg font-bold text-navy">
+        <span class="lang-pt">Preço de vitrine</span>
+        <span class="lang-en">Sticker price</span>
+      </p>
+      <p class="text-sm text-gray-600 mt-2 font-light">
+        <span class="lang-pt">US$ 0 no gratuito; ~US$ {{ data.simulator.vitrine_usd_per_month }}/mês no plano pago.</span>
+        <span class="lang-en">US$ 0 on the free tier; ~US$ {{ data.simulator.vitrine_usd_per_month }}/month on the paid plan.</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">2</p>
+      <p class="font-serif text-lg font-bold text-navy">
+        <span class="lang-pt">Custo marginal</span>
+        <span class="lang-en">Marginal cost</span>
+      </p>
+      <p class="text-sm text-gray-600 mt-2 font-light">
+        <span class="lang-pt">{% include glossary-term.html id="token" text="Tokens" %}, Wh, ml de água, equivalente de API desta consulta.</span>
+        <span class="lang-en">{% include glossary-term.html id="token" text="Tokens" %}, Wh, ml of water, API-equivalent of this query.</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">3</p>
+      <p class="font-serif text-lg font-bold text-navy">
+        <span class="lang-pt">Afundado e permanente</span>
+        <span class="lang-en">Sunk and standing</span>
+      </p>
+      <p class="text-sm text-gray-600 mt-2 font-light">
+        <span class="lang-pt">Pré-treino, alinhamento, cluster sempre ligado. {% include glossary-term.html id="capex" text="CapEx" %} que a consulta não “acende”.</span>
+        <span class="lang-en">Pre-training, alignment, always-on cluster. {% include glossary-term.html id="capex" text="CapEx" %} the query does not “wake up.”</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">4</p>
+      <p class="font-serif text-lg font-bold text-navy">
+        <span class="lang-pt">Externalidades</span>
+        <span class="lang-en">Externalities</span>
+      </p>
+      <p class="text-sm text-gray-600 mt-2 font-light">
+        <span class="lang-pt">Trabalho no {% include glossary-term.html id="sul-global" text="Sul Global" %}, rede elétrica, copyright.</span>
+        <span class="lang-en">Labor in the {% include glossary-term.html id="sul-global" text="Global South" %}, the power grid, copyright.</span>
+      </p>
+    </div>
+  </div>
+
+  <section id="custo-sim" class="bg-white border border-gray-200 rounded-xl shadow-sm p-5 md:p-8 mb-14" aria-labelledby="custo-sim-title">
+    <div class="flex flex-col xl:flex-row gap-8">
+      <div class="xl:w-[42%] min-w-0">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+          <span class="lang-pt">Simulador</span>
+          <span class="lang-en">Simulator</span>
+        </p>
+        <h2 id="custo-sim-title" class="font-serif text-2xl font-bold text-navy mb-2">
+          <span class="lang-pt">Digite um prompt. Percorra o caminho.</span>
+          <span class="lang-en">Type a prompt. Walk the path.</span>
+        </h2>
+        <p class="text-sm text-gray-600 font-light mb-5">
+          <span class="lang-pt">Nenhuma API é chamada. O recibo usa as faixas do YAML ao lado. O modo raciocínio multiplica tokens ocultos — é aí que a conta sobe.</span>
+          <span class="lang-en">No API is called. The receipt uses the YAML bands beside it. Reasoning mode multiplies hidden tokens — that is where the bill jumps.</span>
+        </p>
+        <form id="custo-form" class="space-y-4">
+          <div>
+            <label for="custo-prompt" class="block text-xs font-bold tracking-wide uppercase text-gray-500 mb-1.5">
+              <span class="lang-pt">Seu prompt</span>
+              <span class="lang-en">Your prompt</span>
+            </label>
+            <textarea id="custo-prompt" name="prompt" rows="4" maxlength="2000" required class="custo-input w-full">{{ data.simulator.sample_prompt.pt }}</textarea>
+            <p id="custo-token-live" class="text-xs text-gray-500 mt-1.5 tabular-nums" aria-live="polite"></p>
+          </div>
+          <fieldset>
+            <legend class="text-xs font-bold tracking-wide uppercase text-gray-500 mb-1.5">
+              <span class="lang-pt">Modo</span>
+              <span class="lang-en">Mode</span>
+            </legend>
+            <div class="inline-flex rounded-md border border-gray-200 bg-[#faf9f6] p-0.5" role="radiogroup" aria-label="Mode">
+              <label class="custo-mode-opt">
+                <input type="radio" name="custo-mode" value="chat" class="sr-only" checked>
+                <span class="lang-pt">Chat</span>
+                <span class="lang-en">Chat</span>
+              </label>
+              <label class="custo-mode-opt">
+                <input type="radio" name="custo-mode" value="reasoning" class="sr-only">
+                <span class="lang-pt">Raciocínio</span>
+                <span class="lang-en">Reasoning</span>
+              </label>
+            </div>
+          </fieldset>
+          <button type="submit" id="custo-run" class="custo-run">
+            <span class="lang-pt">Percorrer o caminho</span>
+            <span class="lang-en">Walk the path</span>
+          </button>
+        </form>
+      </div>
+      <aside id="custo-receipt" class="xl:flex-1 min-w-0 bg-[#faf9f6] border border-gray-100 rounded-lg p-5 md:p-6" aria-live="polite">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+          <span class="lang-pt">Recibo desta consulta</span>
+          <span class="lang-en">Receipt for this query</span>
+        </p>
+        <p id="custo-receipt-disclaimer" class="text-xs text-gray-500 font-light mb-4">
+          <span class="lang-pt">Ordem de grandeza educativa, não a conta de um vendor.</span>
+          <span class="lang-en">An educational order of magnitude, not a vendor invoice.</span>
+        </p>
+        <dl class="custo-receipt-dl space-y-3 text-sm">
+          <div class="custo-receipt-row" data-row="vitrine">
+            <dt class="text-gray-500">
+              <span class="lang-pt">1. Vitrine</span>
+              <span class="lang-en">1. Sticker</span>
+            </dt>
+            <dd id="custo-val-vitrine" class="font-semibold text-navy tabular-nums">—</dd>
+          </div>
+          <div class="custo-receipt-row" data-row="tokens">
+            <dt class="text-gray-500">
+              <span class="lang-pt">Tokens (entrada → saída)</span>
+              <span class="lang-en">Tokens (in → out)</span>
+            </dt>
+            <dd id="custo-val-tokens" class="font-semibold text-navy tabular-nums">—</dd>
+          </div>
+          <div class="custo-receipt-row" data-row="energy">
+            <dt class="text-gray-500">
+              <span class="lang-pt">2. Energia (Wh)</span>
+              <span class="lang-en">2. Energy (Wh)</span>
+            </dt>
+            <dd id="custo-val-energy" class="font-semibold text-navy tabular-nums">—</dd>
+          </div>
+          <div class="custo-receipt-row" data-row="water">
+            <dt class="text-gray-500">
+              <span class="lang-pt">Água (ml)</span>
+              <span class="lang-en">Water (ml)</span>
+            </dt>
+            <dd id="custo-val-water" class="font-semibold text-navy tabular-nums">—</dd>
+          </div>
+          <div class="custo-receipt-row" data-row="api">
+            <dt class="text-gray-500">
+              <span class="lang-pt">Equivalente de API (US$)</span>
+              <span class="lang-en">API equivalent (US$)</span>
+            </dt>
+            <dd id="custo-val-api" class="font-semibold text-navy tabular-nums">—</dd>
+          </div>
+          <div class="custo-receipt-row" data-row="training">
+            <dt class="text-gray-500">
+              <span class="lang-pt">3. Treino absoluto</span>
+              <span class="lang-en">3. Training (absolute)</span>
+            </dt>
+            <dd id="custo-val-training" class="font-semibold text-navy tabular-nums">—</dd>
+          </div>
+          <div class="custo-receipt-row" data-row="amort">
+            <dt class="text-gray-500">
+              <span class="lang-pt">Treino amortizado / consulta</span>
+              <span class="lang-en">Training amortized / query</span>
+            </dt>
+            <dd id="custo-val-amort" class="font-semibold text-navy tabular-nums">—</dd>
+          </div>
+          <div class="custo-receipt-row" data-row="labor">
+            <dt class="text-gray-500">
+              <span class="lang-pt">4. Trabalho (não dolarizado)</span>
+              <span class="lang-en">4. Labor (not dollarized)</span>
+            </dt>
+            <dd id="custo-val-labor" class="font-semibold text-navy">—</dd>
+          </div>
+        </dl>
+        <p id="custo-receipt-footnote" class="text-xs text-gray-500 italic mt-4 mb-0"></p>
+      </aside>
+    </div>
+  </section>
+
+  <div id="custo-hud" class="custo-hud no-print" hidden>
+    <p id="custo-hud-text" class="tabular-nums"></p>
+  </div>
+
+  <div class="custo-spine" role="list">
+    {% for act in data.acts %}
+    <section class="custo-act" id="act-{{ act.id }}" aria-labelledby="act-title-{{ act.id }}">
+      <header class="custo-act-header">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-1">
+          <span class="lang-pt">{{ act.kicker.pt }}</span>
+          <span class="lang-en">{{ act.kicker.en }}</span>
+        </p>
+        <h2 id="act-title-{{ act.id }}" class="font-serif text-2xl md:text-3xl font-bold text-navy">
+          <span class="lang-pt">{{ act.title.pt }}</span>
+          <span class="lang-en">{{ act.title.en }}</span>
+        </h2>
+        <p class="text-sm text-gray-600 font-light mt-2 max-w-2xl mx-auto">
+          <span class="lang-pt">{{ act.lead.pt }}</span>
+          <span class="lang-en">{{ act.lead.en }}</span>
+        </p>
+      </header>
+
+      {% assign act_stages = data.stages | where: "act", act.id %}
+      {% for stage in act_stages %}
+      <article class="custo-stage" id="stage-{{ stage.id }}" data-stage="{{ stage.id }}" data-side="{{ stage.side }}" data-kind="{{ stage.cost_kind }}" data-receipt="{{ stage.receipt }}" role="listitem">
+        <div class="custo-stage-node" aria-hidden="true">
+          <span class="custo-node-dot">{{ stage.n }}</span>
+        </div>
+        <div class="custo-stage-card">
+          <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-1">
+            <span class="lang-pt">{{ stage.figure.pt | replace: "RLHF", rlhf_term }}</span>
+            <span class="lang-en">{{ stage.figure.en | replace: "RLHF", rlhf_term }}</span>
+          </p>
+          <h3 class="font-serif text-xl font-bold text-navy mb-2">
+            <span class="lang-pt">{{ stage.title.pt | replace: "RLHF", rlhf_term }}</span>
+            <span class="lang-en">{{ stage.title.en | replace: "RLHF", rlhf_term }}</span>
+          </h3>
+          <p class="text-sm text-gray-700 font-light leading-relaxed mb-3">
+            <span class="lang-pt">{{ stage.lead.pt | replace: "RLHF", rlhf_term }}</span>
+            <span class="lang-en">{{ stage.lead.en | replace: "RLHF", rlhf_term }}</span>
+            {% for s in stage.sources %}<sup class="cite"><a href="#ref-{{ s }}">[{{ s }}]</a></sup>{% endfor %}
+          </p>
+          {% assign stage_cards = data.controversies | where: "stage", stage.id %}
+          {% for card in stage_cards %}
+          <aside class="custo-controversy">
+            <p class="text-[11px] font-bold tracking-widest uppercase text-navy mb-1">
+              <span class="lang-pt">{{ card.title.pt }}</span>
+              <span class="lang-en">{{ card.title.en }}</span>
+            </p>
+            <p class="text-xs text-gray-600 font-light leading-relaxed mb-2">
+              <span class="lang-pt">{{ card.body.pt }}</span>
+              <span class="lang-en">{{ card.body.en }}</span>
+              {% for s in card.sources %}<sup class="cite"><a href="#ref-{{ s }}">[{{ s }}]</a></sup>{% endfor %}
+            </p>
+            <p class="text-xs mb-0">
+              <a href="{{ card.url }}" class="text-terracotta font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
+                <span class="lang-pt">{{ card.link.pt }}</span>
+                <span class="lang-en">{{ card.link.en }}</span>
+              </a>
+            </p>
+          </aside>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </div>
+
+  <section id="metodologia" class="mt-16 pt-10 border-t border-gray-200 max-w-3xl">
+    <h2 class="font-serif text-2xl font-bold text-navy mb-3">
+      <span class="lang-pt">Metodologia</span>
+      <span class="lang-en">Methodology</span>
+    </h2>
+    <div class="space-y-3 text-sm text-gray-700 font-light leading-relaxed">
+      <p class="lang-pt">
+        Esta página não mede o ChatGPT em produção. Nenhum pedido sai deste site. O simulador estima {% include glossary-term.html id="token" text="tokens" %} de entrada por ~4 caracteres, projeta a saída (teto de {{ data.simulator.chat.output_tokens_cap }} no modo chat; {{ data.simulator.reasoning.output_multiplier.min }}–{{ data.simulator.reasoning.output_multiplier.max }}× no raciocínio) e aplica faixas de Wh por mil tokens de saída, litros de água por kWh (WUE on-site até água da geração elétrica) e preços de API de 2024–25 como ordem de grandeza.
+      </p>
+      <p class="lang-en">
+        This page does not meter ChatGPT in production. No request leaves this site. The simulator estimates input {% include glossary-term.html id="token" text="tokens" %} at ~4 characters, projects output (capped at {{ data.simulator.chat.output_tokens_cap }} in chat mode; {{ data.simulator.reasoning.output_multiplier.min }}–{{ data.simulator.reasoning.output_multiplier.max }}× in reasoning) and applies bands for Wh per thousand output tokens, liters of water per kWh (on-site WUE through electricity-generation water) and 2024–25 API prices as an order of magnitude.
+      </p>
+      <p class="lang-pt">
+        O treino aparece duas vezes de propósito: o total absoluto (US$ {{ data.simulator.training_usd.min | divided_by: 1000000 }}–{{ data.simulator.training_usd.max | divided_by: 1000000 }} milhões, Epoch AI / AI Index para GPT-4 e Gemini Ultra) e o amortizado por consulta, dividindo esse total por {{ data.simulator.amortization_queries.min | divided_by: 1000000000 }}–{{ data.simulator.amortization_queries.max | divided_by: 1000000000 }} bilhões de pedidos. O segundo número é pequeno; o primeiro não. Mostrar só o segundo é o truque que esta página recusa.
+      </p>
+      <p class="lang-en">
+        Training appears twice on purpose: the absolute total (US$ {{ data.simulator.training_usd.min | divided_by: 1000000 }}–{{ data.simulator.training_usd.max | divided_by: 1000000 }} million, Epoch AI / AI Index for GPT-4 and Gemini Ultra) and the per-query amortization, dividing that total by {{ data.simulator.amortization_queries.min | divided_by: 1000000000 }}–{{ data.simulator.amortization_queries.max | divided_by: 1000000000 }} billion requests. The second number is small; the first is not. Showing only the second is the trick this page refuses.
+      </p>
+      <p class="lang-pt">
+        Trabalho, copyright e saúde mental não entram no recibo em dólares por token. São custos reais que a planilha da inferência apaga. O recorte brasileiro — {% include glossary-term.html id="scala-ai-city" text="Scala AI City" %}, energia a 6 ¢/kWh, o risco de {% include glossary-term.html id="fazenda-dados" text="fazenda de dados" %} — liga esta peça ao <a href="{{ '/relatorio.html' | relative_url }}" class="text-terracotta hover:underline">relatório de pesquisa</a>.
+      </p>
+      <p class="lang-en">
+        Labor, copyright, and mental health do not enter the receipt as dollars per token. They are real costs the inference spreadsheet erases. The Brazilian frame — {% include glossary-term.html id="scala-ai-city" text="Scala AI City" %}, power at 6 ¢/kWh, the {% include glossary-term.html id="fazenda-dados" text="data farm" %} risk — ties this piece to the <a href="{{ '/relatorio.html' | relative_url }}" class="text-terracotta hover:underline">research report</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="referencias" class="mt-12 pt-8 border-t border-gray-200 max-w-3xl">
+    <h2 class="font-serif text-2xl font-bold text-navy mb-2">
+      <span class="lang-pt">Referências</span>
+      <span class="lang-en">References</span>
+    </h2>
+    <p class="text-sm text-gray-600 font-light mb-6">
+      <span class="lang-pt">Faixas travadas em {{ data.source.retrieved_pt }}. Consulte os originais; modelos e preços mudam depressa.</span>
+      <span class="lang-en">Bands locked on {{ data.source.retrieved_en }}. Check the originals; models and prices move fast.</span>
+    </p>
+    <ol class="references font-sans text-[0.82rem] leading-relaxed text-stone-700 space-y-3 list-none pl-0">
+      {% for ref in data.references %}
+      <li id="ref-{{ ref.n }}" class="ref-item pl-8 -indent-8">
+        <span class="font-semibold text-navy">[{{ ref.n }}]</span>
+        <span class="lang-pt">{{ ref.text.pt }}</span>
+        <span class="lang-en">{{ ref.text.en }}</span>
+        {% if ref.url contains 'http' %}
+        <a class="text-terracotta break-all" href="{{ ref.url }}" target="_blank" rel="noopener noreferrer">{{ ref.url }}</a>
+        {% else %}
+        <a class="text-terracotta break-all" href="{{ ref.url | relative_url }}">{{ ref.url }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+</article>
+<script type="application/json" id="custo-data">{{ data | jsonify }}</script>

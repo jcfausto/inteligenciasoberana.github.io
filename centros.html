@@ -1,0 +1,234 @@
+---
+layout: default
+title: Centros de Pesquisa em Inteligência Artificial — Inteligência Soberana
+description: Mapa dos Centros de Pesquisa Aplicada (CPA) e Institutos Nacionais de Ciência e Tecnologia (INCT) em inteligência artificial no Brasil.
+page_id: centros
+permalink: /centros.html
+centros_js: true
+---
+{% assign data = site.data['centros-ia'] %}
+{% assign ufs = data.centers | map: "uf" | uniq | sort %}
+{% assign cities = data.centers | map: "city" | uniq %}
+<article class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+  <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
+    <span class="lang-pt">Inventário público · atualizado {{ data.source.retrieved_pt }}</span>
+    <span class="lang-en">Public inventory · updated {{ data.source.retrieved_en }}</span>
+  </p>
+  <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-3 leading-tight">
+    <span class="lang-pt">Centros de Pesquisa em Inteligência Artificial</span>
+    <span class="lang-en">AI Research Centers in Brazil</span>
+  </h1>
+  <p class="text-lg text-gray-700 font-light leading-relaxed max-w-3xl mb-8">
+    <span class="lang-pt">Mapa dos centros públicos de pesquisa em IA: a rede de Centros de Pesquisa Aplicada (CPA) apoiada por CGI.br, FAPESP, MCTI e MCom, e os Institutos Nacionais de Ciência e Tecnologia (INCT) com atuação na área.</span>
+    <span class="lang-en">A map of Brazil’s public AI research centers: the Applied Research Centers (CPA) network backed by CGI.br, FAPESP, MCTI and MCom, and the National Institutes of Science and Technology (INCT) working in the field.</span>
+  </p>
+
+  <div class="space-y-4 text-gray-700 font-light leading-relaxed max-w-3xl mb-10">
+    <p class="lang-pt">
+      O levantamento reproduz o inventário do {% include official-link.html href="https://obia.nic.br/s/centros" text="Observatório Brasileiro de Inteligência Artificial (OBIA/NIC.br)" %}. Não é um censo de laboratórios privados nem de todos os grupos universitários de IA — só as sedes públicas listadas pelo observatório. Cada CPA articula instituições associadas em outros estados; o mapa marca a sede.
+    </p>
+    <p class="lang-en">
+      This inventory follows the {% include official-link.html href="https://obia.nic.br/s/centros" text="Brazilian Observatory of Artificial Intelligence (OBIA/NIC.br)" %}. It is not a census of private labs or of every university AI group — only the public host sites listed by the observatory. Each CPA networks associated institutions in other states; the map plots the host site.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">CPA</p>
+      <p class="font-serif text-3xl font-bold text-navy">{{ data.counts.cpa }}</p>
+      <p class="text-xs text-gray-500 mt-1">
+        <span class="lang-pt">Centros de Pesquisa Aplicada</span>
+        <span class="lang-en">Applied Research Centers</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">INCT</p>
+      <p class="font-serif text-3xl font-bold text-navy">{{ data.counts.inct }}</p>
+      <p class="text-xs text-gray-500 mt-1">
+        <span class="lang-pt">Institutos Nacionais de C&amp;T</span>
+        <span class="lang-en">National Science &amp; Tech Institutes</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Cidades</span>
+        <span class="lang-en">Cities</span>
+      </p>
+      <p class="font-serif text-3xl font-bold text-navy">{{ cities.size }}</p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">UF</p>
+      <p class="font-serif text-3xl font-bold text-navy">{{ ufs.size }}</p>
+    </div>
+  </div>
+
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden mb-8">
+    <div class="flex flex-col xl:flex-row gap-3 xl:items-end p-4 md:p-6 border-b border-gray-100 no-print">
+      <fieldset class="xl:w-auto">
+        <legend class="text-xs font-bold tracking-wide uppercase text-gray-500 mb-1.5">
+          <span class="lang-pt">Camada</span>
+          <span class="lang-en">Layer</span>
+        </legend>
+        <div class="inline-flex rounded-md border border-gray-200 bg-[#faf9f6] p-0.5" role="radiogroup" aria-label="Layer">
+          <label class="centros-layer-opt">
+            <input type="radio" name="centros-layer" value="cpa" class="sr-only" checked>
+            <span>CPA</span>
+          </label>
+          <label class="centros-layer-opt">
+            <input type="radio" name="centros-layer" value="inct" class="sr-only">
+            <span>INCT</span>
+          </label>
+          <label class="centros-layer-opt">
+            <input type="radio" name="centros-layer" value="both" class="sr-only">
+            <span class="lang-pt">Ambos</span>
+            <span class="lang-en">Both</span>
+          </label>
+        </div>
+      </fieldset>
+      <label class="flex-1 min-w-0 text-xs font-bold tracking-wide uppercase text-gray-500">
+        <span class="lang-pt">Buscar</span>
+        <span class="lang-en">Search</span>
+        <input id="centros-search" type="search" autocomplete="off" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta" data-placeholder-pt="Nome, instituição ou cidade" data-placeholder-en="Name, host, or city">
+      </label>
+      <label class="xl:w-40 text-xs font-bold tracking-wide uppercase text-gray-500">
+        <span class="lang-pt">UF</span>
+        <span class="lang-en">State</span>
+        <select id="centros-uf" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta">
+          <option value="" data-label-pt="Todas" data-label-en="All">Todas</option>
+          {% for uf in ufs %}
+          <option value="{{ uf }}">{{ uf }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:divide-x divide-gray-100">
+      <div class="p-4 md:p-6 lg:col-span-1 order-2 lg:order-1">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 mb-3">
+          <span class="lang-pt">Por cidade</span>
+          <span class="lang-en">By city</span>
+        </h2>
+        <div class="overflow-auto max-h-80 lg:max-h-[28rem]">
+          <table class="w-full text-left border-separate border-spacing-0 text-sm font-sans">
+            <caption class="sr-only">
+              <span class="lang-pt">Quantidade de centros por cidade</span>
+              <span class="lang-en">Number of centers per city</span>
+            </caption>
+            <thead>
+              <tr class="text-gray-500">
+                <th scope="col" class="py-2 pr-3 font-bold sticky top-0 bg-white z-[1] border-b border-gray-200">
+                  <span class="lang-pt">Cidade</span>
+                  <span class="lang-en">City</span>
+                </th>
+                <th scope="col" class="py-2 pl-3 font-bold text-right sticky top-0 bg-white z-[1] border-b border-gray-200">
+                  <span class="lang-pt">Qtde</span>
+                  <span class="lang-en">Count</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="centros-city-body"></tbody>
+            <tfoot>
+              <tr class="bg-navy text-white font-bold">
+                <th scope="row" class="py-2 pr-3">Total</th>
+                <td id="centros-city-total" class="py-2 pl-3 text-right tabular-nums">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="lg:col-span-2 order-1 lg:order-2">
+        <div id="centros-map" class="centros-map no-print" role="img" aria-label="Mapa do Brasil com centros de pesquisa em inteligência artificial"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+    <div class="overflow-x-auto md:overflow-visible">
+      <table id="centros-table" class="uni-table w-full text-left text-sm table-fixed">
+        <caption class="sr-only">
+          <span class="lang-pt">Lista dos centros públicos de pesquisa em inteligência artificial no Brasil</span>
+          <span class="lang-en">List of public AI research centers in Brazil</span>
+        </caption>
+        <colgroup>
+          <col class="w-[30%]">
+          <col class="w-[10%]">
+          <col class="w-[16%]">
+          <col class="w-[16%]">
+          <col>
+        </colgroup>
+        <thead>
+          <tr class="border-b border-gray-200 text-gray-500">
+            <th scope="col" class="py-3 px-4 font-bold">
+              <button type="button" class="centros-sort inline-flex items-center gap-1 hover:text-navy w-full text-left" data-sort="name" data-type="text" aria-pressed="false">
+                <span class="lang-pt">Centro</span>
+                <span class="lang-en">Center</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold">
+              <button type="button" class="centros-sort inline-flex items-center gap-1 hover:text-navy w-full text-left" data-sort="kind" data-type="text">
+                <span class="lang-pt">Tipo</span>
+                <span class="lang-en">Type</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold">
+              <button type="button" class="centros-sort inline-flex items-center gap-1 hover:text-navy w-full text-left" data-sort="host" data-type="text">
+                <span class="lang-pt">Vínculo</span>
+                <span class="lang-en">Host</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-3 font-bold">
+              <button type="button" class="centros-sort inline-flex items-center gap-1 hover:text-navy w-full text-left" data-sort="city" data-type="text">
+                <span class="lang-pt">Cidade</span>
+                <span class="lang-en">City</span>
+                <span class="uni-sort-ind" aria-hidden="true"></span>
+              </button>
+            </th>
+            <th scope="col" class="py-3 px-4 font-bold">
+              <span class="lang-pt">Áreas</span>
+              <span class="lang-en">Areas</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for c in data.centers %}
+          <tr id="centro-{{ c.id }}" class="centros-row border-b border-gray-100 hover:bg-[#faf9f6] transition-colors cursor-pointer" data-id="{{ c.id }}" data-kind="{{ c.kind }}" data-name="{{ c.name }}" data-host="{{ c.host }}" data-city="{{ c.city }}" data-uf="{{ c.uf }}" data-areas="{{ c.areas | join: '; ' }}">
+            <th scope="row" class="py-3 px-4 font-medium text-navy">
+              {% if c.url and c.url != blank %}
+              <a href="{{ c.url }}" class="hover:text-terracotta transition-colors" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">{{ c.name }}</a>
+              {% else %}
+              {{ c.name }}
+              {% endif %}
+            </th>
+            <td class="py-3 px-3 text-gray-600 uppercase tracking-wide text-xs font-bold whitespace-nowrap">{{ c.kind }}</td>
+            <td class="py-3 px-3 text-gray-600">{% if c.host and c.host != blank %}{{ c.host }}{% else %}—{% endif %}</td>
+            <td class="py-3 px-3 text-gray-600 whitespace-nowrap">{{ c.city }} · {{ c.uf }}</td>
+            <td class="py-3 px-4 text-gray-600 text-xs leading-relaxed centros-areas" data-areas="{{ c.areas | join: '|' }}"></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p id="centros-empty" class="hidden px-4 py-8 text-center text-sm text-gray-500 no-print">
+      <span class="lang-pt">Nenhum centro corresponde à busca.</span>
+      <span class="lang-en">No center matches this search.</span>
+    </p>
+  </div>
+
+  <p class="text-xs text-gray-400 italic mt-6">
+    <span class="lang-pt">
+      Fonte: {% include official-link.html href="https://obia.nic.br/s/centros" text="OBIA/NIC.br, Centros de IA no Brasil" %},
+      consultado em {{ data.source.retrieved_pt }}.
+      Coordenadas das sedes CPA copiadas do mapa do observatório. Para INCTs em que o pino do mapa diverge da tabela do próprio OBIA, prevalece a cidade da tabela.
+    </span>
+    <span class="lang-en">
+      Source: {% include official-link.html href="https://obia.nic.br/s/centros" text="OBIA/NIC.br, AI Centers in Brazil" %},
+      retrieved {{ data.source.retrieved_en }}.
+      CPA host coordinates copied from the observatory map. Where an INCT pin disagrees with OBIA’s own table, the table city is used.
+    </span>
+  </p>
+</article>
+
+<script type="application/json" id="centros-data">{{ data | jsonify }}</script>

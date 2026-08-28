@@ -1,0 +1,651 @@
+---
+layout: default
+title: Inteligência Soberana — Sovereign Intelligence
+description: A soberania digital começa com a soberania das mentes. Manifesto sobre educação, ciência e inteligência artificial no Brasil.
+page_id: manifesto
+theme: manifesto
+charts: true
+manifesto_js: true
+---
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-12 border-b border-gray-200">
+    <div class="lang-pt space-y-6">
+        <span class="inline-block bg-terracotta/10 text-terracotta text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">Manifesto Aberto</span>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-navy">
+            A Soberania Digital começa com a Soberania das Mentes
+        </h1>
+        <p class="text-lg text-gray-700 leading-relaxed font-light">
+            O Brasil está no centro de uma revolução tecnológica global. Mas construir supercomputadores e ceder nossas riquezas naturais para alimentar servidores estrangeiros sem investir na educação básica e em carreiras científicas está nos reduzindo a ser somente uma <strong>"{% include glossary-term.html id="fazenda-dados" text="fazenda de dados" %}"</strong> do {% include glossary-term.html id="norte-global" text="Norte Global" %}.
+        </p>
+    </div>
+
+    <div class="lang-en space-y-6">
+        <span class="inline-block bg-navy/10 text-navy text-xs font-bold tracking-widest uppercase px-3 py-1 rounded">Open Letter</span>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-navy">
+            Digital Sovereignty Begins with Sovereign Minds
+        </h1>
+        <p class="text-lg text-gray-700 leading-relaxed font-light">
+            Brazil stands at the epicenter of a global technology boom. However, building supercomputers and surrendering our green resources to fuel foreign servers while underfunding public education and research is reducing our nation to being only a <strong>"{% include glossary-term.html id="fazenda-dados" text="data farm" %}"</strong> for the {% include glossary-term.html id="norte-global" text="Global North" %}.
+        </p>
+    </div>
+
+    <p class="mt-8 text-[11px] text-gray-400 font-light tracking-wide">
+        <span class="lang-pt">
+            Baseado no <a href="{{ '/relatorio.html' | relative_url }}" class="hover:text-terracotta transition-colors">relatório de pesquisa v{{ site.research.version }}</a>
+            · atualizado em <time datetime="{{ site.research.updated | date: '%Y-%m-%d' }}">{{ site.research.updated_pt }}</time>
+        </span>
+        <span class="lang-en">
+            Based on <a href="{{ '/relatorio.html' | relative_url }}" class="hover:text-terracotta transition-colors">research report v{{ site.research.version }}</a>
+            · updated <time datetime="{{ site.research.updated | date: '%Y-%m-%d' }}">{{ site.research.updated_en }}</time>
+        </span>
+    </p>
+</section>
+
+<!-- Embedded Visualization Centerpiece -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-12">
+    <div class="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
+        <div class="text-center mb-8">
+            <span class="text-xs font-bold text-terracotta uppercase tracking-wider">
+                <span class="lang-pt">A Assimetria do Desperdício</span>
+                <span class="lang-en">The Waste Asymmetry</span>
+            </span>
+            <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy mt-2">
+                <span class="lang-pt">Como o Brasil Financiará Seu Futuro?</span>
+                <span class="lang-en">How Will Brazil Fund Its Future?</span>
+            </h2>
+            <p class="text-gray-500 text-sm mt-2">
+                <span class="lang-pt">Os recursos existem. O verdadeiro problema reside nas prioridades administrativas do {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="Orçamento Geral da União" %}.</span>
+                <span class="lang-en">The resources exist. The real problem lies in the administrative priorities of the {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="federal budget" %}.</span>
+            </p>
+        </div>
+
+        <div class="rounded-lg border border-gray-100 bg-[#faf9f6] p-4 md:p-6">
+            <h3 class="font-serif text-lg md:text-xl font-bold text-navy text-center mb-6 leading-snug">
+                <span class="lang-pt">A Riqueza Mal Alocada do Brasil: Financiamento Político Supera Ciência e Pesquisa Estratégica</span>
+                <span class="lang-en">Brazil's Misallocated Wealth: Political Pork-Barrel Funding Outpaces Strategic Science &amp; Research</span>
+            </h3>
+
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-10">
+                <figure class="min-w-0">
+                    <figcaption id="macroSubtitle" class="text-sm font-bold text-navy mb-3"></figcaption>
+                    <div class="relative h-64 md:h-72">
+                        <canvas id="macroChart" aria-label="Gráfico de nível macro"></canvas>
+                    </div>
+                </figure>
+                <figure class="min-w-0">
+                    <figcaption id="microSubtitle" class="text-sm font-bold text-navy mb-3"></figcaption>
+                    <div class="relative h-64 md:h-72">
+                        <canvas id="microChart" aria-label="Gráfico de nível micro"></canvas>
+                    </div>
+                </figure>
+            </div>
+
+            <p class="text-xs text-gray-400 italic mt-6 lang-pt">Fontes: {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="Orçamento Anual de 2026 (LOA)" %}; {% include official-link.html href="https://www.andifes.org.br/" text="Andifes" %}; {% include official-link.html href="https://observatoriodoconhecimento.org.br/" text="Observatório do Conhecimento" %}; reportagens investigativas de Veja, Folha de S.Paulo e Correio Braziliense.</p>
+            <p class="text-xs text-gray-400 italic mt-6 lang-en">Sources: {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="Brazilian 2026 Annual Budget (LOA)" %}; {% include official-link.html href="https://www.andifes.org.br/" text="Andifes" %}; {% include official-link.html href="https://observatoriodoconhecimento.org.br/" text="Observatório do Conhecimento" %}; investigative reports by Veja, Folha de S.Paulo, &amp; Correio Braziliense.</p>
+        </div>
+
+        <div class="mt-8 text-sm text-gray-600 border-t border-gray-100 pt-6">
+            <div class="lang-pt space-y-2">
+                <p class="font-bold text-navy">Perspectiva:</p>
+                <p class="font-light leading-relaxed">
+                    O gráfico ilustra a chocante contradição orçamentária de 2026. Enquanto o Congresso Nacional destina <strong>R$ 61 bilhões</strong> em {% include glossary-term.html id="emendas-parlamentares" text="emendas parlamentares" %} arbitrárias<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup>, o orçamento de investimento de toda a rede de universidades federais despencou para míseros <strong>R$ 335,9 milhões</strong> (uma queda de 94.3% desde o pico em 2015).
+                </p>
+            </div>
+            <div class="lang-en space-y-2">
+                <p class="font-bold text-navy">Perspective:</p>
+                <p class="font-light leading-relaxed">
+                    This chart illustrates a staggering budgetary contradiction. While the Brazilian Congress maintains a massive pool of <strong>R$ 61 billion</strong> for {% include glossary-term.html id="clientelismo" text="clientelist" %} {% include glossary-term.html id="emendas-parlamentares" text="parliamentary amendments" %}<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup>, the entire capital investment budget for all federal university laboratories has been crushed to just <strong>R$ 335.9 million</strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Essay Content -->
+<main class="max-w-7xl mx-auto px-6 md:px-12 py-12 space-y-8">
+
+    <!-- Section 1 Accordion -->
+    <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+        <button onclick="toggleSection('sec1')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
+            <span class="flex items-center space-x-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest">01</span>
+                <span class="lang-pt">Velocidade de Adoção</span>
+                <span class="lang-en">Adoption Velocity</span>
+            </span>
+            <span id="icon-sec1" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+        </button>
+        <div id="content-sec1" class="p-6 md:p-8">
+            <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
+                <p>
+                    A inteligência artificial generativa quebrou todos os parâmetros históricos de adoção tecnológica. Enquanto tecnologias como a eletricidade, o computador pessoal e o smartphone levaram décadas para alcançar a maioria da população, o ChatGPT alcançou 100 milhões de usuários ativos em dois meses, e em 2025 o modelo já era utilizado por 54,6% dos adultos nos Estados Unidos<sup class="cite"><a href="relatorio.html#ref-2">[2]</a></sup>.
+                </p>
+                <p>
+                    No Brasil, essa curva é ainda mais comprimida devido a uma sociedade altamente conectada via dispositivos móveis. Com conexões móveis cobrindo 102% da população, e o WhatsApp alcançando 93,9% da audiência online nacional<sup class="cite"><a href="relatorio.html#ref-4">[4]</a></sup>, as ferramentas de inteligência artificial são injetadas diretamente na rotina comercial de milhões de brasileiros sem que haja qualquer preparo, regulação ou governança de dados madura. O {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="ECA Digital" %} (Lei nº 15.211/2025), em vigor desde março de 2026, é uma reação tardia no mesmo sentido do KOSA: chega depois que a infraestrutura cognitiva de uma geração já foi reescrita<sup class="cite"><a href="relatorio.html#ref-26">[26]</a></sup><sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>. A lei prevê verificação etária a cada acesso e multas de até 10% do faturamento, mas sua eficácia esbarra nos limites da fiscalização estatal e depende de corresponsabilidade entre plataformas, Estado e sociedade civil<sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>.
+                </p>
+            </div>
+            <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
+                <p>
+                    Generative artificial intelligence has shattered every historical benchmark for technological adoption. While legacy innovations like electricity, personal computers, and smartphones required decades to diffuse to the public, ChatGPT reached 100 million active users in just two months, and by 2025, over 54.6% of US adults had adopted generative tools<sup class="cite"><a href="relatorio.html#ref-2">[2]</a></sup>.
+                </p>
+                <p>
+                    In Brazil, this adoption curve is compressed even further due to a highly connected, mobile-first society. With cellular connections covering 102% of the population, and WhatsApp reaching 93.9% of the online audience<sup class="cite"><a href="relatorio.html#ref-4">[4]</a></sup>, AI tools are injected directly into the daily lives of millions of citizens without mature data governance, state regulation, or safety rails. The {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="ECA Digital" %} (Law No. 15,211/2025), in force since March 2026, is a belated reaction in the same register as KOSA: it arrives after a generation’s cognitive infrastructure has already been rewritten<sup class="cite"><a href="relatorio.html#ref-26">[26]</a></sup><sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>. The statute requires age verification at every access and fines of up to 10% of revenue, but its effectiveness hits the limits of state enforcement and depends on co-responsibility among platforms, the state, and civil society<sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2 Accordion -->
+    <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+        <button onclick="toggleSection('sec2')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
+            <span class="flex items-center space-x-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest">02</span>
+                <span class="lang-pt">O Abismo Regulatório</span>
+                <span class="lang-en">The Regulatory Deficit</span>
+            </span>
+            <span id="icon-sec2" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+        </button>
+        <div id="content-sec2" class="p-6 md:p-8">
+            <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
+                <p>
+                    Enquanto as corporações privadas investem quantias astronômicas — com os quatro maiores {% include glossary-term.html id="hiperscalers" text="hiperscalers" %} globais direcionando mais de <strong>US$ 720 bilhões</strong> em {% include glossary-term.html id="capex" text="CapEx" %} para 2026<sup class="cite"><a href="relatorio.html#ref-5">[5]</a></sup> —, as agências públicas reguladoras operam com orçamentos quase simbólicos. O resultado é um desequilíbrio estrutural de poder, onde o Congresso brasileiro, influenciado por intensos lobbies comerciais, adia o marco legal da IA ({% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="PL 2338/2023" %}) para o final de 2026<sup class="cite"><a href="relatorio.html#ref-10">[10]</a></sup>.
+                </p>
+                <p>
+                    Essa lentidão regulatória deixa a economia nacional altamente exposta. Enquanto 76% das empresas brasileiras mantêm agentes de inteligência artificial em produção, a taxa de incidentes é alarmante: 80% das organizações já foram forçadas a pausar ou reverter uma implantação, e quase 40% destas falhas foram causadas por violações de privacidade ou vazamento de dados críticos<sup class="cite"><a href="relatorio.html#ref-3">[3]</a></sup>.
+                </p>
+            </div>
+            <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
+                <p>
+                    While private corporations allocate astronomical sums — with the Big Four tech {% include glossary-term.html id="hiperscalers" text="hyperscalers" %} guiding toward a combined <strong>$720 billion to $745 billion</strong> in {% include glossary-term.html id="capex" text="CapEx" %} for 2026 alone<sup class="cite"><a href="relatorio.html#ref-5">[5]</a></sup> —, public regulatory bodies operate on shoestring budgets. This asymmetry has mired the Brazilian legislature in a lobbying bottleneck, delaying the vote on the landmark AI Legal Framework ({% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="PL 2338/2023" %}) to late 2026<sup class="cite"><a href="relatorio.html#ref-10">[10]</a></sup>.
+                </p>
+                <p>
+                    This legislative vacuum has created an unstable environment. While 76% of Brazilian companies aggressively deploy AI agents, the failure rate is staggering: 80% of local organizations have been forced to pause or roll back an AI deployment, with 39% of those failures caused directly by critical data breaches or leaks<sup class="cite"><a href="relatorio.html#ref-3">[3]</a></sup>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3 Accordion -->
+    <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+        <button onclick="toggleSection('sec3')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
+            <span class="flex items-center space-x-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest">03</span>
+                <span class="lang-pt">Pressão no Trabalho</span>
+                <span class="lang-en">The Labor Market Squeeze</span>
+            </span>
+            <span id="icon-sec3" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+        </button>
+        <div id="content-sec3" class="p-6 md:p-8">
+            <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
+                <p>
+                    Diferente das revoluções industriais do passado, que automatizaram o trabalho manual, a IA automatiza tarefas de alta cognição. O fechamento das portas de entrada empurra jovens para plataformas algorítmicas de bicos: sobrevivência de curto prazo sem garantias sociais, saúde ou previdência — o ônus inteiro recai sobre o indivíduo, não sobre empregadores ou o Estado. Esse choque atinge o Brasil em um cenário de profunda precarização: com <strong>40% de nossa força de trabalho atuando na informalidade</strong>, e o Congresso tendo removido as salvaguardas trabalhistas mínimas do {% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="projeto de lei original da inteligência artificial" %}, o trabalhador informal está completamente desprotegido.
+                </p>
+                <p>
+                    Para esses trabalhadores, a automação de postos básicos de atendimento, suporte e análise não representa uma transição de carreira corporativa; representa a eliminação repentina e brutal de micro-gigs e serviços digitais de entrada que garantem o sustento básico de suas famílias.
+                </p>
+            </div>
+            <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
+                <p>
+                    Unlike legacy industrial revolutions that automated physical tasks, generative AI targets cognitive work. As traditional entry-level pathways evaporate, young workers migrate toward algorithmic gig platforms: short-term survival with no social guarantees, healthcare, or pension contributions, shifting the entire burden onto the individual. This technological shock is colliding with Brazil's highly precarized labor market, where <strong>40% of the active workforce operates in the informal economy</strong>, completely lacking employer-sponsored pension schemes or social safety nets.
+                </p>
+                <p>
+                    Because the latest version of {% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="PL 2338/2023" %} stripped out minimum labor safeguards, informal workers are left completely exposed. The automation of customer service, basic writing, and administrative tasks does not mean "losing a corporate desk job"—it means the sudden elimination of low-barrier digital micro-gigs that keep families out of poverty.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4 Accordion -->
+    <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+        <button onclick="toggleSection('sec4')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
+            <span class="flex items-center space-x-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest">04</span>
+                <span class="lang-pt">O Paradoxo do Profissional</span>
+                <span class="lang-en">The Professional’s Paradox</span>
+            </span>
+            <span id="icon-sec4" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+        </button>
+        <div id="content-sec4" class="p-6 md:p-8">
+            <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
+                <p>
+                    No campo do desenvolvimento de software, a produtividade trazida pela IA é, em grande parte, uma ilusão de curto prazo que oculta a acumulação silenciosa de <strong>{% include glossary-term.html id="divida-compreensao" text="Dívida de Compreensão" %} (Comprehension Debt)</strong><sup class="cite"><a href="relatorio.html#ref-8">[8]</a></sup><sup class="cite"><a href="relatorio.html#ref-17">[17]</a></sup>. Ao delegarem a escrita de códigos inteiros para modelos black-box, engenheiros estão atrofiando suas habilidades de depuração e entendimento de arquiteturas de sistemas. O código é gerado rápido e passa nos testes unitários, mas ninguém na sala sabe ler ou depurar o que foi gerado se o sistema quebrar.
+                </p>
+                <p>
+                    O mesmo padrão de atrofia e viés de automação se estende à medicina e à educação. Ensaios clínicos mostram que conselhos falhos de modelos de linguagem derrubam o raciocínio diagnóstico mesmo de médicos treinados<sup class="cite"><a href="relatorio.html#ref-21">[21]</a></sup>; erros de IA em radiologia induzem mais falsos positivos e negativos do que o julgamento clínico isolado<sup class="cite"><a href="relatorio.html#ref-22">[22]</a></sup>. Na avaliação escolar, algoritmos achatam notas originais<sup class="cite"><a href="relatorio.html#ref-24">[24]</a></sup> e penalizam falantes não nativos<sup class="cite"><a href="relatorio.html#ref-23">[23]</a></sup>.
+                </p>
+                <p>
+                    Para o ecossistema brasileiro de tecnologia, que atua fortemente no {% include glossary-term.html id="nearshoring" text="nearshoring" %} de desenvolvimento para o mercado norte-americano, o risco é existencial. Se os engenheiros locais se limitarem a ser meros "geradores de código de IA" sob demanda, serão instantaneamente substituídos por agentes autônomos. A única defensibilidade real de mercado é sair da "{% include glossary-term.html id="armadilha-wrappers" text="armadilha dos wrappers" %}" de chat e dominar a arquitetura profunda dos fluxos de trabalho e dados locais.
+                </p>
+            </div>
+            <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
+                <p>
+                    In software engineering, the dramatic speed increase of AI-assisted code generation is largely a short-term illusion that masks the silent accumulation of <strong>{% include glossary-term.html id="divida-compreensao" text="Comprehension Debt" %}</strong><sup class="cite"><a href="relatorio.html#ref-8">[8]</a></sup><sup class="cite"><a href="relatorio.html#ref-17">[17]</a></sup>. By merging thousands of lines of black-box generated code without reading them, developers build "green tests" but suffer from dependency-induced atrophy, losing the capacity to reason through architecture.
+                </p>
+                <p>
+                    The same pattern of atrophy and automation bias extends to medicine and education. Clinical trials show that flawed language-model advice collapses diagnostic reasoning even among trained physicians<sup class="cite"><a href="relatorio.html#ref-21">[21]</a></sup>; AI errors in radiology induce more false positives and negatives than unaided clinical judgement<sup class="cite"><a href="relatorio.html#ref-22">[22]</a></sup>. In grading, algorithms flatten original high-performing work<sup class="cite"><a href="relatorio.html#ref-24">[24]</a></sup> and penalize non-native speakers<sup class="cite"><a href="relatorio.html#ref-23">[23]</a></sup>.
+                </p>
+                <p>
+                    This is an existential threat for Brazil, a major {% include glossary-term.html id="nearshoring" text="nearshoring" %} hub and the 9th largest global ICT market ($97 billion in 2025). As entry-level coding becomes heavily commoditized, local engineers cannot remain simple "code-writers" or build thin "chat wrappers." They must escape the {% include glossary-term.html id="armadilha-wrappers" text="wrapper trap" %} and pivot to designing complex, secure, and localized system architectures.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5 Accordion -->
+    <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+        <button onclick="toggleSection('sec5')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
+            <span class="flex items-center space-x-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest">05</span>
+                <span class="lang-pt">Alternativa Soberana</span>
+                <span class="lang-en">A Sovereign Alternative</span>
+            </span>
+            <span id="icon-sec5" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+        </button>
+        <div id="content-sec5" class="p-6 md:p-8">
+            <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
+                <p>
+                    O {% include official-link.html href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" text="Plano Brasileiro de Inteligência Artificial" %} ({% include glossary-term.html id="pbia" text="PBIA" %}), com aporte planejado de <strong>R$ 23 bilhões</strong><sup class="cite"><a href="relatorio.html#ref-19">[19]</a></sup>, promete estabelecer um supercomputador de US$ 1 bilhão e o desenvolvimento de {% include glossary-term.html id="llm" text="LLMs" %} nativos em português. No entanto, infraestrutura física (hardware) sem investimento massivo no capital humano ({% include glossary-term.html id="mindware" text="mindware" %}) é um casulo vazio.
+                </p>
+                <p>
+                    O verdadeiro gargalo nacional reside na precariedade estrutural que alimenta a histórica <strong>"{% include glossary-term.html id="fuga-cerebros" text="fuga de cérebros" %}"</strong>: nos últimos anos, o país perdeu cerca de 6.700 cientistas e doutores altamente qualificados para o exterior<sup class="cite"><a href="relatorio.html#ref-15">[15]</a></sup> devido a laboratórios deteriorados e bolsas de pós-graduação miseráveis que não oferecem sequer direitos previdenciários elementares.
+                </p>
+                <p>
+                    Paralelamente, a construção de complexos de data centers privados como a <em>{% include glossary-term.html id="scala-ai-city" text="Scala AI City" %}</em> em Eldorado do Sul<sup class="cite"><a href="relatorio.html#ref-7">[7]</a></sup> — com demanda elétrica autorizada de <strong>4,75 GW</strong> (potência superior à da Usina Hidrelétrica de Jirau, que abastece 40 milhões de pessoas) — não é, em si, o problema. O risco é tratá-la como solução única e reduzir o país a ser somente uma <strong>"{% include glossary-term.html id="fazenda-dados" text="fazenda de dados" %}"</strong>. Enquanto o governo federal concede isenção de 100% de impostos federais para a importação de servidores corporativos por cinco anos<sup class="cite"><a href="relatorio.html#ref-18">[18]</a></sup>, as nossas universidades sofrem cortes crônicos e operam com menos de metade do orçamento discricionário que possuíam em 2014.
+                </p>
+            </div>
+            <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
+                <p>
+                    The {% include official-link.html href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" text="Brazilian AI National Plan" %} ({% include glossary-term.html id="pbia" text="PBIA" %}), with a planned budget of <strong>R$ 23 billion</strong><sup class="cite"><a href="relatorio.html#ref-19">[19]</a></sup>, promises a $1 billion supercomputer and native Portuguese language models. However, sovereign hardware without sovereign {% include glossary-term.html id="mindware" text="mindware" %} is a hollow victory.
+                </p>
+                <p>
+                    The true bottleneck resides in the systemic starvation of the scientific ecosystem, which has driven a chronic <strong>"{% include glossary-term.html id="fuga-cerebros" text="Brain Drain" %}" (Fuga de Cérebros)</strong> of roughly 6,700 elite scientists and doctors between 2015 and 2022<sup class="cite"><a href="relatorio.html#ref-15">[15]</a></sup>. Everyday research is run by graduate students surviving on precarious, insecure government fellowships ("bolsas") that lack basic labor rights or pension guarantees.
+                </p>
+                <p>
+                    Meanwhile, massive private developments like the <strong>4.75 GW {% include glossary-term.html id="scala-ai-city" text="Scala AI City" %}</strong> in Eldorado do Sul<sup class="cite"><a href="relatorio.html#ref-7">[7]</a></sup>—which will consume more electricity than the Jirau Hydroelectric Plant (which supplies 40 million citizens)—are not, in themselves, the problem. The risk is treating them as the only solution and reducing Brazil to being only a green-powered "{% include glossary-term.html id="fazenda-dados" text="data farm" %}." The federal government waives import taxes on corporate hardware for five years<sup class="cite"><a href="relatorio.html#ref-18">[18]</a></sup>, while federal universities have had their operational budgets cut by 55% over the past decade.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- Table of Pop Concerts vs University Budgets -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-12 border-t border-gray-200">
+    <div class="bg-[#0f172a] text-white rounded-xl p-6 md:p-10 shadow-lg">
+        <div class="text-center mb-10">
+            <span class="text-xs font-bold text-terracotta uppercase tracking-wider">
+                <span class="lang-pt">A Crise de Prioridade</span>
+                <span class="lang-en">A Conflict of Priorities</span>
+            </span>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">
+                <span class="lang-pt">O Custo de Oportunidade da Ciência Brasileira</span>
+                <span class="lang-en">The Opportunity Cost of Brazilian Science</span>
+            </h2>
+            <p class="text-gray-400 text-sm mt-2 font-light lang-pt">
+                O orçamento de capital para manter laboratórios científicos em todas as {% include universities-phrase.html text="69 universidades federais do Brasil" %} em 2026 é de apenas R$ 335,9 milhões. Compare esse teto nacional com o valor federal distribuído por deputados para shows artísticos em pequenas cidades sem saneamento ou hospitais — e com o {% include glossary-term.html id="ideb" text="IDEB" %} municipal (2023) e o salário médio dos professores da rede municipal (2020). Passe o cursor no nome da cidade para cobertura de água, esgoto, lixo e PIB per capita (Censo 2022):
+            </p>
+            <p class="text-gray-400 text-sm mt-2 font-light lang-en">
+                The 2026 capital budget to maintain scientific laboratories across all {% include universities-phrase.html text="69 federal universities in Brazil" %} is just R$ 335.9 million. Compare that national ceiling with federal funds distributed by deputies for pop concerts in small towns without sanitation or hospitals — and with each town’s 2023 municipal {% include glossary-term.html id="ideb" text="IDEB" %} and 2020 mean municipal-teacher pay. Hover a city name for water, sewer, waste collection, and GDP per capita (2022 Census):
+            </p>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-sm">
+                <thead>
+                    <tr class="border-b border-gray-800 text-gray-400 font-bold">
+                        <th class="py-4 px-4">
+                            <span class="lang-pt">Localidade / Município</span>
+                            <span class="lang-en">Municipality</span>
+                            <span class="block font-normal text-[11px] text-gray-500 mt-0.5 normal-case tracking-normal">
+                                <span class="lang-pt">passe o cursor: saneamento e renda</span>
+                                <span class="lang-en">hover: sanitation and income</span>
+                            </span>
+                        </th>
+                        <th class="py-4 px-4">
+                            <span class="lang-pt">IDEB 2023</span>
+                            <span class="lang-en">2023 IDEB</span>
+                            <span class="block font-normal text-[11px] text-gray-500 mt-0.5 normal-case tracking-normal">
+                                <span class="lang-pt">iniciais / finais</span>
+                                <span class="lang-en">early / later years</span>
+                            </span>
+                        </th>
+                        <th class="py-4 px-4 text-right">
+                            <span class="lang-pt">Salário médio docente</span>
+                            <span class="lang-en">Mean teacher pay</span>
+                            <span class="block font-normal text-[11px] text-gray-500 mt-0.5 normal-case tracking-normal">
+                                <span class="lang-pt">rede municipal · 2020 · 40h</span>
+                                <span class="lang-en">municipal network · 2020 · 40h</span>
+                            </span>
+                        </th>
+                        <th class="py-4 px-4">
+                            <span class="lang-pt">Atração Musical / Artista</span>
+                            <span class="lang-en">Artist / Event</span>
+                        </th>
+                        <th class="py-4 px-4">
+                            <span class="lang-pt">Origem do Recurso Federal</span>
+                            <span class="lang-en">Federal Funding Source</span>
+                        </th>
+                        <th class="py-4 px-4 text-right">
+                            <span class="lang-pt">Valor do Cachê / Repasse (BRL)</span>
+                            <span class="lang-en">Fee / Transfer (BRL)</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-800/50 font-light text-gray-300">
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="sao-fidelis" %}</td>
+                        {% include ideb-cell.html pt="5,0 / 4,2" en="5.0 / 4.2" %}
+                        {% include salary-cell.html pt="R$ 3.518,33" en="R$ 3,518.33" %}
+                        <td class="py-4 px-4">Ana Castela</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-parlamentares" text="Emenda parlamentar" %}
+                            ({% include official-link.html href="https://www.camara.leg.br/deputados/220603/todas-emendas?ano=2025" text="Dani Cunha/PL" title="Emendas orçamentárias oficiais de Dani Cunha na Câmara (2025)" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3304805-sao-fidelis" text="Portal da Transparência" title="Transferências federais a São Fidélis no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 1.000.000<sup class="cite"><a href="relatorio.html#ref-27">[27]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="moita-bonita" %}</td>
+                        {% include ideb-cell.html pt="4,0 / 3,5" en="4.0 / 3.5" %}
+                        {% include salary-cell.html pt="R$ 5.576,79" en="R$ 5,576.79" %}
+                        <td class="py-4 px-4">Weekend Music Festival</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emendas Pix" %}
+                            ({% include official-link.html href="https://www25.senado.leg.br/web/senadores/senador/-/perfil/4811" text="Laércio Oliveira/PP" title="Perfil oficial do senador Laércio Oliveira no Senado Federal" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/2804102-moita-bonita" text="Portal da Transparência" title="Transferências federais a Moita Bonita no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 995.000<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="malhador" %}</td>
+                        {% include ideb-cell.html pt="3,8 / 3,7" en="3.8 / 3.7" %}
+                        {% include salary-cell.html pt="R$ 4.080,28" en="R$ 4,080.28" %}
+                        <td class="py-4 px-4">Wesley Safadão</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emenda Pix" %}
+                            ({% include official-link.html href="https://www.camara.leg.br/deputados/165470/todas-emendas?ano=2025" text="Rodrigo Valadares/UNIÃO" title="Emendas orçamentárias oficiais de Rodrigo Valadares na Câmara (2025)" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/2803906-malhador" text="Portal da Transparência" title="Transferências federais a Malhador no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 900.000<sup class="cite"><a href="relatorio.html#ref-11">[11]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="alpercata" %}</td>
+                        {% include ideb-cell.html pt="5,3 / 4,6" en="5.3 / 4.6" %}
+                        {% include salary-cell.html pt="R$ 2.770,40" en="R$ 2,770.40" mark="‡" %}
+                        <td class="py-4 px-4">Israel & Rodolffo</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emenda Pix" %}
+                            ({% include official-link.html href="https://www.correiobraziliense.com.br/politica/2025/10/7269731-cidades-sem-hospital-gastaram-milhoes-de-emendas-pix-em-shows.html" text="Transferência Especial" title="Reportagem do Estado de Minas / Correio Braziliense sobre as emendas em Alpercata" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3101805-alpercata" text="Portal da Transparência" title="Transferências federais a Alpercata no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 860.000<sup class="cite"><a href="relatorio.html#ref-12">[12]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="sobralia" %}</td>
+                        {% include ideb-cell.html pt="6,1 / 4,9" en="6.1 / 4.9" mark="*" %}
+                        {% include salary-cell.html pt="R$ 3.674,02" en="R$ 3,674.02" %}
+                        <td class="py-4 px-4">Leonardo</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emenda Pix" %}
+                            ({% include official-link.html href="https://www.correiobraziliense.com.br/politica/2025/10/7269731-cidades-sem-hospital-gastaram-milhoes-de-emendas-pix-em-shows.html" text="Transferência Especial" title="Reportagem do Estado de Minas / Correio Braziliense sobre as emendas em Sobrália" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3167707-sobralia" text="Portal da Transparência" title="Transferências federais a Sobrália no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 850.000<sup class="cite"><a href="relatorio.html#ref-12">[12]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="marilac" %}</td>
+                        {% include ideb-cell.html pt="6,0 / 4,6" en="6.0 / 4.6" mark="*" %}
+                        {% include salary-cell.html pt="R$ 3.994,24" en="R$ 3,994.24" %}
+                        <td class="py-4 px-4">Leonardo, Gabi Martins & Outros</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emendas Pix" %}
+                            ({% include official-link.html href="https://www.correiobraziliense.com.br/politica/2025/10/7269731-cidades-sem-hospital-gastaram-milhoes-de-emendas-pix-em-shows.html" text="10 shows" title="Reportagem do Estado de Minas / Correio Braziliense sobre as emendas em Marilac" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3140100-marilac" text="Portal da Transparência" title="Transferências federais a Marilac no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 718.000<sup class="cite"><a href="relatorio.html#ref-12">[12]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="americano-do-brasil" %}</td>
+                        {% include ideb-cell.html pt="7,0 / 5,4" en="7.0 / 5.4" mark="*" %}
+                        {% include salary-cell.html pt="R$ 4.754,03" en="R$ 4,754.03" %}
+                        <td class="py-4 px-4">Festa de Junho (DJs Eletrofunk)</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emenda Pix" %}
+                            ({% include official-link.html href="https://www.camara.leg.br/deputados/220569/todas-emendas?ano=2026" text="Silvye Alves/UNIÃO" title="Emendas orçamentárias oficiais de Silvye Alves na Câmara (2026)" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/5200852-americano-do-brasil" text="Portal da Transparência" title="Transferências federais a Americano do Brasil no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 497.500<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="mar-vermelho" %}</td>
+                        {% include ideb-cell.html pt="5,8 / 5,2" en="5.8 / 5.2" %}
+                        {% include salary-cell.html pt="R$ 3.107,15" en="R$ 3,107.15" %}
+                        <td class="py-4 px-4">Luan Santana</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emenda Pix" %}
+                            ({% include official-link.html href="https://www.camara.leg.br/deputados/204436/todas-emendas?ano=2022" text="Isnaldo Bulhões/MDB" title="Emendas orçamentárias oficiais de Isnaldo Bulhões Jr. na Câmara (2022)" %}
+                            · {% include official-link.html href="https://www25.senado.leg.br/web/senadores/senador/-/perfil/70" text="Renan Calheiros/MDB" title="Perfil oficial do senador Renan Calheiros no Senado Federal" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/2704906-mar-vermelho" text="Portal da Transparência" title="Transferências federais a Mar Vermelho no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 370.000<sup class="cite"><a href="relatorio.html#ref-28">[28]</a></sup></td>
+                    </tr>
+                    <tr class="hover:bg-white/5 transition-colors">
+                        <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="bom-jesus" %}</td>
+                        {% include ideb-cell.html pt="5,5 / 4,9" en="5.5 / 4.9" %}
+                        {% include salary-cell.html pt="R$ 5.586,73" en="R$ 5,586.73" %}
+                        <td class="py-4 px-4">Simone & Simaria</td>
+                        <td class="py-4 px-4">
+                            {% include glossary-term.html id="emendas-pix" text="Emenda Pix" %}
+                            ({% include official-link.html href="https://g1.globo.com/rs/rio-grande-do-sul/noticia/2022/06/23/mp-arquiva-investigacao-contra-prefeitura-de-bom-jesus-por-contratacao-de-show-de-simone-e-simaria-por-r-380-mil.ghtml" text="Festa Regional do Queijo" title="G1: contratação de Simone e Simaria em Bom Jesus (RS)" %})
+                            <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/4302303-bom-jesus" text="Portal da Transparência" title="Transferências federais a Bom Jesus (RS) no Portal da Transparência (CGU)" %}</span>
+                        </td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 380.000<sup class="cite"><a href="relatorio.html#ref-29">[29]</a></sup></td>
+                    </tr>
+                    <tr class="bg-navy border-t-2 border-terracotta text-white font-bold">
+                        <td class="py-4 px-4" colspan="4">
+                            <span class="lang-pt">SOMA DE APENAS UM PEQUENO GRUPO DE SHOWS LOCAIS</span>
+                            <span class="lang-en">SUM OF JUST A SMALL SAMPLE OF LOCAL SHOWS</span>
+                        </td>
+                        <td class="py-4 px-4 text-gray-400">
+                            <span class="lang-pt">Total de Recursos Federais</span>
+                            <span class="lang-en">Total of Federal Resources</span>
+                        </td>
+                        <td class="py-4 px-4 text-right text-terracotta text-lg">R$ 6.570.500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-4 text-[11px] text-gray-500 font-light leading-relaxed">
+            <span class="lang-pt">IDEB da rede municipal, {% include official-link.html href="https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/ideb" text="INEP/MEC" %} (2023), escala de 0 a 10. Primeiro número: anos iniciais (1.º–5.º ano); segundo: anos finais (6.º–9.º). * Anos finais da rede pública, quando o resultado municipal não foi divulgado. Média nacional da rede pública: 5,7 / 4,7 em 2023; 6,1 / 5,0 em 2025.</span>
+            <span class="lang-en">Municipal-network IDEB, {% include official-link.html href="https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/ideb" text="INEP/MEC" %} (2023), 0–10 scale. First figure: early years (grades 1–5); second: later years (grades 6–9). * Later-years score from the public network when the municipal result was not disclosed. National public-network averages: 5.7 / 4.7 in 2023; 6.1 / 5.0 in 2025.</span>
+        </p>
+        <p class="mt-2 text-[11px] text-gray-500 font-light leading-relaxed">
+            <span class="lang-pt">Salário médio bruto dos docentes da rede municipal, padronizado para 40 horas semanais — indicador {% include official-link.html href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/remuneracao-media-dos-docentes" text="INEP/MEC" %} (2020), pareamento Censo Escolar + RAIS. Média nacional da rede municipal: R$ 4.897. Piso nacional em 2020: R$ 2.886,24. ‡ Alpercata ficou abaixo do piso. A jornada real costuma ser menor que 40h; o valor efetivo em folha, portanto, é em geral mais baixo que o padronizado.</span>
+            <span class="lang-en">Mean gross pay of municipal-network teachers, standardised to a 40-hour week — {% include official-link.html href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/remuneracao-media-dos-docentes" text="INEP/MEC" %} indicator (2020), matching the School Census to RAIS. National municipal-network mean: R$ 4,897. The 2020 national floor was R$ 2,886.24. ‡ Alpercata fell below that floor. Actual contracts are often shorter than 40 hours, so take-home pay is typically lower than the standardised figure.</span>
+        </p>
+        <p class="mt-2 text-[11px] text-gray-500 font-light leading-relaxed">
+            <span class="lang-pt">Cada parlamentar aponta para o registro oficial de emendas na {% include official-link.html href="https://www.camara.leg.br/" text="Câmara" %} ou no {% include official-link.html href="https://www25.senado.leg.br/web/senadores" text="Senado" %}. O município aponta para as transferências federais no {% include official-link.html href="https://portaldatransparencia.gov.br/emendas" text="Portal da Transparência (CGU)" %}. Os valores apontam para as reportagens que documentam o uso no show.</span>
+            <span class="lang-en">Each parliamentarian links to the official emenda record in the {% include official-link.html href="https://www.camara.leg.br/" text="Chamber of Deputies" %} or the {% include official-link.html href="https://www25.senado.leg.br/web/senadores" text="Senate" %}. Each municipality links to federal transfers in the {% include official-link.html href="https://portaldatransparencia.gov.br/emendas" text="Transparency Portal (CGU)" %}. The amounts cite the reporting that documents how the money was spent on the show.</span>
+        </p>
+        <p class="mt-2 text-[11px] text-gray-500 font-light leading-relaxed">
+            <span class="lang-pt">Passe o cursor (ou toque) no nome da cidade para população, água encanada, esgoto na rede, coleta de lixo e PIB per capita — {% include official-link.html href="https://sidra.ibge.gov.br/pesquisa/censo-demografico/demografico-2022/universo-caracteristicas-dos-domicilios" text="IBGE, Censo 2022" %} (universo) e {% include official-link.html href="https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html" text="PIB dos Municípios 2023" %}. A comparação é com o Brasil. A {% include official-link.html href="https://www.ibge.gov.br/estatisticas/sociais/trabalho/17270-pnad-continua.html" text="PNAD Contínua" %} não publica esses recortes para municípios desta escala.</span>
+            <span class="lang-en">Hover (or tap) a city name for population, piped water, sewer network, waste collection, and GDP per capita — {% include official-link.html href="https://sidra.ibge.gov.br/pesquisa/censo-demografico/demografico-2022/universo-caracteristicas-dos-domicilios" text="IBGE, 2022 Census" %} (universe) and {% include official-link.html href="https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html" text="2023 Municipal GDP" %}, compared with Brazil. {% include official-link.html href="https://www.ibge.gov.br/estatisticas/sociais/trabalho/17270-pnad-continua.html" text="PNAD Contínua" %} is not published at this municipal grain.</span>
+        </p>
+
+        <div class="mt-12 border-t border-gray-800 pt-10">
+            <p class="text-center text-xs font-bold text-terracotta uppercase tracking-wider">
+                <span class="lang-pt">Custo de oportunidade</span>
+                <span class="lang-en">Opportunity cost</span>
+            </p>
+            <h3 class="font-serif text-2xl md:text-3xl font-bold text-white text-center mt-2">
+                <span class="lang-pt">O que daria para fazer com esse dinheiro</span>
+                <span class="lang-en">What this money could have done</span>
+            </h3>
+            <p class="text-gray-400 text-sm font-light text-center max-w-2xl mx-auto mt-3 leading-relaxed lang-pt">
+                <strong class="text-white font-medium">R$ 6,57 milhões</strong> pagaram nove noites de palco nesta amostra. O mesmo recurso, investido em educação e ciência, cobriria:
+            </p>
+            <p class="text-gray-400 text-sm font-light text-center max-w-2xl mx-auto mt-3 leading-relaxed lang-en">
+                <strong class="text-white font-medium">R$ 6.57 million</strong> paid for nine nights on stage in this sample. The same sum, invested in education and science, would have covered:
+            </p>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <article class="rounded-xl bg-white/5 border border-white/10 p-6 text-center">
+                    <p class="font-serif text-5xl md:text-6xl font-bold text-terracotta tabular-nums leading-none">3</p>
+                    <h4 class="font-bold text-white uppercase text-xs tracking-wider mt-4">
+                        <span class="lang-pt">Universidades federais</span>
+                        <span class="lang-en">Federal universities</span>
+                    </h4>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mt-2 lang-pt">
+                        Orçamento inteiro de modernização laboratorial (“InovaLab”) de <strong class="text-gray-200">três instituições</strong> — a média é R$ 2,17 milhões por universidade.
+                    </p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mt-2 lang-en">
+                        The full laboratory-modernization (“InovaLab”) budget of <strong class="text-gray-200">three institutions</strong> — about R$ 2.17 million per university.
+                    </p>
+                </article>
+                <article class="rounded-xl bg-white/5 border border-white/10 p-6 text-center">
+                    <p class="font-serif text-5xl md:text-6xl font-bold text-terracotta tabular-nums leading-none">45</p>
+                    <h4 class="font-bold text-white uppercase text-xs tracking-wider mt-4">
+                        <span class="lang-pt">Doutorados completos</span>
+                        <span class="lang-en">Complete doctorates</span>
+                    </h4>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mt-2 lang-pt">
+                        Quatro anos de bolsa {% include official-link.html href="https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/prestacao-de-contas/valores-de-bolsas" text="CAPES" %}/{% include official-link.html href="https://www.gov.br/cnpq/pt-br" text="CNPq" %} (R$ 3.000/mês) para <strong class="text-gray-200">45 doutorandos</strong> — ou 182 anos de pesquisa de um único estudante.
+                    </p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mt-2 lang-en">
+                        Four years of a {% include official-link.html href="https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/prestacao-de-contas/valores-de-bolsas" text="CAPES" %}/{% include official-link.html href="https://www.gov.br/cnpq/pt-br" text="CNPq" %} fellowship (R$ 3,000/month) for <strong class="text-gray-200">45 doctoral students</strong> — or 182 years of one student’s research.
+                    </p>
+                </article>
+                <article class="rounded-xl bg-white/5 border border-white/10 p-6 text-center">
+                    <p class="font-serif text-5xl md:text-6xl font-bold text-terracotta tabular-nums leading-none">106</p>
+                    <h4 class="font-bold text-white uppercase text-xs tracking-wider mt-4">
+                        <span class="lang-pt">Professores da educação básica</span>
+                        <span class="lang-en">Basic-education teachers</span>
+                    </h4>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mt-2 lang-pt">
+                        Um ano de salário no {% include official-link.html href="https://in.gov.br/en/web/dou/-/portaria-mec-n-82-de-29-de-janeiro-de-2026-684167441" text="piso nacional do magistério" %} (R$ 5.130,63/mês em 2026) — o chão da carreira docente nas mesmas cidades cujo IDEB e salário médio aparecem na tabela.
+                    </p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed mt-2 lang-en">
+                        One year of pay at the {% include official-link.html href="https://in.gov.br/en/web/dou/-/portaria-mec-n-82-de-29-de-janeiro-de-2026-684167441" text="national teacher salary floor" %} (R$ 5,130.63/month in 2026) — the starting wage in the same towns whose IDEB and mean teacher pay appear in the table.
+                    </p>
+                </article>
+            </div>
+
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <article class="rounded-xl bg-white/[0.03] border border-white/10 p-5">
+                    <p class="font-serif text-3xl font-bold text-white tabular-nums leading-none">42</p>
+                    <h4 class="font-bold text-terracotta uppercase text-[11px] tracking-wider mt-3">
+                        <span class="lang-pt">Cientistas repatriados</span>
+                        <span class="lang-en">Repatriated scientists</span>
+                    </h4>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed mt-2 lang-pt">
+                        Um ano de bolsa especial do “{% include official-link.html href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2024/07/conhecimento-brasil-aplica-recursos-do-fndct-em-formacao-de-redes-internacionais-e-fixacao-de-cientistas-no-pais" text="Conhecimento Brasil" %}” (R$ 13.000/mês) — ou 42 anos de um único pesquisador de ponta.
+                    </p>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed mt-2 lang-en">
+                        One year of a special “{% include official-link.html href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2024/07/conhecimento-brasil-aplica-recursos-do-fndct-em-formacao-de-redes-internacionais-e-fixacao-de-cientistas-no-pais" text="Conhecimento Brasil" %}” fellowship (R$ 13,000/month) — or 42 years of a single top-tier researcher.
+                    </p>
+                </article>
+                <article class="rounded-xl bg-white/[0.03] border border-white/10 p-5">
+                    <p class="font-serif text-3xl font-bold text-white tabular-nums leading-none">130</p>
+                    <h4 class="font-bold text-terracotta uppercase text-[11px] tracking-wider mt-3">
+                        <span class="lang-pt">Mestrados completos</span>
+                        <span class="lang-en">Complete master’s degrees</span>
+                    </h4>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed mt-2 lang-pt">
+                        Dois anos de bolsa {% include official-link.html href="https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/prestacao-de-contas/valores-de-bolsas" text="CAPES" %} de mestrado (R$ 2.100/mês) — a formação de quem toca o laboratório no dia a dia.
+                    </p>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed mt-2 lang-en">
+                        Two years of a {% include official-link.html href="https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/prestacao-de-contas/valores-de-bolsas" text="CAPES" %} master’s fellowship (R$ 2,100/month) — the people who actually run the labs day to day.
+                    </p>
+                </article>
+                <article class="rounded-xl bg-white/[0.03] border border-white/10 p-5">
+                    <p class="font-serif text-3xl font-bold text-white tabular-nums leading-none">2%</p>
+                    <h4 class="font-bold text-terracotta uppercase text-[11px] tracking-wider mt-3">
+                        <span class="lang-pt">Do investimento de capital das 69 federais</span>
+                        <span class="lang-en">Of all 69 federals’ capital budget</span>
+                    </h4>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed mt-2 lang-pt">
+                        Nove shows equivalem a quase <strong class="text-gray-200">2%</strong> dos R$ 335,9 milhões previstos em 2026 para laboratórios de <em>todas</em> as {% include universities-phrase.html text="69 universidades federais" %}.
+                    </p>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed mt-2 lang-en">
+                        Nine concerts equal almost <strong class="text-gray-200">2%</strong> of the R$ 335.9 million budgeted in 2026 for laboratories across <em>all</em> {% include universities-phrase.html text="69 federal universities" %}.
+                    </p>
+                </article>
+            </div>
+
+            <p class="mt-5 text-[11px] text-gray-500 font-light leading-relaxed">
+                <span class="lang-pt">Cálculos sobre R$ 6.570.500. InovaLab: média de R$ 2,17 milhões por instituição federal. Bolsas no país: mestrado R$ 2.100/mês e doutorado R$ 3.000/mês ({% include official-link.html href="https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/prestacao-de-contas/valores-de-bolsas" text="CAPES" %}). Conhecimento Brasil: R$ 13.000/mês. Piso do magistério: {% include official-link.html href="https://in.gov.br/en/web/dou/-/portaria-mec-n-82-de-29-de-janeiro-de-2026-684167441" text="Portaria MEC nº 82/2026" %} (R$ 5.130,63/mês). Capital das federais: R$ 335,9 milhões (LOA 2026).</span>
+                <span class="lang-en">Figures use R$ 6,570,500. InovaLab: R$ 2.17 million average per federal institution. Domestic fellowships: master’s R$ 2,100/month and doctorate R$ 3,000/month ({% include official-link.html href="https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/prestacao-de-contas/valores-de-bolsas" text="CAPES" %}). Conhecimento Brasil: R$ 13,000/month. Teacher floor: {% include official-link.html href="https://in.gov.br/en/web/dou/-/portaria-mec-n-82-de-29-de-janeiro-de-2026-684167441" text="MEC Ordinance 82/2026" %} (R$ 5,130.63/month). Federal capital budget: R$ 335.9 million (2026 Annual Budget).</span>
+            </p>
+        </div>
+    </div>
+
+    <aside class="mt-6 px-1 max-w-4xl mx-auto text-xs text-gray-500 font-light leading-relaxed" aria-label="Esclarecimento">
+        <p class="lang-pt">
+            <span class="font-bold text-navy uppercase tracking-wider">Esclarecimento.</span>
+            Os números desta tabela ilustram uma crise de prioridades na alocação de recursos públicos — não um juízo contra eventos culturais, nem contra os artistas citados. Cultura e festa têm valor. O que se questiona é o uso de emendas federais para cachês milionários em municípios que ainda não têm hospital, saneamento ou ruas asfaltadas, enquanto laboratórios e bolsas de pesquisa operam no limite. O convite é, sobretudo, aos gestores públicos: reordenar essas prioridades. E, de forma complementar, a artistas já consolidados financeiramente: ser mais criteriosos sobre o palco que ocupam — destinando parte do cachê a melhorias concretas na cidade, ou firmando com o município o compromisso de que uma fração do recurso reverta em saúde, infraestrutura e bem-estar da população.
+        </p>
+        <p class="lang-en">
+            <span class="font-bold text-navy uppercase tracking-wider">Disclaimer.</span>
+            The figures in this table illustrate a crisis of public priorities — not an argument against cultural events, nor against the artists named. Culture and celebration have value. What is at issue is the use of federal earmarks for million-real performance fees in municipalities that still lack a hospital, sanitation, or paved streets, while laboratories and research fellowships run on fumes. The appeal is first to policymakers: reorder those priorities. And, complementarily, to artists already in a strong financial position: be more mindful of the stages they accept — by directing part of the fee toward concrete local improvements, or by agreeing with the municipality that a share of the public money returns as commitments to health, infrastructure, and citizens’ wellbeing.
+        </p>
+    </aside>
+</section>
+
+<!-- Interactive CTA / Signature Area -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 text-center space-y-6">
+    <h3 class="font-serif text-3xl font-bold text-navy">
+        <span class="lang-pt">Apóie Esta Visão</span>
+        <span class="lang-en">Support This Vision</span>
+    </h3>
+    <p class="text-gray-600 font-light max-w-xl mx-auto leading-relaxed lang-pt">
+        Se você concorda que o futuro do Brasil depende da valorização real do seu capital humano e da priorização orçamentária da ciência sobre o {% include glossary-term.html id="clientelismo" text="clientelismo" %}, assine o manifesto ou compartilhe esta visão na internet.
+    </p>
+    <p class="text-gray-600 font-light max-w-xl mx-auto leading-relaxed lang-en">
+        If you agree that Brazil's future depends on truly valuing its human capital and prioritizing science over clientelism in the federal budget, sign the manifesto or share this vision online.
+    </p>
+    <div class="pt-4 flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4">
+        <a href="https://forms.gle/UPCDDPaMs9P8yLmw9" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-block text-center bg-terracotta text-white font-bold px-8 py-3 rounded-md hover:bg-red-800 active:scale-95 transition-all shadow-sm">
+            <span class="lang-pt">Assinar o Manifesto</span>
+            <span class="lang-en">Sign the Manifesto</span>
+        </a>
+        <button type="button" onclick="openShareDialog()" class="w-full sm:w-auto border border-gray-300 text-navy font-bold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors">
+            <span class="lang-pt">Compartilhe na Internet</span>
+            <span class="lang-en">Share on the Internet</span>
+        </button>
+    </div>
+    <p>
+        <a href="https://forms.gle/5XBeDzHNNqxg5MEc8" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-navy underline-offset-2 hover:underline transition-colors">
+            <span class="lang-pt">Contato</span>
+            <span class="lang-en">Get In Touch</span>
+        </a>
+    </p>
+    <p class="text-xs text-gray-400 mt-2 font-light max-w-lg mx-auto leading-relaxed">
+        <span class="lang-pt">Após confirmar o email, seu primeiro nome e as iniciais do sobrenome serão listados nesta página (em até 24h). Não pedimos doações nem dados além do formulário.</span>
+        <span class="lang-en">After you confirm your email, your first name and last-name initials will be listed on this page (within 24 hours). We never ask for donations or data beyond the form.</span>
+    </p>
+
+    <dialog id="shareDialog" class="share-dialog no-print" data-share-url="{{ site.url }}{{ page.url | relative_url }}" aria-labelledby="shareDialogTitle">
+        <div class="share-dialog-panel">
+            <h2 id="shareDialogTitle" class="font-serif text-xl font-bold text-navy">
+                <span class="lang-pt">Compartilhe na Internet</span>
+                <span class="lang-en">Share on the Internet</span>
+            </h2>
+            <p class="text-sm text-gray-600 font-light leading-relaxed mt-2">
+                <span class="lang-pt">Copie o texto abaixo e cole na rede social de sua preferência.</span>
+                <span class="lang-en">Copy the text below and paste it on the social network of your choice.</span>
+            </p>
+            <textarea id="shareText" class="share-dialog-text" readonly rows="5" aria-label="Share text"></textarea>
+            <div class="share-dialog-actions">
+                <button type="button" id="shareCopyBtn" onclick="copyShareText()">
+                    <span class="lang-pt">Copiar</span>
+                    <span class="lang-en">Copy</span>
+                </button>
+                <button type="button" class="share-dialog-close" onclick="closeShareDialog()">
+                    <span class="lang-pt">Fechar</span>
+                    <span class="lang-en">Close</span>
+                </button>
+            </div>
+        </div>
+    </dialog>
+</section>
+
+{% include assinaturas.html %}

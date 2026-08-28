@@ -1,0 +1,456 @@
+# Public AI research centers in Brazil, transcribed from OBIA/NIC.br.
+# CPA coordinates from the OBIA Leaflet embed. INCT host/city follow the OBIA
+# table; when the embed's pin disagrees with that table, city-level coordinates
+# for the table city are used instead of the conflicting pin.
+source:
+  name: Observatório Brasileiro de Inteligência Artificial (OBIA/NIC.br)
+  url: https://obia.nic.br/s/centros
+  retrieved: 2026-08-28
+  retrieved_pt: 28 de agosto de 2026
+  retrieved_en: 28 August 2026
+counts:
+  cpa: 13
+  inct: 21
+  total: 34
+centers:
+  - id: bios
+    kind: cpa
+    name: BI0S - Brazilian Institute of Data Science
+    areas:
+      - Agricultura
+      - Saúde
+    host: UNICAMP
+    city: Campinas
+    uf: SP
+    lat: -22.8184
+    lng: -47.0647
+    sede: UNICAMP (Rua Josiah Willard Gibbs, 85)
+    url: https://bv.fapesp.br/pt/auxilios/109243/bi0s-brazilian-institute-of-data-science/
+  - id: c4ai
+    kind: cpa
+    name: C4AI - Centro de Inteligência Artificial
+    areas:
+      - Saúde
+      - Administração
+      - Agronegócio
+      - Ciência, Tecnologia e Inovação
+      - Educação
+      - Governo
+      - Meio Ambiente
+    host: USP
+    city: São Paulo
+    uf: SP
+    lat: -23.5574
+    lng: -46.7314
+    sede: USP (Prédio Inova-USP, Av. Prof. Lúcio Martins Rodrigues, 370)
+    url: https://c4ai.inova.usp.br/
+  - id: ceiare
+    kind: cpa
+    name: Centro de Excelência em Inteligência Artificial para Energias Renováveis (COPPE/UFRJ)
+    areas:
+      - Energia
+      - Indústria
+    host: UFRJ
+    city: Rio de Janeiro
+    uf: RJ
+    lat: -22.8612
+    lng: -43.2263
+    sede: UFRJ (LAMCE/COPPE, Parque Tecnológico da UFRJ)
+    url: https://coppe.ufrj.br/planeta-coppe/coppe-sediara-o-centro-de-excelencia-em-inteligencia-artificial-para-energia-renovaveis/
+  - id: ceiasc
+    kind: cpa
+    name: Centro de Excelência em Inteligência Artificial para Segurança Cibernética
+    areas:
+      - Segurança
+    host: UFPE
+    city: Recife
+    uf: PE
+    lat: -8.0551
+    lng: -34.9516
+    sede: UFPE (Centro de Informática - CIn, Av. Prof. Moraes Rego, 1235)
+    url: https://portal.cin.ufpe.br/2023/09/11/conheca-o-centro-de-excelencia-em-inteligencia-artificial-para-seguranca-cibernetica-sediados-no-cin-ufpe/
+  - id: cepaii
+    kind: cpa
+    name: Centro de Excelência em Pesquisa Aplicada em Inteligência Artificial para a Indústria
+    areas:
+      - Indústria
+    host: SENAI
+    city: Salvador
+    uf: BA
+    lat: -12.9361
+    lng: -38.3622
+    sede: SENAI CIMATEC (Avenida Orlando Gomes, 1845)
+    url: https://cpaia.senaicimatec.com.br/
+  - id: cdi2
+    kind: cpa
+    name: Centro de Pesquisa em Engenharia Ciência de Dados para a Indústria Inteligente (CDI2)
+    areas:
+      - Indústria
+    host: USP
+    city: São Paulo
+    uf: SP
+    lat: -23.5552
+    lng: -46.7297
+    sede: Escola Politécnica da USP (Av. Prof. Luciano Gualberto)
+    url: https://obia.nic.br/cdi2
+  - id: ciagsaude
+    kind: cpa
+    name: Centro para Inteligência Artificial em Gestão de Saúde (ciaGSaúde)
+    areas:
+      - Saúde
+    host: USP
+    city: São Paulo
+    uf: SP
+    lat: -23.5562
+    lng: -46.6684
+    sede: Faculdade de Medicina da USP (Av. Dr. Arnaldo, 455)
+    url: https://ciagsaude.icmc.usp.br/pt-BR
+  - id: cereia
+    kind: cpa
+    name: CEREIA - Centro de Referência em Inteligência Artificial
+    areas:
+      - Saúde
+    host: UFC
+    city: Fortaleza
+    uf: CE
+    lat: -3.7454
+    lng: -38.5742
+    sede: UFC (Insight Lab, Campus do Pici, Bloco 918)
+    url: https://bv.fapesp.br/pt/auxilios/109947/cereia-centro-de-referencia-em-inteligencia-artificial/
+  - id: ciia-saude
+    kind: cpa
+    name: CIIA-Saúde - Centro de Inovação em Inteligência Artificial para a Saúde
+    areas:
+      - Saúde
+    host: UFMG
+    city: Belo Horizonte
+    uf: MG
+    lat: -19.8692
+    lng: -43.9664
+    sede: UFMG (Campus Pampulha, Av. Antônio Carlos, 6627)
+    url: https://bv.fapesp.br/pt/auxilios/110077/centro-de-inovacao-em-inteligencia-artificial-para-a-saude-ciia-saude
+  - id: iara
+    kind: cpa
+    name: IARA - Inteligência Artificial Recriando Ambientes
+    areas:
+      - Cidades
+      - TICs
+    host: USP-SC
+    city: São Carlos
+    uf: SP
+    lat: -22.0072
+    lng: -47.8974
+    sede: USP São Carlos (Av. Trabalhador São-carlense, 400)
+    url: https://bv.fapesp.br/pt/auxilios/111390/iara-inteligencia-artificial-recriando-ambientes/
+  - id: iasmin
+    kind: cpa
+    name: Plataforma IASMIN - Inteligência Artificial, Soluções para a Manufatura Inteligente
+    areas:
+      - Indústria
+    host: IPT
+    city: São Paulo
+    uf: SP
+    lat: -23.5590
+    lng: -46.7380
+    sede: IPT - Instituto de Pesquisas Tecnológicas (Av. Prof. Almeida Prado, 532)
+    url: https://plataformaiasmin.org.br/Home/Index
+  - id: praia
+    kind: cpa
+    name: PRAIA Educação
+    areas:
+      - Indústria
+    host: UFPE
+    city: Recife
+    uf: PE
+    lat: -8.0548
+    lng: -34.9517
+    sede: UFPE (Centro de Informática - CIn)
+    url: https://portal.cin.ufpe.br/pesquisa-e-extensao/pesquisa/grupos-de-pesquisa/praia/
+  - id: vivabem
+    kind: cpa
+    name: VivaBem – Hub de Inteligência Artificial para Saúde e Bem-Estar
+    areas:
+      - Saúde
+    host: UNICAMP; SAMSUNG
+    city: Campinas
+    uf: SP
+    lat: -22.8156
+    lng: -47.0672
+    sede: UNICAMP (Cidade Universitária Zeferino Vaz)
+    url: https://vivabem.unicamp.br/conheca/
+  - id: inct-combate-fome
+    kind: inct
+    name: INCT Combate à Fome
+    areas:
+      - Segurança alimentar
+      - Sociedade
+    host: USP
+    city: São Paulo
+    uf: SP
+    lat: -23.5554
+    lng: -46.6647
+    sede: Faculdade de Saúde Pública / USP
+    url: https://www.fsp.usp.br/
+  - id: inct-ias
+    kind: inct
+    name: INCT em Inteligência Artificial e Sustentabilidade (INCT-IAS)
+    areas:
+      - Meio Ambiente
+    host: PUCRS
+    city: Porto Alegre
+    uf: RS
+    lat: -30.0583
+    lng: -51.1744
+    sede: PUCRS
+    url: https://www.pucrs.br/
+  - id: inct-iaciber
+    kind: inct
+    name: INCT em Inteligência Artificial para Cibersegurança (INCT-IACiber)
+    areas:
+      - Segurança
+    host: UFMG
+    city: Belo Horizonte
+    uf: MG
+    lat: -19.8692
+    lng: -43.9664
+    sede: UFMG
+    url: https://dcc.ufmg.br/
+  - id: inct-tild-iar
+    kind: inct
+    name: INCT em Inteligência Artificial Responsável para Linguística Computacional, Tratamento e Disseminação de Informação (INCT TILD-IAR)
+    areas:
+      - Ciência da Informação
+    host: UFMG
+    city: Belo Horizonte
+    uf: MG
+    lat: -19.8692
+    lng: -43.9664
+    sede: Departamento de Ciência da Computação (DCC) / UFMG
+    url: https://dcc.ufmg.br/ufmg-coordena-rede-internacional-de-ia-responsavel-e-sustentavel/
+  - id: inct-materials
+    kind: inct
+    name: INCT em Materials Informatics
+    areas:
+      - Indústria
+    host: CNPEM
+    city: Campinas
+    uf: SP
+    lat: -22.8170
+    lng: -47.0544
+    sede: CNPEM
+    url: https://cnpem.br/
+  - id: inct-ia-edu
+    kind: inct
+    name: INCT IA.Edu – Instituto Nacional de Inteligência Artificial na Educação Desplugada
+    areas:
+      - Educação
+    host: UFAL
+    city: Maceió
+    uf: AL
+    lat: -9.5541
+    lng: -35.7756
+    sede: NEES / UFAL
+    url: https://nees.ufal.br/
+  - id: inct-iamazonia
+    kind: inct
+    name: INCT IAmazônia
+    areas:
+      - Cidades
+      - Saúde
+    host: UFPA
+    city: Belém
+    uf: PA
+    lat: -1.4748
+    lng: -48.4452
+    sede: Universidade Federal do Pará (UFPA)
+    url: https://ufpa.br/ufpa-aprova-dois-institutos-nacionais-de-ciencia-tecnologia/
+  - id: inct-insac
+    kind: inct
+    name: INCT InSAC - Instituto Nacional de Ciência e Tecnologia para Sistemas Autônomos Cooperativos Aplicados em Segurança e Meio Ambiente
+    areas:
+      - Segurança
+      - Meio Ambiente
+      - Energia
+      - Agro
+      - Mobilidade e Transportes
+      - Óleo e Gás
+    host: USP
+    city: São Paulo
+    uf: SP
+    lat: -23.5552
+    lng: -46.7297
+    sede: USP
+    url: https://www.usp.br/
+  - id: inct-internet-futuro
+    kind: inct
+    name: INCT Instituto Nacional de Ciência e Tecnologia da Internet do Futuro
+    areas:
+      - Mobilidade e Transportes
+      - Saúde
+      - Telecomunicações
+      - Cidades
+    host: USP
+    city: São Paulo
+    uf: SP
+    lat: -23.5552
+    lng: -46.7297
+    sede: Escola Politécnica / USP
+    url: https://www.poli.usp.br/
+  - id: inct-democracia-digital
+    kind: inct
+    name: INCT Instituto Nacional de Ciência e Tecnologia Democracia Digital
+    areas:
+      - Governo
+      - Sociedade
+    host: UFBA
+    city: Salvador
+    uf: BA
+    lat: -12.9936
+    lng: -38.5111
+    sede: UFBA
+    url: https://www.ufba.br/
+  - id: inct-engenharia-software
+    kind: inct
+    name: INCT Instituto Nacional de Ciência e Tecnologia Engenharia de Software
+    areas:
+      - Cidades
+    host: ""
+    city: Recife
+    uf: PE
+    lat: -8.0550
+    lng: -34.9515
+    sede: Recife
+    url: https://portal.cin.ufpe.br/
+  - id: inct-iaia
+    kind: inct
+    name: INCT Instituto Nacional de Inteligência Artificial - IAIA
+    areas:
+      - Agricultura
+      - Cidades
+      - Saúde
+    host: UFPE
+    city: Recife
+    uf: PE
+    lat: -8.0551
+    lng: -34.9516
+    sede: Centro de Informática (CIn) / UFPE
+    url: https://portal.cin.ufpe.br/
+  - id: inct-iqnano
+    kind: inct
+    name: INCT IQNano - Infraestruturas Quântica e Nano para Aplicações Convergentes
+    areas:
+      - Segurança
+      - Ciência, Tecnologia e Inovação
+      - Telecomunicações
+      - Saúde
+    host: UFMG
+    city: Belo Horizonte
+    uf: MG
+    lat: -19.8680
+    lng: -43.9635
+    sede: UFMG
+    url: https://dcc.ufmg.br/infraestruturas-quantica-e-nano-para-aplicacoes-convergentes/
+  - id: inct-iconiot
+    kind: inct
+    name: INCT Redes de Comunicação e Internet das Coisas Inteligentes
+    areas:
+      - Telecomunicações
+      - Saúde
+      - Cidades
+    host: UNICAMP
+    city: Campinas
+    uf: SP
+    lat: -22.8156
+    lng: -47.0672
+    sede: Unicamp
+    url: https://iconiot.ic.unicamp.br/
+  - id: inct-signals
+    kind: inct
+    name: INCT Sensoriamento Remoto e Vigilância Aerotransportada e Espacial
+    areas:
+      - Meio Ambiente
+      - Segurança
+      - Território
+      - Telecomunicações
+    host: UFC
+    city: Fortaleza
+    uf: CE
+    lat: -3.7454
+    lng: -38.5742
+    sede: UFC
+    url: https://inct-signals.org/
+  - id: inct-stream
+    kind: inct
+    name: INCT Stream
+    areas:
+      - Agricultura
+      - Meio Ambiente
+      - Bioeconomia
+    host: UFPA
+    city: Belém
+    uf: PA
+    lat: -1.4748
+    lng: -48.4452
+    sede: Universidade Federal do Pará (UFPA)
+    url: https://ufpa.br/ufpa-aprova-dois-institutos-nacionais-de-ciencia-tecnologia/
+  - id: inct-namitec
+    kind: inct
+    name: INCT-NAMITEC Instituto Nacional de Ciência e Tecnologia Nano e Microeletrônica para Tecnologias Habilitadoras
+    areas:
+      - Telecomunicações
+      - Saúde, Mobilidade e Transporte
+      - Energia
+      - Ecologia
+    host: UNICAMP
+    city: Campinas
+    uf: SP
+    lat: -22.8193
+    lng: -47.0519
+    sede: CTI Renato Archer / Unicamp
+    url: https://namitec.org.br/
+  - id: inct-ines-ia
+    kind: inct
+    name: Instituto Nacional de Ciência e Tecnologia para Engenharia de Software Baseada em e para Inteligência Artificial (INES.IA)
+    areas: []
+    host: UFPE
+    city: Recife
+    uf: PE
+    lat: -8.0548
+    lng: -34.9517
+    sede: Centro de Informática (CIn) / UFPE
+    url: https://www.gov.br/cnpq/pt-br/assuntos/noticias/cnpq-em-acao/chamada-inct-amplia-aprovacao-em-20-com-suplementacao-do-fndct-e-faps-veja-o-resultado-final/ResultadoFinalChamadaINCT462024.pdf
+  - id: inct-iaprobem
+    kind: inct
+    name: Instituto Nacional de Inteligência Artificial para o Bem Social (IAPROBEM)
+    areas: []
+    host: USP
+    city: São Paulo
+    uf: SP
+    lat: -23.5574
+    lng: -46.7314
+    sede: USP
+    url: http://portal-adm.cnpq.br/web/guest/chamadas-publicas?p_p_id=resultadosportlet_WAR_resultadoscnpqportlet_INSTANCE_0ZaM&filtro=abertas&detalha=chamadaDivulgada&idDivulgacao=12625
+  - id: inct-patologia
+    kind: inct
+    name: Instituto Nacional de Patologia Molecular e Computacional
+    areas:
+      - Saúde
+    host: FIOCRUZ
+    city: Salvador
+    uf: BA
+    lat: -12.9380
+    lng: -38.3910
+    sede: FIOCRUZ Bahia
+    url: https://www.bahia.fiocruz.br/institutos-nacionais-de-ciencia-e-tecnologia-vinculados-a-fiocruz-bahia-sao-aprovados-em-chamada-do-cnpq/
+  - id: inct-pics
+    kind: inct
+    name: "Pesquisas Inovadoras em Ciências da Saúde: da Nanotecnologia à Inteligência Artificial - INCT PICS"
+    areas:
+      - Saúde
+    host: USP
+    city: Ribeirão Preto
+    uf: SP
+    lat: -21.1667
+    lng: -47.8600
+    sede: USP Ribeirão Preto
+    url: https://sites.usp.br/fisica/df-ffclrp-coordenara-novo-instituto-nacional-de-ciencia-e-tecnologia-inct-aprovado-pelo-cnpq/

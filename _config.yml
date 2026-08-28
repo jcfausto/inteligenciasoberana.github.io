@@ -1,0 +1,42 @@
+title: Inteligência Soberana
+tagline: A soberania digital começa com a soberania das mentes
+description: >-
+  Manifesto e relatório sobre soberania digital, financiamento científico e
+  inteligência artificial no Brasil.
+url: https://inteligenciasoberana.com.br
+baseurl: ""
+lang: pt-BR
+timezone: America/Sao_Paulo
+author: Inteligência Soberana
+theme: null
+
+research:
+  version: "1.6"
+  updated: 2026-08-28
+  updated_pt: "28 de agosto de 2026"
+  updated_en: "28 August 2026"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Jekyll ignores dot-directories unless listed here.
+include:
+  - .well-known
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .gitignore
+  - scripts
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

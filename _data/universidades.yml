@@ -1,0 +1,779 @@
+# Discretionary RP2 budget of Brazil's 69 federal universities, 2026.
+# Source: Andifes analysis of PLOA/LOA 2026 (anexos 1 and 2).
+# RP2 excludes parliamentary emendas and own revenue.
+# Values in BRL (integers). loa = ploa - cut.
+year: 2026
+count: 69
+andifes_report: https://www.apufsc.org.br/wp-content/uploads/2025/12/Relatorio-Andifes-PLOA-2026-1-1.pdf
+loa_law: https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html
+observatorio: https://observatoriodoconhecimento.org.br/
+totals:
+  ploa: 6924921096
+  cut: 488043050
+  loa: 6436878046
+  cut_pct: 7.05
+  pnaes_ploa: 1368391984
+  pnaes_loa: 1268470519
+observatorio_totals:
+  discretionary_bi: 7.85
+  capital_mi: 335.9
+institutions:
+  - acronym: FURG
+    slug: furg
+    name_pt: Universidade Federal do Rio Grande
+    name_en: Federal University of Rio Grande
+    uf: RS
+    city: Rio Grande
+    ploa: 77184364
+    cut: 5340128
+    loa: 71844236
+    pnaes_ploa: 10810059
+    pnaes_loa: 10018092
+  - acronym: UFABC
+    slug: ufabc
+    name_pt: Universidade Federal do ABC
+    name_en: Federal University of ABC
+    uf: SP
+    city: Santo André
+    ploa: 63134552
+    cut: 4335998
+    loa: 58798554
+    pnaes_ploa: 11070273
+    pnaes_loa: 10259243
+  - acronym: UFAC
+    slug: ufac
+    name_pt: Universidade Federal do Acre
+    name_en: Federal University of Acre
+    uf: AC
+    city: Rio Branco
+    ploa: 63052839
+    cut: 4281779
+    loa: 58771060
+    pnaes_ploa: 12649206
+    pnaes_loa: 11722499
+  - acronym: UFAL
+    slug: ufal
+    name_pt: Universidade Federal de Alagoas
+    name_en: Federal University of Alagoas
+    uf: AL
+    city: Maceió
+    ploa: 115702474
+    cut: 8273309
+    loa: 107429165
+    pnaes_ploa: 29896829
+    pnaes_loa: 27733044
+  - acronym: UFAM
+    slug: ufam
+    name_pt: Universidade Federal do Amazonas
+    name_en: Federal University of Amazonas
+    uf: AM
+    city: Manaus
+    ploa: 135200733
+    cut: 9320132
+    loa: 125880601
+    pnaes_ploa: 32144394
+    pnaes_loa: 29828245
+  - acronym: UFAPE
+    slug: ufape
+    name_pt: Universidade Federal do Agreste de Pernambuco
+    name_en: Federal University of the Agreste of Pernambuco
+    uf: PE
+    city: Garanhuns
+    ploa: 16209482
+    cut: 1126968
+    loa: 15082514
+    pnaes_ploa: 2579581
+    pnaes_loa: 2392686
+  - acronym: UFBA
+    slug: ufba
+    name_pt: Universidade Federal da Bahia
+    name_en: Federal University of Bahia
+    uf: BA
+    city: Salvador
+    ploa: 203293432
+    cut: 14703255
+    loa: 188590177
+    pnaes_ploa: 46926056
+    pnaes_loa: 43488269
+  - acronym: UFC
+    slug: ufc
+    name_pt: Universidade Federal do Ceará
+    name_en: Federal University of Ceará
+    uf: CE
+    city: Fortaleza
+    ploa: 188587460
+    cut: 13623669
+    loa: 174963791
+    pnaes_ploa: 61217825
+    pnaes_loa: 56756450
+  - acronym: UFCA
+    slug: ufca
+    name_pt: Universidade Federal do Cariri
+    name_en: Federal University of Cariri
+    uf: CE
+    city: Juazeiro do Norte
+    ploa: 34524670
+    cut: 2507011
+    loa: 32017659
+    pnaes_ploa: 7322203
+    pnaes_loa: 6785764
+  - acronym: UFCAT
+    slug: ufcat
+    name_pt: Universidade Federal de Catalão
+    name_en: Federal University of Catalão
+    uf: GO
+    city: Catalão
+    ploa: 19160458
+    cut: 1354415
+    loa: 17806043
+    pnaes_ploa: 4517256
+    pnaes_loa: 4187479
+  - acronym: UFCG
+    slug: ufcg
+    name_pt: Universidade Federal de Campina Grande
+    name_en: Federal University of Campina Grande
+    uf: PB
+    city: Campina Grande
+    ploa: 104989932
+    cut: 7488344
+    loa: 97501588
+    pnaes_ploa: 21266964
+    pnaes_loa: 19708903
+  - acronym: UFCSPA
+    slug: ufcspa
+    name_pt: Universidade Federal de Ciências da Saúde de Porto Alegre
+    name_en: Federal University of Health Sciences of Porto Alegre
+    uf: RS
+    city: Porto Alegre
+    ploa: 40263836
+    cut: 2748598
+    loa: 37515238
+    pnaes_ploa: 4153662
+    pnaes_loa: 3849357
+  - acronym: UFDPAR
+    slug: ufdpar
+    name_pt: Universidade Federal do Delta do Parnaíba
+    name_en: Federal University of the Parnaíba Delta
+    uf: PI
+    city: Parnaíba
+    ploa: 24255532
+    cut: 1621743
+    loa: 22633789
+    pnaes_ploa: 5801358
+    pnaes_loa: 5376340
+  - acronym: UFES
+    slug: ufes
+    name_pt: Universidade Federal do Espírito Santo
+    name_en: Federal University of Espírito Santo
+    uf: ES
+    city: Vitória
+    ploa: 116338211
+    cut: 8320216
+    loa: 108017995
+    pnaes_ploa: 23431962
+    pnaes_loa: 21715288
+  - acronym: UFERSA
+    slug: ufersa
+    name_pt: Universidade Federal Rural do Semi-Árido
+    name_en: Federal Rural University of the Semi-Arid
+    uf: RN
+    city: Mossoró
+    ploa: 71255528
+    cut: 5052393
+    loa: 66203135
+    pnaes_ploa: 10887009
+    pnaes_loa: 10089405
+  - acronym: UFF
+    slug: uff
+    name_pt: Universidade Federal Fluminense
+    name_en: Fluminense Federal University
+    uf: RJ
+    city: Niterói
+    ploa: 210959809
+    cut: 15313578
+    loa: 195646231
+    pnaes_ploa: 43241915
+    pnaes_loa: 40073922
+  - acronym: UFFS
+    slug: uffs
+    name_pt: Universidade Federal da Fronteira Sul
+    name_en: Federal University of the Southern Frontier
+    uf: SC
+    city: Chapecó
+    ploa: 67378361
+    cut: 4721256
+    loa: 62657105
+    pnaes_ploa: 12754858
+    pnaes_loa: 11820411
+  - acronym: UFG
+    slug: ufg
+    name_pt: Universidade Federal de Goiás
+    name_en: Federal University of Goiás
+    uf: GO
+    city: Goiânia
+    ploa: 129098698
+    cut: 9271027
+    loa: 119827671
+    pnaes_ploa: 32790227
+    pnaes_loa: 30399669
+  - acronym: UFGD
+    slug: ufgd
+    name_pt: Universidade Federal da Grande Dourados
+    name_en: Federal University of Grande Dourados
+    uf: MS
+    city: Dourados
+    ploa: 47965440
+    cut: 3234618
+    loa: 44730822
+    pnaes_ploa: 10038611
+    pnaes_loa: 9310224
+  - acronym: UFJ
+    slug: ufj
+    name_pt: Universidade Federal de Jataí
+    name_en: Federal University of Jataí
+    uf: GO
+    city: Jataí
+    ploa: 25368057
+    cut: 1783012
+    loa: 23585045
+    pnaes_ploa: 5235194
+    pnaes_loa: 4851654
+  - acronym: UFJF
+    slug: ufjf
+    name_pt: Universidade Federal de Juiz de Fora
+    name_en: Federal University of Juiz de Fora
+    uf: MG
+    city: Juiz de Fora
+    ploa: 123300817
+    cut: 9001431
+    loa: 114299386
+    pnaes_ploa: 20896559
+    pnaes_loa: 19365634
+  - acronym: UFLA
+    slug: ufla
+    name_pt: Universidade Federal de Lavras
+    name_en: Federal University of Lavras
+    uf: MG
+    city: Lavras
+    ploa: 65945741
+    cut: 4709223
+    loa: 61236518
+    pnaes_ploa: 8548017
+    pnaes_loa: 7921773
+  - acronym: UFMA
+    slug: ufma
+    name_pt: Universidade Federal do Maranhão
+    name_en: Federal University of Maranhão
+    uf: MA
+    city: São Luís
+    ploa: 149758572
+    cut: 10195125
+    loa: 139563447
+    pnaes_ploa: 24725267
+    pnaes_loa: 22887385
+  - acronym: UFMG
+    slug: ufmg
+    name_pt: Universidade Federal de Minas Gerais
+    name_en: Federal University of Minas Gerais
+    uf: MG
+    city: Belo Horizonte
+    ploa: 261986168
+    cut: 18951562
+    loa: 243034606
+    pnaes_ploa: 45521930
+    pnaes_loa: 42234404
+  - acronym: UFMS
+    slug: ufms
+    name_pt: Universidade Federal de Mato Grosso do Sul
+    name_en: Federal University of Mato Grosso do Sul
+    uf: MS
+    city: Campo Grande
+    ploa: 120042253
+    cut: 8260078
+    loa: 111782175
+    pnaes_ploa: 21416819
+    pnaes_loa: 19847778
+  - acronym: UFMT
+    slug: ufmt
+    name_pt: Universidade Federal de Mato Grosso
+    name_en: Federal University of Mato Grosso
+    uf: MT
+    city: Cuiabá
+    ploa: 115880283
+    cut: 7885518
+    loa: 107994765
+    pnaes_ploa: 23073835
+    pnaes_loa: 21383399
+  - acronym: UFNT
+    slug: ufnt
+    name_pt: Universidade Federal do Norte do Tocantins
+    name_en: Federal University of Northern Tocantins
+    uf: TO
+    city: Araguaína
+    ploa: 28284600
+    cut: 2032611
+    loa: 26251989
+    pnaes_ploa: 5500000
+    pnaes_loa: 5111711
+  - acronym: UFOB
+    slug: ufob
+    name_pt: Universidade Federal do Oeste da Bahia
+    name_en: Federal University of Western Bahia
+    uf: BA
+    city: Barreiras
+    ploa: 32400047
+    cut: 2358268
+    loa: 30041779
+    pnaes_ploa: 6077740
+    pnaes_loa: 5632473
+  - acronym: UFOP
+    slug: ufop
+    name_pt: Universidade Federal de Ouro Preto
+    name_en: Federal University of Ouro Preto
+    uf: MG
+    city: Ouro Preto
+    ploa: 67811207
+    cut: 4605993
+    loa: 63205214
+    pnaes_ploa: 13821488
+    pnaes_loa: 12809274
+  - acronym: UFOPA
+    slug: ufopa
+    name_pt: Universidade Federal do Oeste do Pará
+    name_en: Federal University of Western Pará
+    uf: PA
+    city: Santarém
+    ploa: 50890295
+    cut: 3612547
+    loa: 47277748
+    pnaes_ploa: 10692369
+    pnaes_loa: 9909024
+  - acronym: UFPA
+    slug: ufpa
+    name_pt: Universidade Federal do Pará
+    name_en: Federal University of Pará
+    uf: PA
+    city: Belém
+    ploa: 222157048
+    cut: 15938723
+    loa: 206218325
+    pnaes_ploa: 39017063
+    pnaes_loa: 36158592
+  - acronym: UFPB
+    slug: ufpb
+    name_pt: Universidade Federal da Paraíba
+    name_en: Federal University of Paraíba
+    uf: PB
+    city: João Pessoa
+    ploa: 165605866
+    cut: 11998082
+    loa: 153607784
+    pnaes_ploa: 45456210
+    pnaes_loa: 42131687
+  - acronym: UFPE
+    slug: ufpe
+    name_pt: Universidade Federal de Pernambuco
+    name_en: Federal University of Pernambuco
+    uf: PE
+    city: Recife
+    ploa: 192156087
+    cut: 13608119
+    loa: 178547968
+    pnaes_ploa: 43610700
+    pnaes_loa: 40458686
+  - acronym: UFPEL
+    slug: ufpel
+    name_pt: Universidade Federal de Pelotas
+    name_en: Federal University of Pelotas
+    uf: RS
+    city: Pelotas
+    ploa: 95548313
+    cut: 6493306
+    loa: 89055007
+    pnaes_ploa: 17735413
+    pnaes_loa: 16436080
+  - acronym: UFPI
+    slug: ufpi
+    name_pt: Universidade Federal do Piauí
+    name_en: Federal University of Piauí
+    uf: PI
+    city: Teresina
+    ploa: 138564363
+    cut: 9678226
+    loa: 128886137
+    pnaes_ploa: 29644518
+    pnaes_loa: 27509330
+  - acronym: UFPR
+    slug: ufpr
+    name_pt: Universidade Federal do Paraná
+    name_en: Federal University of Paraná
+    uf: PR
+    city: Curitiba
+    ploa: 217368670
+    cut: 14936922
+    loa: 202431748
+    pnaes_ploa: 29648652
+    pnaes_loa: 27476531
+  - acronym: UFR
+    slug: ufr
+    name_pt: Universidade Federal de Rondonópolis
+    name_en: Federal University of Rondonópolis
+    uf: MT
+    city: Rondonópolis
+    ploa: 19820322
+    cut: 1305782
+    loa: 18514540
+    pnaes_ploa: 4921418
+    pnaes_loa: 4560866
+  - acronym: UFRA
+    slug: ufra
+    name_pt: Universidade Federal Rural da Amazônia
+    name_en: Federal Rural University of Amazonia
+    uf: PA
+    city: Belém
+    ploa: 54774280
+    cut: 3984080
+    loa: 50790200
+    pnaes_ploa: 6413730
+    pnaes_loa: 5948408
+  - acronym: UFRB
+    slug: ufrb
+    name_pt: Universidade Federal do Recôncavo da Bahia
+    name_en: Federal University of Recôncavo da Bahia
+    uf: BA
+    city: Cruz das Almas
+    ploa: 55004364
+    cut: 3915409
+    loa: 51088955
+    pnaes_ploa: 13314483
+    pnaes_loa: 12350026
+  - acronym: UFRGS
+    slug: ufrgs
+    name_pt: Universidade Federal do Rio Grande do Sul
+    name_en: Federal University of Rio Grande do Sul
+    uf: RS
+    city: Porto Alegre
+    ploa: 200549813
+    cut: 14513243
+    loa: 186036570
+    pnaes_ploa: 30540078
+    pnaes_loa: 28302649
+  - acronym: UFRJ
+    slug: ufrj
+    name_pt: Universidade Federal do Rio de Janeiro
+    name_en: Federal University of Rio de Janeiro
+    uf: RJ
+    city: Rio de Janeiro
+    ploa: 349281427
+    cut: 25335144
+    loa: 323946283
+    pnaes_ploa: 67096085
+    pnaes_loa: 62180486
+  - acronym: UFRN
+    slug: ufrn
+    name_pt: Universidade Federal do Rio Grande do Norte
+    name_en: Federal University of Rio Grande do Norte
+    uf: RN
+    city: Natal
+    ploa: 207144438
+    cut: 14767078
+    loa: 192377360
+    pnaes_ploa: 38100295
+    pnaes_loa: 35308988
+  - acronym: UFRPE
+    slug: ufrpe
+    name_pt: Universidade Federal Rural de Pernambuco
+    name_en: Federal Rural University of Pernambuco
+    uf: PE
+    city: Recife
+    ploa: 81948760
+    cut: 5883251
+    loa: 76065509
+    pnaes_ploa: 15318581
+    pnaes_loa: 14214602
+  - acronym: UFRR
+    slug: ufrr
+    name_pt: Universidade Federal de Roraima
+    name_en: Federal University of Roraima
+    uf: RR
+    city: Boa Vista
+    ploa: 46021505
+    cut: 3104644
+    loa: 42916861
+    pnaes_ploa: 6987278
+    pnaes_loa: 6475376
+  - acronym: UFRRJ
+    slug: ufrrj
+    name_pt: Universidade Federal Rural do Rio de Janeiro
+    name_en: Federal Rural University of Rio de Janeiro
+    uf: RJ
+    city: Seropédica
+    ploa: 75327151
+    cut: 5410854
+    loa: 69916297
+    pnaes_ploa: 15695447
+    pnaes_loa: 14545566
+  - acronym: UFS
+    slug: ufs
+    name_pt: Universidade Federal de Sergipe
+    name_en: Federal University of Sergipe
+    uf: SE
+    city: São Cristóvão
+    ploa: 131249635
+    cut: 9061459
+    loa: 122188176
+    pnaes_ploa: 38496859
+    pnaes_loa: 35676501
+  - acronym: UFSB
+    slug: ufsb
+    name_pt: Universidade Federal do Sul da Bahia
+    name_en: Federal University of Southern Bahia
+    uf: BA
+    city: Itabuna
+    ploa: 28376799
+    cut: 1970963
+    loa: 26405836
+    pnaes_ploa: 4052769
+    pnaes_loa: 3755855
+  - acronym: UFSC
+    slug: ufsc
+    name_pt: Universidade Federal de Santa Catarina
+    name_en: Federal University of Santa Catarina
+    uf: SC
+    city: Florianópolis
+    ploa: 177512247
+    cut: 12866840
+    loa: 164645407
+    pnaes_ploa: 33975963
+    pnaes_loa: 31486813
+  - acronym: UFSCar
+    slug: ufscar
+    name_pt: Universidade Federal de São Carlos
+    name_en: Federal University of São Carlos
+    uf: SP
+    city: São Carlos
+    ploa: 74268236
+    cut: 5039526
+    loa: 69228710
+    pnaes_ploa: 13230331
+    pnaes_loa: 12261930
+  - acronym: UFSJ
+    slug: ufsj
+    name_pt: Universidade Federal de São João del-Rei
+    name_en: Federal University of São João del-Rei
+    uf: MG
+    city: São João del-Rei
+    ploa: 73445182
+    cut: 5051120
+    loa: 68394062
+    pnaes_ploa: 15437453
+    pnaes_loa: 14318669
+  - acronym: UFSM
+    slug: ufsm
+    name_pt: Universidade Federal de Santa Maria
+    name_en: Federal University of Santa Maria
+    uf: RS
+    city: Santa Maria
+    ploa: 155595305
+    cut: 11191818
+    loa: 144403487
+    pnaes_ploa: 30461865
+    pnaes_loa: 28230165
+  - acronym: UFT
+    slug: uft
+    name_pt: Universidade Federal do Tocantins
+    name_en: Federal University of Tocantins
+    uf: TO
+    city: Palmas
+    ploa: 65211162
+    cut: 4436551
+    loa: 60774611
+    pnaes_ploa: 17305965
+    pnaes_loa: 16052747
+  - acronym: UFTM
+    slug: uftm
+    name_pt: Universidade Federal do Triângulo Mineiro
+    name_en: Federal University of the Triângulo Mineiro
+    uf: MG
+    city: Uberaba
+    ploa: 52622604
+    cut: 3603179
+    loa: 49019425
+    pnaes_ploa: 10280901
+    pnaes_loa: 9528883
+  - acronym: UFU
+    slug: ufu
+    name_pt: Universidade Federal de Uberlândia
+    name_en: Federal University of Uberlândia
+    uf: MG
+    city: Uberlândia
+    ploa: 166539297
+    cut: 10675906
+    loa: 155863391
+    pnaes_ploa: 26884120
+    pnaes_loa: 24914535
+  - acronym: UFV
+    slug: ufv
+    name_pt: Universidade Federal de Viçosa
+    name_en: Federal University of Viçosa
+    uf: MG
+    city: Viçosa
+    ploa: 107633201
+    cut: 7388698
+    loa: 100244503
+    pnaes_ploa: 19228286
+    pnaes_loa: 17819582
+  - acronym: UFVJM
+    slug: ufvjm
+    name_pt: Universidade Federal dos Vales do Jequitinhonha e Mucuri
+    name_en: Federal University of the Jequitinhonha and Mucuri Valleys
+    uf: MG
+    city: Diamantina
+    ploa: 54033522
+    cut: 3914895
+    loa: 50118627
+    pnaes_ploa: 8943252
+    pnaes_loa: 8288051
+  - acronym: UnB
+    slug: unb
+    name_pt: Universidade de Brasília
+    name_en: University of Brasília
+    uf: DF
+    city: Brasília
+    ploa: 201688251
+    cut: 13743869
+    loa: 187944382
+    pnaes_ploa: 43780570
+    pnaes_loa: 40573114
+  - acronym: UNIFAL
+    slug: unifal
+    name_pt: Universidade Federal de Alfenas
+    name_en: Federal University of Alfenas
+    uf: MG
+    city: Alfenas
+    ploa: 46594030
+    cut: 3268744
+    loa: 43325286
+    pnaes_ploa: 7477261
+    pnaes_loa: 6929462
+  - acronym: UNIFAP
+    slug: unifap
+    name_pt: Universidade Federal do Amapá
+    name_en: Federal University of Amapá
+    uf: AP
+    city: Macapá
+    ploa: 50703011
+    cut: 3432828
+    loa: 47270183
+    pnaes_ploa: 8253701
+    pnaes_loa: 7649018
+  - acronym: UNIFEI
+    slug: unifei
+    name_pt: Universidade Federal de Itajubá
+    name_en: Federal University of Itajubá
+    uf: MG
+    city: Itajubá
+    ploa: 42719267
+    cut: 3037620
+    loa: 39681647
+    pnaes_ploa: 6265552
+    pnaes_loa: 5811073
+  - acronym: UNIFESP
+    slug: unifesp
+    name_pt: Universidade Federal de São Paulo
+    name_en: Federal University of São Paulo
+    uf: SP
+    city: São Paulo
+    ploa: 97104023
+    cut: 7061143
+    loa: 90042880
+    pnaes_ploa: 13270357
+    pnaes_loa: 12298144
+  - acronym: UNIFESSPA
+    slug: unifesspa
+    name_pt: Universidade Federal do Sul e Sudeste do Pará
+    name_en: Federal University of Southern and Southeastern Pará
+    uf: PA
+    city: Marabá
+    ploa: 30201325
+    cut: 2063119
+    loa: 28138206
+    pnaes_ploa: 6240144
+    pnaes_loa: 5782979
+  - acronym: UNILA
+    slug: unila
+    name_pt: Universidade Federal da Integração Latino-Americana
+    name_en: Federal University of Latin American Integration
+    uf: PR
+    city: Foz do Iguaçu
+    ploa: 48045330
+    cut: 3320185
+    loa: 44725145
+    pnaes_ploa: 10176219
+    pnaes_loa: 9435022
+  - acronym: UNILAB
+    slug: unilab
+    name_pt: Universidade da Integração Internacional da Lusofonia Afro-Brasileira
+    name_en: University of International Integration of Afro-Brazilian Lusophony
+    uf: CE
+    city: Redenção
+    ploa: 43281090
+    cut: 3118075
+    loa: 40163015
+    pnaes_ploa: 13616877
+    pnaes_loa: 12619277
+  - acronym: UNIPAMPA
+    slug: unipampa
+    name_pt: Universidade Federal do Pampa
+    name_en: Federal University of Pampa
+    uf: RS
+    city: Bagé
+    ploa: 62810410
+    cut: 4190609
+    loa: 58619801
+    pnaes_ploa: 12639185
+    pnaes_loa: 11713212
+  - acronym: UNIR
+    slug: unir
+    name_pt: Universidade Federal de Rondônia
+    name_en: Federal University of Rondônia
+    uf: RO
+    city: Porto Velho
+    ploa: 48367809
+    cut: 3265451
+    loa: 45102358
+    pnaes_ploa: 9400000
+    pnaes_loa: 8733316
+  - acronym: UNIRIO
+    slug: unirio
+    name_pt: Universidade Federal do Estado do Rio de Janeiro
+    name_en: Federal University of the State of Rio de Janeiro
+    uf: RJ
+    city: Rio de Janeiro
+    ploa: 65891596
+    cut: 4423485
+    loa: 61468111
+    pnaes_ploa: 9714321
+    pnaes_loa: 9002631
+  - acronym: UNIVASF
+    slug: univasf
+    name_pt: Universidade Federal do Vale do São Francisco
+    name_en: Federal University of the São Francisco Valley
+    uf: PE
+    city: Petrolina
+    ploa: 46640078
+    cut: 3162689
+    loa: 43477389
+    pnaes_ploa: 8162147
+    pnaes_loa: 7567849
+  - acronym: UTFPR
+    slug: utfpr
+    name_pt: Universidade Tecnológica Federal do Paraná
+    name_en: Federal University of Technology — Paraná
+    uf: PR
+    city: Curitiba
+    ploa: 162891428
+    cut: 11847610
+    loa: 151043818
+    pnaes_ploa: 28588469
+    pnaes_loa: 26494019

@@ -1,0 +1,274 @@
+- id: armadilha-wrappers
+  label:
+    pt: Armadilha dos wrappers
+    en: Wrapper trap
+  aliases:
+    pt: ["armadilha dos wrappers", "armadilha do wrapper"]
+    en: ["wrapper trap", "chat wrapper trap"]
+  def:
+    pt: "Negócio que só empilha uma interface fina — em geral um chat — sobre um modelo de IA estrangeiro, sem dados, fluxo ou propriedade intelectual próprios. Não tem fosso: some com uma atualização do provedor do modelo."
+    en: "A business that only layers a thin interface — usually a chat — on top of a foreign AI model, with no proprietary data, workflow, or IP. It has no moat and can vanish with one model-provider update."
+
+- id: capex
+  label:
+    pt: CapEx
+    en: CapEx
+  aliases:
+    pt: ["CapEx"]
+    en: ["CapEx"]
+  def:
+    pt: "Capital expenditure, ou despesa de capital: investimento em ativos de longo prazo — data centers, servidores, redes — distinto do gasto operacional do dia a dia. Nos relatórios das hiperscalers, o CapEx mede o tamanho da aposta em infraestrutura de IA."
+    en: "Capital expenditure: investment in long-lived assets — data centers, servers, networks — as opposed to day-to-day operating spend. In hyperscaler reports, CapEx is the yardstick of how large the AI-infrastructure bet has become."
+
+- id: clientelismo
+  label:
+    pt: Clientelismo
+    en: Clientelism
+  aliases:
+    pt: ["clientelismo", "clientelista", "clientelistas"]
+    en: ["clientelism", "clientelist"]
+  def:
+    pt: "Troca de recursos públicos — cargos, obras, emendas — por apoio político ou eleitoral. No orçamento brasileiro, alimenta a barganha local e desvia dinheiro que poderia ir para universidades e pesquisa."
+    en: "The exchange of public resources — jobs, works, earmarks — for political or electoral support. In Brazil’s budget it feeds local bargaining and diverts money that could go to universities and research."
+
+- id: custeio-discricionario
+  label:
+    pt: Custeio discricionário
+    en: Discretionary operating budget
+  aliases:
+    pt: ["custeio discricionário"]
+    en: ["discretionary operating budget", "discretionary budget"]
+  def:
+    pt: "Parcela do orçamento universitário que o governo pode cortar ou ampliar a cada ano — contas de luz, manutenção, material de consumo — distinta dos gastos obrigatórios com pessoal. É a linha que mais sofre nos cortes."
+    en: "The slice of a university budget that can be cut or expanded each year — utilities, maintenance, supplies — as opposed to mandatory payroll. It is the line that takes the brunt of austerity."
+
+- id: divida-compreensao
+  label:
+    pt: Dívida de compreensão
+    en: Comprehension debt
+  aliases:
+    pt: ["dívida de compreensão"]
+    en: ["comprehension debt"]
+  def:
+    pt: "O fosso crescente entre o volume de código (ou de decisões) que um sistema contém e quanto dele qualquer ser humano ainda entende. Diferente da dívida técnica, não é um atalho consciente: reside na cognição coletiva do time."
+    en: "The widening gap between how much code (or how many decisions) a system contains and how much of it any human still understands. Unlike technical debt, it is not a conscious shortcut: it lives in the team’s collective cognition."
+
+- id: emendas-parlamentares
+  label:
+    pt: Emendas parlamentares
+    en: Parliamentary amendments
+  aliases:
+    pt: ["emendas parlamentares"]
+    en: ["parliamentary amendments", "parliamentary emendas"]
+  def:
+    pt: "Verbas do Orçamento da União que deputados e senadores destinam a projetos em seus redutos. Em volume, superam de longe o custeio das universidades federais e costumam alimentar barganha política local."
+    en: "Federal budget earmarks that deputies and senators send to projects in their districts. In volume they dwarf the operating budget of federal universities and often feed local political bargaining."
+
+- id: emendas-pix
+  label:
+    pt: Emendas Pix
+    en: Emendas Pix
+  aliases:
+    pt: ["emendas Pix", "emenda Pix"]
+    en: ["emendas Pix", "emenda Pix"]
+  def:
+    pt: "Transferências especiais de emendas parlamentares enviadas direto ao município, com pouca rastreabilidade — apelidadas de Pix pela rapidez e pela opacidade. Têm financiado shows e eventos em cidades sem hospital ou saneamento."
+    en: "Special-transfer parliamentary earmarks sent straight to a municipality, with little audit trail — nicknamed Pix for their speed and opacity. They have funded concerts and events in towns without a hospital or sanitation."
+
+- id: fazenda-dados
+  label:
+    pt: Fazenda de dados
+    en: Data farm
+  aliases:
+    pt: ["fazenda de dados", "fazenda digital"]
+    en: ["data farm", "digital farm"]
+  def:
+    pt: "Crítica ao modelo em que o país se reduz a ser somente hospedeiro: exporta terra, energia limpa e infraestrutura para cargas de IA estrangeiras, enquanto algoritmos, pesos de modelos e margens permanecem no exterior. Não recai sobre ter data centers, e sim sobre tratá-los como solução única."
+    en: "A critique of the model in which a country is reduced to being only a host: it exports land, clean energy, and infrastructure for foreign AI workloads, while algorithms, model weights, and margins stay abroad. The target is not having data centers, but treating them as the only solution."
+
+- id: fuga-cerebros
+  label:
+    pt: Fuga de cérebros
+    en: Brain drain
+  aliases:
+    pt: ["fuga de cérebros"]
+    en: ["brain drain", "Fuga de Cérebros"]
+  def:
+    pt: "Emigração de cientistas, engenheiros e pesquisadores altamente qualificados. Entre 2015 e 2022 o Brasil perdeu cerca de 6.700 profissionais de elite para instituições do Norte Global."
+    en: "The emigration of highly qualified scientists, engineers, and researchers. Between 2015 and 2022 Brazil lost about 6,700 elite professionals to institutions in the Global North."
+
+- id: hiperscalers
+  label:
+    pt: Hiperscalers
+    en: Hyperscalers
+  aliases:
+    pt: ["hiperscalers"]
+    en: ["hyperscalers"]
+  def:
+    pt: "As gigantes globais de nuvem e plataforma — em especial Amazon, Alphabet, Meta e Microsoft — que concentram capital, data centers e modelos de fronteira. Seu CapEx combinado chega a centenas de bilhões de dólares ao ano."
+    en: "The global cloud and platform giants — especially Amazon, Alphabet, Meta, and Microsoft — that concentrate capital, data centers, and frontier models. Their combined CapEx runs to hundreds of billions of dollars a year."
+
+- id: ideb
+  label:
+    pt: IDEB
+    en: IDEB
+  aliases:
+    pt: ["IDEB", "Índice de Desenvolvimento da Educação Básica"]
+    en: ["IDEB", "Basic Education Development Index"]
+  def:
+    pt: "Índice de Desenvolvimento da Educação Básica, calculado pelo INEP/MEC. Combina desempenho em provas (SAEB) com a taxa de aprovação, numa escala de 0 a 10, para os anos iniciais (1.º–5.º), os anos finais (6.º–9.º) e o ensino médio. É o principal termômetro oficial da qualidade da rede pública no município."
+    en: "Brazil’s Basic Education Development Index, calculated by INEP/MEC. It combines standardised-test performance (SAEB) with the approval rate, on a 0–10 scale, for early years (grades 1–5), later years (grades 6–9), and high school. It is the main official gauge of public-school quality in a municipality."
+
+- id: inference-scaling
+  label:
+    pt: Inference scaling
+    en: Inference scaling
+  aliases:
+    pt: ["inference scaling", "test-time compute"]
+    en: ["inference scaling", "test-time compute"]
+  def:
+    pt: "Gastar mais compute na hora da resposta — não só no treino — para o modelo “pensar” em tokens ocultos antes de escrever. É o que modelos de raciocínio (o1 e sucessores) fazem: a conta de energia, latência e tokens sobe uma ordem de grandeza por consulta."
+    en: "Spending extra compute at answer time — not only at training — so the model “thinks” in hidden tokens before it writes. That is what reasoning models (o1 and successors) do: energy, latency, and tokens per query jump by an order of magnitude."
+
+- id: lgpd
+  label:
+    pt: LGPD
+    en: LGPD
+  aliases:
+    pt: ["LGPD"]
+    en: ["LGPD"]
+  def:
+    pt: "Lei Geral de Proteção de Dados (Lei n.º 13.709/2018), o marco brasileiro de privacidade. Regula coleta e uso de dados pessoais; propostas de “zona neutra” em data centers buscam isentar cargas estrangeiras dessa jurisdição."
+    en: "Brazil’s General Data Protection Law (Law No. 13.709/2018). It governs collection and use of personal data; proposed data-center “neutral zones” would exempt foreign workloads from this jurisdiction."
+
+- id: llm
+  label:
+    pt: LLM
+    en: LLM
+  aliases:
+    pt: ["LLM", "LLMs"]
+    en: ["LLM", "LLMs"]
+  def:
+    pt: "Large Language Model, ou grande modelo de linguagem: sistema de IA treinado em volumes massivos de texto para gerar e interpretar linguagem. ChatGPT, Claude e Copilot são exemplos; o PBIA prevê LLMs nativos em português."
+    en: "Large language model: an AI system trained on massive text corpora to generate and interpret language. ChatGPT, Claude, and Copilot are examples; Brazil’s PBIA funds native Portuguese LLMs."
+
+- id: mindware
+  label:
+    pt: Mindware
+    en: Mindware
+  aliases:
+    pt: ["mindware", "mindware soberano"]
+    en: ["mindware", "sovereign mindware"]
+  def:
+    pt: "O capital cognitivo soberano: universidades, pesquisa, propriedade intelectual e carreiras científicas estáveis. Sem mindware, hardware soberano — supercomputadores e data centers — vira casulo vazio a serviço de cargas estrangeiras."
+    en: "Sovereign cognitive capital: universities, research, intellectual property, and stable scientific careers. Without mindware, sovereign hardware — supercomputers and data centers — becomes an empty shell hosting foreign workloads."
+
+- id: nearshoring
+  label:
+    pt: Nearshoring
+    en: Nearshoring
+  aliases:
+    pt: ["nearshoring"]
+    en: ["nearshoring"]
+  def:
+    pt: "Contratação de serviços (código, suporte, back-office) em países próximos em fuso e custo, em vez de no próprio território. O Brasil é hub de nearshoring para o mercado norte-americano; a IA generativa ameaça essa arbitragem de mão de obra."
+    en: "Hiring services (code, support, back office) in nearby, lower-cost countries rather than at home. Brazil is a nearshoring hub for the North American market; generative AI threatens that labor-cost arbitrage."
+
+- id: norte-global
+  label:
+    pt: Norte Global
+    en: Global North
+  aliases:
+    pt: ["Norte Global"]
+    en: ["Global North"]
+  def:
+    pt: "Países de alta renda — em especial EUA, Europa Ocidental e Leste Asiático — que concentram capital, propriedade intelectual e infraestrutura de inteligência artificial."
+    en: "High-income countries — especially the US, Western Europe, and East Asia — that concentrate capital, intellectual property, and artificial-intelligence infrastructure."
+
+- id: pre-treino
+  label:
+    pt: Pré-treino
+    en: Pre-training
+  aliases:
+    pt: ["pré-treino", "pre-treino", "pre-training"]
+    en: ["pre-training", "pretraining"]
+  def:
+    pt: "A fase em que um modelo de linguagem lê corpora massivos e ajusta bilhões de pesos numa corrida de GPU que dura semanas ou meses. É CapEx concentrado: dezenas a centenas de milhões de dólares antes de existir um único chat."
+    en: "The phase in which a language model reads massive corpora and fits billions of weights in a GPU run that lasts weeks or months. It is concentrated CapEx: tens to hundreds of millions of dollars before a single chat exists."
+
+- id: pbia
+  label:
+    pt: PBIA
+    en: PBIA
+  aliases:
+    pt: ["PBIA"]
+    en: ["PBIA"]
+  def:
+    pt: "Plano Brasileiro de Inteligência Artificial (2024–2028), sob o lema “IA para o Bem de Todos”. Prevê cerca de R$ 23 bilhões em quatro anos para computação soberana, LLMs em português e redução da dependência de nuvens estrangeiras."
+    en: "Brazil’s Artificial Intelligence Plan (2024–2028), under the slogan “AI for the Good of All.” It pledges about R$ 23 billion over four years for sovereign compute, Portuguese LLMs, and less dependence on foreign clouds."
+
+- id: rlhf
+  label:
+    pt: RLHF
+    en: RLHF
+  aliases:
+    pt: ["RLHF", "reinforcement learning from human feedback", "aprendizado por reforço com feedback humano"]
+    en: ["RLHF", "reinforcement learning from human feedback"]
+  def:
+    pt: "Reinforcement Learning from Human Feedback (aprendizado por reforço com feedback humano): pessoas comparam respostas do modelo e essa preferência vira sinal de treino. É a camada que transforma um modelo bruto em produto de chat — e a que costuma ser terceirizada a rotuladores mal pagos no Sul Global."
+    en: "Reinforcement Learning from Human Feedback: humans compare model answers and that preference becomes a training signal. It is the layer that turns a raw model into a chat product — and the one often outsourced to underpaid annotators in the Global South."
+
+- id: scala-ai-city
+  label:
+    pt: Scala AI City
+    en: Scala AI City
+  aliases:
+    pt: ["Scala AI City"]
+    en: ["Scala AI City"]
+  def:
+    pt: "Campus de data centers da Scala em Eldorado do Sul (RS), projetado para até cerca de 4,7 GW. É o principal polo privado da aposta brasileira em infraestrutura de IA — e o exemplo mais citado do risco de o país virar somente uma “fazenda de dados” se o hardware não vier acompanhado de mindware."
+    en: "Scala’s data-center campus in Eldorado do Sul (Rio Grande do Sul), planned for up to about 4.7 GW. It is the main private hub of Brazil’s AI-infrastructure bet — and the most cited example of the risk that the country becomes only a “data farm” if hardware is not matched by mindware."
+
+- id: soberania-digital
+  label:
+    pt: Soberania digital
+    en: Digital sovereignty
+  aliases:
+    pt: ["soberania digital"]
+    en: ["digital sovereignty"]
+  def:
+    pt: "Capacidade de um país de controlar infraestrutura, dados, modelos e regras digitais em seu território, em vez de depender de plataformas, nuvens e jurisdições estrangeiras."
+    en: "A country’s capacity to control digital infrastructure, data, models, and rules on its territory, rather than depending on foreign platforms, clouds, and jurisdictions."
+
+- id: sul-global
+  label:
+    pt: Sul Global
+    en: Global South
+  aliases:
+    pt: ["Sul Global"]
+    en: ["Global South"]
+  def:
+    pt: "Países de renda média e baixa da América Latina, África e grande parte da Ásia, em geral importadores de tecnologia e exportadores de recursos. O relatório situa o Brasil como pioneiro do Sul Global em IA soberana."
+    en: "Middle- and low-income countries in Latin America, Africa, and much of Asia, typically technology importers and resource exporters. The report casts Brazil as a Global South pioneer in sovereign AI."
+
+- id: token
+  label:
+    pt: Token
+    en: Token
+  aliases:
+    pt: ["token", "tokens"]
+    en: ["token", "tokens"]
+  def:
+    pt: "Unidade em que o modelo parte o texto — em geral um pedaço de palavra, não a palavra inteira. Uma regra de bolso é cerca de quatro caracteres por token. Energia, latência e preço de API são cobrados por token de entrada e de saída."
+    en: "The unit in which the model splits text — usually a piece of a word, not the whole word. A rule of thumb is about four characters per token. Energy, latency, and API price are billed per input and output token."
+
+- id: cloud-act
+  label:
+    pt: US CLOUD Act
+    en: US CLOUD Act
+  aliases:
+    pt: ["US CLOUD Act", "CLOUD Act"]
+    en: ["US CLOUD Act", "CLOUD Act"]
+  def:
+    pt: "Lei norte-americana (2018) que pode obrigar empresas sob jurisdição dos EUA a entregar dados armazenados no exterior. Data centers de controle estrangeiro no Brasil podem, por isso, não garantir soberania de fato."
+    en: "A 2018 US law that can compel companies under US jurisdiction to hand over data stored abroad. Foreign-controlled data centers in Brazil may therefore fail to deliver genuine data sovereignty."

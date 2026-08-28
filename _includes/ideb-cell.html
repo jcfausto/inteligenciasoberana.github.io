@@ -1,0 +1,6 @@
+{% capture _ideb -%}
+<td class="{{ include.class | default: 'py-4 px-4 tabular-nums' }}">
+    <span class="{{ include.score_class | default: 'text-white font-medium' }} lang-pt">{{ include.pt }}{% if include.mark %}<sup class="text-gray-500">{{ include.mark }}</sup>{% endif %}</span>
+    <span class="{{ include.score_class | default: 'text-white font-medium' }} lang-en">{{ include.en }}{% if include.mark %}<sup class="text-gray-500">{{ include.mark }}</sup>{% endif %}</span>
+</td>
+{%- endcapture -%}{{ _ideb }}
