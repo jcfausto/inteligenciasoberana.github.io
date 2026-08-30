@@ -422,6 +422,76 @@ html[data-lang="en"] .lang-pt {
   outline-offset: 2px;
 }
 
+.marco-spine {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.marco-spine::before {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 2px;
+  background: #e5e7eb;
+}
+
+.marco-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.25rem 1fr;
+  gap: 0.9rem;
+  padding-bottom: 1.25rem;
+}
+
+.marco-step-node {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: 0.45rem;
+  margin-left: 0.2rem;
+  border-radius: 999px;
+  border: 2px solid #c45c26;
+  background: #faf9f6;
+  z-index: 1;
+}
+
+.marco-step.is-current .marco-step-node {
+  background: #c45c26;
+  box-shadow: 0 0 0 4px rgba(196, 92, 38, 0.2);
+}
+
+.marco-step.is-current .marco-step-card {
+  border-color: #0f172a;
+}
+
+.marco-pill {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.marco-pill-no_texto {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.marco-pill-em_disputa {
+  background: #fff7ed;
+  color: #c45c26;
+}
+
+.marco-pill-removido {
+  background: #f1f5f9;
+  color: #475569;
+}
+
 .share-dialog {
   width: min(28rem, calc(100vw - 2rem));
   padding: 0;

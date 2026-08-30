@@ -1,0 +1,53 @@
+name: Refresh Marco Legal radar
+
+on:
+  schedule:
+    - cron: "0 8 1,16 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Fetch Câmara snapshot
+        run: python3 scripts/fetch_marco_legal_ia.py --summary /tmp/marco-summary.md
+
+      - name: Open or update pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- _data/marco-legal-ia.yml; then
+            echo "No YAML changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B chore/radar-marco-refresh
+          git add _data/marco-legal-ia.yml
+          git commit -m "chore: refresh PL 2338/2023 radar snapshot"
+          git push -f origin chore/radar-marco-refresh
+          existing="$(gh pr list --head chore/radar-marco-refresh --state open --json number --jq '.[0].number')"
+          if [ -n "$existing" ]; then
+            gh pr edit "$existing" --body-file /tmp/marco-summary.md
+          else
+            gh pr create \
+              --base "${{ github.event.repository.default_branch }}" \
+              --head chore/radar-marco-refresh \
+              --title "chore: refresh PL 2338/2023 radar snapshot" \
+              --body-file /tmp/marco-summary.md
+          fi

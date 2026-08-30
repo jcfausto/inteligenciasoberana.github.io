@@ -1,0 +1,1275 @@
+# Radar do Marco Legal da IA (PL 2338/2023).
+# Status, timeline acts, and hearings refresh from the Câmara API.
+# points, officers, vote_window, and invitee sectors are curated.
+# Do not edit retrieved dates by hand — run scripts/fetch_marco_legal_ia.py.
+source:
+  retrieved: '2026-08-30'
+  retrieved_pt: 30 de agosto de 2026
+  retrieved_en: 30 August 2026
+  camara_id: 2487262
+  orgao_id: 539776
+  urls:
+    camara: https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262
+    api: https://dadosabertos.camara.leg.br/api/v2/proposicoes/2487262
+    comissao: https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-temporarias/especiais/57a-legislatura/comissao-especial-sobre-inteligencia-artificial-pl-2338-23
+    inteiro_teor: https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=2868197
+status:
+  house: camara
+  stage: parecer
+  label:
+    pt: Aguardando parecer do relator
+    en: Awaiting rapporteur’s opinion
+  last_move_date: '2026-06-17'
+  last_move_label:
+    pt: 17 de junho de 2026
+    en: 17 June 2026
+  last_move:
+    pt: Apensação da proposição PL 5433/2025 à proposição PL 3782/2025.
+    en: Apensação da proposição PL 5433/2025 à proposição PL 3782/2025.
+  regime: Prioridade (Art. 151, II, RICD)
+  situacao: Aguardando Parecer
+  introduced: '2023-05-03'
+  years_in_process: 3
+  years_in_process_since:
+    pt: desde 3 de maio de 2023
+    en: since 3 May 2023
+  vote_window: 2026-q4
+  vote_window_label:
+    pt: Final de 2026
+    en: Late 2026
+counts:
+  hearings: 17
+  invitees: 115
+timeline:
+- id: juristas
+  date: '2022'
+  date_label:
+    pt: 2022–2023
+    en: 2022–2023
+  house: pre
+  current: false
+  title:
+    pt: Comissão de Juristas
+    en: Commission of Jurists
+  lead:
+    pt: O Senado instala uma comissão de juristas, sob Ricardo Villas Bôas Cueva e Laura Schertel
+      Mendes, para redigir a base do futuro marco.
+    en: The Senate installs a commission of jurists, chaired by Ricardo Villas Bôas Cueva and Laura
+      Schertel Mendes, to draft the future framework.
+- id: apresentacao
+  date: '2023'
+  date_label:
+    pt: '2023'
+    en: '2023'
+  house: senado
+  current: false
+  title:
+    pt: PL 2338/2023 no Senado
+    en: PL 2338/2023 in the Senate
+  lead:
+    pt: O senador Rodrigo Pacheco apresenta o projeto que dispõe sobre o desenvolvimento, o fomento
+      e o uso ético da inteligência artificial.
+    en: Senator Rodrigo Pacheco introduces the bill on the development, promotion, and ethical use
+      of artificial intelligence.
+- id: ctia
+  date: '2024'
+  date_label:
+    pt: '2024'
+    en: '2024'
+  house: senado
+  current: false
+  title:
+    pt: CTIA e relatoria de Eduardo Gomes
+    en: CTIA and Eduardo Gomes’s report
+  lead:
+    pt: A Comissão Temporária Interna de Inteligência Artificial debate o texto sob relatoria do senador
+      Eduardo Gomes e avalia centenas de emendas.
+    en: The Senate’s temporary AI committee debates the text under Senator Eduardo Gomes and reviews
+      hundreds of amendments.
+- id: senado-plenario
+  date: '2024-12-10'
+  date_label:
+    pt: 10 de dezembro de 2024
+    en: 10 December 2024
+  house: senado
+  current: false
+  title:
+    pt: Aprovação no Plenário do Senado
+    en: Senate floor approval
+  lead:
+    pt: O Plenário do Senado aprova o substitutivo. O texto segue à Câmara para revisão.
+    en: The Senate floor approves the substitute text. The bill goes to the Chamber of Deputies for
+      review.
+- id: camara-chegada
+  date: '2025-03-17'
+  date_label:
+    pt: 17 de março de 2025
+    en: 17 March 2025
+  house: camara
+  current: false
+  title:
+    pt: Chegada à Câmara
+    en: Arrival in the Chamber
+  lead:
+    pt: A Câmara recebe o Ofício SF nº 235/2025 e apresenta o PL 2338/2023 para revisão, nos termos
+      do art. 65 da Constituição.
+    en: The Chamber receives Senate Official Letter No. 235/2025 and dockets PL 2338/2023 for review
+      under Constitution art. 65.
+- id: comissao
+  date: '2025-04-29'
+  date_label:
+    pt: 29 de abril de 2025
+    en: 29 April 2025
+  house: camara
+  current: false
+  title:
+    pt: Comissão Especial
+    en: Special Committee
+  lead:
+    pt: Ato da Presidência constitui a Comissão Especial destinada a proferir parecer ao PL 2338/2023.
+    en: A presidential act constitutes the Special Committee charged with reporting on PL 2338/2023.
+- id: instalacao
+  date: '2025-05-20'
+  date_label:
+    pt: 20 de maio de 2025
+    en: 20 May 2025
+  house: camara
+  current: false
+  title:
+    pt: Instalação, presidência e relatoria
+    en: Installation, chair, and rapporteur
+  lead:
+    pt: A comissão se instala. Luísa Canziani assume a presidência; Aguinaldo Ribeiro é designado
+      relator.
+    en: The committee is installed. Luísa Canziani takes the chair; Aguinaldo Ribeiro is named rapporteur.
+- id: audiencias
+  date: 2025-06
+  date_label:
+    pt: junho–outubro de 2025
+    en: June–October 2025
+  house: camara
+  current: false
+  title:
+    pt: Audiências públicas
+    en: Public hearings
+  lead:
+    pt: A comissão ouve governo, reguladores, academia, empresas e sociedade civil em dezenas de sessões
+      formais.
+    en: The committee hears government, regulators, academia, companies, and civil society across
+      dozens of formal sessions.
+- id: parecer
+  date: '2026-06-17'
+  date_label:
+    pt: desde 2025
+    en: since 2025
+  house: camara
+  current: true
+  title:
+    pt: Aguardando parecer do relator
+    en: Awaiting the rapporteur’s opinion
+  lead:
+    pt: A ficha oficial permanece em “Aguardando Parecer”. Os registros recentes são sobretudo apensações,
+      não um texto novo.
+    en: The official docket remains “Awaiting opinion.” Recent entries are mostly annexations, not
+      a new text.
+points:
+- id: risco
+  status: no_texto
+  title:
+    pt: Classificação por risco
+    en: Risk classification
+  summary:
+    pt: O texto aprovado no Senado separa sistemas por risco à vida e aos direitos fundamentais —
+      excessivo (proibido), alto (regulado) e demais — e distingue IA de IA generativa.
+    en: The Senate-approved text ranks systems by risk to life and fundamental rights — excessive
+      (banned), high (regulated), and the rest — and distinguishes AI from generative AI.
+- id: proibicoes
+  status: no_texto
+  title:
+    pt: Proibições de risco excessivo
+    en: Excessive-risk bans
+  summary:
+    pt: Ficam vedadas armas autônomas que selecionam e atacam alvos sem intervenção humana, sistemas
+      para abuso sexual de crianças e adolescentes, e avaliação preditiva de personalidade para prever
+      crimes.
+    en: Banned uses include autonomous weapons that select and strike targets without a human, systems
+      for child sexual abuse, and personality scoring to predict crime.
+- id: biometria
+  status: em_disputa
+  title:
+    pt: Biometria em espaço público
+    en: Public-space biometrics
+  summary:
+    pt: Câmeras com reconhecimento em espaços públicos ficam restritas a busca de vítimas, desaparecidos
+      e recaptura de foragidos, com autorização judicial e limite de pena.
+    en: Public facial-recognition cameras are limited to searching for victims, missing people, and
+      recapturing fugitives, with a court order and a penalty threshold.
+  dispute:
+    pt: O recorte ainda divide convidados entre vedação ampla e exceções de segurança pública.
+    en: Invitees still split between a broad ban and public-security exceptions.
+- id: governanca
+  status: em_disputa
+  title:
+    pt: ANPD e o SIA
+    en: ANPD and the SIA
+  summary:
+    pt: A Autoridade Nacional de Proteção de Dados coordenaria o Sistema Nacional de Regulação e Governança
+      de Inteligência Artificial, com autoridades setoriais e comitês de especialistas.
+    en: The National Data Protection Authority would coordinate the National AI Regulation and Governance
+      System, with sector regulators and expert committees.
+  dispute:
+    pt: Parte dos convidados defende um órgão coordenador; outra parte teme concentração e prefere
+      arranjo setorial.
+    en: Some invitees want a coordinating body; others fear concentration and prefer a sector-by-sector
+      setup.
+- id: direitos
+  status: no_texto
+  title:
+    pt: Direitos de quem é afetado
+    en: Rights of affected people
+  summary:
+    pt: Quem sofre decisão automatizada relevante teria direito a informação, contestação e revisão
+      humana.
+    en: Anyone subject to a material automated decision would have rights to information, challenge,
+      and human review.
+- id: responsabilidade
+  status: em_disputa
+  title:
+    pt: Responsabilidade civil
+    en: Civil liability
+  summary:
+    pt: O marco prevê regras de responsabilidade civil para danos causados por sistemas de IA, em
+      diálogo com o Código Civil e o CDC.
+    en: The bill sets civil-liability rules for harm from AI systems, alongside the Civil Code and
+      the Consumer Code.
+  dispute:
+    pt: O desenho exato — nexo, ônus da prova, teto — ainda não fechou na Câmara.
+    en: The exact design — causation, burden of proof, caps — is still open in the Chamber.
+- id: autoral
+  status: em_disputa
+  title:
+    pt: Direitos autorais
+    en: Copyright
+  summary:
+    pt: Uso sem fins comerciais por pesquisa, jornalismo, museus, arquivos, bibliotecas e educação
+      seria livre; uso comercial geraria remuneração ao titular.
+    en: Non-commercial use by research, journalism, museums, archives, libraries, and education would
+      be free; commercial use would trigger remuneration.
+  dispute:
+    pt: 'É o principal impasse da Câmara: criadores pedem remuneração; plataformas e startups temem
+      trava ao treino.'
+    en: 'This is the Chamber’s main deadlock: creators want pay; platforms and startups fear a training
+      freeze.'
+- id: trabalho
+  status: removido
+  title:
+    pt: Salvaguardas trabalhistas
+    en: Labor safeguards
+  summary:
+    pt: O texto inicial buscava proteções mínimas para o mercado de trabalho. O processo na Câmara
+      retirou essas salvaguardas.
+    en: The early draft sought baseline labor-market protections. The Chamber process stripped those
+      safeguards.
+  dispute:
+    pt: Com cerca de 40% da força de trabalho na informalidade, a omissão deixa o trabalhador precário
+      exposto à automação.
+    en: With about 40% of the workforce informal, the omission leaves precarious workers exposed to
+      automation.
+- id: sancoes
+  status: no_texto
+  title:
+    pt: Sanções
+    en: Sanctions
+  summary:
+    pt: O texto do Senado prevê multas de até 2% do faturamento, limitadas a R$ 50 milhões por infração,
+      além de outras medidas administrativas.
+    en: The Senate text provides for fines of up to 2% of revenue, capped at R$ 50 million per offense,
+      plus other administrative measures.
+officers:
+- id: pacheco
+  role: autor
+  role_label:
+    pt: Autor
+    en: Author
+  name: Rodrigo Pacheco
+  party: PSD
+  uf: MG
+  house: senado
+  house_label:
+    pt: Senado Federal
+    en: Federal Senate
+- id: eduardo-gomes
+  role: relator_senado
+  role_label:
+    pt: Relator no Senado
+    en: Senate rapporteur
+  name: Eduardo Gomes
+  party: PL
+  uf: TO
+  house: senado
+  house_label:
+    pt: Senado Federal
+    en: Federal Senate
+- id: canziani
+  role: presidente
+  role_label:
+    pt: Presidência da Comissão Especial
+    en: Special Committee chair
+  name: Luísa Canziani
+  party: PSD
+  uf: PR
+  house: camara
+  house_label:
+    pt: Câmara dos Deputados
+    en: Chamber of Deputies
+- id: aguinaldo
+  role: relator_camara
+  role_label:
+    pt: Relator na Câmara
+    en: Chamber rapporteur
+  name: Aguinaldo Ribeiro
+  party: PP
+  uf: PB
+  house: camara
+  house_label:
+    pt: Câmara dos Deputados
+    en: Chamber of Deputies
+hearings:
+- id: '76626'
+  date: '2025-06-10'
+  theme:
+    pt: Conceitos de IA e modelos de regulação
+    en: AI concepts and regulatory models
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/76626
+  kind: audiencia
+- id: '76860'
+  date: '2025-06-17'
+  theme:
+    pt: Proteção de direitos fundamentais e novas tecnologias
+    en: Fundamental-rights protection and new technologies
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/76860
+  kind: audiencia
+- id: '76970'
+  date: '2025-07-08'
+  theme:
+    pt: Proteção de direitos fundamentais e novas tecnologias
+    en: Fundamental-rights protection and new technologies
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/76970
+  kind: audiencia
+- id: '77186'
+  date: '2025-07-15'
+  theme:
+    pt: Estrutura de governança de IA
+    en: AI governance structure
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/77186
+  kind: audiencia
+- id: '77344'
+  date: '2025-08-06'
+  theme:
+    pt: Estrutura de governança de IA
+    en: AI governance structure
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/77344
+  kind: audiencia
+- id: '77200'
+  date: '2025-08-12'
+  theme:
+    pt: Ecossistema e competitividade nacionais
+    en: National ecosystem and competitiveness
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/77200
+  kind: audiencia
+- id: '77331'
+  date: '2025-08-19'
+  theme:
+    pt: Infraestrutura para IA, fomento e sandbox regulatório
+    en: AI infrastructure, funding, and regulatory sandbox
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/77331
+  kind: audiencia
+- id: '77599'
+  date: '2025-08-26'
+  theme:
+    pt: Infraestrutura para IA, fomento e sandbox regulatório
+    en: AI infrastructure, funding, and regulatory sandbox
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/77599
+  kind: audiencia
+- id: '78768'
+  date: '2025-09-02'
+  theme:
+    pt: IA generativa e direitos autorais
+    en: Generative AI and copyright
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/78768
+  kind: audiencia
+- id: '78849'
+  date: '2025-09-03'
+  theme:
+    pt: Deep nudes e crimes contra mulheres por IA
+    en: Deep nudes and AI-enabled crimes against women
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/78849
+  kind: audiencia
+- id: '78885'
+  date: '2025-09-09'
+  theme:
+    pt: IA generativa e direitos autorais
+    en: Generative AI and copyright
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/78885
+  kind: audiencia
+- id: '79054'
+  date: '2025-09-10'
+  theme:
+    pt: IA generativa, direitos autorais e integridade da informação
+    en: Generative AI, copyright, and information integrity
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/79054
+  kind: audiencia
+- id: '79189'
+  date: '2025-09-16'
+  theme:
+    pt: Sistemas de IA, serviço público e infraestruturas críticas
+    en: AI systems, the public sector, and critical infrastructure
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/79189
+  kind: audiencia
+- id: '79191'
+  date: '2025-09-30'
+  theme:
+    pt: Sistemas de IA, serviço público e infraestruturas críticas
+    en: AI systems, the public sector, and critical infrastructure
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/79191
+  kind: audiencia
+- id: '79640'
+  date: '2025-10-14'
+  theme:
+    pt: 'IA na educação: riscos, inovações e o futuro da aprendizagem'
+    en: 'AI in education: risks, innovations, and the future of learning'
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/79640
+  kind: audiencia
+- id: '79688'
+  date: '2025-10-28'
+  theme:
+    pt: IA na segurança pública e responsabilidades federativas
+    en: AI in public security and federal responsibilities
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/79688
+  kind: audiencia
+- id: '79832'
+  date: '2025-10-28'
+  theme:
+    pt: Tecnologia de IA na educação básica
+    en: AI technology in basic education
+  url: https://dadosabertos.camara.leg.br/api/v2/eventos/79832
+  kind: audiencia
+invitees:
+- id: adauto-duarte
+  name: Adauto Duarte
+  org: Relações Institucionais, Trabalhistas e Sindicais a Federação Brasileira de Bancos - Febraban
+  title: Diretor-executivo
+  sector: empresas
+  hearings:
+  - '77344'
+- id: adriana-rollo
+  name: Adriana Rollo
+  org: ''
+  title: Especialista em Inteligência Artificial e Direitos Autorais
+  sector: sociedade_civil
+  hearings:
+  - '78768'
+- id: affonso-nina
+  name: Affonso Nina
+  org: Associação das Empresas de Tecnologia da Informação e Comunicação e de Tecnologias Digitais
+    - BRASSCOM
+  title: Presidente
+  sector: empresas
+  hearings:
+  - '76626'
+- id: alessandra-lustrati
+  name: Alessandra Lustrati
+  org: Programa de Acesso Digital do Reino Unido
+  title: Diretora
+  sector: sociedade_civil
+  hearings:
+  - '77331'
+- id: alexandre-freire
+  name: Alexandre Freire
+  org: Agência Nacional de Telecomunicações - ANATEL
+  title: Conselheiro
+  sector: regulador
+  hearings:
+  - '79189'
+- id: alexandre-goncalves-de-amorim
+  name: Alexandre Gonçalves de Amorim
+  org: Serviço Federal de Processamento de Dados - Serpro
+  title: Diretor-Presidente
+  sector: governo
+  hearings:
+  - '79189'
+- id: alisson-alexsandro-possa
+  name: Alisson Alexsandro Possa
+  org: Ensino, Desenvolvimento e Pesquisa - IDP
+  title: Pesquisador no Instituto Brasileiro
+  sector: academia
+  hearings:
+  - '76970'
+- id: allan-rocha
+  name: Allan Rocha
+  org: Instituto Brasileiro de Direito Autoral (IBDA)
+  title: Diretor Científico
+  sector: sociedade_civil
+  hearings:
+  - '78885'
+- id: amabile-pacios
+  name: Amábile Pacios
+  org: Federação Nacional das Escolas Particulares (FENEP)
+  title: Vice-Presidente
+  sector: empresas
+  hearings:
+  - '79832'
+- id: ana-mielke
+  name: Ana Mielke
+  org: Intervozes
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '78849'
+- id: ana-paula-bialer
+  name: Ana Paula Bialer
+  org: Movimento Brasil Competitivo, MBC
+  title: Consultora
+  sector: empresas
+  hearings:
+  - '77200'
+- id: ana-ungari-dal-fabbro
+  name: Ana Úngari Dal Fabbro
+  org: Atenção Básica do Ministério da Educação
+  title: Coordenadora-Geral de Tecnologia e Inovação
+  sector: governo
+  hearings:
+  - '79832'
+- id: andriei-gutierrez
+  name: Andriei Gutierrez
+  org: Associação Brasileira das Empresas de Software - ABES
+  title: Presidente
+  sector: empresas
+  hearings:
+  - '76626'
+- id: andre-beck
+  name: André Beck
+  org: Widelabs
+  title: Diretor de Operações e Diretor Financeiro
+  sector: empresas
+  hearings:
+  - '76970'
+- id: andre-fernandes
+  name: André Fernandes
+  org: Instituto de Pesquisa em Direito e Tecnologia do Recife - IP.rec
+  title: Diretor
+  sector: sociedade_civil
+  hearings:
+  - '78768'
+- id: andre-filipe-batista
+  name: André Filipe Batista
+  org: Tecnologia no INSPER
+  title: Professor e Diretor
+  sector: academia
+  hearings:
+  - '76970'
+- id: andre-macedo-santana
+  name: André Macedo Santana
+  org: Inteligência Artificial, Economia Digital, Ciência, Tecnologia e Inovação do Piauí
+  title: Secretário
+  sector: governo
+  hearings:
+  - '78768'
+- id: antonio-marcos-fonte-guimaraes
+  name: Antônio Marcos Fonte Guimarães
+  org: Departamento de Regulação do Sistema Financeiro do Banco Central
+  title: Consultor
+  sector: regulador
+  hearings:
+  - '77186'
+  - '77344'
+- id: antonio-paulo-dos-santos
+  name: Antônio Paulo dos Santos
+  org: Federação Nacional dos Jornalistas - FENAJ
+  title: Secretário de Relações Institucionais
+  sector: governo
+  hearings:
+  - '79054'
+- id: arthur-william
+  name: Arthur William
+  org: Senac Departamento Nacional e Representante da Confederação Nacional do Comércio
+  title: Supervisor de Tecnologias Educacionais
+  sector: empresas
+  hearings:
+  - '79832'
+- id: basilio-rodriguez-perez
+  name: Basilio Rodriguez Perez
+  org: Associação Brasileira de Provedores de Internet e Telecomunicações - ABRINT
+  title: Vice Presidente
+  sector: empresas
+  hearings:
+  - '77331'
+- id: bia-barbosa
+  name: Bia Barbosa
+  org: Repórteres Sem Fronteiras
+  title: Coordenadora de Incidência do escritório para América Latina
+  sector: sociedade_civil
+  hearings:
+  - '79054'
+- id: bianca-kremer
+  name: Bianca Kremer
+  org: CGI.br
+  title: Conselheira
+  sector: regulador
+  hearings:
+  - '78849'
+- id: bruno-bioni
+  name: Bruno Bioni
+  org: Data Privacy Brasil
+  title: Diretor
+  sector: sociedade_civil
+  hearings:
+  - '76626'
+- id: carla-egydio
+  name: Carla Egydio
+  org: Associação de Jornalismo Digital - Ajor
+  title: Diretora de Relações Institucionais
+  sector: sociedade_civil
+  hearings:
+  - '79054'
+- id: carlos-bruno-ferreira-da-silva
+  name: Carlos Bruno Ferreira da Silva
+  org: República e Coordenador da Comissão de Tecnologia da Informação e Comunicação da 3ª Câmara
+    de Coordenação e Revisão do Ministério Público Federal
+  title: Procurador
+  sector: governo
+  hearings:
+  - '79191'
+- id: carlos-eduardo-azen-alves
+  name: Carlos Eduardo Azen Alves
+  org: Departamento de Indústrias de TI, Telecom e Economia Criativa do BNDES
+  title: Chefe
+  sector: governo
+  hearings:
+  - '77599'
+- id: christian-perrone
+  name: Christian Perrone
+  org: Microsoft Brasil
+  title: Diretor de Relações Governamentais
+  sector: empresas
+  hearings:
+  - '76970'
+- id: clarice-tavares
+  name: Clarice Tavares
+  org: InternetLab
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '78849'
+- id: cleber-zanchettin
+  name: Cleber Zanchettin
+  org: Sociedade Brasileira de Computação - SBC
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '76626'
+- id: cristiane-rauen
+  name: Cristiane Rauen
+  org: Ministério de Desenvolvimento Industrial, Inovação, Comércio e Serviços, MDIC
+  title: Diretora de Transformação Digital Inovação e Novos Negócios
+  sector: regulador
+  hearings:
+  - '77200'
+- id: cristiano-therrien
+  name: Cristiano Therrien
+  org: Montréal, com pós-doutorado em Inteligência Artificial e regulação na University of Ottawa
+  title: Doutor em Direito pela Université
+  sector: sociedade_civil
+  hearings:
+  - '77331'
+- id: cristina-godoy-bernardo-de-oliveira
+  name: Cristina Godoy Bernardo de Oliveira
+  org: Comitê Gestor do Centro de Inteligência Artificial e Aprendizado de Máquina (CIAAM) da USP
+  title: membro
+  sector: academia
+  hearings:
+  - '77599'
+- id: dalton-morato
+  name: Dalton Morato
+  org: relações institucionais na Associação Brasileira de Direitos Reprográficos - ABDR
+  title: Diretor Jurídico, administrativo, e
+  sector: empresas
+  hearings:
+  - '78768'
+- id: dante-cid
+  name: Dante Cid
+  org: SNEL, representando Abrelivros, a CBL e o SNEL
+  title: Presidente
+  sector: empresas
+  hearings:
+  - '78768'
+- id: dario-carnevalli-durigan
+  name: Dario Carnevalli Durigan
+  org: Fazenda
+  title: Secretário-Executivo do Ministério
+  sector: governo
+  hearings:
+  - '76626'
+- id: diogo-cortiz
+  name: Diogo Cortiz
+  org: PUC-SP e pesquisador em IA e sociedade
+  title: Professor
+  sector: academia
+  hearings:
+  - '79054'
+- id: dora-kaufman
+  name: Dora Kaufman
+  org: INTELIGÊNCIA ARTIFICIAL
+  title: Pesquisadora dos impactos sociais
+  sector: academia
+  hearings:
+  - '79189'
+- id: duardo-saron
+  name: Duardo Saron
+  org: Fundação Itaú
+  title: Presidente
+  sector: empresas
+  hearings:
+  - '79640'
+- id: deborah-de-mari
+  name: Déborah de Mari
+  org: Força Meninas
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '78849'
+- id: fabro-steibel
+  name: Fabro Steibel
+  org: Instituto de Tecnologia e Sociedade - ITS Rio
+  title: Diretor Executivo
+  sector: sociedade_civil
+  hearings:
+  - '77186'
+  - '77344'
+- id: fernanda-rodrigues
+  name: Fernanda Rodrigues
+  org: Instituto de Referência em Internet e Sociedade (IRIS)
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '78849'
+- id: fernanda-spinardi
+  name: Fernanda Spinardi
+  org: Gestão de Soluções para Clientes na Amazon Web Services (AWS)
+  title: Líder
+  sector: empresas
+  hearings:
+  - '77331'
+- id: fabio-borges-de-oliveira
+  name: Fábio Borges de Oliveira
+  org: Laboratório Nacional de Computação Científica - LNCC
+  title: Diretor
+  sector: academia
+  hearings:
+  - '77599'
+- id: gabriel-renault
+  name: Gabriel Renault
+  org: Dharma.AI
+  title: Diretor Executivo e Co-fundador
+  sector: empresas
+  hearings:
+  - '76860'
+- id: gabriel-saad-travassos-do-carmo
+  name: Gabriel Saad Travassos do Carmo
+  org: projeto "Mapeando a Vigilância Biométrica - Levantamento Nacional sobre o uso do reconhecimento
+    facial na segurança pública"
+  title: Defensor Público Federal, participante
+  sector: governo
+  hearings:
+  - '79688'
+- id: glauce-carvalhal
+  name: Glauce Carvalhal
+  org: Confederação Nacional das Seguradoras - CNseg
+  title: Diretora Jurídica
+  sector: empresas
+  hearings:
+  - '77186'
+  - '77344'
+- id: gustavo-santana-borges
+  name: Gustavo Santana Borges
+  org: Agência Nacional de Telecomunicações - ANATEL
+  title: Superintendente Executivo
+  sector: regulador
+  hearings:
+  - '77344'
+- id: hermano-barros-tercius
+  name: Hermano Barros Tercius
+  org: Ministério das Comunicações
+  title: Secretário de Telecomunicações
+  sector: governo
+  hearings:
+  - '79189'
+- id: hugo-melo-giallanza
+  name: Hugo Melo Giallanza
+  org: Brasil Startups
+  title: Presidente
+  sector: empresas
+  hearings:
+  - '79191'
+- id: hugo-valadares-siqueira
+  name: Hugo Valadares Siqueira
+  org: Departamento de Ciência, Tecnologia e Inovação Digital do MCTI
+  title: Diretor
+  sector: governo
+  hearings:
+  - '77599'
+- id: ig-ibert-bittencourt
+  name: Ig Ibert Bittencourt
+  org: Núcleo de Excelência em Tecnologias Sociais (NEES)
+  title: Pesquisador na Universidade Federal de Alagoas e Co-fundador
+  sector: academia
+  hearings:
+  - '79640'
+- id: igor-marchesini
+  name: Igor Marchesini
+  org: Fazenda
+  title: Assessor Especial do Ministro
+  sector: sociedade_civil
+  hearings:
+  - '77331'
+- id: isabelle-christina
+  name: Isabelle Christina
+  org: Inteligência Artificial da UNICEF
+  title: Representante
+  sector: governo
+  hearings:
+  - '78849'
+- id: israel-matos-batista
+  name: Israel Matos Batista
+  org: Conselho Nacional de Educação
+  title: Conselheiro
+  sector: regulador
+  hearings:
+  - '79832'
+- id: ivo-esteves-alonso-mosca
+  name: Ivo Esteves Alonso Mósca
+  org: Federação Brasileira de Bancos - Febraban
+  title: Diretor-executivo de Inovação, Produtos e Serviços Bancários
+  sector: empresas
+  hearings:
+  - '77186'
+- id: jacqueline-alves-torres
+  name: Jacqueline Alves Torres
+  org: Padronização, Interoperabilidade, Análise de Informações e Desenvolvimento Setorial (GPIND),
+    da Diretoria de Desenvolvimento Setorial (DIDES) da Agência Naciona
+  title: Gerente
+  sector: sociedade_civil
+  hearings:
+  - '79191'
+- id: janine-mello-dos-santos
+  name: Janine Mello dos Santos
+  org: Cidadania
+  title: Secretária-Executiva do Ministério de Direitos Humanos e
+  sector: governo
+  hearings:
+  - '76970'
+- id: jean-paul-torres-neumann
+  name: Jean Paul Torres Neumann
+  org: Confederação das Associações das Empresas Brasileiras de Tecnologia da Informação - ASSESPRO
+  title: Diretor Adjunto de Inteligência de Dados e IA
+  sector: empresas
+  hearings:
+  - '77200'
+- id: jonathan-goudinho
+  name: Jonathan Goudinho
+  org: IBM Brasil
+  title: Gerente de Relações Governamentais e Assuntos Regulatórios
+  sector: empresas
+  hearings:
+  - '79189'
+- id: jose-guilherme-sabe
+  name: José Guilherme Sabe
+  org: Parqtec - Fundação Parque de Alta Tecnologia de São Carlos
+  title: Diretor Técnico
+  sector: academia
+  hearings:
+  - '77331'
+- id: joao-brant
+  name: João Brant
+  org: Secretaria de Comunicação da Presidência da República
+  title: Secretário de Políticas Digitais
+  sector: governo
+  hearings:
+  - '79054'
+- id: joao-henrique-martins
+  name: João Henrique Martins
+  org: ''
+  title: Cientista Político e Pesquisador
+  sector: academia
+  hearings:
+  - '79688'
+- id: joao-martins-da-silva-junior
+  name: João Martins da Silva Junior
+  org: Confederação da Agricultura e Pecuária do Brasil - CNA
+  title: Presidente
+  sector: empresas
+  hearings:
+  - '77186'
+  - '77344'
+- id: julia-sant-anna
+  name: Julia Sant’Anna
+  org: Centro de Inovação para a Educação Brasileira (CIEB)
+  title: Diretora Executiva
+  sector: sociedade_civil
+  hearings:
+  - '79640'
+- id: juliano-maranhao
+  name: Juliano Maranhão
+  org: Faculdade de Direito da Universidade de São Paulo - USP
+  title: Professor
+  sector: academia
+  hearings:
+  - '78768'
+- id: larissa-santiago
+  name: Larissa Santiago
+  org: Blogueiras Negras
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '78849'
+- id: laura-schertel
+  name: Laura Schertel
+  org: Comissão de Juristas instituída pelo Senado Federal
+  title: Relatora
+  sector: sociedade_civil
+  hearings:
+  - '76626'
+- id: lilian-manoela-monteiro-cintra-de-melo
+  name: Lilian Manoela Monteiro Cintra de Melo
+  org: Justiça e Segurança Pública
+  title: Secretária de Direito Digital do Ministério
+  sector: governo
+  hearings:
+  - '77344'
+- id: luana-smeets
+  name: Luana Smeets
+  org: Todos Pela Educação
+  title: Gerente de Políticas Públicas
+  sector: sociedade_civil
+  hearings:
+  - '79640'
+- id: luca-schirru
+  name: Luca Schirru
+  org: Entidade de Gestão de Direitos sobre Obras Audiovisuais da República Federativa do Brasil,
+    EGEDA
+  title: Especialista em Direitos Autorais
+  sector: empresas
+  hearings:
+  - '78885'
+- id: luis-fernando-prado
+  name: Luis Fernando Prado
+  org: IA Responsável e membro do Conselho Consultivo da Associação Brasileira de Inteligência Artificial
+    - ABRIA
+  title: Líder do Comitê
+  sector: empresas
+  hearings:
+  - '76860'
+- id: luiz-alexandre-reali
+  name: Luiz Alexandre Reali
+  org: Observatório Brasileiro de Inteligência Artificial (OBIA)
+  title: Gerente
+  sector: sociedade_civil
+  hearings:
+  - '76626'
+- id: luiz-moncau
+  name: Luiz Moncau
+  org: Google
+  title: Gerente de Relações Governamentais e Políticas Públicas
+  sector: empresas
+  hearings:
+  - '77599'
+- id: lilian-cintra-de-melo
+  name: Lílian Cintra de Melo
+  org: Justiça e Segurança Pública
+  title: Secretária Nacional de Direitos Digitais do Ministério
+  sector: governo
+  hearings:
+  - '78849'
+- id: manuella-ribeiro
+  name: Manuella Ribeiro
+  org: Instituto Alana
+  title: Analista de Pesquisa em Políticas Públicas
+  sector: sociedade_civil
+  hearings:
+  - '76970'
+- id: marcos-alves-de-souza
+  name: Marcos Alves de Souza
+  org: MINC
+  title: Secretário de Direitos Autorais e Intelectuais
+  sector: governo
+  hearings:
+  - '78768'
+- id: marcos-ferrari
+  name: Marcos Ferrari
+  org: Conexis Brasil Digital
+  title: Presidente Executivo
+  sector: empresas
+  hearings:
+  - '79189'
+- id: marcos-peigo
+  name: Marcos Peigo
+  org: Scala Data Centers
+  title: Diretor Executivo
+  sector: empresas
+  hearings:
+  - '77331'
+- id: margareth-kang
+  name: Margareth Kang
+  org: Meta
+  title: Gerente de Politicas Públicas
+  sector: empresas
+  hearings:
+  - '78768'
+- id: marina-pita
+  name: Marina Pita
+  org: Secretaria de Comunicação Social da Presidência da República
+  title: Representante
+  sector: governo
+  hearings:
+  - '76860'
+- id: nicolas-andrade
+  name: Nicolas Andrade
+  org: OpenAI
+  title: Head of Latam & Caribbean Policy
+  sector: empresas
+  hearings:
+  - '76860'
+- id: nina-da-hora
+  name: Nina da Hora
+  org: Hora
+  title: Representante do Instituto
+  sector: academia
+  hearings:
+  - '76860'
+  - '78849'
+- id: pablo-nunes
+  name: Pablo Nunes
+  org: ''
+  title: Pesquisador em segurança pública, tecnologia e dados abertos
+  sector: academia
+  hearings:
+  - '79191'
+- id: paula-guedes
+  name: Paula Guedes
+  org: Organização não-governamental Artigo 19
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '76860'
+- id: paulo-rosa
+  name: Paulo Rosa
+  org: Pró-Música Brasil
+  title: Presidente
+  sector: empresas
+  hearings:
+  - '78768'
+- id: pedro-brasileiro
+  name: Pedro Brasileiro
+  org: Salesforce
+  title: Gerente de Relações Governamentais e Políticas Públicas
+  sector: empresas
+  hearings:
+  - '77331'
+- id: pedro-henrique-ramos
+  name: Pedro Henrique Ramos
+  org: Centro de Estratégia e Regulação, Reglab
+  title: Diretor-executivo
+  sector: sociedade_civil
+  hearings:
+  - '78885'
+- id: pedro-lucas-pereira-araujo
+  name: Pedro Lucas Pereira Araújo
+  org: Superintendência Executiva da Agência Nacional de Telecomunicações - ANATEL
+  title: Assessor
+  sector: regulador
+  hearings:
+  - '77186'
+- id: pierre-lucena
+  name: Pierre Lucena
+  org: UFPE
+  title: Presidente do Porto Digital e Professor
+  sector: academia
+  hearings:
+  - '77599'
+- id: ramon-martins-da-silva
+  name: Ramon Martins da Silva
+  org: TOTVS
+  title: Diretor de Inteligência Artificial
+  sector: empresas
+  hearings:
+  - '77599'
+- id: raquel-saraiva
+  name: Raquel Saraiva
+  org: Recife - IP.rec, entidade integrante da Coalizão de Direitos na Rede
+  title: Instituto de Pesquisa em Direito e Tecnologia
+  sector: sociedade_civil
+  hearings:
+  - '78849'
+- id: raul-echeberria
+  name: Raúl Echeberría
+  org: Associação Latina-Americana de Internet - ALAI)
+  title: Diretor Executivo
+  sector: empresas
+  hearings:
+  - '79191'
+- id: renan-gaya
+  name: Renan Gaya
+  org: Secretaria de Governo Digital do Ministério da Gestão e da Inovação em Serviços Públicos -
+    SGD/MGI
+  title: Diretor de Infraestrutura de Dados Públicos
+  sector: governo
+  hearings:
+  - '79189'
+- id: rene-guilherme-da-silva-medrado
+  name: Renê Guilherme da Silva Medrado
+  org: Instituto Brasileiro de Estudos de Concorrência, Consumo e Comércio Internacional - IBRAC
+  title: Diretor Presidente
+  sector: sociedade_civil
+  hearings:
+  - '76970'
+- id: ricardo-de-lins-e-horta
+  name: Ricardo de Lins e Horta
+  org: Justiça e Segurança Pública
+  title: Secretário Nacional de Direitos Digitais Substituto do Ministério
+  sector: governo
+  hearings:
+  - '79688'
+- id: roberta-barreira-sousa-aires
+  name: Roberta Barreira Sousa Aires
+  org: Confederação Nacional do Comércio de Bens, Serviços e Turismo - CNC
+  title: Advogada
+  sector: empresas
+  hearings:
+  - '77200'
+- id: roberto-correa-de-mello
+  name: Roberto Corrêa de Mello
+  org: Associação Brasileira de Música e Artes - ABRAMUS
+  title: Diretor Geral
+  sector: empresas
+  hearings:
+  - '78885'
+- id: rodrigo-ferreira
+  name: Rodrigo Ferreira
+  org: Diretoria de Governança, Orçamento e Finanças da Casa da Moeda do Brasil  (conifirmada)
+  title: Assessor
+  sector: governo
+  hearings:
+  - '76860'
+- id: rodrigo-henrique-luiz-correa
+  name: Rodrigo Henrique Luiz Correa
+  org: Prefeitura do Rio de Janeiro, associado ao Fórum de Proteção de Dados Pessoais dos Municípios
+  title: Secretário de Municipal de Integridade
+  sector: governo
+  hearings:
+  - '79191'
+- id: rodrigo-pastl-pontes
+  name: Rodrigo Pastl Pontes
+  org: Confederação Nacional da Indústria - CNI
+  title: Gerente de Transformação Digital em Inovação
+  sector: regulador
+  hearings:
+  - '77200'
+- id: rony-vainzof
+  name: Rony Vainzof
+  org: dados na Fecomércio/SP
+  title: Consultor em proteção
+  sector: empresas
+  hearings:
+  - '78885'
+- id: sandra-avila
+  name: Sandra Ávila
+  org: Computação
+  title: Professora e Cientista
+  sector: academia
+  hearings:
+  - '79191'
+- id: sofia-schurig
+  name: Sofia Schurig
+  org: Núcleo Jornalismo
+  title: Representante
+  sector: sociedade_civil
+  hearings:
+  - '78849'
+- id: sther-dweck
+  name: Sther Dweck
+  org: Gestão e Inovação em Serviços Públicos
+  title: Ministra
+  sector: sociedade_civil
+  hearings:
+  - '77186'
+- id: sergio-branco
+  name: Sérgio Branco
+  org: ITS - Instituto de Tecnologia e Sociedade
+  title: Diretor
+  sector: sociedade_civil
+  hearings:
+  - '79054'
+- id: telma-woerle
+  name: Telma Woerle
+  org: Universidade Federal de Goiás (UFG)
+  title: Diretora Executiva do Centro de Excelência em Inteligência Artificial (CEIA)
+  sector: academia
+  hearings:
+  - '77331'
+- id: ttore-medeiros
+  name: Ttore Medeiros
+  org: ''
+  title: Professor e pesquisador. Doutor em Comunicação
+  sector: academia
+  hearings:
+  - '77599'
+- id: victor-drummond
+  name: Victor Drummond
+  org: Interartis
+  title: Presidente Executivo
+  sector: sociedade_civil
+  hearings:
+  - '79054'
+- id: victor-oliveira-fernandes
+  name: Victor Oliveira Fernandes
+  org: Conselho Administrativo de Defesa Econômica, CADE
+  title: Conselheiro
+  sector: regulador
+  hearings:
+  - '77200'
+- id: virgilio-almeida
+  name: Virgílio Almeida
+  org: Universidade Federal de Minas Gerais - UFMG
+  title: Professor Emérito
+  sector: academia
+  hearings:
+  - '79189'
+- id: wagner-lenhart
+  name: Wagner Lenhart
+  org: Instituto Millenium
+  title: Diretor Executivo
+  sector: sociedade_civil
+  hearings:
+  - '78885'
+- id: waldemar-goncalves-ortunho-junior
+  name: Waldemar Gonçalves Ortunho Júnior
+  org: Autoridade Nacional de Proteção de Dados - ANPD
+  title: Diretor-Presidente
+  sector: regulador
+  hearings:
+  - '77186'
+  - '77344'
+- id: washington-bandeira
+  name: Washington Bandeira
+  org: Estado do Piauí
+  title: Secretário de Educação
+  sector: governo
+  hearings:
+  - '79832'
+- id: wisley-pereira
+  name: Wisley Pereira
+  org: Confederação Nacional da Indústria
+  title: Superintendente de Educação do SESI e Representante
+  sector: empresas
+  hearings:
+  - '79832'

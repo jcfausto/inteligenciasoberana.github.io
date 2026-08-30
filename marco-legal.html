@@ -1,0 +1,318 @@
+---
+layout: default
+title: Radar do Marco Legal da IA — Inteligência Soberana
+description: Acompanhamento do PL 2338/2023 — tramitação, pontos do texto, responsáveis e convidados formais das audiências da Câmara.
+page_id: marco-legal
+permalink: /marco-legal.html
+marco_js: true
+---
+{% assign data = site.data['marco-legal-ia'] %}
+<article class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+  <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
+    <span class="lang-pt">Radar legislativo · atualizado <time datetime="{{ data.source.retrieved }}">{{ data.source.retrieved_pt }}</time></span>
+    <span class="lang-en">Legislative radar · updated <time datetime="{{ data.source.retrieved }}">{{ data.source.retrieved_en }}</time></span>
+  </p>
+  <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-3 leading-tight">
+    <span class="lang-pt">Radar do Marco Legal da IA</span>
+    <span class="lang-en">AI Legal Framework Radar</span>
+  </h1>
+  <p class="text-lg text-gray-700 font-light leading-relaxed max-w-3xl mb-6">
+    <span class="lang-pt">O Brasil ainda não tem uma lei geral de inteligência artificial. Este radar acompanha o {% include glossary-term.html id="marco-legal-ia" text="PL 2338/2023" %} — o Marco Legal da IA — na Câmara dos Deputados: onde está, o que o texto diz, quem responde por ele e quem foi formalmente convidado a opinar.</span>
+    <span class="lang-en">Brazil still has no general artificial-intelligence law. This radar tracks {% include glossary-term.html id="marco-legal-ia" text="PL 2338/2023" %} — the AI Legal Framework — in the Chamber of Deputies: where it stands, what the text says, who is responsible, and who was formally invited to speak.</span>
+  </p>
+  <p class="text-sm text-gray-600 font-light leading-relaxed max-w-3xl mb-10">
+    <span class="lang-pt">Snapshot consultado em {{ data.source.retrieved_pt }}. A data do último ato oficial da Câmara é outra: {{ data.status.last_move_label.pt }}.</span>
+    <span class="lang-en">Snapshot retrieved {{ data.source.retrieved_en }}. The Chamber’s last official act is a different date: {{ data.status.last_move_label.en }}.</span>
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-4 mb-14">
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Projeto</span>
+        <span class="lang-en">Bill</span>
+      </p>
+      <p class="font-serif text-2xl font-bold text-navy">PL 2338/2023</p>
+      <p class="text-xs text-gray-500 mt-1 font-light">
+        <span class="lang-pt">Marco Legal da Inteligência Artificial</span>
+        <span class="lang-en">AI Legal Framework</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Anos em tramitação</span>
+        <span class="lang-en">Years in process</span>
+      </p>
+      <p class="font-serif text-3xl font-bold text-navy">{{ data.status.years_in_process }}</p>
+      <p class="text-xs text-gray-500 mt-1 font-light">
+        <span class="lang-pt">{{ data.status.years_in_process_since.pt }}, no Senado</span>
+        <span class="lang-en">{{ data.status.years_in_process_since.en }}, in the Senate</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Casa atual</span>
+        <span class="lang-en">Current house</span>
+      </p>
+      <p class="font-serif text-2xl font-bold text-navy">
+        <span class="lang-pt">Câmara</span>
+        <span class="lang-en">Chamber</span>
+      </p>
+      <p class="text-xs text-gray-500 mt-1 font-light">
+        <span class="lang-pt">Comissão Especial PL 2338/23</span>
+        <span class="lang-en">Special Committee on PL 2338/23</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Fase</span>
+        <span class="lang-en">Stage</span>
+      </p>
+      <p class="font-serif text-xl font-bold text-navy leading-snug">
+        <span class="lang-pt">{{ data.status.label.pt }}</span>
+        <span class="lang-en">{{ data.status.label.en }}</span>
+      </p>
+      <p class="text-xs text-gray-500 mt-1 font-light">
+        <span class="lang-pt">Último ato: {{ data.status.last_move_label.pt }}</span>
+        <span class="lang-en">Last act: {{ data.status.last_move_label.en }}</span>
+      </p>
+    </div>
+    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+      <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+        <span class="lang-pt">Votação</span>
+        <span class="lang-en">Vote</span>
+      </p>
+      <p class="font-serif text-2xl font-bold text-navy">
+        <span class="lang-pt">{{ data.status.vote_window_label.pt }}</span>
+        <span class="lang-en">{{ data.status.vote_window_label.en }}</span>
+      </p>
+      <p class="text-xs text-gray-500 mt-1 font-light">
+        <span class="lang-pt">Janela política, não um prazo oficial da ficha</span>
+        <span class="lang-en">A political window, not an official docket deadline</span>
+      </p>
+    </div>
+  </div>
+
+  <section id="tramitacao" class="mb-16 scroll-mt-24" aria-labelledby="marco-timeline-title">
+    <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+      <span class="lang-pt">Tramitação</span>
+      <span class="lang-en">Process</span>
+    </p>
+    <h2 id="marco-timeline-title" class="font-serif text-2xl md:text-3xl font-bold text-navy mb-6">
+      <span class="lang-pt">Linha do tempo</span>
+      <span class="lang-en">Timeline</span>
+    </h2>
+    <ol class="marco-spine">
+      {% for step in data.timeline %}
+      <li class="marco-step{% if step.current %} is-current{% endif %}" data-house="{{ step.house }}">
+        <div class="marco-step-node" aria-hidden="true"></div>
+        <div class="marco-step-card bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+          <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-1">
+            <span class="lang-pt">{{ step.date_label.pt }}</span>
+            <span class="lang-en">{{ step.date_label.en }}</span>
+            {% if step.current %}
+            <span class="ml-2 text-navy">
+              <span class="lang-pt">agora</span>
+              <span class="lang-en">now</span>
+            </span>
+            {% endif %}
+          </p>
+          <h3 class="font-serif text-lg font-bold text-navy">
+            <span class="lang-pt">{{ step.title.pt }}</span>
+            <span class="lang-en">{{ step.title.en }}</span>
+          </h3>
+          <p class="text-sm text-gray-600 font-light leading-relaxed mt-2">
+            <span class="lang-pt">{{ step.lead.pt }}</span>
+            <span class="lang-en">{{ step.lead.en }}</span>
+          </p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    <p class="text-xs text-gray-500 font-light mt-4">
+      <span class="lang-pt">Último despacho oficial: {{ data.status.last_move.pt }}</span>
+      <span class="lang-en">Latest official dispatch: {{ data.status.last_move.en }}</span>
+    </p>
+  </section>
+
+  <section id="pontos" class="mb-16 scroll-mt-24" aria-labelledby="marco-points-title">
+    <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+      <span class="lang-pt">O texto</span>
+      <span class="lang-en">The text</span>
+    </p>
+    <h2 id="marco-points-title" class="font-serif text-2xl md:text-3xl font-bold text-navy mb-3">
+      <span class="lang-pt">Principais pontos</span>
+      <span class="lang-en">Main points</span>
+    </h2>
+    <p class="text-sm text-gray-600 font-light leading-relaxed max-w-3xl mb-6">
+      <span class="lang-pt">Leitura do substitutivo aprovado no Senado e do que a Câmara ainda discute. Não é um comentário artigo a artigo.</span>
+      <span class="lang-en">A reading of the Senate-approved substitute and of what the Chamber is still arguing. Not an article-by-article commentary.</span>
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {% for point in data.points %}
+      <article class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+        <p class="mb-2">
+          <span class="marco-pill marco-pill-{{ point.status }}">
+            <span class="lang-pt">{% if point.status == "no_texto" %}No texto{% elsif point.status == "em_disputa" %}Em disputa{% else %}Removido{% endif %}</span>
+            <span class="lang-en">{% if point.status == "no_texto" %}In the text{% elsif point.status == "em_disputa" %}Contested{% else %}Removed{% endif %}</span>
+          </span>
+        </p>
+        <h3 class="font-serif text-lg font-bold text-navy">
+          <span class="lang-pt">{{ point.title.pt }}</span>
+          <span class="lang-en">{{ point.title.en }}</span>
+        </h3>
+        <p class="text-sm text-gray-600 font-light leading-relaxed mt-2">
+          <span class="lang-pt">{{ point.summary.pt }}</span>
+          <span class="lang-en">{{ point.summary.en }}</span>
+        </p>
+        {% if point.dispute %}
+        <p class="text-sm text-gray-700 font-light leading-relaxed mt-3 pl-3 border-l-2 border-terracotta">
+          <span class="lang-pt">{{ point.dispute.pt }}</span>
+          <span class="lang-en">{{ point.dispute.en }}</span>
+        </p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="responsaveis" class="mb-16 scroll-mt-24" aria-labelledby="marco-officers-title">
+    <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+      <span class="lang-pt">Quem conduz</span>
+      <span class="lang-en">Who leads</span>
+    </p>
+    <h2 id="marco-officers-title" class="font-serif text-2xl md:text-3xl font-bold text-navy mb-6">
+      <span class="lang-pt">Responsáveis</span>
+      <span class="lang-en">Officials</span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+      {% for person in data.officers %}
+      <article class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+          <span class="lang-pt">{{ person.role_label.pt }}</span>
+          <span class="lang-en">{{ person.role_label.en }}</span>
+        </p>
+        <h3 class="font-serif text-xl font-bold text-navy">{{ person.name }}</h3>
+        <p class="text-sm text-gray-600 mt-1">{{ person.party }}–{{ person.uf }}</p>
+        <p class="text-xs text-gray-500 mt-2">
+          <span class="lang-pt">{{ person.house_label.pt }}</span>
+          <span class="lang-en">{{ person.house_label.en }}</span>
+        </p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="convidados" class="scroll-mt-24" aria-labelledby="marco-invitees-title">
+    <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+      <span class="lang-pt">Quem foi ouvido</span>
+      <span class="lang-en">Who was heard</span>
+    </p>
+    <h2 id="marco-invitees-title" class="font-serif text-2xl md:text-3xl font-bold text-navy mb-3">
+      <span class="lang-pt">Convidados formais</span>
+      <span class="lang-en">Formal invitees</span>
+    </h2>
+    <p class="text-sm text-gray-600 font-light leading-relaxed max-w-3xl mb-6">
+      <span class="lang-pt">Pessoas e instituições convidadas às audiências públicas da Comissão Especial da Câmara. Nomes extraídos das pautas oficiais. Quem falou em mais de uma sessão aparece uma vez. {{ data.counts.invitees }} registros em {{ data.counts.hearings }} audiências.</span>
+      <span class="lang-en">People and institutions invited to the Chamber Special Committee’s public hearings. Names taken from official agendas. Anyone who appeared more than once is listed once. {{ data.counts.invitees }} records across {{ data.counts.hearings }} hearings.</span>
+    </p>
+
+    <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+      <div class="flex flex-col gap-3 p-4 md:p-6 border-b border-gray-100 no-print">
+        <label class="text-xs font-bold tracking-wide uppercase text-gray-500">
+          <span class="lang-pt">Buscar</span>
+          <span class="lang-en">Search</span>
+          <input id="marco-search" type="search" autocomplete="off" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta" data-placeholder-pt="Nome, órgão ou função" data-placeholder-en="Name, organization, or role">
+        </label>
+        <fieldset>
+          <legend class="text-xs font-bold tracking-wide uppercase text-gray-500 mb-1.5">
+            <span class="lang-pt">Setor</span>
+            <span class="lang-en">Sector</span>
+          </legend>
+          <div class="flex flex-wrap gap-1" role="radiogroup" aria-label="Sector">
+            <label class="centros-layer-opt">
+              <input type="radio" name="marco-sector" value="" class="sr-only" checked>
+              <span class="lang-pt">Todos</span>
+              <span class="lang-en">All</span>
+            </label>
+            <label class="centros-layer-opt">
+              <input type="radio" name="marco-sector" value="governo" class="sr-only">
+              <span class="lang-pt">Governo</span>
+              <span class="lang-en">Government</span>
+            </label>
+            <label class="centros-layer-opt">
+              <input type="radio" name="marco-sector" value="regulador" class="sr-only">
+              <span class="lang-pt">Regulador</span>
+              <span class="lang-en">Regulator</span>
+            </label>
+            <label class="centros-layer-opt">
+              <input type="radio" name="marco-sector" value="academia" class="sr-only">
+              <span>Academia</span>
+            </label>
+            <label class="centros-layer-opt">
+              <input type="radio" name="marco-sector" value="sociedade_civil" class="sr-only">
+              <span class="lang-pt">Sociedade civil</span>
+              <span class="lang-en">Civil society</span>
+            </label>
+            <label class="centros-layer-opt">
+              <input type="radio" name="marco-sector" value="empresas" class="sr-only">
+              <span class="lang-pt">Empresas</span>
+              <span class="lang-en">Companies</span>
+            </label>
+          </div>
+        </fieldset>
+        <label class="text-xs font-bold tracking-wide uppercase text-gray-500">
+          <span class="lang-pt">Audiência</span>
+          <span class="lang-en">Hearing</span>
+          <select id="marco-hearing" class="mt-1.5 w-full rounded-md border border-gray-200 bg-[#faf9f6] px-3 py-2 text-sm font-medium font-sans tracking-normal normal-case text-navy focus:outline-none focus:ring-2 focus:ring-terracotta/40 focus:border-terracotta">
+            <option value="" data-label-pt="Todas" data-label-en="All">Todas</option>
+            {% for hearing in data.hearings %}
+            <option value="{{ hearing.id }}" data-label-pt="{{ hearing.date }} · {{ hearing.theme.pt }}" data-label-en="{{ hearing.date }} · {{ hearing.theme.en }}">{{ hearing.date }} · {{ hearing.theme.pt }}</option>
+            {% endfor %}
+          </select>
+        </label>
+        <p id="marco-count" class="text-xs text-gray-500" data-total="{{ data.counts.invitees }}"></p>
+      </div>
+
+      <ul id="marco-invitee-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-gray-100">
+        {% for person in data.invitees %}
+        <li class="marco-invitee bg-white p-5" data-name="{{ person.name }}" data-org="{{ person.org }}" data-title="{{ person.title }}" data-sector="{{ person.sector }}" data-hearings="{{ person.hearings | join: ',' }}">
+          <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-1">
+            <span class="lang-pt">{% if person.sector == "governo" %}Governo{% elsif person.sector == "regulador" %}Regulador{% elsif person.sector == "academia" %}Academia{% elsif person.sector == "empresas" %}Empresas{% else %}Sociedade civil{% endif %}</span>
+            <span class="lang-en">{% if person.sector == "governo" %}Government{% elsif person.sector == "regulador" %}Regulator{% elsif person.sector == "academia" %}Academia{% elsif person.sector == "empresas" %}Companies{% else %}Civil society{% endif %}</span>
+          </p>
+          <h3 class="font-serif text-lg font-bold text-navy leading-snug">{{ person.name }}</h3>
+          {% if person.title and person.title != blank %}
+          <p class="text-sm text-gray-600 mt-1 font-light">{{ person.title }}</p>
+          {% endif %}
+          {% if person.org and person.org != blank %}
+          <p class="text-xs text-gray-500 mt-1">{{ person.org }}</p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <p id="marco-empty" class="hidden px-4 py-8 text-center text-sm text-gray-500 no-print">
+        <span class="lang-pt">Nenhum convidado corresponde aos filtros.</span>
+        <span class="lang-en">No invitee matches these filters.</span>
+      </p>
+    </div>
+  </section>
+
+  <p class="text-xs text-gray-400 italic mt-8">
+    <span class="lang-pt">
+      Fontes: {% include official-link.html href=data.source.urls.camara text="ficha de tramitação da Câmara" %};
+      {% include official-link.html href=data.source.urls.api text="API de Dados Abertos" %};
+      {% include official-link.html href=data.source.urls.comissao text="Comissão Especial PL 2338/23" %}.
+      Consultado em {{ data.source.retrieved_pt }}.
+      Script de atualização: <code>scripts/fetch_marco_legal_ia.py</code>.
+      O snapshot não é um feed ao vivo; convidados vêm das pautas oficiais, não de um censo de lobbies.
+    </span>
+    <span class="lang-en">
+      Sources: {% include official-link.html href=data.source.urls.camara text="Chamber docket" %};
+      {% include official-link.html href=data.source.urls.api text="Open Data API" %};
+      {% include official-link.html href=data.source.urls.comissao text="Special Committee on PL 2338/23" %}.
+      Retrieved {{ data.source.retrieved_en }}.
+      Refresh script: <code>scripts/fetch_marco_legal_ia.py</code>.
+      This snapshot is not a live feed; invitees come from official agendas, not a census of lobbyists.
+    </span>
+  </p>
+</article>

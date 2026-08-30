@@ -9,6 +9,17 @@
     pt: "Negócio que só empilha uma interface fina — em geral um chat — sobre um modelo de IA estrangeiro, sem dados, fluxo ou propriedade intelectual próprios. Não tem fosso: some com uma atualização do provedor do modelo."
     en: "A business that only layers a thin interface — usually a chat — on top of a foreign AI model, with no proprietary data, workflow, or IP. It has no moat and can vanish with one model-provider update."
 
+- id: anpd
+  label:
+    pt: ANPD
+    en: ANPD
+  aliases:
+    pt: ["ANPD", "Autoridade Nacional de Proteção de Dados"]
+    en: ["ANPD", "National Data Protection Authority"]
+  def:
+    pt: "Autoridade Nacional de Proteção de Dados, o órgão federal que aplica a LGPD. No PL 2338/2023, seria a coordenadora do Sistema Nacional de Regulação e Governança de Inteligência Artificial (SIA)."
+    en: "Brazil’s National Data Protection Authority, the federal body that enforces the LGPD. Under PL 2338/2023 it would coordinate the National AI Regulation and Governance System (SIA)."
+
 - id: capex
   label:
     pt: CapEx
@@ -163,6 +174,17 @@
     pt: "Large Language Model, ou grande modelo de linguagem: sistema de IA treinado em volumes massivos de texto para gerar e interpretar linguagem. ChatGPT, Claude e Copilot são exemplos; o PBIA prevê LLMs nativos em português."
     en: "Large language model: an AI system trained on massive text corpora to generate and interpret language. ChatGPT, Claude, and Copilot are examples; Brazil’s PBIA funds native Portuguese LLMs."
 
+- id: marco-legal-ia
+  label:
+    pt: Marco Legal da IA
+    en: AI Legal Framework
+  aliases:
+    pt: ["Marco Legal da IA", "marco legal da IA", "PL 2338/2023", "PL 2338"]
+    en: ["AI Legal Framework", "PL 2338/2023", "PL 2338"]
+  def:
+    pt: "Projeto de Lei 2338/2023, o marco brasileiro de inteligência artificial. Aprovado no Senado em dezembro de 2024, tramita na Câmara sem parecer do relator; a votação foi adiada para o fim de 2026."
+    en: "Bill 2338/2023, Brazil’s proposed AI statute. Passed by the Senate in December 2024, it is still awaiting a rapporteur’s opinion in the Chamber; the vote was pushed to late 2026."
+
 - id: mindware
   label:
     pt: Mindware
@@ -239,6 +261,17 @@
   def:
     pt: "Campus de data centers da Scala em Eldorado do Sul (RS), projetado para até cerca de 4,7 GW. É o principal polo privado da aposta brasileira em infraestrutura de IA — e o exemplo mais citado do risco de o país virar somente uma “fazenda de dados” se o hardware não vier acompanhado de mindware."
     en: "Scala’s data-center campus in Eldorado do Sul (Rio Grande do Sul), planned for up to about 4.7 GW. It is the main private hub of Brazil’s AI-infrastructure bet — and the most cited example of the risk that the country becomes only a “data farm” if hardware is not matched by mindware."
+
+- id: sia
+  label:
+    pt: SIA
+    en: SIA
+  aliases:
+    pt: ["SIA", "Sistema Nacional de Regulação e Governança de Inteligência Artificial"]
+    en: ["SIA", "National AI Regulation and Governance System"]
+  def:
+    pt: "Sistema Nacional de Regulação e Governança de Inteligência Artificial, previsto no PL 2338/2023. Seria coordenado pela ANPD e composto por autoridades setoriais e comitês de especialistas."
+    en: "The National AI Regulation and Governance System proposed in PL 2338/2023. It would be coordinated by the ANPD and include sector authorities and expert committees."
 
 - id: soberania-digital
   label:
