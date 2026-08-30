@@ -130,6 +130,17 @@
     pt: "Gastar mais compute na hora da resposta — não só no treino — para o modelo “pensar” em tokens ocultos antes de escrever. É o que modelos de raciocínio (o1 e sucessores) fazem: a conta de energia, latência e tokens sobe uma ordem de grandeza por consulta."
     en: "Spending extra compute at answer time — not only at training — so the model “thinks” in hidden tokens before it writes. That is what reasoning models (o1 and successors) do: energy, latency, and tokens per query jump by an order of magnitude."
 
+- id: kosa
+  label:
+    pt: KOSA
+    en: KOSA
+  aliases:
+    pt: ["KOSA", "Kids Online Safety Act"]
+    en: ["KOSA", "Kids Online Safety Act"]
+  def:
+    pt: "Kids Online Safety Act: projeto de lei federal dos EUA que obrigaria plataformas digitais a mitigar riscos a menores — conteúdo nocivo, design viciante, dever de cuidado. Tramita desde 2022 e permanece preso a debates constitucionais; o relatório o cita como salvaguarda que chega mais de quinze anos depois da ubiquidade das redes, no mesmo registro tardio do ECA Digital."
+    en: "Kids Online Safety Act: a US federal bill that would require digital platforms to mitigate harms to minors — harmful content, addictive design, a duty of care. Before Congress since 2022 and still stuck in constitutional debate; the report cites it as a safeguard arriving more than fifteen years after social media’s ubiquity, in the same belated register as Brazil’s ECA Digital."
+
 - id: lgpd
   label:
     pt: LGPD

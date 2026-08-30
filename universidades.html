@@ -5,8 +5,12 @@ description: Orçamento discricionário federal de 2026 das 69 universidades fed
 page_id: universidades
 permalink: /universidades.html
 universidades_js: true
+charts: true
 ---
 {% assign data = site.data.universidades %}
+{% assign inv = site.data.investimento_federais %}
+{% assign inv_first = inv.series | first %}
+{% assign inv_last = inv.series | last %}
 {% assign ufs = data.institutions | map: "uf" | uniq | sort %}
 <article class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
   <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
@@ -172,7 +176,7 @@ universidades_js: true
     </p>
   </div>
 
-  <p class="text-xs text-gray-400 italic mt-6">
+  <p class="text-xs text-gray-400 italic mt-6 mb-16">
     <span class="lang-pt">
       Fontes: {% include official-link.html href="https://www.apufsc.org.br/wp-content/uploads/2025/12/Relatorio-Andifes-PLOA-2026-1-1.pdf" text="Andifes, análise PLOA/LOA 2026 (anexos 1 e 2)" %};
       {% include official-link.html href="https://www2.camara.gov.br/legin/fed/lei/2026/lei-15346-14-janeiro-2026-798659-norma-pl.html" text="Lei 15.346/2026 (LOA)" %};
@@ -186,4 +190,138 @@ universidades_js: true
       Figures in current BRL. RP2 excludes emendas and own revenue.
     </span>
   </p>
+
+  <section id="investimento" class="scroll-mt-24">
+    <p class="text-xs font-bold tracking-widest uppercase text-terracotta mb-4">
+      <span class="lang-pt">Série histórica · {{ inv_first.year }}–{{ inv_last.year }}</span>
+      <span class="lang-en">Time series · {{ inv_first.year }}–{{ inv_last.year }}</span>
+    </p>
+    <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy mb-3 leading-tight">
+      <span class="lang-pt">O investimento de capital despencou 94,5% desde 2014</span>
+      <span class="lang-en">Capital investment has fallen 94.5% since 2014</span>
+    </h2>
+    <div class="space-y-4 text-gray-700 font-light leading-relaxed max-w-3xl mb-8">
+      <p class="lang-pt">
+        O manifesto cita o <strong>PLOA 2026 de R$&nbsp;{{ inv.observatorio_2026_ploa_mi | replace: '.', ',' }}&nbsp;milhões</strong> — <strong>{{ inv.observatorio_remaining_pct | replace: '.', ',' }}%</strong> do pico, uma queda de <strong>{{ inv.observatorio_drop_pct | replace: '.', ',' }}%</strong>. Essa comparação, publicada pelo {% include official-link.html href=inv.observatorio_ploa_2026 text="Observatório do Conhecimento" %}, usa o investimento de <strong>2014</strong> (R$&nbsp;{{ inv.observatorio_2014_real_bi | replace: '.', ',' }}&nbsp;bilhões, já corrigido pelo IPCA), não 2015. A série abaixo reproduz o mesmo recorte no {% include official-link.html href=inv.siop text="SIOP" %}: GND&nbsp;4 (investimentos) do orçamento discricionário de todas as universidades federais.
+      </p>
+      <p class="lang-en">
+        The manifesto cites the <strong>2026 executive bill of R$&nbsp;{{ inv.observatorio_2026_ploa_mi }}&nbsp;million</strong> — <strong>{{ inv.observatorio_remaining_pct }}%</strong> of the peak, a <strong>{{ inv.observatorio_drop_pct }}%</strong> drop. That comparison, published by the {% include official-link.html href=inv.observatorio_ploa_2026 text="Observatório do Conhecimento" %}, uses <strong>2014</strong> capital spending (R$&nbsp;{{ inv.observatorio_2014_real_bi }}&nbsp;billion, IPCA-adjusted), not 2015. The series below reconstructs the same cut in {% include official-link.html href=inv.siop text="SIOP" %}: GND&nbsp;4 (capital investment) in the discretionary budget of all federal universities.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+      <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+          <span class="lang-pt">Pico (LOA {{ inv.peak_year }}, preços de {{ inv_last.year }})</span>
+          <span class="lang-en">Peak ({{ inv.peak_year }} budget, {{ inv_last.year }} prices)</span>
+        </p>
+        <p class="font-serif text-2xl md:text-3xl font-bold text-navy" data-money="{{ inv.peak_loa_real }}" data-money-mode="bi">{{ inv.peak_loa_real }}</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+          <span class="lang-pt">PLOA {{ inv_last.year }}</span>
+          <span class="lang-en">{{ inv_last.year }} executive bill</span>
+        </p>
+        <p class="font-serif text-2xl md:text-3xl font-bold text-navy" data-money="{{ inv.year_2026_ploa }}" data-money-mode="mi1">{{ inv.year_2026_ploa }}</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-terracotta mb-2">
+          <span class="lang-pt">Queda real</span>
+          <span class="lang-en">Real drop</span>
+        </p>
+        <p class="font-serif text-2xl md:text-3xl font-bold text-navy">
+          <span class="lang-pt">−{{ inv.drop_pct | replace: '.', ',' }}%</span>
+          <span class="lang-en">−{{ inv.drop_pct }}%</span>
+        </p>
+        <p class="text-xs text-gray-500 mt-1">
+          <span class="lang-pt">{{ inv.remaining_pct | replace: '.', ',' }}% do patamar de {{ inv.peak_year }}</span>
+          <span class="lang-en">{{ inv.remaining_pct }}% of the {{ inv.peak_year }} level</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm mb-8">
+      <h3 class="font-serif text-lg md:text-xl font-bold text-navy mb-1">
+        <span class="lang-pt">Investimento de capital da rede federal (GND 4)</span>
+        <span class="lang-en">Federal-network capital investment (GND 4)</span>
+      </h3>
+      <p id="uni-invest-caption" class="text-sm text-gray-500 mb-6">
+        <span class="lang-pt">Valores em R$ milhões a preços médios de {{ inv_last.year }} (IPCA). A barra de 2026 do PLOA é o piso citado no manifesto.</span>
+        <span class="lang-en">Figures in R$ millions at {{ inv_last.year }} average prices (IPCA). The 2026 executive-bill bar is the floor cited in the manifesto.</span>
+      </p>
+      <div class="relative h-72 md:h-80">
+        <canvas id="uniInvestChart" aria-label="Gráfico do investimento de capital das universidades federais desde 2014"></canvas>
+      </div>
+      <p class="text-xs text-gray-500 mt-6 leading-relaxed">
+        <span class="lang-pt">A LOA inclui emendas parlamentares após a tramitação; o PLOA é a proposta do Executivo. Em {{ inv_last.year }} o Congresso elevou a LOA de investimento para R$&nbsp;625&nbsp;milhões — ainda cerca de 90% abaixo do pico de {{ inv.peak_year }} em termos reais.</span>
+        <span class="lang-en">The enacted budget (LOA) includes parliamentary emendas after Congress amends the bill; PLOA is the executive proposal. In {{ inv_last.year }} Congress raised authorized capital spending to R$&nbsp;625&nbsp;million — still about 90% below the {{ inv.peak_year }} peak in real terms.</span>
+      </p>
+    </div>
+
+    <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="uni-table w-full text-left border-collapse text-sm">
+          <caption class="sr-only">
+            <span class="lang-pt">Investimento de capital (GND 4) das universidades federais, PLOA e LOA, {{ inv_first.year }}–{{ inv_last.year }}</span>
+            <span class="lang-en">Federal university capital investment (GND 4), executive bill and enacted budget, {{ inv_first.year }}–{{ inv_last.year }}</span>
+          </caption>
+          <thead>
+            <tr class="border-b border-gray-200 text-gray-500">
+              <th scope="col" class="py-3 px-4 font-bold">
+                <span class="lang-pt">Ano</span>
+                <span class="lang-en">Year</span>
+              </th>
+              <th scope="col" class="py-3 px-3 font-bold text-right">
+                <span class="lang-pt">PLOA (corrente)</span>
+                <span class="lang-en">PLOA (current)</span>
+              </th>
+              <th scope="col" class="py-3 px-3 font-bold text-right">
+                <span class="lang-pt">LOA (corrente)</span>
+                <span class="lang-en">LOA (current)</span>
+              </th>
+              <th scope="col" class="py-3 px-3 font-bold text-right">
+                <span class="lang-pt">PLOA ({{ inv_last.year }})</span>
+                <span class="lang-en">PLOA ({{ inv_last.year }})</span>
+              </th>
+              <th scope="col" class="py-3 px-4 font-bold text-right">
+                <span class="lang-pt">LOA ({{ inv_last.year }})</span>
+                <span class="lang-en">LOA ({{ inv_last.year }})</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in inv.series %}
+            <tr class="border-b border-gray-100{% if row.year == inv.peak_year %} bg-[#faf9f6]{% endif %}{% if row.year == inv_last.year %} bg-terracotta/5{% endif %}">
+              <th scope="row" class="py-3 px-4 font-medium text-navy">
+                {{ row.year }}{% if row.year == inv.peak_year %}<span class="block text-[11px] font-normal text-terracotta mt-0.5"><span class="lang-pt">pico real</span><span class="lang-en">real peak</span></span>{% endif %}{% if row.year == inv_last.year %}<span class="block text-[11px] font-normal text-terracotta mt-0.5">PLOA</span>{% endif %}
+              </th>
+              <td class="py-3 px-3 text-right tabular-nums text-gray-700" data-money="{{ row.ploa }}" data-money-mode="brl">{{ row.ploa }}</td>
+              <td class="py-3 px-3 text-right tabular-nums text-gray-700" data-money="{{ row.loa }}" data-money-mode="brl">{{ row.loa }}</td>
+              <td class="py-3 px-3 text-right tabular-nums text-gray-700" data-money="{{ row.ploa_real }}" data-money-mode="brl">{{ row.ploa_real }}</td>
+              <td class="py-3 px-4 text-right tabular-nums font-semibold text-navy" data-money="{{ row.loa_real }}" data-money-mode="brl">{{ row.loa_real }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 italic mt-6">
+      <span class="lang-pt">
+        Fontes: {% include official-link.html href=inv.siop text="SIOP / SOF" %} (consulta SPARQL, extraída em {{ inv.retrieved_pt }});
+        IPCA {% include official-link.html href=inv.ipca text="BCB SGS 433" %};
+        {% include official-link.html href=inv.observatorio_ploa_2026 text="Observatório do Conhecimento, Balanço PLOA 2026" %} (R$&nbsp;{{ inv.observatorio_2026_ploa_mi | replace: '.', ',' }}&nbsp;mi = {{ inv.observatorio_remaining_pct | replace: '.', ',' }}% de 2014).
+        Recorte: universidades federais, GND&nbsp;4, despesas discricionárias (RP diferente de 0 e 1). A reconstrução no SIOP chega a R$&nbsp;335,5&nbsp;milhões no PLOA 2026, 0,1% abaixo da cifra do Observatório.
+      </span>
+      <span class="lang-en">
+        Sources: {% include official-link.html href=inv.siop text="SIOP / SOF" %} (SPARQL query, retrieved {{ inv.retrieved_en }});
+        IPCA {% include official-link.html href=inv.ipca text="BCB SGS 433" %};
+        {% include official-link.html href=inv.observatorio_ploa_2026 text="Observatório do Conhecimento, 2026 PLOA review" %} (R$&nbsp;{{ inv.observatorio_2026_ploa_mi }}M = {{ inv.observatorio_remaining_pct }}% of 2014).
+        Scope: federal universities, GND&nbsp;4, discretionary outlays (primary-result codes other than 0 and 1). The SIOP reconstruction yields R$&nbsp;335.5&nbsp;million in the 2026 bill, 0.1% below the Observatório figure.
+      </span>
+    </p>
+  </section>
 </article>
+<script type="application/json" id="uni-invest-data">
+{{ inv.series | jsonify }}
+</script>

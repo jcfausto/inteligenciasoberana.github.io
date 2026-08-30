@@ -1,15 +1,12 @@
 (function () {
   const table = document.getElementById('uni-table');
-  if (!table) {
-    return;
-  }
-
-  const tbody = table.querySelector('tbody');
-  const rows = Array.from(tbody.querySelectorAll('.uni-row'));
+  const tbody = table ? table.querySelector('tbody') : null;
+  const rows = tbody ? Array.from(tbody.querySelectorAll('.uni-row')) : [];
   const searchInput = document.getElementById('uni-search');
   const ufSelect = document.getElementById('uni-uf');
   const empty = document.getElementById('uni-empty');
-  const sortButtons = table.querySelectorAll('.uni-sort');
+  const sortButtons = table ? table.querySelectorAll('.uni-sort') : [];
+  let investChart = null;
 
   let sortKey = 'name';
   let sortDir = 'asc';
@@ -32,9 +29,9 @@
       });
       return lang === 'en' ? `R$ ${formatted}B` : `R$ ${formatted} bi`;
     }
-    if (mode === 'mi') {
+    if (mode === 'mi' || mode === 'mi1') {
       const millions = n / 1e6;
-      const digits = millions >= 100 ? 0 : 1;
+      const digits = mode === 'mi1' || millions < 100 ? 1 : 0;
       const formatted = millions.toLocaleString(loc, {
         minimumFractionDigits: digits,
         maximumFractionDigits: digits,
@@ -67,6 +64,153 @@
         allOpt.textContent = lang === 'en' ? allOpt.dataset.labelEn : allOpt.dataset.labelPt;
       }
     }
+  }
+
+  function millions(value) {
+    return Math.round(Number(value) / 1e5) / 10;
+  }
+
+  function formatInvestMillions(value, lang) {
+    const loc = lang === 'en' ? 'en-US' : 'pt-BR';
+    const formatted = value.toLocaleString(loc, {
+      minimumFractionDigits: value >= 100 ? 0 : 1,
+      maximumFractionDigits: 1,
+    });
+    return lang === 'en' ? `R$ ${formatted}M` : `R$ ${formatted} mi`;
+  }
+
+  function investCopy(lang) {
+    if (lang === 'en') {
+      return {
+        ploa: 'Executive bill (PLOA)',
+        loa: 'Enacted budget (LOA)',
+        axis: 'R$ millions (2026 prices)',
+        aria: 'Bar chart of federal university capital investment from 2014 to 2026',
+      };
+    }
+    return {
+      ploa: 'Proposta do Executivo (PLOA)',
+      loa: 'Orçamento autorizado (LOA)',
+      axis: 'R$ milhões (preços de 2026)',
+      aria: 'Gráfico de barras do investimento de capital das universidades federais de 2014 a 2026',
+    };
+  }
+
+  function initInvestChart() {
+    const canvas = document.getElementById('uniInvestChart');
+    const dataEl = document.getElementById('uni-invest-data');
+    if (!canvas || !dataEl || typeof Chart === 'undefined') {
+      return;
+    }
+    let series;
+    try {
+      series = JSON.parse(dataEl.textContent);
+    } catch (err) {
+      return;
+    }
+    if (!Array.isArray(series) || series.length === 0) {
+      return;
+    }
+    const lang = pageLang();
+    const copy = investCopy(lang);
+    const labels = series.map((row) => String(row.year));
+    const ploa = series.map((row) => millions(row.ploa_real));
+    const loa = series.map((row) => millions(row.loa_real));
+    const last = labels.length - 1;
+    const ploaColors = labels.map((_, i) => (i === last ? '#9a3f14' : '#c45c26'));
+    const loaColors = labels.map((_, i) => (i === last ? '#334155' : '#0f172a'));
+    canvas.setAttribute('aria-label', copy.aria);
+    investChart = new Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: copy.ploa,
+            data: ploa,
+            backgroundColor: ploaColors,
+            borderWidth: 0,
+            borderRadius: 3,
+            maxBarThickness: 18,
+          },
+          {
+            label: copy.loa,
+            data: loa,
+            backgroundColor: loaColors,
+            borderWidth: 0,
+            borderRadius: 3,
+            maxBarThickness: 18,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 400 },
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+              color: '#334155',
+              boxWidth: 12,
+              font: { size: 11, family: 'Inter, system-ui, sans-serif' },
+            },
+          },
+          tooltip: {
+            callbacks: {
+              label(item) {
+                return `${item.dataset.label}: ${formatInvestMillions(item.raw, pageLang())}`;
+              },
+            },
+          },
+          datalabels: { display: false },
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: {
+              color: '#6b7280',
+              font: { size: 11, family: 'Inter, system-ui, sans-serif' },
+            },
+          },
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: '#9ca3af',
+              font: { size: 11, family: 'Inter, system-ui, sans-serif' },
+              callback(value) {
+                return formatInvestMillions(value, pageLang());
+              },
+            },
+            grid: { color: '#f3f4f6' },
+            border: { display: false },
+            title: {
+              display: true,
+              text: copy.axis,
+              color: '#6b7280',
+              font: { size: 11, family: 'Inter, system-ui, sans-serif' },
+            },
+          },
+        },
+      },
+    });
+  }
+
+  function applyInvestChartLanguage() {
+    if (!investChart) {
+      return;
+    }
+    const copy = investCopy(pageLang());
+    investChart.data.datasets[0].label = copy.ploa;
+    investChart.data.datasets[1].label = copy.loa;
+    investChart.options.scales.y.title.text = copy.axis;
+    const canvas = document.getElementById('uniInvestChart');
+    if (canvas) {
+      canvas.setAttribute('aria-label', copy.aria);
+    }
+    investChart.update('none');
   }
 
   function rowVisible(row) {
@@ -128,6 +272,9 @@
   }
 
   function render() {
+    if (!tbody) {
+      return;
+    }
     const visible = [];
     const hidden = [];
     rows.forEach((row) => {
@@ -169,10 +316,15 @@
     ufSelect.addEventListener('change', render);
   }
 
+  initInvestChart();
+
   function syncLanguage() {
     applyMoney();
     applyChrome();
-    render();
+    if (table) {
+      render();
+    }
+    applyInvestChartLanguage();
   }
 
   const originalSetLanguage = window.setLanguage;

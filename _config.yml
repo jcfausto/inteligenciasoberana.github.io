@@ -12,9 +12,9 @@ theme: null
 
 research:
   version: "1.6"
-  updated: 2026-08-28
-  updated_pt: "28 de agosto de 2026"
-  updated_en: "28 August 2026"
+  updated: 2026-08-30
+  updated_pt: "30 de agosto de 2026"
+  updated_en: "30 August 2026"
 
 plugins:
   - jekyll-sitemap

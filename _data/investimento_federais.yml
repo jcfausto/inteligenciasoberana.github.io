@@ -1,0 +1,91 @@
+# Discretionary capital investment (GND 4) of Brazil's federal universities.
+# Source: SIOP SPARQL (http://www1.siop.planejamento.gov.br/sparql/), retrieved 2026-08-30.
+# Scope: UO names matching federal universities (Universidade Federal, UnB,
+# UTFPR, Fundação Universidade); GND 4; Resultado Primário other than 0 (financial)
+# and 1 (mandatory). Same discretionary cut used by the Observatório do Conhecimento.
+# Nominal values in BRL. Real values converted to 2026 average prices with IPCA
+# (BCB SGS 433 / IBGE); 2026 uses the Jan–Jul 2026 average index.
+retrieved: 2026-08-30
+retrieved_pt: 30 de agosto de 2026
+retrieved_en: 30 August 2026
+siop: https://www1.siop.planejamento.gov.br/sparql/
+ipca: https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json
+observatorio: https://observatoriodoconhecimento.org.br/
+observatorio_ploa_2026: https://adufrj.org.br/images/ObC_Relatrio_PLOA_2026.pdf
+peak_year: 2014
+# Observatório published endpoints (IPCA-deflated, their vintage).
+observatorio_2014_real_bi: 5.92
+observatorio_2026_ploa_mi: 335.9
+observatorio_remaining_pct: 5.67
+observatorio_drop_pct: 94.3
+# SIOP reconstruction, 2026 average prices.
+peak_loa_real: 6150335714
+year_2026_ploa: 335532998
+remaining_pct: 5.5
+drop_pct: 94.5
+series:
+  - year: 2014
+    ploa: 2593973678
+    loa: 3211220156
+    ploa_real: 4968145495
+    loa_real: 6150335714
+  - year: 2015
+    ploa: 2610910771
+    loa: 3233752414
+    ploa_real: 4586423571
+    loa_real: 5680530511
+  - year: 2016
+    ploa: 2058515470
+    loa: 2591069597
+    ploa_real: 3325437052
+    loa_real: 4185753747
+  - year: 2017
+    ploa: 1284980931
+    loa: 1553071580
+    ploa_real: 2006671524
+    loa_real: 2425331333
+  - year: 2018
+    ploa: 395866598
+    loa: 1092080012
+    ploa_real: 596345116
+    loa_real: 1645141533
+  - year: 2019
+    ploa: 405194545
+    loa: 1129421720
+    ploa_real: 588430658
+    loa_real: 1640166121
+  - year: 2020
+    ploa: 390706211
+    loa: 675217685
+    ploa_real: 549735198
+    loa_real: 950051259
+  - year: 2021
+    ploa: 347936220
+    loa: 410988793
+    ploa_real: 452030879
+    loa_real: 533947357
+  - year: 2022
+    ploa: 425634642
+    loa: 652956179
+    ploa_real: 506016870
+    loa_real: 776268681
+  - year: 2023
+    ploa: 365213059
+    loa: 606063858
+    ploa_real: 415116032
+    loa_real: 688876856
+  - year: 2024
+    ploa: 274648980
+    loa: 553971879
+    ploa_real: 299113669
+    loa_real: 603317591
+  - year: 2025
+    ploa: 323683010
+    loa: 712397883
+    ploa_real: 335675450
+    loa_real: 738792190
+  - year: 2026
+    ploa: 335532998
+    loa: 625358138
+    ploa_real: 335532998
+    loa_real: 625358138

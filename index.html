@@ -88,13 +88,13 @@ manifesto_js: true
             <div class="lang-pt space-y-2">
                 <p class="font-bold text-navy">Perspectiva:</p>
                 <p class="font-light leading-relaxed">
-                    O gráfico ilustra a chocante contradição orçamentária de 2026. Enquanto o Congresso Nacional destina <strong>R$ 61 bilhões</strong> em {% include glossary-term.html id="emendas-parlamentares" text="emendas parlamentares" %} arbitrárias<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup>, o orçamento de investimento de toda a rede de universidades federais despencou para míseros <strong>R$ 335,9 milhões</strong> (uma queda de 94.3% desde o pico em 2015).
+                    O gráfico ilustra a chocante contradição orçamentária de 2026. Enquanto o Congresso Nacional destina <strong>R$ 61 bilhões</strong> em {% include glossary-term.html id="emendas-parlamentares" text="emendas parlamentares" %} arbitrárias<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup>, o orçamento de investimento de toda a rede de universidades federais despencou para míseros <strong>R$ 335,9 milhões</strong> (uma queda de 94,3% desde o pico em 2014). <a href="{{ '/universidades.html#investimento' | relative_url }}" class="text-terracotta hover:underline">Ver a série histórica</a>.
                 </p>
             </div>
             <div class="lang-en space-y-2">
                 <p class="font-bold text-navy">Perspective:</p>
                 <p class="font-light leading-relaxed">
-                    This chart illustrates a staggering budgetary contradiction. While the Brazilian Congress maintains a massive pool of <strong>R$ 61 billion</strong> for {% include glossary-term.html id="clientelismo" text="clientelist" %} {% include glossary-term.html id="emendas-parlamentares" text="parliamentary amendments" %}<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup>, the entire capital investment budget for all federal university laboratories has been crushed to just <strong>R$ 335.9 million</strong>.
+                    This chart illustrates a staggering budgetary contradiction. While the Brazilian Congress maintains a massive pool of <strong>R$ 61 billion</strong> for {% include glossary-term.html id="clientelismo" text="clientelist" %} {% include glossary-term.html id="emendas-parlamentares" text="parliamentary amendments" %}<sup class="cite"><a href="relatorio.html#ref-13">[13]</a></sup>, the entire capital investment budget for all federal university laboratories has been crushed to just <strong>R$ 335.9 million</strong> (a 94.3% drop since the 2014 peak). <a href="{{ '/universidades.html#investimento' | relative_url }}" class="text-terracotta hover:underline">See the historical series</a>.
                 </p>
             </div>
         </div>
@@ -104,15 +104,38 @@ manifesto_js: true
 <!-- Main Essay Content -->
 <main class="max-w-7xl mx-auto px-6 md:px-12 py-12 space-y-8">
 
+    <div id="teses" class="text-center max-w-3xl mx-auto scroll-mt-24">
+        <span class="text-xs font-bold text-terracotta uppercase tracking-wider">
+            <span class="lang-pt">Cinco teses</span>
+            <span class="lang-en">Five theses</span>
+        </span>
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-navy mt-2">
+            <span class="lang-pt">O que este manifesto afirma</span>
+            <span class="lang-en">What this manifesto asserts</span>
+        </h2>
+        <p class="text-gray-500 text-sm mt-3 leading-relaxed font-light">
+            <span class="lang-pt">O quadro acima exemplifica a assimetria. Os cinco pontos abaixo a interpretam. Cada ponto é uma tese: um diagnóstico encadeado e sustentado por evidência, não um slogan ou uma reivindicação isolada. Os quatro primeiros descrevem a os perigos e desafios da IA. O quinto propõe uma abordagem mais sustentável.</span>
+            <span class="lang-en">The chart above illustrates the asymmetry. The five points below interpret it. Each point is a thesis: a chained, evidence-backed diagnosis, not a slogan or a standalone demand. The first four describe the risks and challenges of AI. The fifth proposes a more sustainable approach.</span>
+        </p>
+    </div>
+
     <!-- Section 1 Accordion -->
     <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
-        <button onclick="toggleSection('sec1')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
-            <span class="flex items-center space-x-4">
-                <span class="text-terracotta text-sm font-sans tracking-widest">01</span>
-                <span class="lang-pt">Velocidade de Adoção</span>
-                <span class="lang-en">Adoption Velocity</span>
+        <button onclick="toggleSection('sec1')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left transition-colors hover:bg-slate-800">
+            <span class="flex items-start space-x-4 min-w-0 pr-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest mt-2 shrink-0">01</span>
+                <span class="min-w-0">
+                    <span class="block font-serif font-bold text-xl md:text-2xl">
+                        <span class="lang-pt">Velocidade de Adoção</span>
+                        <span class="lang-en">Adoption Velocity</span>
+                    </span>
+                    <span class="block mt-1 font-sans font-light text-sm text-white/70 leading-snug">
+                        <span class="lang-pt">A tecnologia chegou antes da sociedade</span>
+                        <span class="lang-en">The technology arrived before society did</span>
+                    </span>
+                </span>
             </span>
-            <span id="icon-sec1" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+            <span id="icon-sec1" class="text-2xl transition-transform duration-200 rotate-180 shrink-0">&minus;</span>
         </button>
         <div id="content-sec1" class="p-6 md:p-8">
             <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
@@ -120,7 +143,10 @@ manifesto_js: true
                     A inteligência artificial generativa quebrou todos os parâmetros históricos de adoção tecnológica. Enquanto tecnologias como a eletricidade, o computador pessoal e o smartphone levaram décadas para alcançar a maioria da população, o ChatGPT alcançou 100 milhões de usuários ativos em dois meses, e em 2025 o modelo já era utilizado por 54,6% dos adultos nos Estados Unidos<sup class="cite"><a href="relatorio.html#ref-2">[2]</a></sup>.
                 </p>
                 <p>
-                    No Brasil, essa curva é ainda mais comprimida devido a uma sociedade altamente conectada via dispositivos móveis. Com conexões móveis cobrindo 102% da população, e o WhatsApp alcançando 93,9% da audiência online nacional<sup class="cite"><a href="relatorio.html#ref-4">[4]</a></sup>, as ferramentas de inteligência artificial são injetadas diretamente na rotina comercial de milhões de brasileiros sem que haja qualquer preparo, regulação ou governança de dados madura. O {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="ECA Digital" %} (Lei nº 15.211/2025), em vigor desde março de 2026, é uma reação tardia no mesmo sentido do KOSA: chega depois que a infraestrutura cognitiva de uma geração já foi reescrita<sup class="cite"><a href="relatorio.html#ref-26">[26]</a></sup><sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>. A lei prevê verificação etária a cada acesso e multas de até 10% do faturamento, mas sua eficácia esbarra nos limites da fiscalização estatal e depende de corresponsabilidade entre plataformas, Estado e sociedade civil<sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>.
+                    No Brasil, essa curva é ainda mais comprimida devido a uma sociedade altamente conectada via dispositivos móveis. Com conexões móveis cobrindo 102% da população, e o WhatsApp alcançando 93,9% da audiência online nacional<sup class="cite"><a href="relatorio.html#ref-4">[4]</a></sup>, as ferramentas de inteligência artificial são injetadas diretamente na rotina comercial de milhões de brasileiros sem que haja qualquer preparo, regulação ou governança de dados madura. Enquanto 54,6% dos adultos nos EUA usavam IA generativa no fim de 2025<sup class="cite"><a href="relatorio.html#ref-2">[2]</a></sup>, <strong>71% dos adultos conectados no Brasil já utilizaram chatbots</strong> — um salto de 25 pontos desde 2023, acima da média global de 62%<sup class="cite"><a href="relatorio.html#ref-27">[27]</a></sup>. O país é o segundo no mundo em uso diário de IA generativa (51,6%)<sup class="cite"><a href="relatorio.html#ref-28">[28]</a></sup> e o terceiro maior mercado do ChatGPT, com 310 milhões de visitas mensais e 45,8 milhões de usuários ativos semanais<sup class="cite"><a href="relatorio.html#ref-30">[30]</a></sup>. Quarenta e três por cento da população ampla já usa ferramentas de geração de texto no cotidiano<sup class="cite"><a href="relatorio.html#ref-29">[29]</a></sup>.
+                </p>
+                <p>
+                    O {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="ECA Digital" %} (Lei nº 15.211/2025), em vigor desde março de 2026, é uma reação tardia no mesmo sentido do {% include glossary-term.html id="kosa" text="KOSA" %}: chega depois que a infraestrutura cognitiva de uma geração já foi reescrita<sup class="cite"><a href="relatorio.html#ref-26">[26]</a></sup><sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>. A lei prevê verificação etária a cada acesso e multas de até 10% do faturamento, mas sua eficácia esbarra nos limites da fiscalização estatal e depende de corresponsabilidade entre plataformas, Estado e sociedade civil<sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>.
                 </p>
             </div>
             <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
@@ -128,7 +154,10 @@ manifesto_js: true
                     Generative artificial intelligence has shattered every historical benchmark for technological adoption. While legacy innovations like electricity, personal computers, and smartphones required decades to diffuse to the public, ChatGPT reached 100 million active users in just two months, and by 2025, over 54.6% of US adults had adopted generative tools<sup class="cite"><a href="relatorio.html#ref-2">[2]</a></sup>.
                 </p>
                 <p>
-                    In Brazil, this adoption curve is compressed even further due to a highly connected, mobile-first society. With cellular connections covering 102% of the population, and WhatsApp reaching 93.9% of the online audience<sup class="cite"><a href="relatorio.html#ref-4">[4]</a></sup>, AI tools are injected directly into the daily lives of millions of citizens without mature data governance, state regulation, or safety rails. The {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="ECA Digital" %} (Law No. 15,211/2025), in force since March 2026, is a belated reaction in the same register as KOSA: it arrives after a generation’s cognitive infrastructure has already been rewritten<sup class="cite"><a href="relatorio.html#ref-26">[26]</a></sup><sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>. The statute requires age verification at every access and fines of up to 10% of revenue, but its effectiveness hits the limits of state enforcement and depends on co-responsibility among platforms, the state, and civil society<sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>.
+                    In Brazil, this adoption curve is compressed even further due to a highly connected, mobile-first society. With cellular connections covering 102% of the population, and WhatsApp reaching 93.9% of the online audience<sup class="cite"><a href="relatorio.html#ref-4">[4]</a></sup>, AI tools are injected directly into the daily lives of millions of citizens without mature data governance, state regulation, or safety rails. While 54.6% of US adults used generative AI by late 2025<sup class="cite"><a href="relatorio.html#ref-2">[2]</a></sup>, <strong>71% of connected adults in Brazil have already used AI chatbots</strong> — a 25-point jump since 2023, above the 62% global average<sup class="cite"><a href="relatorio.html#ref-27">[27]</a></sup>. Brazil ranks second worldwide in daily generative-AI use (51.6%)<sup class="cite"><a href="relatorio.html#ref-28">[28]</a></sup> and is the third-largest ChatGPT market, with 310 million monthly visits and 45.8 million weekly active users<sup class="cite"><a href="relatorio.html#ref-30">[30]</a></sup>. Forty-three percent of the broader population already uses text-generation tools in daily life<sup class="cite"><a href="relatorio.html#ref-29">[29]</a></sup>.
+                </p>
+                <p>
+                    The {% include official-link.html href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm" text="ECA Digital" %} (Law No. 15,211/2025), in force since March 2026, is a belated reaction in the same register as {% include glossary-term.html id="kosa" text="KOSA" %}: it arrives after a generation’s cognitive infrastructure has already been rewritten<sup class="cite"><a href="relatorio.html#ref-26">[26]</a></sup><sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>. The statute requires age verification at every access and fines of up to 10% of revenue, but its effectiveness hits the limits of state enforcement and depends on co-responsibility among platforms, the state, and civil society<sup class="cite"><a href="relatorio.html#ref-25">[25]</a></sup>.
                 </p>
             </div>
         </div>
@@ -136,18 +165,26 @@ manifesto_js: true
 
     <!-- Section 2 Accordion -->
     <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
-        <button onclick="toggleSection('sec2')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
-            <span class="flex items-center space-x-4">
-                <span class="text-terracotta text-sm font-sans tracking-widest">02</span>
-                <span class="lang-pt">O Abismo Regulatório</span>
-                <span class="lang-en">The Regulatory Deficit</span>
+        <button onclick="toggleSection('sec2')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left transition-colors hover:bg-slate-800">
+            <span class="flex items-start space-x-4 min-w-0 pr-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest mt-2 shrink-0">02</span>
+                <span class="min-w-0">
+                    <span class="block font-serif font-bold text-xl md:text-2xl">
+                        <span class="lang-pt">O Abismo Regulatório</span>
+                        <span class="lang-en">The Regulatory Deficit</span>
+                    </span>
+                    <span class="block mt-1 font-sans font-light text-sm text-white/70 leading-snug">
+                        <span class="lang-pt">O Estado não acompanha o capital privado</span>
+                        <span class="lang-en">The state cannot keep pace with private capital</span>
+                    </span>
+                </span>
             </span>
-            <span id="icon-sec2" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+            <span id="icon-sec2" class="text-2xl transition-transform duration-200 rotate-180 shrink-0">&minus;</span>
         </button>
         <div id="content-sec2" class="p-6 md:p-8">
             <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
                 <p>
-                    Enquanto as corporações privadas investem quantias astronômicas — com os quatro maiores {% include glossary-term.html id="hiperscalers" text="hiperscalers" %} globais direcionando mais de <strong>US$ 720 bilhões</strong> em {% include glossary-term.html id="capex" text="CapEx" %} para 2026<sup class="cite"><a href="relatorio.html#ref-5">[5]</a></sup> —, as agências públicas reguladoras operam com orçamentos quase simbólicos. O resultado é um desequilíbrio estrutural de poder, onde o Congresso brasileiro, influenciado por intensos lobbies comerciais, adia o marco legal da IA ({% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="PL 2338/2023" %}) para o final de 2026<sup class="cite"><a href="relatorio.html#ref-10">[10]</a></sup>.
+                    Enquanto as corporações privadas investem quantias astronômicas, com os quatro maiores {% include glossary-term.html id="hiperscalers" text="hiperscalers" %} globais direcionando mais de <strong>US$ 720 bilhões</strong> em {% include glossary-term.html id="capex" text="CapEx" %} para 2026<sup class="cite"><a href="relatorio.html#ref-5">[5]</a></sup>, as agências públicas reguladoras operam com orçamentos quase simbólicos. O resultado é um desequilíbrio estrutural de poder, onde o Congresso brasileiro, influenciado por intensos lobbies comerciais, adia o marco legal da IA ({% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="PL 2338/2023" %}) para o final de 2026<sup class="cite"><a href="relatorio.html#ref-10">[10]</a></sup>.
                 </p>
                 <p>
                     Essa lentidão regulatória deixa a economia nacional altamente exposta. Enquanto 76% das empresas brasileiras mantêm agentes de inteligência artificial em produção, a taxa de incidentes é alarmante: 80% das organizações já foram forçadas a pausar ou reverter uma implantação, e quase 40% destas falhas foram causadas por violações de privacidade ou vazamento de dados críticos<sup class="cite"><a href="relatorio.html#ref-3">[3]</a></sup>.
@@ -155,7 +192,7 @@ manifesto_js: true
             </div>
             <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
                 <p>
-                    While private corporations allocate astronomical sums — with the Big Four tech {% include glossary-term.html id="hiperscalers" text="hyperscalers" %} guiding toward a combined <strong>$720 billion to $745 billion</strong> in {% include glossary-term.html id="capex" text="CapEx" %} for 2026 alone<sup class="cite"><a href="relatorio.html#ref-5">[5]</a></sup> —, public regulatory bodies operate on shoestring budgets. This asymmetry has mired the Brazilian legislature in a lobbying bottleneck, delaying the vote on the landmark AI Legal Framework ({% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="PL 2338/2023" %}) to late 2026<sup class="cite"><a href="relatorio.html#ref-10">[10]</a></sup>.
+                    While private corporations allocate astronomical sums, with the Big Four tech {% include glossary-term.html id="hiperscalers" text="hyperscalers" %} guiding toward a combined <strong>$720 billion to $745 billion</strong> in {% include glossary-term.html id="capex" text="CapEx" %} for 2026 alone<sup class="cite"><a href="relatorio.html#ref-5">[5]</a></sup>, public regulatory bodies operate on shoestring budgets. This asymmetry has mired the Brazilian legislature in a lobbying bottleneck, delaying the vote on the landmark AI Legal Framework ({% include official-link.html href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262" text="PL 2338/2023" %}) to late 2026<sup class="cite"><a href="relatorio.html#ref-10">[10]</a></sup>.
                 </p>
                 <p>
                     This legislative vacuum has created an unstable environment. While 76% of Brazilian companies aggressively deploy AI agents, the failure rate is staggering: 80% of local organizations have been forced to pause or roll back an AI deployment, with 39% of those failures caused directly by critical data breaches or leaks<sup class="cite"><a href="relatorio.html#ref-3">[3]</a></sup>.
@@ -166,13 +203,21 @@ manifesto_js: true
 
     <!-- Section 3 Accordion -->
     <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
-        <button onclick="toggleSection('sec3')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
-            <span class="flex items-center space-x-4">
-                <span class="text-terracotta text-sm font-sans tracking-widest">03</span>
-                <span class="lang-pt">Pressão no Trabalho</span>
-                <span class="lang-en">The Labor Market Squeeze</span>
+        <button onclick="toggleSection('sec3')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left transition-colors hover:bg-slate-800">
+            <span class="flex items-start space-x-4 min-w-0 pr-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest mt-2 shrink-0">03</span>
+                <span class="min-w-0">
+                    <span class="block font-serif font-bold text-xl md:text-2xl">
+                        <span class="lang-pt">Pressão no Trabalho</span>
+                        <span class="lang-en">The Labor Market Squeeze</span>
+                    </span>
+                    <span class="block mt-1 font-sans font-light text-sm text-white/70 leading-snug">
+                        <span class="lang-pt">O choque cai sobre quem já é precário</span>
+                        <span class="lang-en">The shock falls on those already in precarity</span>
+                    </span>
+                </span>
             </span>
-            <span id="icon-sec3" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+            <span id="icon-sec3" class="text-2xl transition-transform duration-200 rotate-180 shrink-0">&minus;</span>
         </button>
         <div id="content-sec3" class="p-6 md:p-8">
             <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
@@ -196,13 +241,21 @@ manifesto_js: true
 
     <!-- Section 4 Accordion -->
     <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
-        <button onclick="toggleSection('sec4')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
-            <span class="flex items-center space-x-4">
-                <span class="text-terracotta text-sm font-sans tracking-widest">04</span>
-                <span class="lang-pt">O Paradoxo do Profissional</span>
-                <span class="lang-en">The Professional’s Paradox</span>
+        <button onclick="toggleSection('sec4')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left transition-colors hover:bg-slate-800">
+            <span class="flex items-start space-x-4 min-w-0 pr-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest mt-2 shrink-0">04</span>
+                <span class="min-w-0">
+                    <span class="block font-serif font-bold text-xl md:text-2xl">
+                        <span class="lang-pt">O Paradoxo do Profissional</span>
+                        <span class="lang-en">The Professional’s Paradox</span>
+                    </span>
+                    <span class="block mt-1 font-sans font-light text-sm text-white/70 leading-snug">
+                        <span class="lang-pt">Até o especialista atrofia se só opera a caixa-preta</span>
+                        <span class="lang-en">Even the specialist atrophies if they only operate the black box</span>
+                    </span>
+                </span>
             </span>
-            <span id="icon-sec4" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+            <span id="icon-sec4" class="text-2xl transition-transform duration-200 rotate-180 shrink-0">&minus;</span>
         </button>
         <div id="content-sec4" class="p-6 md:p-8">
             <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
@@ -232,13 +285,21 @@ manifesto_js: true
 
     <!-- Section 5 Accordion -->
     <div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
-        <button onclick="toggleSection('sec5')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left font-serif font-bold text-xl md:text-2xl transition-colors hover:bg-slate-800">
-            <span class="flex items-center space-x-4">
-                <span class="text-terracotta text-sm font-sans tracking-widest">05</span>
-                <span class="lang-pt">Alternativa Soberana</span>
-                <span class="lang-en">A Sovereign Alternative</span>
+        <button onclick="toggleSection('sec5')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left transition-colors hover:bg-slate-800">
+            <span class="flex items-start space-x-4 min-w-0 pr-4">
+                <span class="text-terracotta text-sm font-sans tracking-widest mt-2 shrink-0">05</span>
+                <span class="min-w-0">
+                    <span class="block font-serif font-bold text-xl md:text-2xl">
+                        <span class="lang-pt">Alternativa Soberana</span>
+                        <span class="lang-en">A Sovereign Alternative</span>
+                    </span>
+                    <span class="block mt-1 font-sans font-light text-sm text-white/70 leading-snug">
+                        <span class="lang-pt">Hardware sem <em>mindware</em> é casulo vazio</span>
+                        <span class="lang-en">Hardware without <em>mindware</em> is an empty husk</span>
+                    </span>
+                </span>
             </span>
-            <span id="icon-sec5" class="text-2xl transition-transform duration-200 rotate-180">&minus;</span>
+            <span id="icon-sec5" class="text-2xl transition-transform duration-200 rotate-180 shrink-0">&minus;</span>
         </button>
         <div id="content-sec5" class="p-6 md:p-8">
             <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
@@ -341,7 +402,7 @@ manifesto_js: true
                             ({% include official-link.html href="https://www.camara.leg.br/deputados/220603/todas-emendas?ano=2025" text="Dani Cunha/PL" title="Emendas orçamentárias oficiais de Dani Cunha na Câmara (2025)" %})
                             <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/3304805-sao-fidelis" text="Portal da Transparência" title="Transferências federais a São Fidélis no Portal da Transparência (CGU)" %}</span>
                         </td>
-                        <td class="py-4 px-4 text-right font-bold text-white">R$ 1.000.000<sup class="cite"><a href="relatorio.html#ref-27">[27]</a></sup></td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 1.000.000<sup class="cite"><a href="relatorio.html#ref-31">[31]</a></sup></td>
                     </tr>
                     <tr class="hover:bg-white/5 transition-colors">
                         <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="moita-bonita" %}</td>
@@ -426,7 +487,7 @@ manifesto_js: true
                             · {% include official-link.html href="https://www25.senado.leg.br/web/senadores/senador/-/perfil/70" text="Renan Calheiros/MDB" title="Perfil oficial do senador Renan Calheiros no Senado Federal" %})
                             <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/2704906-mar-vermelho" text="Portal da Transparência" title="Transferências federais a Mar Vermelho no Portal da Transparência (CGU)" %}</span>
                         </td>
-                        <td class="py-4 px-4 text-right font-bold text-white">R$ 370.000<sup class="cite"><a href="relatorio.html#ref-28">[28]</a></sup></td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 370.000<sup class="cite"><a href="relatorio.html#ref-32">[32]</a></sup></td>
                     </tr>
                     <tr class="hover:bg-white/5 transition-colors">
                         <td class="py-4 px-4 font-medium text-white">{% include city-tip.html id="bom-jesus" %}</td>
@@ -438,7 +499,7 @@ manifesto_js: true
                             ({% include official-link.html href="https://g1.globo.com/rs/rio-grande-do-sul/noticia/2022/06/23/mp-arquiva-investigacao-contra-prefeitura-de-bom-jesus-por-contratacao-de-show-de-simone-e-simaria-por-r-380-mil.ghtml" text="Festa Regional do Queijo" title="G1: contratação de Simone e Simaria em Bom Jesus (RS)" %})
                             <span class="block text-[11px] text-gray-500 mt-0.5">{% include official-link.html href="https://portaldatransparencia.gov.br/localidades/4302303-bom-jesus" text="Portal da Transparência" title="Transferências federais a Bom Jesus (RS) no Portal da Transparência (CGU)" %}</span>
                         </td>
-                        <td class="py-4 px-4 text-right font-bold text-white">R$ 380.000<sup class="cite"><a href="relatorio.html#ref-29">[29]</a></sup></td>
+                        <td class="py-4 px-4 text-right font-bold text-white">R$ 380.000<sup class="cite"><a href="relatorio.html#ref-33">[33]</a></sup></td>
                     </tr>
                     <tr class="bg-navy border-t-2 border-terracotta text-white font-bold">
                         <td class="py-4 px-4" colspan="4">
