@@ -342,9 +342,49 @@ if (document.readyState === 'loading') {
   boot();
 }
 
+function initMoreMenu() {
+  const root = document.querySelector('[data-more-menu]');
+  if (!root || root.dataset.menuBound) return;
+
+  const button = root.querySelector('[data-more-menu-button]');
+  const panel = root.querySelector('[data-more-menu-panel]');
+  if (!button || !panel) return;
+
+  function isOpen() {
+    return !panel.classList.contains('hidden');
+  }
+
+  function setOpen(open) {
+    panel.classList.toggle('hidden', !open);
+    button.setAttribute('aria-expanded', String(open));
+  }
+
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setOpen(!isOpen());
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!root.contains(event.target)) setOpen(false);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && isOpen()) {
+      setOpen(false);
+      button.focus();
+    }
+  });
+}
+
 function boot() {
   const params = new URLSearchParams(window.location.search);
   const savedLang = params.get('lang') || localStorage.getItem('lang');
   setLanguage(savedLang === 'en' ? 'en' : 'pt');
-  initCharts();
+  initMoreMenu();
+  try {
+    initCharts();
+  } catch (err) {
+    console.error(err);
+  }
 }

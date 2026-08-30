@@ -16,45 +16,22 @@
       <li class="lang-en">Content is copyrighted, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="text-gray-400 underline hover:text-terracotta transition-colors" rel="license">CC BY 4.0</a> — reuse allowed with attribution.</li>
     </ul>
     <p class="text-xs">
-      <a href="{{ '/termos.html' | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
-        <span class="lang-pt">Termos de uso</span>
-        <span class="lang-en">Terms of use</span>
-      </a>
-      <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
-      <a href="{{ '/glossario.html' | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
-        <span class="lang-pt">Glossário</span>
-        <span class="lang-en">Glossary</span>
-      </a>
-      <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
-      <a href="{{ '/universidades.html' | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
-        <span class="lang-pt">Universidades federais</span>
-        <span class="lang-en">Federal universities</span>
-      </a>
-      <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
-      <a href="{{ '/centros.html' | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
-        <span class="lang-pt">Centros de IA</span>
-        <span class="lang-en">AI centers</span>
-      </a>
-      <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
-      <a href="{{ '/producao.html' | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
-        <span class="lang-pt">Produção científica</span>
-        <span class="lang-en">Scientific output</span>
-      </a>
-      <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
-      <a href="{{ '/custo-prompt.html' | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
-        <span class="lang-pt">Custo de um prompt</span>
-        <span class="lang-en">Cost of a prompt</span>
-      </a>
-      <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
-      <a href="{{ '/marco-legal.html' | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
-        <span class="lang-pt">Radar do Marco Legal</span>
-        <span class="lang-en">AI Legal Framework Radar</span>
-      </a>
-      <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
-      <a href="https://forms.gle/5XBeDzHNNqxg5MEc8" class="text-gray-400 underline hover:text-terracotta transition-colors" target="_blank" rel="noopener noreferrer">
-        <span class="lang-pt">Contato</span>
-        <span class="lang-en">Contact</span>
-      </a>
+      {% for item in site.data.more_pages %}
+        {% unless forloop.first %}
+        <span class="text-gray-600 mx-2" aria-hidden="true">·</span>
+        {% endunless %}
+        {% if item.external %}
+        <a href="{{ item.href }}" class="text-gray-400 underline hover:text-terracotta transition-colors" target="_blank" rel="noopener noreferrer">
+          <span class="lang-pt">{{ item.pt }}</span>
+          <span class="lang-en">{{ item.en }}</span>
+        </a>
+        {% else %}
+        <a href="{{ item.href | relative_url }}" class="text-gray-400 underline hover:text-terracotta transition-colors">
+          <span class="lang-pt">{{ item.pt }}</span>
+          <span class="lang-en">{{ item.en }}</span>
+        </a>
+        {% endif %}
+      {% endfor %}
     </p>
   </div>
 </footer>

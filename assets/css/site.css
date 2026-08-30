@@ -2,6 +2,31 @@ html {
   scroll-behavior: smooth;
 }
 
+.more-menu-button {
+  cursor: pointer;
+}
+
+.more-menu-button[aria-expanded="true"] {
+  color: #0f172a;
+  border-color: #0f172a;
+}
+
+.more-menu-caret {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.more-menu-button[aria-expanded="true"] .more-menu-caret {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .more-menu-caret {
+    transition: none;
+  }
+}
+
 html[data-lang="pt"] .lang-en {
   display: none !important;
 }

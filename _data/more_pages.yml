@@ -1,0 +1,42 @@
+- id: termos
+  href: /termos.html
+  menu: false
+  pt: Termos de uso
+  en: Terms of use
+
+- id: universidades
+  href: /universidades.html
+  pt: Universidades federais
+  en: Federal universities
+
+- id: centros
+  href: /centros.html
+  pt: Centros de IA
+  en: AI centers
+
+- id: producao
+  href: /producao.html
+  pt: Produção científica
+  en: Scientific output
+
+- id: custo-prompt
+  href: /custo-prompt.html
+  pt: Custo de um prompt
+  en: Cost of a prompt
+
+- id: marco-legal
+  href: /marco-legal.html
+  pt: Radar do Marco Legal
+  en: AI Legal Framework Radar
+
+- id: glossario
+  href: /glossario.html
+  pt: Glossário
+  en: Glossary
+
+- id: contato
+  href: https://forms.gle/5XBeDzHNNqxg5MEc8
+  external: true
+  menu: false
+  pt: Contato
+  en: Contact
