@@ -9,3 +9,4 @@ vendor/
 research/
 .tmp-ibge/
 .tmp-*/
+scripts/__pycache__/
