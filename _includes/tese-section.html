@@ -1,0 +1,43 @@
+{%- comment -%}
+  Renders one thesis accordion section.
+  Usage: {% include tese-section.html n=1 %}
+  Reads its content from _data/tese_<n>.yml (site.data.tese_<n>).
+{%- endcomment -%}
+{% assign data_key = "tese_" | append: include.n %}
+{% assign t = site.data[data_key] %}
+{% assign secid = "sec" | append: include.n %}
+<!-- Section {{ include.n }} Accordion -->
+<div class="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm">
+    <button onclick="toggleSection('{{ secid }}')" class="w-full flex justify-between items-center p-6 bg-navy text-white text-left transition-colors hover:bg-slate-800">
+        <span class="flex items-start space-x-4 min-w-0 pr-4">
+            <span class="text-terracotta text-sm font-sans tracking-widest mt-2 shrink-0">{{ t.number }}</span>
+            <span class="min-w-0">
+                <span class="block font-serif font-bold text-xl md:text-2xl">
+                    <span class="lang-pt">{{ t.title.pt }}</span>
+                    <span class="lang-en">{{ t.title.en }}</span>
+                </span>
+                <span class="block mt-1 font-sans font-light text-sm text-white/70 leading-snug">
+                    <span class="lang-pt">{{ t.subtitle.pt }}</span>
+                    <span class="lang-en">{{ t.subtitle.en }}</span>
+                </span>
+            </span>
+        </span>
+        <span id="icon-{{ secid }}" class="text-2xl transition-transform duration-200 rotate-180 shrink-0">&minus;</span>
+    </button>
+    <div id="content-{{ secid }}" class="p-6 md:p-8">
+        <div class="lang-pt space-y-4 text-gray-800 leading-relaxed font-light text-justify">
+            {% for p in t.body.pt %}
+            <p>
+                {{ p }}
+            </p>
+            {% endfor %}
+        </div>
+        <div class="lang-en space-y-4 text-gray-800 leading-relaxed font-light">
+            {% for p in t.body.en %}
+            <p>
+                {{ p }}
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
