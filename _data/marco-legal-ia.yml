@@ -3,9 +3,9 @@
 # points, officers, vote_window, and invitee sectors are curated.
 # Do not edit retrieved dates by hand — run scripts/fetch_marco_legal_ia.py.
 source:
-  retrieved: '2026-08-30'
-  retrieved_pt: 30 de agosto de 2026
-  retrieved_en: 30 August 2026
+  retrieved: '2026-09-01'
+  retrieved_pt: 1 de setembro de 2026
+  retrieved_en: 1 September 2026
   camara_id: 2487262
   orgao_id: 539776
   urls:
