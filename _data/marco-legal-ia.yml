@@ -3,9 +3,9 @@
 # points, officers, vote_window, and invitee sectors are curated.
 # Do not edit retrieved dates by hand — run scripts/fetch_marco_legal_ia.py.
 source:
-  retrieved: '2026-08-30'
-  retrieved_pt: 30 de agosto de 2026
-  retrieved_en: 30 August 2026
+  retrieved: '2026-09-16'
+  retrieved_pt: 16 de setembro de 2026
+  retrieved_en: 16 September 2026
   camara_id: 2487262
   orgao_id: 539776
   urls:
@@ -19,13 +19,13 @@ status:
   label:
     pt: Aguardando parecer do relator
     en: Awaiting rapporteur’s opinion
-  last_move_date: '2026-06-17'
+  last_move_date: '2026-09-02'
   last_move_label:
-    pt: 17 de junho de 2026
-    en: 17 June 2026
+    pt: 2 de setembro de 2026
+    en: 2 September 2026
   last_move:
-    pt: Apensação da proposição PL 5433/2025 à proposição PL 3782/2025.
-    en: Apensação da proposição PL 5433/2025 à proposição PL 3782/2025.
+    pt: Apensação da proposição PL 1542/2026 à proposição PL 904/2026.
+    en: Apensação da proposição PL 1542/2026 à proposição PL 904/2026.
   regime: Prioridade (Art. 151, II, RICD)
   situacao: Aguardando Parecer
   introduced: '2023-05-03'
@@ -158,7 +158,7 @@ timeline:
     en: The committee hears government, regulators, academia, companies, and civil society across
       dozens of formal sessions.
 - id: parecer
-  date: '2026-06-17'
+  date: '2026-09-02'
   date_label:
     pt: desde 2025
     en: since 2025
